@@ -8,25 +8,25 @@
         "avg_intensity": "HIGH",
         "avg_arousal": "MEDIUM",
         "avg_valence": "POSITIVE",
-        "emotion_probability": 0.60
+        "emotion_probability": 0.6
       },
       "Sad": {
         "avg_intensity": "MEDIUM",
         "avg_arousal": "LOW",
         "avg_valence": "NEGATIVE",
-        "emotion_probability": 0.20
+        "emotion_probability": 0.2
       },
       "Surprised": {
         "avg_intensity": "LOW",
         "avg_arousal": "MEDIUM",
         "avg_valence": "POSITIVE",
-        "emotion_probability": 0.10
+        "emotion_probability": 0.1
       },
       "Neutral": {
         "avg_intensity": "LOW",
         "avg_arousal": "LOW",
         "avg_valence": "NEUTRAL",
-        "emotion_probability": 0.10
+        "emotion_probability": 0.1
       }
     },
     "realtime_face_emotion": {
@@ -37,5 +37,32 @@
       "arousal_label": "MEDIUM"
     },
     "user_message": "Sai che la morte di Mufasa non mi mette tristezza perche mio padre e vivo e gli voglio molto bene!"
+  },
+  {
+    "case_id": "case_002",
+    "timestamp": "2026-05-27T18:27:03.636877",
+    "stimulus": "titanic",
+    "priming_emotion": {
+      "Disgust": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "HIGH",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.9
+      },
+      "Sad": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.7
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Sad",
+      "probability": 0.7,
+      "intensity_label": "MEDIUM",
+      "valence_label": "NEGATIVE",
+      "arousal_label": "MEDIUM"
+    },
+    "user_message": "sono rimasto triste per la morte di jack, mi sento da solo"
   }
 ]

@@ -92,4 +92,7 @@ progetto_d22_marble/
 
 ## Autori
 
-Progetto D:22 — Università di Urbino
+- TOYEM TEZEM RYAN PARFAIT
+- SIMONE AGOSTINELLI
+  
+Progetto D_22 — Università Politecnica delle Marche

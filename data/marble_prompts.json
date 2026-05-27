@@ -167,5 +167,64 @@
       "A DIFFERENT full descriptive text prompt (150+ words) with an alternative aesthetic approach to the same emotion: Imagine a cozy, candlelit room filled with soft blankets and plush pillows. The warm glow of lanterns casts gentle shadows on the walls as the scent of freshly baked cookies wafts through the air. In this peaceful sanctuary, a comforting presence is felt, as if one's loved ones are nearby, offering reassurance and love. As you settle into this calming space, the soft crackling of the fireplace creates a soothing background hum, inviting relaxation and contemplation.",
       "ANOTHER full descriptive text prompt (150+ words) with a completely different visual interpretation: Picture a tranquil lake at dusk, where the sky is painted with hues of pink, orange, and purple. The water's surface reflects these vibrant colors, creating a dazzling display of natural beauty. A small wooden boat glides effortlessly across the lake, its gentle rocking motion mimicking the rhythm of one's heartbeat. As you sit on the shore, surrounded by the serene atmosphere, the soft lapping of the water against the shore creates a calming melody, evoking feelings of peace and connection to nature."
     ]
+  },
+  {
+    "prompt_id": "prompt_004",
+    "case_id": "case_002",
+    "timestamp": "2026-05-27T18:27:38.526061",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Sad",
+      "intensity_score": 0.54,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Disgust": 0.315,
+        "Sad": 0.536
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Disgust": 0.9,
+          "Sad": 0.42
+        },
+        "realtime_scores": {
+          "Sad": 0.42
+        },
+        "text_scores": {
+          "Sad": 1.0
+        }
+      }
+    },
+    "cardinal_context_hint": "Based on keywords ['triste'], the likely cardinal point is: from loss to memory, care, and hope",
+    "runtime_analysis": {
+      "dominant_emotion": "Sad",
+      "complex_emotion": "a deep sense of loss and longing, as if the weight of grief is crushing one's soul",
+      "stimulus": "Titanic",
+      "user_reaction": "the user feels a strong emotional connection to Jack's character and is overcome by the tragedy",
+      "cardinal_point": "from loss to memory, care, and hope",
+      "world_objective": "to create an emotionally resonant world that acknowledges the pain of loss while offering a glimmer of hope"
+    },
+    "marble_prompt": "Create a suspended landscape of gentle mist-shrouded mountains, where the soft blue-gray hues evoke a sense of melancholy. A serene lake stretches out, its calm waters reflecting the faint light of distant stars. The air is crisp and cool, carrying the scent of damp earth and new life. As the user navigates this world, they'll find subtle reminders of Jack's character: a worn journal page drifting on the breeze, a lone guitar leaning against a misty tree trunk, or a small, flickering candle casting an otherworldly glow. The atmosphere is contemplative, yet hopeful, inviting the user to reflect on their emotions and find solace in the beauty of this suspended world.",
+    "negative_constraints": [
+      "no direct references to loss or tragedy",
+      "no dark or oppressive tones",
+      "no isolation or disconnection from others"
+    ],
+    "variants": [
+      {
+        "marble_prompt": "In a dreamlike environment, create an open plain where wispy clouds drift lazily across the sky. A lone figure stands in the distance, their back to the user, as if lost in thought. The landscape is bathed in soft, warm light that seems to emanate from within the earth itself. As the user explores this world, they'll discover fragments of Jack's character: a faint smile on the distant figure's face, a scattering of stars shining like diamonds across the plain, or a subtle melody carried on the breeze. The atmosphere is one of quiet contemplation and introspection, inviting the user to find solace in the simplicity of this world.",
+        "negative_constraints": [
+          "no direct references to loss",
+          "no cold or distant tones"
+        ]
+      },
+      {
+        "marble_prompt": "Design a sheltered space where the soft glow of lanterns casts an intimate atmosphere. The air is thick with the scent of old books and worn leather, evoking a sense of comfort and familiarity. As the user navigates this world, they'll find scattered pages from Jack's journal, each one revealing a piece of his story. The atmosphere is warm and inviting, full of promise and potential, as if the very fabric of reality has been woven together to create a tapestry of hope.",
+        "negative_constraints": [
+          "no darkness or oppressive tones",
+          "no disconnection from others"
+        ]
+      }
+    ]
   }
 ]
