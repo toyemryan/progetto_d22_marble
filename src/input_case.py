@@ -15,7 +15,7 @@ TRANSLATIONS_PATH = os.path.join(DATA_DIR, "translations.json")
 
 
 def load_translations():
-    with open(TRANSLATIONS_PATH, "r", encoding="utf-8") as f:
+    with open(TRANSLATIONS_PATH, "r", encoding="utf-8") as f: # apre il file translations.json e lo carica come dizionario
         return json.load(f)
 
 
@@ -150,7 +150,7 @@ def collect_case():
     cases = load_raw_cases()
 
     print("=" * 60)
-    print("  PROGETTO D:22 — Nuovo caso emozionale")
+    print("  PROGETTO D_22 — Nuovo caso emozionale")
     print("=" * 60)
 
     # Stimolo

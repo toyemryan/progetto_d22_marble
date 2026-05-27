@@ -84,6 +84,7 @@ def call_llama(prompt):
     payload = {
         "model": OLLAMA_MODEL,
         "prompt": prompt,
+        "format": "json",
         "stream": False,
         "options": {
             "temperature": 0.7,
@@ -111,30 +112,114 @@ def call_llama(prompt):
 def parse_llama_response(response_text):
     """
     Parsa la risposta di Llama, cercando il JSON nella risposta.
-    Llama potrebbe aggiungere testo prima/dopo il JSON.
+    Llama spesso aggiunge markdown, commenti, blocchi ``` attorno al JSON.
+    Se il JSON non è parsabile, estrae i contenuti manualmente dal testo.
     """
     if not response_text:
         return None
 
-    # Cerca un blocco JSON nella risposta
+    import re
+
+    # 1. Rimuovi blocchi markdown ```json ... ``` o ``` ... ```
+    cleaned = re.sub(r'```json\s*', '', response_text)
+    cleaned = re.sub(r'```\s*', '', cleaned)
+
+    # 2. Prova a parsare direttamente
     try:
-        # Prova a parsare direttamente
-        return json.loads(response_text)
+        return json.loads(cleaned.strip())
     except json.JSONDecodeError:
         pass
 
-    # Cerca JSON tra parentesi graffe
-    start = response_text.find("{")
-    end = response_text.rfind("}") + 1
-    if start >= 0 and end > start:
-        try:
-            return json.loads(response_text[start:end])
-        except json.JSONDecodeError:
-            pass
+    # 3. Cerca il JSON più grande tra parentesi graffe (nidificate)
+    depth = 0
+    start = -1
+    best_json = None
+    for i, ch in enumerate(cleaned):
+        if ch == '{':
+            if depth == 0:
+                start = i
+            depth += 1
+        elif ch == '}':
+            depth -= 1
+            if depth == 0 and start >= 0:
+                candidate = cleaned[start:i+1]
+                try:
+                    parsed = json.loads(candidate)
+                    # Prendi il JSON più completo (con marble_prompt se possibile)
+                    if best_json is None or "marble_prompt" in parsed:
+                        best_json = parsed
+                except json.JSONDecodeError:
+                    pass
+                start = -1
 
-    print("⚠ Impossibile parsare la risposta JSON di Llama.")
-    print("  Risposta grezza salvata come testo.")
-    return {"raw_response": response_text}
+    if best_json:
+        return best_json
+
+    # 4. Fallback: estrai i contenuti dal testo grezzo
+    print("⚠ JSON non parsabile. Estrazione manuale dal testo...")
+    result = extract_from_raw_text(response_text)
+    return result
+
+
+def extract_from_raw_text(text):
+    """
+    Estrae marble_prompt, runtime_analysis, negative_constraints e variants
+    dal testo grezzo di Llama quando il JSON non è valido.
+    """
+    import re
+
+    result = {}
+
+    # Estrai marble_prompt: cerca il blocco descrittivo più lungo
+    # Di solito è dopo "marble_prompt" o "Marble Prompt" o "Create a/an"
+    prompt_match = re.search(
+        r'(?:marble_prompt["\s:]*|Marble Prompt[*\s:]*)(Create .+?)(?:\n\n(?:Variant|Negative|\*\*|```)|$)',
+        text, re.DOTALL | re.IGNORECASE
+    )
+    if prompt_match:
+        result["marble_prompt"] = prompt_match.group(1).strip().strip('"').strip("'")
+    else:
+        # Cerca qualsiasi paragrafo che inizia con "Create"
+        create_match = re.search(r'(Create (?:a|an|the) .+?)(?:\n\n|\nVariant|\nNegative|$)', text, re.DOTALL)
+        if create_match:
+            result["marble_prompt"] = create_match.group(1).strip().strip('"')
+
+    # Estrai runtime_analysis dai campi individuali
+    runtime = {}
+    field_patterns = {
+        "dominant_emotion": r'"dominant_emotion"\s*:\s*"([^"]+)"',
+        "complex_emotion": r'"complex_emotion"\s*:\s*"([^"]+)"',
+        "stimulus": r'"stimulus"\s*:\s*"([^"]+)"',
+        "user_reaction": r'"user_reaction"\s*:\s*"([^"]+)"',
+        "cardinal_point": r'"cardinal_point"\s*:\s*"([^"]+)"',
+        "world_objective": r'"world_objective"\s*:\s*"([^"]+)"',
+    }
+    for field, pattern in field_patterns.items():
+        match = re.search(pattern, text)
+        if match:
+            runtime[field] = match.group(1)
+    if runtime:
+        result["runtime_analysis"] = runtime
+
+    # Estrai negative constraints
+    neg_matches = re.findall(r'(?:Avoid|Refrain|Do not|No )[^\n*]+', text, re.IGNORECASE)
+    if neg_matches:
+        result["negative_constraints"] = [n.strip().strip('*').strip() for n in neg_matches]
+
+    # Estrai variants
+    variant_matches = re.findall(
+        r'\*\*([^*]+)\*\*:\s*([^\n]+(?:\n(?!\*\*|\n)[^\n]+)*)',
+        text
+    )
+    if variant_matches:
+        result["variants"] = [
+            f"{name.strip()}: {desc.strip()}" for name, desc in variant_matches
+        ]
+
+    if not result:
+        result["raw_response"] = text
+
+    return result
 
 
 def generate_marble_prompt(normalized_case, fusion_profile, cardinal_context):

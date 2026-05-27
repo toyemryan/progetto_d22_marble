@@ -1,1 +1,171 @@
-[]
+[
+  {
+    "prompt_id": "prompt_001",
+    "case_id": "case_001",
+    "timestamp": "2026-05-27T17:41:03.156175",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Happy",
+      "intensity_score": 0.64,
+      "valence": "positive",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Neutral": 0.0105,
+        "Happy": 0.6375,
+        "Sad": 0.242,
+        "Surprised": 0.0105
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.6,
+          "Sad": 0.12,
+          "Surprised": 0.03,
+          "Neutral": 0.03
+        },
+        "realtime_scores": {
+          "Happy": 0.95
+        },
+        "text_scores": {
+          "Sad": 1.0
+        }
+      }
+    },
+    "cardinal_context_hint": "Based on keywords ['mio padre', 'vivo'], the likely cardinal point is: from loss to presence, gratitude, and familial bond",
+    "raw_response": "Based on the inputs, I will generate a prompt for Marble that creates a 3D world able to emotionally stimulate the user and redirect their thoughts toward the cardinal point of the conversation.\n\n**Runtime Analysis**\n```\n{\n  \"dominant_emotion\": \"Happy\",\n  \"complex_emotion\": \"Gratitude and Joy\",\n  \"stimulus\": \"Death of Mufasa - The Lion King\",\n  \"user_reaction\": \"Positive Emotional Response to Loss\",\n  \"cardinal_point\": \"From Loss to Presence, Gratitude, and Familial Bond\",\n  \"world_objective\": \"Create a World that Embodies the Feeling of Joy and Appreciation for Life\"\n}\n```\n\n**Marble Prompt**\n```\n{\n  \"runtime_analysis\": {\n    ...\n  },\n  \"marble_prompt\": \"Create a world where golden warm light illuminates a serene savannah, filled with lush green grasses and vibrant yellow wildflowers. The sky above is a brilliant blue, with a few puffy white clouds drifting lazily by. In the distance, a small herd of gentle animals roams freely, their soft footsteps barely disturbing the tranquility of the scene.\n\nIn the center of this peaceful landscape, place a sturdy tree with gnarled branches that seem to whisper stories of love and family. The trunk of the tree bears an inscription in elegant script: 'To those who have been lost, but remain in our hearts.'\n\nAs the user explores this world, they will feel the warmth of the sun on their skin, the softness of the grass beneath their feet, and the comforting presence of loved ones nearby. The scent of fresh-cut grass and blooming flowers will waft through the air, evoking feelings of gratitude and joy.\n\nVariants:\n\n1. **Whimsical Wonder**: Add a few wispy clouds shaped like animals or leaves, and have them gently float across the sky.\n2. **Serenity Sanctuary**: Replace the savannah with a tranquil lake, complete with lily pads and water lilies. The tree becomes a majestic willow, its branches dipping into the water.\n3. **Joyful Journey**: Introduce a winding path that leads to a distant hillside, where a group of joyful creatures (e.g., butterflies, birds, or rabbits) gather to celebrate life.\n```\n\n**Negative Constraints**\n\n* Avoid creating a sad or melancholic atmosphere\n* Refrain from using dark colors or foreboding lighting\n* Do not introduce any elements that might evoke fear or anxiety\n\nBy following these guidelines and the emotional state of the user, Marble will generate a 3D world that is visually stunning, emotionally engaging, and thought-provoking. The prompt encourages exploration, contemplation, and appreciation for life, while honoring the themes of loss, family, and gratitude."
+  },
+  {
+    "prompt_id": "prompt_002",
+    "case_id": "case_001",
+    "timestamp": "2026-05-27T18:00:05.342554",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Happy",
+      "intensity_score": 0.64,
+      "valence": "positive",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Happy": 0.6375,
+        "Sad": 0.242,
+        "Surprised": 0.0105,
+        "Neutral": 0.0105
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.6,
+          "Sad": 0.12,
+          "Surprised": 0.03,
+          "Neutral": 0.03
+        },
+        "realtime_scores": {
+          "Happy": 0.95
+        },
+        "text_scores": {
+          "Sad": 1.0
+        }
+      }
+    },
+    "cardinal_context_hint": "Based on keywords ['mio padre', 'vivo'], the likely cardinal point is: from loss to presence, gratitude, and familial bond",
+    "runtime_analysis": {
+      "dominant_emotion": "Happy",
+      "complex_emotion": "Gratitude towards family bond",
+      "stimulus": "Death of Mufasa - The Lion King",
+      "user_reaction": "Positive and grateful despite loss",
+      "cardinal_point": "From loss to presence, gratitude, and familial bond",
+      "world_objective": "Create a world that acknowledges the depth of grief while focusing on the joy of family bonds"
+    },
+    "marble_prompt": {
+      "environment": "A warm and golden savannah with lush greenery and gentle hills",
+      "lighting": "Soft, warm light with subtle sunbeams and starlight in the distance",
+      "colors": [
+        "Yellow",
+        "Gold",
+        "Orange",
+        "Green"
+      ],
+      "spatial composition": "Open paths and particles that lead to a central family gathering area",
+      "materials": [
+        "Grass",
+        "Trees",
+        "Stones"
+      ],
+      "symbolic elements": [
+        "Family lanterns",
+        "Cushions",
+        "Curved benches"
+      ],
+      "atmosphere": "Soothing, peaceful, with hints of nostalgia",
+      "negative constraints": []
+    },
+    "variants": [
+      {
+        "environment": "A cozy and intimate garden with rose bushes and a central family tree",
+        "lighting": "Soft, warm candlelight with subtle starlight in the distance",
+        "colors": [
+          "Pink",
+          "Cream",
+          "Light Blue"
+        ],
+        "spatial composition": "Curved pathways and seating areas that lead to a central gathering spot"
+      },
+      {
+        "environment": "A majestic and open landscape with rolling hills and distant mountains",
+        "lighting": "Warm, golden light with subtle clouds and sunbeams in the distance",
+        "colors": [
+          "Yellow",
+          "Gold",
+          "Orange"
+        ],
+        "spatial composition": "Wide-open spaces with gentle slopes and a central family gathering area"
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_003",
+    "case_id": "case_001",
+    "timestamp": "2026-05-27T18:03:27.157187",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Happy",
+      "intensity_score": 0.64,
+      "valence": "positive",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Happy": 0.6375,
+        "Sad": 0.242,
+        "Neutral": 0.0105,
+        "Surprised": 0.0105
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.6,
+          "Sad": 0.12,
+          "Surprised": 0.03,
+          "Neutral": 0.03
+        },
+        "realtime_scores": {
+          "Happy": 0.95
+        },
+        "text_scores": {
+          "Sad": 1.0
+        }
+      }
+    },
+    "cardinal_context_hint": "Based on keywords ['mio padre', 'vivo'], the likely cardinal point is: from loss to presence, gratitude, and familial bond",
+    "runtime_analysis": {
+      "dominant_emotion": "Happy",
+      "complex_emotion": "Gratitude and joy in the face of loss, accompanied by a sense of protection and presence.",
+      "stimulus": "Death of Mufasa - The Lion King",
+      "user_reaction": "Interpreting Mufasa's death as a reminder that one's own father is alive, leading to gratitude and emotional connection.",
+      "cardinal_point": "From loss to presence, gratitude, and familial bond",
+      "world_objective": "Create an emotionally warm 3D world inspired by the feeling of realizing that someone deeply loved is still present in one's life."
+    },
+    "marble_prompt": "Imagine a sunlit savannah at dawn, where golden grasses sway gently in the morning breeze. A subtle mist rises from the earth, carrying the scent of blooming wildflowers. In this serene landscape, a majestic tree stands tall, its branches adorned with vibrant yellow and orange streamers, symbolizing the joy and warmth of connection. As you wander through this idyllic world, the soft rustling of leaves and the distant songs of birds create a soothing melody, evoking feelings of gratitude and peaceful coexistence. Amidst the lush greenery, a winding path invites exploration, leading to hidden clearings and secret glades, where the gentle warmth of sunlight nurtures the soul. The atmosphere is filled with an air of hope and renewal, as if the very presence of loved ones has awakened the beauty within.",
+    "negative_constraints": [
+      "Avoid any elements that might evoke feelings of sadness or loss"
+    ],
+    "variants": [
+      "A DIFFERENT full descriptive text prompt (150+ words) with an alternative aesthetic approach to the same emotion: Imagine a cozy, candlelit room filled with soft blankets and plush pillows. The warm glow of lanterns casts gentle shadows on the walls as the scent of freshly baked cookies wafts through the air. In this peaceful sanctuary, a comforting presence is felt, as if one's loved ones are nearby, offering reassurance and love. As you settle into this calming space, the soft crackling of the fireplace creates a soothing background hum, inviting relaxation and contemplation.",
+      "ANOTHER full descriptive text prompt (150+ words) with a completely different visual interpretation: Picture a tranquil lake at dusk, where the sky is painted with hues of pink, orange, and purple. The water's surface reflects these vibrant colors, creating a dazzling display of natural beauty. A small wooden boat glides effortlessly across the lake, its gentle rocking motion mimicking the rhythm of one's heartbeat. As you sit on the shore, surrounded by the serene atmosphere, the soft lapping of the water against the shore creates a calming melody, evoking feelings of peace and connection to nature."
+    ]
+  }
+]

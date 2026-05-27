@@ -34,19 +34,21 @@ TRANSFORMATION RULES:
 - If arousal is high: use dynamic worlds with force lines, directional light, moving elements.
 - Every emotion must become color, light, geometry, object, or spatial relationship. No abstract prompts.
 
-OUTPUT FORMAT (respond in valid JSON only):
+OUTPUT FORMAT (respond in valid JSON only, no markdown, no explanation, no ```):
+CRITICAL: Your entire response must be a single valid JSON object. Do not add any text before or after the JSON. Do not wrap it in markdown code blocks. Do not add comments.
+
 {
   "runtime_analysis": {
-    "dominant_emotion": "",
-    "complex_emotion": "",
-    "stimulus": "",
-    "user_reaction": "",
-    "cardinal_point": "",
-    "world_objective": ""
+    "dominant_emotion": "the dominant emotion label",
+    "complex_emotion": "nuanced emotional description",
+    "stimulus": "the visual stimulus",
+    "user_reaction": "interpretation of user message",
+    "cardinal_point": "the reflective direction",
+    "world_objective": "what the Marble world should achieve"
   },
-  "marble_prompt": "",
-  "negative_constraints": [],
-  "variants": []
+  "marble_prompt": "A SINGLE LONG DESCRIPTIVE TEXT IN ENGLISH. This must be a detailed, narrative, cinematic description of the 3D world. Write it as one continuous text of at least 150 words that you would paste directly into a 3D world generation tool. It must describe environment, lighting, colors, spatial composition, materials, symbolic elements, atmosphere, and what to avoid, all within flowing prose. Example style: Create an emotionally warm 3D world inspired by the feeling of realizing that someone deeply loved is still present in one's life. Design a golden savannah at sunset, with soft orange and amber light, tall grass gently moving in the wind... Do NOT use JSON, bullet points, or structured fields inside marble_prompt. It must be plain descriptive English text.",
+  "negative_constraints": ["constraint 1", "constraint 2", "constraint 3"],
+  "variants": ["A DIFFERENT full descriptive text prompt (150+ words) with an alternative aesthetic approach to the same emotion", "ANOTHER full descriptive text prompt (150+ words) with a completely different visual interpretation"]
 }
 
 RULES:
@@ -56,6 +58,6 @@ RULES:
 - Do not generate vague abstract prompts.
 - Translate emotions into visible, spatial, and explorable elements.
 - Prefer cinematic, poetic, realistic but dreamlike 3D worlds.
-- The marble_prompt must be in English, concrete, and visually generable.
-- Include environment, lighting, colors, spatial composition, materials, symbolic elements, atmosphere, and negative constraints.
-- Generate 2-3 variants with different aesthetic approaches.
+- The marble_prompt and each variant must be plain English descriptive text of at least 150 words, NOT structured JSON or bullet points.
+- Each prompt must include environment, lighting, colors, spatial composition, materials, symbolic elements, atmosphere, and negative constraints woven into the narrative.
+- Generate exactly 2 variants with different aesthetic approaches.

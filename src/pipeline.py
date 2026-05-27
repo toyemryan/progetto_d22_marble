@@ -94,7 +94,7 @@ def run_all():
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Pipeline D:22 — Emotion-Aware Marble Prompt Generation"
+        description="Pipeline D_22 — Emotion-Aware Marble Prompt Generation"
     )
     parser.add_argument("--new", action="store_true",
                         help="Raccogli un nuovo caso interattivo")
@@ -111,7 +111,7 @@ def main():
 
     print("""
     ╔══════════════════════════════════════════════╗
-    ║  PROGETTO D:22                               ║
+    ║  PROGETTO D_22                               ║
     ║  Emotion-Aware Marble Prompt Generation      ║
     ╚══════════════════════════════════════════════╝
     """)
