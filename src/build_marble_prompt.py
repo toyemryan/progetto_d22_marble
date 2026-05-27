@@ -57,14 +57,13 @@ def build_llama_prompt(normalized_case, fusion_profile, cardinal_context):
     """
     meta = load_meta_prompt()
 
-    # Inietta i dati nel meta-prompt
-    filled = meta.format(
-        stimulus=normalized_case["stimulus"],
-        priming_emotion=json.dumps(normalized_case["priming_emotion"], indent=2),
-        realtime_face_emotion=json.dumps(normalized_case["realtime_face_emotion"], indent=2),
-        user_message=normalized_case["user_message"],
-        fusion_profile=json.dumps(fusion_profile, indent=2),
-    )
+    # Inietta i dati nel meta-prompt (usa replace per evitare conflitti con le {} del JSON)
+    filled = meta
+    filled = filled.replace("{stimulus}", normalized_case["stimulus"])
+    filled = filled.replace("{priming_emotion}", json.dumps(normalized_case["priming_emotion"], indent=2))
+    filled = filled.replace("{realtime_face_emotion}", json.dumps(normalized_case["realtime_face_emotion"], indent=2))
+    filled = filled.replace("{user_message}", normalized_case["user_message"])
+    filled = filled.replace("{fusion_profile}", json.dumps(fusion_profile, indent=2))
 
     # Aggiungi il contesto del punto cardinale come istruzione aggiuntiva
     cardinal_hint = cardinal_context.get("hint", "")
