@@ -47,8 +47,8 @@ CRITICAL: Your entire response must be a single valid JSON object. Do not add an
     "world_objective": "what the Marble world should achieve"
   },
   "marble_prompt": "A SINGLE LONG DESCRIPTIVE TEXT IN ENGLISH. This must be a detailed, narrative, cinematic description of the 3D world. Write it as one continuous text of at least 150 words that you would paste directly into a 3D world generation tool. It must describe environment, lighting, colors, spatial composition, materials, symbolic elements, atmosphere, and what to avoid, all within flowing prose. Example style: Create an emotionally warm 3D world inspired by the feeling of realizing that someone deeply loved is still present in one's life. Design a golden savannah at sunset, with soft orange and amber light, tall grass gently moving in the wind... Do NOT use JSON, bullet points, or structured fields inside marble_prompt. It must be plain descriptive English text.",
-  "negative_constraints": ["constraint 1", "constraint 2", "constraint 3"],
-  "variants": ["A DIFFERENT full descriptive text prompt (150+ words) with an alternative aesthetic approach to the same emotion", "ANOTHER full descriptive text prompt (150+ words) with a completely different visual interpretation"]
+  "negative_constraints": ["Always provide at least 3-5 constraints. These describe what the Marble world must NOT contain. Examples: no grief-focused imagery, no darkness, no danger, no isolation, no cold tones, no threatening elements, no enclosed oppressive spaces. Tailor constraints to the specific emotion and cardinal point."],
+  "variants": ["Write a completely different 150+ word Marble prompt for the same emotion but with a different environment and aesthetic", "Write another 150+ word Marble prompt with a third visual interpretation"]
 }
 
 RULES:
