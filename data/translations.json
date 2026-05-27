@@ -1,0 +1,35 @@
+{
+  "emotions": {
+    "felice": "Happy",
+    "felicità": "Happy",
+    "gioia": "Happy",
+    "triste": "Sad",
+    "tristezza": "Sad",
+    "arrabbiato": "Angry",
+    "rabbia": "Angry",
+    "paura": "Fear",
+    "spaventato": "Fear",
+    "sorpreso": "Surprised",
+    "sorpresa": "Surprised",
+    "disgusto": "Disgust",
+    "neutro": "Neutral",
+    "neutrale": "Neutral",
+    "tenerezza": "Tenderness",
+    "tenero": "Tenderness"
+  },
+  "intensity": {
+    "1": "LOW", "2": "LOW", "3": "LOW",
+    "4": "MEDIUM", "5": "MEDIUM", "6": "MEDIUM", "7": "MEDIUM",
+    "8": "HIGH", "9": "HIGH", "10": "HIGH"
+  },
+  "valence": {
+    "positiva": "POSITIVE",
+    "neutra": "NEUTRAL",
+    "negativa": "NEGATIVE"
+  },
+  "arousal": {
+    "1": "LOW", "2": "LOW", "3": "LOW",
+    "4": "MEDIUM", "5": "MEDIUM", "6": "MEDIUM", "7": "MEDIUM",
+    "8": "HIGH", "9": "HIGH", "10": "HIGH"
+  }
+}

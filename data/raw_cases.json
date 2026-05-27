@@ -1,0 +1,41 @@
+[
+  {
+    "case_id": "case_001",
+    "timestamp": "2026-05-27T10:00:00",
+    "stimulus": "Death of Mufasa - The Lion King",
+    "priming_emotion": {
+      "Happy": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.60
+      },
+      "Sad": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.20
+      },
+      "Surprised": {
+        "avg_intensity": "LOW",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.10
+      },
+      "Neutral": {
+        "avg_intensity": "LOW",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEUTRAL",
+        "emotion_probability": 0.10
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Happy",
+      "probability": 0.95,
+      "intensity_label": "HIGH",
+      "valence_label": "POSITIVE",
+      "arousal_label": "MEDIUM"
+    },
+    "user_message": "Sai che la morte di Mufasa non mi mette tristezza perche mio padre e vivo e gli voglio molto bene!"
+  }
+]
