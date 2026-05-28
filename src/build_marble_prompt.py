@@ -14,6 +14,8 @@ import json
 import os
 import requests
 from datetime import datetime
+import threading
+from loader.spinner import spinner
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROMPTS_DIR = os.path.join(BASE_DIR, "prompts")
@@ -92,19 +94,34 @@ def call_llama(prompt):
         },
     }
 
+    stop_event = threading.Event()
+    spinner_thread = threading.Thread(target=spinner, args=(stop_event, "In attesa di risposta da Llama"))
     try:
-        response = requests.post(OLLAMA_URL, json=payload, timeout=120)
+        spinner_thread.start()
+
+        response = requests.post(OLLAMA_URL, json=payload, timeout=180)
         response.raise_for_status()
-        return response.json().get("response", "")
+        result = response.json().get("response", "")
+
+        stop_event.set()
+        spinner_thread.join()
+        return result
+
     except requests.ConnectionError:
+        stop_event.set()
+        spinner_thread.join()
         print("❌ Errore: Ollama non è in esecuzione.")
         print("   Avvia Ollama con: ollama serve")
         print(f"   Poi scarica il modello con: ollama pull {OLLAMA_MODEL}")
         return None
     except requests.Timeout:
+        stop_event.set()
+        spinner_thread.join()
         print("❌ Errore: Timeout nella risposta di Llama.")
         return None
     except Exception as e:
+        stop_event.set()
+        spinner_thread.join()
         print(f"❌ Errore nella chiamata a Llama: {e}")
         return None
 
