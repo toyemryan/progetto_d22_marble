@@ -64,5 +64,32 @@
       "arousal_label": "MEDIUM"
     },
     "user_message": "sono rimasto triste per la morte di jack, mi sento da solo"
+  },
+  {
+    "case_id": "case_003",
+    "timestamp": "2026-05-28T18:52:10.764301",
+    "stimulus": "La vittoria dell'Italia ai mondiali 2006",
+    "priming_emotion": {
+      "Happy": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.9
+      },
+      "Angry": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "HIGH",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.4
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Sad",
+      "probability": 0.6,
+      "intensity_label": "MEDIUM",
+      "valence_label": "NEGATIVE",
+      "arousal_label": "MEDIUM"
+    },
+    "user_message": "Per la terza volta l'Italia non va ai mondiali e mi sento distrutto. Aiuto!"
   }
 ]
