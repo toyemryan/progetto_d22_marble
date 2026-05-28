@@ -5,22 +5,11 @@ Legge raw_cases.json, uniforma le etichette e produce casi normalizzati.
 
 import json
 import os
+from config.emotions import EMOTIONS
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 RAW_CASES_PATH = os.path.join(DATA_DIR, "raw_cases.json")
-
-# Mappatura per uniformare i nomi delle emozioni
-EMOTION_NORMALIZE = {
-    "happy": "Happy", "felice": "Happy", "felicità": "Happy", "gioia": "Happy",
-    "sad": "Sad", "triste": "Sad", "tristezza": "Sad",
-    "angry": "Angry", "arrabbiato": "Angry", "rabbia": "Angry",
-    "fear": "Fear", "paura": "Fear", "spaventato": "Fear",
-    "surprised": "Surprised", "sorpreso": "Surprised", "sorpresa": "Surprised",
-    "disgust": "Disgust", "disgusto": "Disgust",
-    "neutral": "Neutral", "neutro": "Neutral", "neutrale": "Neutral",
-    "tenderness": "Tenderness", "tenerezza": "Tenderness", "tenero": "Tenderness",
-}
 
 VALID_INTENSITY = {"HIGH", "MEDIUM", "LOW"}
 VALID_VALENCE = {"POSITIVE", "NEUTRAL", "NEGATIVE"}
@@ -28,13 +17,18 @@ VALID_AROUSAL = {"HIGH", "MEDIUM", "LOW"}
 
 
 def load_raw_cases():
+    """imports raw cases from RAW_CASES_PATH"""
     with open(RAW_CASES_PATH, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
-def normalize_emotion_name(name):
+def normalize_emotion_name(name: str) -> str:
     """Uniforma il nome dell'emozione (IT/EN) al formato standard EN."""
-    return EMOTION_NORMALIZE.get(name.strip().lower(), name.strip().title())
+    key = name.strip().lower()
+    for emotion in EMOTIONS:
+        if emotion.matches_alias(key):
+            return emotion.label.value
+    return name.strip().title()
 
 
 def normalize_label(value, valid_set, default="MEDIUM"):
@@ -79,6 +73,8 @@ def normalize_realtime(realtime_raw):
 
 def normalize_case(case):
     """Normalizza un singolo caso."""
+    if not case["case_id"]:
+        raise ValueError("case must have a case_id")
     return {
         "case_id": case["case_id"],
         "timestamp": case.get("timestamp", ""),

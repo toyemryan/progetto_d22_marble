@@ -7,6 +7,7 @@ L'inferenza dell'emozione complessa è delegata a Llama (build_marble_prompt.py)
 """
 
 import re
+from config.emotions import EMOTIONS
 
 # Pesi dal documento tecnico (sezione 9.3)
 PRIMING_WEIGHT = 0.35
@@ -17,39 +18,6 @@ TEXT_WEIGHT = 0.20
 INTENSITY_MAP = {"HIGH": 1.0, "MEDIUM": 0.6, "LOW": 0.3}
 VALENCE_MAP = {"POSITIVE": 1.0, "NEUTRAL": 0.0, "NEGATIVE": -1.0}
 AROUSAL_MAP = {"HIGH": 1.0, "MEDIUM": 0.5, "LOW": 0.2}
-
-# Keywords emozionali italiani per l'analisi testuale (sezione 9.4)
-TEXT_EMOTION_KEYWORDS = {
-    "Happy": [
-        "felice", "gioia", "contento", "bello", "voglio bene", "amore",
-        "sorriso", "ridere", "allegro", "fantastico", "meraviglioso",
-    ],
-    "Sad": [
-        "triste", "tristezza", "piangere", "lacrime", "dolore", "perdita",
-        "mancare", "manca", "solo", "solitudine", "vuoto",
-    ],
-    "Angry": [
-        "arrabbiato", "rabbia", "furioso", "ingiusto", "odio",
-        "irritato", "nervoso", "stufo",
-    ],
-    "Fear": [
-        "paura", "spaventato", "terrore", "ansia", "agitazione",
-        "preoccupato", "timore", "angoscia",
-    ],
-    "Surprised": [
-        "sorpreso", "sorpresa", "incredibile", "assurdo", "wow",
-        "inaspettato", "shock",
-    ],
-    "Tenderness": [
-        "tenero", "tenerezza", "dolce", "amorevole", "affetto",
-        "carino", "delicato", "gentile", "abbraccio",
-    ],
-    "Disgust": [
-        "schifo", "disgusto", "orribile", "rivoltante", "ripugnante",
-    ],
-    "Neutral": [],
-}
-
 
 def score_priming(priming_emotion):
     """
@@ -86,11 +54,11 @@ def score_text(user_message):
     scores = {}
     total_hits = 0
 
-    for emo, keywords in TEXT_EMOTION_KEYWORDS.items():
-        hits = sum(1 for kw in keywords if kw in text_lower)
-        if hits > 0:
-            scores[emo] = hits
-            total_hits += hits
+    for emotion in EMOTIONS:
+        hits = emotion.matches_text(text_lower)
+        if hits:
+            scores[emotion.label.value] = len(hits)
+            total_hits += len(hits)
 
     # Normalizza a 0-1
     if total_hits > 0:
