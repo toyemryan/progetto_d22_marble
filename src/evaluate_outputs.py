@@ -11,6 +11,7 @@ Criteri (dalla sezione 10.1):
 import json
 import os
 import requests
+from config.evualuate_expr import CONCRETENESS_KEYWORDS, FORBIDDEN_WORDS
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
@@ -20,21 +21,6 @@ EVAL_REPORT_PATH = os.path.join(DATA_DIR, "evaluation_report.json")
 OLLAMA_URL = "http://localhost:11434/api/generate"
 OLLAMA_MODEL = "llama3"
 
-# Checklist concreteness (sezione 10.1)
-CONCRETENESS_KEYWORDS = [
-    "environment", "landscape", "space", "room", "world",
-    "light", "lighting", "glow", "shadow", "sun",
-    "color", "colour", "palette", "hue", "tone",
-    "material", "texture", "surface", "stone", "glass", "wood",
-    "object", "element", "tree", "water", "path", "door",
-    "atmosphere", "mood", "feeling",
-]
-
-# Parole vietate (sezione Appendice C)
-FORBIDDEN_WORDS = [
-    "facereader", "noldus", "sensor", "biometric", "webcam",
-    "facial data", "face detection", "camera", "tracking",
-]
 
 
 def load_marble_prompts():
