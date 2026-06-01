@@ -6,8 +6,13 @@ per produrre un profilo emozionale parziale.
 L'inferenza dell'emozione complessa è delegata a Llama (build_marble_prompt.py).
 """
 
-import re
-from config.emotions import EMOTIONS
+from config.emotions import EMOTIONS, HF_TO_EMOTION, Emotion, EmotionLabel
+from deep_translator import GoogleTranslator
+from dotenv import load_dotenv
+import os
+from huggingface_hub import InferenceClient
+
+load_dotenv()
 
 # Pesi dal documento tecnico (sezione 9.3)
 PRIMING_WEIGHT = 0.35
@@ -19,6 +24,9 @@ INTENSITY_MAP = {"HIGH": 1.0, "MEDIUM": 0.6, "LOW": 0.3}
 VALENCE_MAP = {"POSITIVE": 1.0, "NEUTRAL": 0.0, "NEGATIVE": -1.0}
 AROUSAL_MAP = {"HIGH": 1.0, "MEDIUM": 0.5, "LOW": 0.2}
 
+def translate_it_to_en(text: str) -> str:
+    return GoogleTranslator(source="it", target="en").translate(text)
+
 def score_priming(priming_emotion):
     """
     Calcola il punteggio per ogni emozione di priming.
@@ -28,7 +36,10 @@ def score_priming(priming_emotion):
     for emo, data in priming_emotion.items():
         prob = data.get("emotion_probability", 0.5)
         intensity = INTENSITY_MAP.get(data.get("avg_intensity", "MEDIUM"), 0.6)
-        scores[emo] = prob * intensity
+        score = prob * intensity
+        emotion = next((e for e in EMOTIONS if emo.lower() in e.normalize_aliases), None)
+        if emotion is not None:
+            scores[emotion.label] = score
     return scores
 
 
@@ -42,29 +53,31 @@ def score_realtime(realtime_face_emotion):
     intensity = INTENSITY_MAP.get(
         realtime_face_emotion.get("intensity_label", "MEDIUM"), 0.6
     )
-    return {emo: prob * intensity}
+    emotion = next((e for e in EMOTIONS if emo.lower() in e.normalize_aliases), None)
+    if emotion is not None:
+        return {emotion.label: prob * intensity}
+    raise ValueError("wrong value for the emotion")
 
-
-def score_text(user_message):
+def score_text(user_message: str) -> dict:
     """
-    Analisi basica del testo con keyword matching.
-    Conta le occorrenze di keywords per ogni emozione.
+    Traduce il testo ed esegue l'analisi con il classificatore SamLowe/roberta-base-go_emotions
+    Restituisce un dizionario emozione -> score normalizzato 0-1.
     """
-    text_lower = user_message.lower()
-    scores = {}
-    total_hits = 0
+    if not user_message or not user_message.strip():
+        return {"Neutral": 1.0}
 
-    for emotion in EMOTIONS:
-        hits = emotion.matches_text(text_lower)
-        if hits:
-            scores[emotion.label.value] = len(hits)
-            total_hits += len(hits)
+    translated = translate_it_to_en(user_message)
+    token = os.getenv("HF_TOKEN", "")
+    client = InferenceClient(token=os.getenv("HF_TOKEN"))
+    results = client.text_classification(translated, model="SamLowe/roberta-base-go_emotions")
 
-    # Normalizza a 0-1
-    if total_hits > 0:
-        scores = {emo: score / total_hits for emo, score in scores.items()}
-    else:
-        scores = {"Neutral": 1.0}
+    scores: dict[EmotionLabel, float] = {}
+
+    for item in results:
+        label = item["label"].lower()
+        if label in HF_TO_EMOTION and item["score"] > 0.05:
+            emotion = HF_TO_EMOTION[label]
+            scores[emotion] = scores.get(emotion, 0.0) + item["score"]
 
     return scores
 

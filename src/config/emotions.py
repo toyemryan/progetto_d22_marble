@@ -1,8 +1,8 @@
 from dataclasses import dataclass
-from enum import Enum
+from enum import StrEnum
 
 
-class EmotionLabel(Enum):
+class EmotionLabel(StrEnum):
     HAPPY      = "Happy"
     SAD        = "Sad"
     ANGRY      = "Angry"
@@ -111,3 +111,50 @@ EMOTIONS: list[Emotion] = [
         text_keywords=(),
     ),
 ]
+
+#mapping from classifier emotion to my Emotions
+HF_TO_EMOTION: dict[str, EmotionLabel] = {
+    # HAPPY
+    "joy":          EmotionLabel.HAPPY,
+    "amusement":    EmotionLabel.HAPPY,
+    "excitement":   EmotionLabel.HAPPY,
+    "optimism":     EmotionLabel.HAPPY,
+    "pride":        EmotionLabel.HAPPY,
+    "relief":       EmotionLabel.HAPPY,
+    "gratitude":    EmotionLabel.HAPPY,
+
+    # SAD
+    "sadness":      EmotionLabel.SAD,
+    "grief":        EmotionLabel.SAD,
+    "disappointment": EmotionLabel.SAD,
+    "remorse":      EmotionLabel.SAD,
+
+    # ANGRY
+    "anger":        EmotionLabel.ANGRY,
+    "annoyance":    EmotionLabel.ANGRY,
+    "disapproval":  EmotionLabel.ANGRY,
+
+    # FEAR
+    "fear":         EmotionLabel.FEAR,
+    "nervousness":  EmotionLabel.FEAR,
+
+    # SURPRISED
+    "surprise":     EmotionLabel.SURPRISED,
+    "realization":  EmotionLabel.SURPRISED,
+    "confusion":    EmotionLabel.SURPRISED,
+
+    # DISGUST
+    "disgust":      EmotionLabel.DISGUST,
+
+    # TENDERNESS
+    "love":         EmotionLabel.TENDERNESS,
+    "caring":       EmotionLabel.TENDERNESS,
+    "admiration":   EmotionLabel.TENDERNESS,
+
+    # NEUTRAL
+    "neutral":      EmotionLabel.NEUTRAL,
+    "curiosity":    EmotionLabel.NEUTRAL,
+    "desire":       EmotionLabel.NEUTRAL,
+    "approval":     EmotionLabel.NEUTRAL,
+    "embarrassment": EmotionLabel.NEUTRAL,
+}
