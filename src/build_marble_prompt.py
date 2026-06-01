@@ -126,7 +126,7 @@ def call_llama(prompt):
         return None
 
 
-def parse_llama_response(response_text):
+def parse_llama_response(response_text) -> dict|None:
     """
     Parsa la risposta di Llama, cercando il JSON nella risposta.
     Llama spesso aggiunge markdown, commenti, blocchi ``` attorno al JSON.
@@ -258,6 +258,8 @@ def generate_marble_prompt(normalized_case, fusion_profile, cardinal_context):
 
     # 3. Parsa la risposta
     parsed = parse_llama_response(raw_response)
+    if not parsed:
+        parsed = {}
 
     # 4. Costruisci il risultato con metadata
     prompts = load_marble_prompts()

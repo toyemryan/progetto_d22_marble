@@ -92,7 +92,7 @@ def fuse_emotions(normalized_case):
         fusion[emo] = round(p + r + t, 4)
 
     # Emozione dominante = punteggio più alto
-    dominant = max(fusion, key=fusion.get)
+    dominant = max(fusion.keys(), key=lambda k: fusion[k])
 
     # Valence e arousal dalla realtime (segnale più forte)
     rt = normalized_case["realtime_face_emotion"]
