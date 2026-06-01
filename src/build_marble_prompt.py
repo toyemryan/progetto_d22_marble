@@ -10,12 +10,15 @@ Questo modulo:
 6. Salva il risultato in marble_prompts.json
 """
 
+import asyncio
 import json
 import os
 import requests
 from datetime import datetime
 import threading
 from loader.spinner import spinner
+from vpn_utils.vpn import vpn_tunnel
+from vpn_utils.ssh_con import close_remote, run_remote
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROMPTS_DIR = os.path.join(BASE_DIR, "prompts")
@@ -239,13 +242,21 @@ def extract_from_raw_text(text):
     return result
 
 
-def generate_marble_prompt(normalized_case, fusion_profile, cardinal_context):
+async def generate_marble_prompt(normalized_case, fusion_profile, cardinal_context, start_vpn = False):
     """
     Funzione principale: assembla, chiama Llama, salva il risultato.
 
     Input:  caso normalizzato + profilo fusione + contesto cardinale
     Output: dict con runtime_analysis + marble_prompt + metadata
     """
+
+    if start_vpn:
+        async with vpn_tunnel():
+            client, tunnel = await run_remote()
+            result = await generate_marble_prompt(normalized_case, fusion_profile, cardinal_context)
+            await close_remote(client, tunnel)
+            return result
+
     # 1. Assembla il prompt per Llama
     llama_prompt = build_llama_prompt(normalized_case, fusion_profile, cardinal_context)
 
@@ -289,7 +300,7 @@ if __name__ == "__main__":
     case = parse_and_normalize()
     profile = fuse_emotions(case)
     cardinal = prepare_cardinal_context(case, profile)
-    result = generate_marble_prompt(case, profile, cardinal)
+    result = asyncio.run(generate_marble_prompt(case, profile, cardinal))
 
     if result:
         print(json.dumps(result, indent=2, ensure_ascii=False))

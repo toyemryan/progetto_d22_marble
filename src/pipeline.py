@@ -10,7 +10,7 @@ Modalità:
 """
 
 import argparse
-import json
+import asyncio
 import sys
 import os
 
@@ -46,7 +46,7 @@ def process_case(normalized_case):
 
     # Fase 4 — Generazione prompt Marble (Llama)
     print("\n🎨 Fase 4: Generazione prompt Marble...")
-    result = generate_marble_prompt(normalized_case, fusion, cardinal)
+    result = asyncio.run(generate_marble_prompt(normalized_case, fusion, cardinal, start_vpn=True))
 
     if result:
         marble_prompt = result.get("marble_prompt", "")
