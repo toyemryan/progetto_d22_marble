@@ -20,7 +20,7 @@ from loader.spinner import spinner
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROMPTS_DIR = os.path.join(BASE_DIR, "prompts")
 DATA_DIR = os.path.join(BASE_DIR, "data")
-META_PROMPT_PATH = os.path.join(PROMPTS_DIR, "meta_prompt_base.txt")
+META_PROMPT_PATH = os.path.join(PROMPTS_DIR, "meta_prompt_v2.txt")
 MARBLE_PROMPTS_PATH = os.path.join(DATA_DIR, "marble_prompts.json")
 
 # Configurazione Ollama

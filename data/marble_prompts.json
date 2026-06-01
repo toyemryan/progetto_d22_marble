@@ -314,5 +314,56 @@
         ]
       }
     ]
+  },
+  {
+    "prompt_id": "prompt_009",
+    "case_id": "case_003",
+    "timestamp": "2026-06-01T11:16:42.072213",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Happy",
+      "intensity_score": 0.32,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Angry": 0.084,
+        "Neutral": 0.2,
+        "Happy": 0.315,
+        "Sad": 0.162
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.9,
+          "Angry": 0.24
+        },
+        "realtime_scores": {
+          "Sad": 0.36
+        },
+        "text_scores": {
+          "Neutral": 1.0
+        }
+      }
+    },
+    "cardinal_context_hint": "No keyword pattern matched. Llama should infer the cardinal point from the full message and stimulus context.",
+    "runtime_analysis": {
+      "dominant_emotion": "Happy",
+      "emotion_target": {
+        "emotion_target": "Gratitude"
+      },
+      "complex_emotion": "A mix of nostalgia for past Italian football victories, sadness over current disappointment, and a strong desire to be proud of the team's achievements again.",
+      "stimulus_universe": "stadium, football pitch, grass, floodlights, crowd, blue jerseys",
+      "user_reaction": "The user feels frustrated and sad about Italy not qualifying for the World Cup for the third time, but still holds onto hope and memories of past victories.",
+      "world_transformation": "Transform the stadium environment by replacing the sadness with a sense of nostalgia and pride. Maintain the vibrant colors and energy of the crowd, but tone down the brightness to create a more introspective atmosphere."
+    },
+    "marble_prompt": "In the heart of a bustling Italian stadium, the once-luminous floodlights now cast a warm, golden glow on the lush green grass. The air is filled with the whispers of nostalgia as the sounds of past victories echo through the empty seats. Amidst the silence, the blue jerseys seem to whisper words of encouragement, their colors muted but still vibrant enough to evoke memories of triumphant moments. As the sun dips below the horizon, the stadium transforms into a symbol of pride and gratitude, reminding us that even in disappointment, there is always hope for a brighter future.",
+    "negative_constraints": [
+      "No imagery that evokes feelings of despair or hopelessness",
+      "No prominent use of red colors",
+      "No depiction of isolation or loneliness"
+    ],
+    "variants": [
+      " variant 1: The same stadium environment during the day, with a bright blue sky and sunlight filtering through the seats. The grass is a deeper green, and the blue jerseys seem to glow with an inner light, symbolizing the power of hope and resilience.",
+      "variant 2: A panoramic view of the stadium from above, with the floodlights forming a constellation that represents the user's memories and emotions. The colors are muted, but the overall atmosphere is one of warmth and gratitude."
+    ]
   }
 ]
