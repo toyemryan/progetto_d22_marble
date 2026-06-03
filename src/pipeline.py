@@ -23,7 +23,9 @@ from emotion_fusion import fuse_emotions
 from cardinal_point import prepare_cardinal_context
 from build_marble_prompt import generate_marble_prompt
 from evaluate_outputs import evaluate_all
+from dotenv import load_dotenv
 
+load_dotenv()
 
 def process_case(normalized_case):
     """Processa un singolo caso attraverso tutta la pipeline."""
@@ -46,7 +48,8 @@ def process_case(normalized_case):
 
     # Fase 4 — Generazione prompt Marble (Llama)
     print("\n🎨 Fase 4: Generazione prompt Marble...")
-    result = asyncio.run(generate_marble_prompt(normalized_case, fusion, cardinal, start_vpn=True))
+    start_vpn = os.getenv("CONNECT_TO_REMOTE", "false").lower() == "true"
+    result = asyncio.run(generate_marble_prompt(normalized_case, fusion, cardinal, start_vpn=start_vpn))
 
     if result:
         marble_prompt = result.get("marble_prompt", "")

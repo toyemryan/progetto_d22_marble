@@ -57,5 +57,6 @@ async def close_remote(client, tunnel):
         loop = asyncio.get_event_loop()
         await loop.run_in_executor(None, client.close)
         print("Client SSH chiuso con successo.")
+    return 
 
     
