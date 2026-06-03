@@ -8,11 +8,8 @@ L'inferenza dell'emozione complessa è delegata a Llama (build_marble_prompt.py)
 
 from config.emotions import EMOTIONS, HF_TO_EMOTION, Emotion, EmotionLabel
 from utils.translator import translate_it_to_en
-from dotenv import load_dotenv
 import os
-from huggingface_hub import InferenceClient
-
-load_dotenv()
+from huggingface_hub import InferenceClient, errors
 
 # Pesi dal documento tecnico (sezione 9.3)
 PRIMING_WEIGHT = 0.35
@@ -64,17 +61,42 @@ def score_text(user_message: str) -> dict:
         return {"Neutral": 1.0}
 
     translated = translate_it_to_en(user_message)
-    token = os.getenv("HF_TOKEN", "")
-    client = InferenceClient(token=os.getenv("HF_TOKEN"))
-    results = client.text_classification(translated, model="SamLowe/roberta-base-go_emotions")
+    token = os.getenv("HF_TOKEN")
+    client = InferenceClient(token=token)
+    try:
+        results = client.text_classification(translated, model="SamLowe/roberta-base-go_emotions")
+        scores: dict[EmotionLabel, float] = {}
 
-    scores: dict[EmotionLabel, float] = {}
+        for item in results:
+            label = item["label"].lower()
+            if label in HF_TO_EMOTION and item["score"] > 0.05:
+                emotion = HF_TO_EMOTION[label]
+                scores[emotion] = scores.get(emotion, 0.0) + item["score"]
+    except Exception as e:
+        print(f"[score_text] HF API fallita, uso fallback: {e}")
+        scores = base_score_text(user_message)
 
-    for item in results:
-        label = item["label"].lower()
-        if label in HF_TO_EMOTION and item["score"] > 0.05:
-            emotion = HF_TO_EMOTION[label]
-            scores[emotion] = scores.get(emotion, 0.0) + item["score"]
+    return scores
+
+def base_score_text(user_message: str):
+    """
+    Analisi basica del testo con keyword matching.
+    Conta le occorrenze di keywords per ogni emozione.
+    """
+    text_lower = user_message.lower()
+    scores = {}
+    total_hits = 0
+
+    for emotion in EMOTIONS:
+        hits = emotion.matches_text(text_lower)
+        if hits:
+            scores[emotion.label] = len(hits)
+            total_hits += len(hits)
+
+    if total_hits > 0:
+        scores = {emo: score / total_hits for emo, score in scores.items()}
+    else:
+        scores = {EmotionLabel.NEUTRAL: 1.0}
 
     return scores
 
