@@ -2,6 +2,8 @@ import asyncio
 import subprocess
 from contextlib import asynccontextmanager
 
+from vpn_utils.ssh_con import close_remote, run_remote
+
 async def vpn_connect():
     proc = await asyncio.create_subprocess_exec(
         "powershell", "-Command",
@@ -31,7 +33,9 @@ async def vpn_disconnect():
 @asynccontextmanager
 async def vpn_tunnel():
     await vpn_connect()
+    client, tunnel = await run_remote()
     try:
         yield
     finally:
+        await close_remote(client, tunnel)
         await vpn_disconnect()

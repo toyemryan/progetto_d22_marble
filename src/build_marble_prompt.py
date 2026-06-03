@@ -16,9 +16,9 @@ import os
 import requests
 from datetime import datetime
 import threading
+from utils.meta_prompt import load_meta_prompt
 from utils.spinner import spinner
 from vpn_utils.vpn import vpn_tunnel
-from vpn_utils.ssh_con import close_remote, run_remote
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROMPTS_DIR = os.path.join(BASE_DIR, "prompts")
@@ -29,12 +29,6 @@ MARBLE_PROMPTS_PATH = os.path.join(DATA_DIR, "marble_prompts.json")
 # Configurazione Ollama
 OLLAMA_URL = "http://localhost:11434/api/generate"
 OLLAMA_MODEL = "llama3"  # Cambiare se necessario (llama3:8b, llama3:70b, etc.)
-
-
-def load_meta_prompt():
-    with open(META_PROMPT_PATH, "r", encoding="utf-8") as f:
-        return f.read()
-
 
 def load_marble_prompts():
     if os.path.exists(MARBLE_PROMPTS_PATH):
@@ -60,7 +54,7 @@ def build_llama_prompt(normalized_case, fusion_profile, cardinal_context):
     Assembla il prompt finale per Llama combinando
     meta-prompt + dati del caso.
     """
-    meta = load_meta_prompt()
+    meta = load_meta_prompt(META_PROMPT_PATH)
 
     # Inietta i dati nel meta-prompt (usa replace per evitare conflitti con le {} del JSON)
     filled = meta
@@ -252,9 +246,7 @@ async def generate_marble_prompt(normalized_case, fusion_profile, cardinal_conte
 
     if start_vpn:
         async with vpn_tunnel():
-            client, tunnel = await run_remote()
             result = await generate_marble_prompt(normalized_case, fusion_profile, cardinal_context)
-            await close_remote(client, tunnel)
             return result
 
     # 1. Assembla il prompt per Llama

@@ -1,0 +1,23 @@
+Given this message from a user: "{user_message}"
+The user is currently experiencing: {dominant_emotion}
+
+In the context of emotional transformation, what is the direction 
+of change that this message suggests? Not where the user IS,
+but where their words are naturally moving toward.
+
+This is not a final destination, but the next step in an 
+emotional journey — a threshold the user is crossing.
+
+Choose exactly one target emotion from: {array}
+Respond ONLY with a JSON like: {{"emotion": "target_emo", "cardinal_point": "from something toward some other thing"}}
+
+Rules for the cardinal_point:
+- Describe the emotional transition using evocative, narrative language
+- Do NOT use the words of the dominant emotion or the target emotion directly
+- Use concrete human experiences, not abstract labels
+- Keep it concise: one sentence, "from X toward Y" structure
+
+Example:
+User message: "My father is still alive and I am grateful"
+Dominant emotion: Sad
+Output: {{"emotion": "Gratitude", "cardinal_point": "from the weight of absence toward the warmth of presence and bond"}}

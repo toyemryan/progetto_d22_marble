@@ -1,20 +1,61 @@
+import asyncio
 import os
-from huggingface_hub import InferenceClient
+import json
+from build_marble_prompt import call_llama
 from config.emotions import EMOTION_TO_TARGET, EmotionLabel, EmotionTarget
-from utils.translator import translate_it_to_en
+from vpn_utils.vpn import vpn_tunnel
+from utils.meta_prompt import load_meta_prompt
 
-def get_emotion_target(dominant_emotion: EmotionLabel) -> EmotionTarget:
-    return EMOTION_TO_TARGET.get(dominant_emotion, EmotionTarget.NEUTRAL)
+META_PROMPT_PATH = "prompts/cardinal_point_meta_prompt.txt"
+
+async def get_emotion_target(user_message: str, dominant_emotion: EmotionLabel) -> tuple[EmotionTarget, str]:
+    try:
+        array = [e.value for e in EmotionTarget]
+        meta_prompt = load_meta_prompt(META_PROMPT_PATH)
+        prompt = meta_prompt.format(
+            array=array,
+            user_message=user_message,
+            dominant_emotion=dominant_emotion
+        )
+            
+        if os.getenv("CONNECT_TO_REMOTE", "").lower() == "true":
+            async with vpn_tunnel():
+                result = call_llama(prompt)
+        else:
+            result = call_llama(prompt)
+        
+        if not result:
+            raise ValueError("Llama returned None or empty response")
+
+        parsed = json.loads(str(result).strip())
+
+        valid_labels = [e.value for e in EmotionTarget]
+        found = next((label for label in valid_labels if label.lower() in parsed["emotion"].lower()), None)
+
+        if not found:
+            raise ValueError(f"No valid EmotionTarget found in: {parsed['emotion']}")
+
+        return EmotionTarget(found), parsed["cardinal_point"]
+    except Exception as e:
+        print(e)
+        target = EMOTION_TO_TARGET.get(dominant_emotion, EmotionTarget.NEUTRAL)
+        return target, f"from {dominant_emotion.value.lower()} toward {target.value.lower()}"
 
 def prepare_cardinal_context(normalized_case, fusion_profile):
-    target = get_emotion_target(fusion_profile["dominant_emotion"])
+    target, cardinal_point = asyncio.run(
+        get_emotion_target(
+            normalized_case["user_message"], 
+            fusion_profile["dominant_emotion"]
+        )
+    )
     
     return {
         "user_message": normalized_case["user_message"],
         "stimulus": normalized_case["stimulus"],
         "dominant_emotion": fusion_profile["dominant_emotion"],
         "valence": fusion_profile["valence"],
-        "hint": f"the likely cardinal point is: {target}"
+        "emotion_target": target,
+        "hint": f"the likely cardinal point is: {cardinal_point}",
     }
 
 if __name__ == "__main__":
