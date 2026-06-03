@@ -16,7 +16,7 @@ import os
 import requests
 from datetime import datetime
 import threading
-from loader.spinner import spinner
+from utils.spinner import spinner
 from vpn_utils.vpn import vpn_tunnel
 from vpn_utils.ssh_con import close_remote, run_remote
 
