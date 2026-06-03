@@ -3,6 +3,7 @@ from enum import StrEnum
 
 
 class EmotionLabel(StrEnum):
+    """Emozioni rilevabili dal testo e dal volto"""
     HAPPY      = "Happy"
     SAD        = "Sad"
     ANGRY      = "Angry"
@@ -12,6 +13,31 @@ class EmotionLabel(StrEnum):
     TENDERNESS = "Tenderness"
     NEUTRAL    = "Neutral"
 
+
+class EmotionTarget(StrEnum):
+    """Direzioni emotive verso cui portare l'utente"""
+    HOPE        = "Hope"
+    GRATITUDE   = "Gratitude"
+    PRIDE       = "Pride"
+    ACCEPTANCE  = "Acceptance"
+    SAFETY      = "Safety"
+    CONNECTION  = "Connection"
+    JOY         = "Joy"
+    TENDERNESS  = "Tenderness"
+    NOSTALGIA   = "Nostalgia"
+    WONDER      = "Wonder"
+    NEUTRAL = "Neutral"
+
+EMOTION_TO_TARGET: dict[EmotionLabel, EmotionTarget] = {
+    EmotionLabel.SAD:        EmotionTarget.HOPE,
+    EmotionLabel.FEAR:       EmotionTarget.SAFETY,
+    EmotionLabel.ANGRY:      EmotionTarget.ACCEPTANCE,
+    EmotionLabel.DISGUST:    EmotionTarget.WONDER,
+    EmotionLabel.SURPRISED:  EmotionTarget.JOY,
+    EmotionLabel.HAPPY:      EmotionTarget.GRATITUDE,
+    EmotionLabel.TENDERNESS: EmotionTarget.CONNECTION,
+    EmotionLabel.NEUTRAL:    EmotionTarget.WONDER,
+}
 
 @dataclass(frozen=True)
 class Emotion:

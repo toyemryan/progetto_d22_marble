@@ -7,7 +7,7 @@ L'inferenza dell'emozione complessa è delegata a Llama (build_marble_prompt.py)
 """
 
 from config.emotions import EMOTIONS, HF_TO_EMOTION, Emotion, EmotionLabel
-from deep_translator import GoogleTranslator
+from utils.translator import translate_it_to_en
 from dotenv import load_dotenv
 import os
 from huggingface_hub import InferenceClient
@@ -23,9 +23,6 @@ TEXT_WEIGHT = 0.20
 INTENSITY_MAP = {"HIGH": 1.0, "MEDIUM": 0.6, "LOW": 0.3}
 VALENCE_MAP = {"POSITIVE": 1.0, "NEUTRAL": 0.0, "NEGATIVE": -1.0}
 AROUSAL_MAP = {"HIGH": 1.0, "MEDIUM": 0.5, "LOW": 0.2}
-
-def translate_it_to_en(text: str) -> str:
-    return GoogleTranslator(source="it", target="en").translate(text)
 
 def score_priming(priming_emotion):
     """
