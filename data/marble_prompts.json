@@ -30,13 +30,13 @@
         }
       }
     },
-    "cardinal_context_hint": "Based on keywords ['mio padre', 'vivo'], the likely cardinal point is: from loss to presence, gratitude, and familial bond",
+    "cardinal_context_hint": "the likely cardinal point is: from loss toward presence, gratitude, and familial bond",
     "runtime_analysis": {
       "dominant_emotion": "Happy",
       "complex_emotion": "Gratitude and joy in the face of loss, accompanied by a sense of protection and presence.",
       "stimulus": "Death of Mufasa - The Lion King",
       "user_reaction": "Interpreting Mufasa's death as a reminder that one's own father is alive, leading to gratitude and emotional connection.",
-      "cardinal_point": "From loss to presence, gratitude, and familial bond",
+      "cardinal_point": "From loss toward presence, gratitude, and familial bond",
       "world_objective": "Create an emotionally warm 3D world inspired by the feeling of realizing that someone deeply loved is still present in one's life."
     },
     "marble_prompt": "Imagine a sunlit savannah at dawn, where golden grasses sway gently in the morning breeze. A subtle mist rises from the earth, carrying the scent of blooming wildflowers. In this serene landscape, a majestic tree stands tall, its branches adorned with vibrant yellow and orange streamers, symbolizing the joy and warmth of connection. As you wander through this idyllic world, the soft rustling of leaves and the distant songs of birds create a soothing melody, evoking feelings of gratitude and peaceful coexistence. Amidst the lush greenery, a winding path invites exploration, leading to hidden clearings and secret glades, where the gentle warmth of sunlight nurtures the soul. The atmosphere is filled with an air of hope and renewal, as if the very presence of loved ones has awakened the beauty within.",
@@ -75,7 +75,7 @@
         }
       }
     },
-    "cardinal_context_hint": "Based on keywords ['triste'], the likely cardinal point is: from loss to memory, care, and hope",
+    "cardinal_context_hint": "Based on keywords ['triste'], the likely cardinal point is: from loss toward memory, care, and hope",
     "runtime_analysis": {
       "dominant_emotion": "Sad",
       "complex_emotion": "a deep sense of loss and longing, as if the weight of grief is crushing one's soul",
@@ -558,7 +558,7 @@
         }
       }
     },
-    "cardinal_context_hint": "the likely cardinal point is: from sad toward hope",
+    "cardinal_context_hint": "the likely cardinal point is: from happy toward joy",
     "runtime_analysis": {
       "dominant_emotion": "Sad",
       "emotion_target": "Hope",

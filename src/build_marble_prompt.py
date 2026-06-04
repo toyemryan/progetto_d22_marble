@@ -77,7 +77,7 @@ def build_llama_prompt(normalized_case, fusion_profile, cardinal_context):
     return filled
 
 
-def call_llama(prompt):
+def call_llama(prompt, label:str = "In attesa di risposta da Llama"):
     """
     Chiama Llama tramite Ollama API.
     Restituisce la risposta come stringa.
@@ -94,7 +94,7 @@ def call_llama(prompt):
     }
 
     stop_event = threading.Event()
-    spinner_thread = threading.Thread(target=spinner, args=(stop_event, "In attesa di risposta da Llama"))
+    spinner_thread = threading.Thread(target=spinner, args=(stop_event, label))
     try:
         spinner_thread.start()
 

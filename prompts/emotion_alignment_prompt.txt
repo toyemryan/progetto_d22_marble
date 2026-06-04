@@ -70,7 +70,11 @@ Ask yourself:
 ---
 
 Respond ONLY with valid JSON, no markdown, no explanation outside the JSON:
-{{"score": 3, "motivation": "explanation of why this score, referencing at least 2 specific visual elements from the description that support or undermine the emotional proximity", "relative_position": "better/worse/equal from the comparison calibration", "best_element": "the single most emotionally effective visual element in the description", "weakness": "what specific element or change would be needed to score one point higher. Like a missing feature for the next level"}}
+{{"score": 3, "motivation": "explanation of why this score, referencing at least 2 specific visual elements from the description that support or undermine the emotional proximity", "relative_position": "better/worse/equal", "best_element": "the single most emotionally effective visual element in the description", "weakness": "what specific element or change would be needed to score one point higher. Like a missing feature for the next level"}}
 
-IMPORTANT: If weakness is "none", the score MUST be 5, but remember that 5 is rare.
-If you assign a score below 5, you MUST name a specific weakness.
+IMPORTANT: The relative_position must be better, equal or worse
+if the score is greater, equal or lower than the last evaluated prompt.
+
+CRITICAL: If weakness is "none", you MUST assign score 5. 
+If you assign score 4 or below, you MUST name a specific weakness. 
+These two rules are absolute and have no exceptions, but remember 5 is rare.
