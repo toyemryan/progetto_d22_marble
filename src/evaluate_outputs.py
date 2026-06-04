@@ -13,6 +13,7 @@ import json
 import os
 from build_marble_prompt import call_llama
 from config.emotions import EmotionTarget
+from config.evualuate_expr import EMOTION_REFERENCE_PROMPT, EMOTION_REFERENCE_PROMPT_REASON
 from utils.file_utils import load_from_file
 from vpn_utils.vpn import vpn_tunnel
 from datetime import datetime
@@ -23,23 +24,6 @@ PROMPTS_DIR = os.path.join(BASE_DIR, "prompts")
 MARBLE_PROMPTS_PATH = os.path.join(DATA_DIR, "marble_prompts.json")
 EVAL_REPORT_PATH = os.path.join(DATA_DIR, "evaluation_report.json")
 EMOTION_PROMPT_PATH = os.path.join(PROMPTS_DIR, "emotion_alignment_prompt.txt")
-
-REFERENCE_PROMPT = """Imagine yourself standing at the edge of a serene lake, 
-surrounded by the gentle rustling of trees and the soft warmth of golden sunlight. 
-The air is filled with the sweet scent of blooming flowers as far as the eye can see. 
-In the distance, a faint mist rises from the water's surface, carrying the whispers 
-of past triumphs. The sound of gentle lapping waves against the shore creates a soothing 
-melody that calms the mind and heart. As you walk along the lake's edge, the soft grass 
-beneath your feet and the warmth of the sun on your skin evoke feelings of comfort and 
-gratitude for life's simple pleasures. A delicate wooden boat glides across the water, 
-its gentle rocking motion echoing the rhythm of your heartbeat. In this peaceful sanctuary, 
-the weight of disappointment slowly lifts, replaced by a sense of nostalgia and appreciation 
-for the beauty that surrounds you."""
-
-REFERENCE_PROMPT_REASON = """scores 1 because it generates a generic lake landscape 
-    with only a vague emotional warmth, completely disconnected from the visual stimulus 
-    (Italy 2006 World Cup stadium). No stadium, no jerseys, no football elements. 
-    The target emotion is barely implied and not anchored to any specific visual element."""
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 OLLAMA_MODEL = "llama3"
@@ -102,9 +86,9 @@ async def evaluate_emotion_alignment(prompt_entry: dict, prompt_3_ex: dict, last
 
 async def evaluate_prompt(prompt_entry, last_eval) -> dict:
     """Valuta un singolo prompt su tutti i criteri singolari."""
-    example_3 = {"prompt": REFERENCE_PROMPT,
+    example_3 = {"prompt": EMOTION_REFERENCE_PROMPT,
                  "score": "3",
-                 "motivation": REFERENCE_PROMPT_REASON
+                 "motivation": EMOTION_REFERENCE_PROMPT_REASON
     }
     metrics = {
         "emotion_alignment": await evaluate_emotion_alignment(prompt_entry, example_3, last_eval),
