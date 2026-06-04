@@ -126,7 +126,7 @@ def main():
     elif args.all:
         run_all()
     elif args.evaluate:
-        evaluate_all()
+        asyncio.run(evaluate_all())
     elif args.case:
         run_case(args.case)
     else:

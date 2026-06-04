@@ -16,7 +16,7 @@ import os
 import requests
 from datetime import datetime
 import threading
-from utils.meta_prompt import load_meta_prompt
+from utils.file_utils import load_from_file
 from utils.spinner import spinner
 from vpn_utils.vpn import vpn_tunnel
 
@@ -54,15 +54,17 @@ def build_llama_prompt(normalized_case, fusion_profile, cardinal_context):
     Assembla il prompt finale per Llama combinando
     meta-prompt + dati del caso.
     """
-    meta = load_meta_prompt(META_PROMPT_PATH)
+    meta = load_from_file(META_PROMPT_PATH)
 
     # Inietta i dati nel meta-prompt (usa replace per evitare conflitti con le {} del JSON)
-    filled = meta
-    filled = filled.replace("{stimulus}", normalized_case["stimulus"])
-    filled = filled.replace("{priming_emotion}", json.dumps(normalized_case["priming_emotion"], indent=2))
-    filled = filled.replace("{realtime_face_emotion}", json.dumps(normalized_case["realtime_face_emotion"], indent=2))
-    filled = filled.replace("{user_message}", normalized_case["user_message"])
-    filled = filled.replace("{fusion_profile}", json.dumps(fusion_profile, indent=2))
+    filled = (meta
+              .replace("{stimulus}", normalized_case["stimulus"])
+              .replace("{priming_emotion}", json.dumps(normalized_case["priming_emotion"], indent=2))
+              .replace("{realtime_face_emotion}", json.dumps(normalized_case["realtime_face_emotion"], indent=2))
+              .replace("{user_message}", normalized_case["user_message"])
+              .replace("{fusion_profile}", json.dumps(fusion_profile, indent=2))
+              .replace("{emotion_target}", str(cardinal_context.get("emotion_target", "")))
+    )
 
     # Aggiungi il contesto del punto cardinale come istruzione aggiuntiva
     cardinal_hint = cardinal_context.get("hint", "")

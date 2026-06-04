@@ -1,0 +1,239 @@
+[
+  {
+    "prompt_id": "prompt_003",
+    "metrics": {
+      "emotion_alignment": {
+        "metric": "emotion_alignment",
+        "score": -1,
+        "motivation": "Evaluation failed: target emotion not passed",
+        "emotion_target": "",
+        "cardinal_point": "Based on keywords ['mio padre', 'vivo'], the likely cardinal point is: from loss to presence, gratitude, and familial bond"
+      }
+    }
+  },
+  {
+    "prompt_id": "prompt_004",
+    "metrics": {
+      "emotion_alignment": {
+        "metric": "emotion_alignment",
+        "score": -1,
+        "motivation": "Evaluation failed: target emotion not passed",
+        "emotion_target": "",
+        "cardinal_point": "Based on keywords ['triste'], the likely cardinal point is: from loss to memory, care, and hope"
+      }
+    }
+  },
+  {
+    "prompt_id": "prompt_005",
+    "metrics": {
+      "emotion_alignment": {
+        "metric": "emotion_alignment",
+        "score": -1,
+        "motivation": "Evaluation failed: target emotion not passed",
+        "emotion_target": "",
+        "cardinal_point": "Based on keywords ['triste'], the likely cardinal point is: from loss to memory, care, and hope"
+      }
+    }
+  },
+  {
+    "prompt_id": "prompt_006",
+    "metrics": {
+      "emotion_alignment": {
+        "metric": "emotion_alignment",
+        "score": -1,
+        "motivation": "Evaluation failed: target emotion not passed",
+        "emotion_target": "",
+        "cardinal_point": "No keyword pattern matched. Llama should infer the cardinal point from the full message and stimulus context."
+      }
+    }
+  },
+  {
+    "prompt_id": "prompt_007",
+    "metrics": {
+      "emotion_alignment": {
+        "metric": "emotion_alignment",
+        "score": -1,
+        "motivation": "Evaluation failed: target emotion not passed",
+        "emotion_target": "",
+        "cardinal_point": "No keyword pattern matched. Llama should infer the cardinal point from the full message and stimulus context."
+      }
+    }
+  },
+  {
+    "prompt_id": "prompt_008",
+    "metrics": {
+      "emotion_alignment": {
+        "metric": "emotion_alignment",
+        "score": -1,
+        "motivation": "Evaluation failed: target emotion not passed",
+        "emotion_target": "",
+        "cardinal_point": "No keyword pattern matched. Llama should infer the cardinal point from the full message and stimulus context."
+      }
+    }
+  },
+  {
+    "prompt_id": "prompt_009",
+    "metrics": {
+      "emotion_alignment": {
+        "metric": "emotion_alignment",
+        "score": 4,
+        "motivation": "The prompt effectively uses at least 3 specific visual elements to evoke the target emotion of gratitude, such as the warm golden glow from the floodlights, the blue jerseys whispering words of encouragement, and the stadium transforming into a symbol of pride and gratitude. These elements work together to create a powerful emotional direction.",
+        "relative_position": "better",
+        "best_element": "The blue jerseys seem to whisper words of encouragement, their colors muted but still vibrant enough to evoke memories of triumphant moments.",
+        "weakness": "The prompt could benefit from a stronger connection between the visual elements and the emotional transformation, as it is already quite effective in evoking gratitude.",
+        "emotion_target": "Gratitude",
+        "cardinal_point": "No keyword pattern matched. Llama should infer the cardinal point from the full message and stimulus context."
+      }
+    }
+  },
+  {
+    "prompt_id": "prompt_010",
+    "metrics": {
+      "emotion_alignment": {
+        "metric": "emotion_alignment",
+        "score": 4,
+        "motivation": "This prompt effectively uses at least 3 specific visual elements to evoke the target emotion of hope, such as the once-lively football pitch now lay empty like a canvas awaiting a new brushstroke, the blue jerseys whispering tales of victories past, and the faintest hint of a smile on the faces of those who remained. These elements work together to create a powerful emotional direction.",
+        "relative_position": "better",
+        "best_element": "the faintest hint of a smile on the faces of those who remained",
+        "weakness": "none",
+        "emotion_target": "Hope",
+        "cardinal_point": "the likely cardinal point is: Hope"
+      }
+    }
+  },
+  {
+    "prompt_id": "prompt_011",
+    "metrics": {
+      "emotion_alignment": {
+        "metric": "emotion_alignment",
+        "score": 4,
+        "motivation": "This prompt effectively uses multiple specific visual elements to evoke hope, such as the floodlights casting a warm glow on the deserted football pitch, the once-vibrant blue jerseys now hanging limp and lifeless, and the sound of distant cheering growing louder. These elements work together to create a powerful emotional direction.",
+        "relative_position": "better",
+        "best_element": "the sound of distant cheering growing louder",
+        "weakness": "none",
+        "emotion_target": "Hope",
+        "cardinal_point": "the likely cardinal point is: Hope"
+      }
+    }
+  },
+  {
+    "prompt_id": "prompt_012",
+    "metrics": {
+      "emotion_alignment": {
+        "metric": "emotion_alignment",
+        "score": 4,
+        "motivation": "The prompt effectively uses multiple specific visual elements to evoke hope, such as the echoes of past glories lingering in the air, the once-vibrant blue jerseys now faded and worn, and the faint glow of hope beginning to emerge. These elements work together to create a powerful emotional direction.",
+        "relative_position": "better",
+        "best_element": "The use of 'echoes of past glories' is particularly effective in evoking hope, as it implies that the memories of Italy's triumphant moments are still alive and relevant.",
+        "weakness": "While the prompt does an excellent job of anchoring to the visual stimulus and using specific elements to evoke hope, it could be strengthened by more explicitly highlighting the transformation from a melancholic landscape to one filled with hope.",
+        "emotion_target": "Hope",
+        "cardinal_point": "the likely cardinal point is: Hope"
+      }
+    }
+  },
+  {
+    "prompt_id": "prompt_013",
+    "metrics": {
+      "emotion_alignment": {
+        "metric": "emotion_alignment",
+        "score": 4,
+        "motivation": "The prompt effectively uses multiple specific visual elements to evoke hope, such as the stern rising into the darkness, the warm light spreading across the water, and schools of bioluminescent fish dancing in rhythmic harmony. These elements work together to create a powerful emotional direction.",
+        "relative_position": "better",
+        "best_element": "The warm light spreading across the water is the most effective visual element, as it explicitly represents the transition from sorrow to hope.",
+        "weakness": "The prompt could be improved by more explicitly highlighting the connection between the ship's creaking hull and the schools of bioluminescent fish dancing in rhythmic harmony. This element feels slightly disconnected from the rest of the description.",
+        "emotion_target": "Hope",
+        "cardinal_point": "the likely cardinal point is: from sad toward hope"
+      }
+    }
+  },
+  {
+    "prompt_id": "prompt_014",
+    "metrics": {
+      "emotion_alignment": {
+        "metric": "emotion_alignment",
+        "score": 4,
+        "motivation": "The prompt effectively uses multiple specific visual elements to evoke self-acceptance, such as the 'vibrant tapestry of warm hues', the 'sweet scent of blooming acacia trees', and the 'twilight's warmth' that illuminates the landscape. These elements work together to create a powerful emotional direction.",
+        "relative_position": "better",
+        "best_element": "the vibrant tapestry of warm hues",
+        "weakness": "The prompt could benefit from more explicit connection between the visual elements and the cardinal point (from sorrow toward self-acceptance). While the transition is hinted at, it's not as clear as in Reference B.",
+        "emotion_target": "self-acceptance",
+        "cardinal_point": "the likely cardinal point is: from sorrow toward self-acceptance"
+      }
+    }
+  },
+  {
+    "prompt_id": "prompt_015",
+    "metrics": {
+      "emotion_alignment": {
+        "metric": "emotion_alignment",
+        "score": 5,
+        "motivation": "The prompt effectively uses multiple specific visual elements to evoke appreciation, such as 'warm, golden light', 'grasslands alive with the sounds of lions' gentle roars', and 'stars begin to twinkle in the evening sky'. These elements work together to create a powerful emotional direction.",
+        "relative_position": "better",
+        "best_element": "the description of the grasslands being 'alive with the sounds of lions' gentle roars'",
+        "weakness": "none",
+        "emotion_target": "Appreciation",
+        "cardinal_point": "the likely cardinal point is: from indifference toward appreciation"
+      }
+    }
+  },
+  {
+    "prompt_id": "prompt_016",
+    "metrics": {
+      "emotion_alignment": {
+        "metric": "emotion_alignment",
+        "score": 4,
+        "motivation": "The world clearly communicates the target emotion through at least 3 named visual elements: 'warm, golden light', 'proud lions', and 'star-studded sky'. The cardinal point is partially visible in the transformation from vulnerability to empowered connection. For example, the phrase 'the strength and resilience that lies within' suggests a shift from vulnerability to confidence.",
+        "relative_position": "better",
+        "best_element": "The description of the 'proud lions, their manes glistening in the fading light', effectively evokes pride and majesty.",
+        "weakness": "While the prompt does an excellent job of anchoring to the visual stimulus and conveying a sense of connection to the land, it could benefit from more explicit representation of the cardinal point (from vulnerability to empowered connection). Some elements, like the 'scent of blooming flowers' and 'earthy aroma of freshly turned soil', might be too generic or disconnected from the target emotion.",
+        "emotion_target": "Pride",
+        "cardinal_point": "the likely cardinal point is: from a sense of vulnerability toward a feeling of empowered connection"
+      }
+    }
+  },
+  {
+    "prompt_id": "prompt_017",
+    "metrics": {
+      "emotion_alignment": {
+        "metric": "emotion_alignment",
+        "score": 4,
+        "motivation": "The world clearly communicates the target emotion through at least 3 named visual elements: 'Pride Rock', 'golden glow of sunset', and 'manes glistening in the warm light'. The cardinal point is partially visible in the transformation from uncertainty to familial security and appreciation.",
+        "relative_position": "better",
+        "best_element": "The specific image of 'Pride Rock' majestically rising against the golden glow of sunset effectively anchors the world to the visual stimulus, making it a strong foundation for the pride emotion.",
+        "weakness": "While the description does well in evoking pride, it could be stronger by including more explicit elements that demonstrate the transformation from uncertainty to familial security and appreciation.",
+        "emotion_target": "Pride",
+        "cardinal_point": "the likely cardinal point is: from a sense of uncertainty toward a foundation of familial security and appreciation"
+      }
+    }
+  },
+  {
+    "prompt_id": "prompt_018",
+    "metrics": {
+      "emotion_alignment": {
+        "metric": "emotion_alignment",
+        "score": 4,
+        "motivation": "The prompt effectively uses at least three specific visual elements to communicate the target emotion: 'As the Titanic's grand staircase stretches out like a ghostly arm', 'soft glow of the chandeliers', and 'deserted corridors'. The description also explicitly conveys the transformation from isolation to connection through the mention of 'perhaps in this moment of sorrow, I can find solace in the connections that once bound me to others.'",
+        "relative_position": "better than Reference A (score 3), equal to or worse than Reference B (score 4)",
+        "best_element": "the ship's grand staircase stretching out like a ghostly arm",
+        "weakness": "The prompt could be improved by adding more specific visual elements that directly evoke the target emotion of connection, rather than relying solely on the emotional connotation of the Titanic's grandeur and opulence.",
+        "emotion_target": "Connection",
+        "cardinal_point": "the likely cardinal point is: from the isolation of grief toward a sense of shared experience and communal solace"
+      }
+    }
+  },
+  {
+    "prompt_id": "prompt_019",
+    "metrics": {
+      "emotion_alignment": {
+        "metric": "emotion_alignment",
+        "score": 4,
+        "motivation": "The prompt effectively uses at least three specific visual elements to communicate the target emotion, such as 'the once-vibrant stadium now lay in a desolate silence', 'the blue jerseys, once worn with pride, now hung limp and forgotten', and 'a glimmer of light flickered'. The description also explicitly conveys the transformation from disappointment to hope through the mention of 'one day, the national team would rise again, stronger and more resilient than ever before.'",
+        "relative_position": "better",
+        "best_element": "the blue jerseys, once worn with pride, now hung limp and forgotten",
+        "weakness": "The prompt could be strengthened by adding more sensory details to further emphasize the desolation and disappointment, such as the smell of stale air or the sound of distant whispers.",
+        "emotion_target": "Hope",
+        "cardinal_point": "the likely cardinal point is: from the darkness of disappointment toward the dawn of a new possibility"
+      }
+    }
+  }
+]

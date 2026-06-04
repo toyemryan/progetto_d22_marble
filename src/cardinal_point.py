@@ -4,14 +4,15 @@ import json
 from build_marble_prompt import call_llama
 from config.emotions import EMOTION_TO_TARGET, EmotionLabel, EmotionTarget
 from vpn_utils.vpn import vpn_tunnel
-from utils.meta_prompt import load_meta_prompt
+from utils.file_utils import load_from_file
 
-META_PROMPT_PATH = "prompts/cardinal_point_meta_prompt.txt"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+META_PROMPT_PATH = os.path.join(BASE_DIR, "prompts", "cardinal_point_meta_prompt.txt")
 
 async def get_emotion_target(user_message: str, dominant_emotion: EmotionLabel) -> tuple[EmotionTarget, str]:
     try:
         array = [e.value for e in EmotionTarget]
-        meta_prompt = load_meta_prompt(META_PROMPT_PATH)
+        meta_prompt = load_from_file(META_PROMPT_PATH)
         prompt = meta_prompt.format(
             array=array,
             user_message=user_message,

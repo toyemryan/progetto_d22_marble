@@ -347,9 +347,7 @@
     "cardinal_context_hint": "No keyword pattern matched. Llama should infer the cardinal point from the full message and stimulus context.",
     "runtime_analysis": {
       "dominant_emotion": "Happy",
-      "emotion_target": {
-        "emotion_target": "Gratitude"
-      },
+      "emotion_target": "Gratitude",
       "complex_emotion": "A mix of nostalgia for past Italian football victories, sadness over current disappointment, and a strong desire to be proud of the team's achievements again.",
       "stimulus_universe": "stadium, football pitch, grass, floodlights, crowd, blue jerseys",
       "user_reaction": "The user feels frustrated and sad about Italy not qualifying for the World Cup for the third time, but still holds onto hope and memories of past victories.",
@@ -563,9 +561,7 @@
     "cardinal_context_hint": "the likely cardinal point is: from sad toward hope",
     "runtime_analysis": {
       "dominant_emotion": "Sad",
-      "emotion_target": {
-        "emotion_target": "Hope"
-      },
+      "emotion_target": "Hope",
       "complex_emotion": "A poignant, mournful atmosphere permeates the world, evoking feelings of loss and longing.",
       "stimulus_universe": "the sinking Titanic ship in the middle of the ocean, with a gloomy, stormy night sky",
       "user_reaction": "The user is still reeling from the tragic death of Jack Dawson, feeling isolated and alone despite the vastness of the ocean around them",
@@ -631,9 +627,7 @@
     "cardinal_context_hint": "the likely cardinal point is: from sorrow toward self-acceptance",
     "runtime_analysis": {
       "dominant_emotion": "Happy",
-      "emotion_target": {
-        "self-acceptance": null
-      },
+      "emotion_target": "self-acceptance",
       "complex_emotion": "A blend of joy and tenderness, with a sense of warmth and acceptance.",
       "stimulus_universe": "savannah, Pride Rock, African landscape, lions, twilight",
       "user_reaction": "The death of Mufasa does not make me sad because my father is alive and I love him very much!",
@@ -721,6 +715,269 @@
       {
         "prompt": "The savannah stretches out before you like an endless tapestry, woven from threads of emerald green and golden wheat. The lions' manes shimmer in the sunlight like a thousand tiny jewels, as Pride Rock rises into the distance, its stones glowing with a soft, luminescent light. In this world, every step feels like a journey of discovery, leading you toward a deeper appreciation for the beauty that surrounds you.",
         "description": "A different spatial scale and symbolic emphasis"
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_016",
+    "case_id": "case_001",
+    "timestamp": "2026-06-04T09:28:43.081144",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Happy",
+      "intensity_score": 0.64,
+      "valence": "positive",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Happy": 0.6375,
+        "Tenderness": 0.1785,
+        "Sad": 0.1848,
+        "Neutral": 0.0105,
+        "Surprised": 0.0105
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.6,
+          "Sad": 0.12,
+          "Surprised": 0.03,
+          "Neutral": 0.03
+        },
+        "realtime_scores": {
+          "Happy": 0.95
+        },
+        "text_scores": {
+          "Tenderness": 0.8926364481449127,
+          "Sad": 0.7140482850372791
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from a sense of vulnerability toward a feeling of empowered connection",
+    "runtime_analysis": {
+      "dominant_emotion": "Happy",
+      "emotion_target": "Pride",
+      "complex_emotion": "A warm, golden light illuminates the savannah as the sun sets on Pride Rock, filling the air with a sense of joy and celebration. The emotional resonance is one of pride and connection, as if the very land itself is acknowledging the strength and resilience that lies within.",
+      "stimulus_universe": {
+        "setting": "Savannah",
+        "objects": [
+          "Pride Rock",
+          "Lions"
+        ],
+        "characters": [
+          "Simba"
+        ],
+        "narrative themes": [
+          "Mufasa's death",
+          "Circle of life"
+        ],
+        "visual elements": [
+          "Twilight",
+          "Golden light"
+        ]
+      },
+      "user_reaction": "The user's message conveys a sense of joy and connection, acknowledging the strength and resilience that lies within. This emotional state is reflected in the world's atmosphere and lighting.",
+      "world_transformation": "The base environment is transformed by the happy emotion, shifting from a somber tone to a vibrant, celebratory one. The golden light illuminates the savannah, filling it with warmth and life."
+    },
+    "marble_prompt": "As the sun sets on Pride Rock, the savannah comes alive with a warm, golden light. The air is filled with the sounds of celebration, as if the very land itself is acknowledging the strength and resilience that lies within. The lions, majestic and proud, roam freely beneath the star-studded sky. The scent of blooming flowers wafts through the grasses, and the earthy aroma of freshly turned soil mingles with the sweet fragrance of blooming acacia trees. A pride of lions, their manes glistening in the fading light, gathers around a majestic tree, its branches heavy with ripened fruit. Simba, the young prince, stands tall among them, his heart full of joy and connection to the land that is his home. The world pulses with life, as if every molecule of air holds the essence of pride and connection.",
+    "negative_constraints": [
+      "No scenes of despair or loss",
+      "No dark tones or shadows",
+      "No isolation or loneliness"
+    ],
+    "variants": [
+      {
+        "prompt": "As the sun rises over Pride Rock, a new day dawns on the savannah. The air is crisp with the scent of morning dew, and the grasses are bathed in a warm, golden light. A pride of lions stirs, their manes glistening like molten lava as they stretch and awaken to the promise of a new day. Simba, young and full of energy, bounds across the landscape, his heart filled with joy and connection to the land that is his home.",
+        "time_of_day": "Morning",
+        "palette": [
+          "Golden light",
+          "Crisp morning dew"
+        ]
+      },
+      {
+        "prompt": "From a panoramic perspective, Pride Rock rises majestically above the savannah, its granite walls towering into the sky. The landscape stretches out in every direction, a tapestry of grasses and flowers woven together by the gentle breeze. A pride of lions, their manes glowing like embers in the fading light, roams freely across the rolling hills, their paws barely touching the ground as they gallop with abandon. Simba stands tall at the edge of this vast expanse, his heart filled with a sense of connection to the land and its creatures.",
+        "spatial_scale": "Panoramic",
+        "symbolic_emphasis": [
+          "Majesty",
+          "Connection"
+        ]
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_017",
+    "case_id": "case_001",
+    "timestamp": "2026-06-04T09:30:15.549441",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Happy",
+      "intensity_score": 0.64,
+      "valence": "positive",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Tenderness": 0.1785,
+        "Neutral": 0.0105,
+        "Surprised": 0.0105,
+        "Sad": 0.1848,
+        "Happy": 0.6375
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.6,
+          "Sad": 0.12,
+          "Surprised": 0.03,
+          "Neutral": 0.03
+        },
+        "realtime_scores": {
+          "Happy": 0.95
+        },
+        "text_scores": {
+          "Tenderness": 0.8926364481449127,
+          "Sad": 0.7140482850372791
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from a sense of uncertainty toward a foundation of familial security and appreciation",
+    "runtime_analysis": {
+      "dominant_emotion": "Happy",
+      "emotion_target": "Pride",
+      "complex_emotion": "A feeling of warmth and togetherness, rooted in the pride of family bonds and the joy of being alive.",
+      "stimulus_universe": "Savannah, Pride Rock, African landscape, lions, twilight",
+      "user_reaction": "The user's message expresses happiness and gratitude for their father's life, which is a source of comfort and security.",
+      "world_transformation": "The emotional transformation modulates the stimulus universe with warm golden light, vibrant colors, full and alive space, yellow/gold/orange/green hues, evoking a sense of abundance and contentment."
+    },
+    "marble_prompt": "In the twilight savannah, Pride Rock rises majestically against the golden glow of sunset. The air is filled with the sounds of lions' gentle roars, their manes glistening in the warm light. The grasslands stretch out like a sea of gold, where antelopes and gazelles roam freely, their coats shimmering with every step. In this vibrant tapestry, life bursts forth in every direction, a testament to the pride and joy that fills your heart.",
+    "negative_constraints": [
+      "No sorrow or despair-inducing imagery",
+      "No dark or ominous tones",
+      "No isolation or loneliness",
+      "No danger or threat of loss"
+    ],
+    "variants": [
+      {
+        "marble_prompt": "As the sun dips below the horizon, the savannah transforms into a kaleidoscope of colors. The sky is painted with hues of pink and orange, while the grasslands glow like embers. Lions laze in the warm light, their manes a fiery halo. In this world of abundance and joy, your heart feels at peace, surrounded by the pride and love that fills your life.",
+        "constraints": [
+          "No sudden movements or loud noises",
+          "No harsh or jarring sounds"
+        ]
+      },
+      {
+        "marble_prompt": "The Pride Rock landscape stretches out before you like a majestic cityscape. The golden light of sunset casts long shadows across the grasslands, where animals roam in harmony. In this world of pride and security, your heart feels grounded and at ease, surrounded by the warmth and love that fills your life.",
+        "constraints": [
+          "No oppressive or confining spaces",
+          "No sense of disconnection from others"
+        ]
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_018",
+    "case_id": "case_002",
+    "timestamp": "2026-06-04T09:30:49.426184",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Sad",
+      "intensity_score": 0.53,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Disgust": 0.315,
+        "Sad": 0.5321
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Disgust": 0.9,
+          "Sad": 0.42
+        },
+        "realtime_scores": {
+          "Sad": 0.42
+        },
+        "text_scores": {
+          "Sad": 0.9807404577732086
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the isolation of grief toward a sense of shared experience and communal solace",
+    "runtime_analysis": {
+      "dominant_emotion": "Sad",
+      "emotion_target": "Connection",
+      "complex_emotion": "A poignant and isolating sadness that slowly shifts towards a longing for connection and community.",
+      "stimulus_universe": "The Titanic, an ocean liner, with its opulent settings, grand staircase, and elegant attire.",
+      "user_reaction": "The user is deeply saddened by the loss of Jack and feels disconnected from others.",
+      "world_transformation": "The stimulus universe is modulated by sadness to create a melancholic atmosphere with desaturated colors, foggy lighting, and a sense of emptiness."
+    },
+    "marble_prompt": "As the Titanic's grand staircase stretches out like a ghostly arm, I find myself lost in thought, surrounded by the opulent decorations that once seemed so vibrant. The soft glow of the chandeliers casts an eerie light on the deserted corridors, where the sound of whispers and weeping echoes through the halls. The ship's majestic proportions seem to shrink as the darkness closes in, suffocating me with its weight. I am but a small figure, lost in this sea of sorrow, yearning for connection to those who have left me behind. The ship's grandeur is now a monument to my isolation, a constant reminder of what I've lost. As I wander these empty decks, I feel the ship slowly sinking into the depths, just as my heart sinks with grief. But amidst the desolation, a glimmer of hope flickers – perhaps in this moment of sorrow, I can find solace in the connections that once bound me to others.",
+    "negative_constraints": [
+      "No scenes of mass panic or chaos; no explicit references to Jack's death; no depiction of the ship's destruction"
+    ],
+    "variants": [
+      {
+        "prompt": "As night falls on the Titanic, the ship's lights twinkle like diamonds against the dark horizon. The grand staircase stretches out before me, a beacon of hope in this sea of sorrow. I wander the deserted decks, searching for solace among the remnants of a bygone era. Though the darkness surrounds me, the soft glow of the chandeliers whispers promises of connection and community. Perhaps, as I stand at the edge of the ship, I can find strength in the bonds that once bound me to others.",
+        "palette": [
+          "Soft blues",
+          "Warm golden tones"
+        ],
+        "time_of_day": "Night"
+      },
+      {
+        "prompt": "The Titanic's grand staircase rises like a majestic mountain range, its curves and arches a testament to human ingenuity. I find myself at the edge of this artificial world, staring out into the vast expanse of the ocean. The ship's opulence is juxtaposed against the desolation of my heart – a poignant reminder that even in sorrow, there is always the possibility for connection and community. As I gaze out at the waves, I feel the ship slowly receding into the distance, leaving me to ponder the fragility of life and the importance of human bonds.",
+        "palette": [
+          "Cool blues",
+          "Earth tones"
+        ],
+        "scale": "Panoramic"
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_019",
+    "case_id": "case_003",
+    "timestamp": "2026-06-04T09:31:22.264891",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Sad",
+      "intensity_score": 0.39,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Angry": 0.084,
+        "Happy": 0.315,
+        "Sad": 0.387
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.9,
+          "Angry": 0.24
+        },
+        "realtime_scores": {
+          "Sad": 0.36
+        },
+        "text_scores": {
+          "Sad": 1.125104159116745
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the darkness of disappointment toward the dawn of a new possibility",
+    "runtime_analysis": {
+      "dominant_emotion": "Sad",
+      "emotion_target": "Hope",
+      "complex_emotion": "A mix of sadness and nostalgia, with hints of anger and hopelessness, but ultimately aiming to redirect towards a sense of hope.",
+      "stimulus_universe": "The stadium, football pitch, grass, floodlights, crowd, blue jerseys from the Italy wins 2006 World Cup visual stimulus",
+      "user_reaction": "A feeling of disappointment and frustration due to repeated disappointments in not making it to the world cup, with a sense of desperation and helplessness.",
+      "world_transformation": "The stadium environment should be transformed by sadness, with desaturated colors, fog or haze, emptiness, still or slow movement, blue/grey/silver tones. The atmosphere should feel heavy and oppressive, but with hints of nostalgia and longing for the past glories."
+    },
+    "marble_prompt": "As the floodlights dimmed, the once-vibrant stadium now lay in a desolate silence, the empty seats a poignant reminder of what could have been. The lush green grass, once trampled by players, now stood still and lifeless, like the hopes and dreams of the Italian fans. The blue jerseys, once worn with pride, now hung limp and forgotten, symbols of disappointment and defeat. But amidst this bleakness, a glimmer of light flickered, a beacon of hope that one day, the national team would rise again, stronger and more resilient than ever before.",
+    "negative_constraints": [
+      "No imagery of tears or crying",
+      "No depiction of absolute darkness or despair",
+      "No representation of destruction or chaos"
+    ],
+    "variants": [
+      {
+        "prompt": "As the sun began to set on the empty stadium, the fading light cast a warm glow over the abandoned pitch, illuminating the memories of past glories. The blue jerseys, once worn with pride, now hung like ghostly apparitions, reminders of what could have been. In this twilight moment, the darkness seemed to recede, replaced by a sense of nostalgia and longing for better times.",
+        "description": "This variant captures the same emotional essence as the original prompt, but in a different time of day (twilight) and with a different color palette (warm tones)."
+      },
+      {
+        "prompt": "From a distance, the stadium appeared as a miniature model, its tiny details and intricate textures seeming almost doll-like. But as you drew closer, the scale shifted, and the empty seats became cavernous, the grassy pitch an endless expanse of possibility. The blue jerseys, once worn with pride, now hung like flags on a distant horizon, beckoning towards a brighter future.",
+        "description": "This variant captures the same emotional essence as the original prompt, but at a different spatial scale (panoramic) and with a different symbolic emphasis."
       }
     ]
   }
