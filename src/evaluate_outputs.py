@@ -15,6 +15,7 @@ from build_marble_prompt import call_llama
 from config.emotions import EmotionTarget
 from utils.file_utils import load_from_file
 from vpn_utils.vpn import vpn_tunnel
+from datetime import datetime
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
@@ -23,7 +24,7 @@ MARBLE_PROMPTS_PATH = os.path.join(DATA_DIR, "marble_prompts.json")
 EVAL_REPORT_PATH = os.path.join(DATA_DIR, "evaluation_report.json")
 EMOTION_PROMPT_PATH = os.path.join(PROMPTS_DIR, "emotion_alignment_prompt.txt")
 
-REFERENCE_PROMPT_3 = """Imagine yourself standing at the edge of a serene lake, 
+REFERENCE_PROMPT = """Imagine yourself standing at the edge of a serene lake, 
 surrounded by the gentle rustling of trees and the soft warmth of golden sunlight. 
 The air is filled with the sweet scent of blooming flowers as far as the eye can see. 
 In the distance, a faint mist rises from the water's surface, carrying the whispers 
@@ -35,10 +36,10 @@ its gentle rocking motion echoing the rhythm of your heartbeat. In this peaceful
 the weight of disappointment slowly lifts, replaced by a sense of nostalgia and appreciation 
 for the beauty that surrounds you."""
 
-REFERENCE_PROMPT_3_REASON = """scores 3 because it evokes a generic emotional warmth 
-but completely ignores the visual stimulus (Italy 2006 World Cup stadium) — 
-the world is a lake with no connection to football, crowds, or jerseys. 
-The cardinal point is absent."""
+REFERENCE_PROMPT_REASON = """scores 1 because it generates a generic lake landscape 
+    with only a vague emotional warmth, completely disconnected from the visual stimulus 
+    (Italy 2006 World Cup stadium). No stadium, no jerseys, no football elements. 
+    The target emotion is barely implied and not anchored to any specific visual element."""
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 OLLAMA_MODEL = "llama3"
@@ -65,9 +66,8 @@ async def evaluate_emotion_alignment(prompt_entry: dict, prompt_3_ex: dict, last
         prompt = (load_from_file(EMOTION_PROMPT_PATH)
                   .replace('{marble_prompt}', marble_prompt)
                   .replace("{emotion_target}", str(emotion_target))
-                  .replace("{cardinal_point}", cardinal_point)
-                  .replace("{reference_prompt_3}", prompt_3_ex["prompt"])
-                  .replace("{reference_prompt_3_reason}", prompt_3_ex["motivation"])
+                  .replace("{reference_prompt_1}", prompt_3_ex["prompt"])
+                  .replace("{reference_prompt_1_reason}", prompt_3_ex["motivation"])
                   .replace("{last_prompt}", last_eval["prompt"])
                   .replace("{last_score}", str(last_eval["score"]))
                   .replace("{last_motivation}", last_eval["motivation"])
@@ -102,9 +102,9 @@ async def evaluate_emotion_alignment(prompt_entry: dict, prompt_3_ex: dict, last
 
 async def evaluate_prompt(prompt_entry, last_eval) -> dict:
     """Valuta un singolo prompt su tutti i criteri singolari."""
-    example_3 = {"prompt": REFERENCE_PROMPT_3,
+    example_3 = {"prompt": REFERENCE_PROMPT,
                  "score": "3",
-                 "motivation": REFERENCE_PROMPT_3_REASON
+                 "motivation": REFERENCE_PROMPT_REASON
     }
     metrics = {
         "emotion_alignment": await evaluate_emotion_alignment(prompt_entry, example_3, last_eval),
@@ -129,12 +129,14 @@ async def evaluate_all():
     if os.getenv("CONNECT_TO_REMOTE", "").lower() == "true":
         async with vpn_tunnel():
             for entry in prompts:
+                pid = entry.get("prompt_id", "") # type: ignore
+                print(f"ID: {pid}")
                 result = await evaluate_prompt(
                     entry, 
                     last_eval=last_eval,
                 )
                 last_eval = {
-                    "prompt": entry.get("marble_prompt", ""),
+                    "prompt": entry.get("marble_prompt", ""), # type: ignore
                     "score": result["metrics"]["emotion_alignment"]["score"],
                     "motivation": result["metrics"]["emotion_alignment"]["motivation"]
                 }
@@ -142,15 +144,17 @@ async def evaluate_all():
                 results.append(result)
 
                 # Stampa riepilogo
-                pid = result["prompt_id"]
                 emo_ali = result["metrics"]["emotion_alignment"]
-
-                print(f"ID: {pid}")
+                
                 print(f"emotion alignment: {emo_ali}")
 
     # Salva report
+    report = {
+        "evaluated_at": datetime.now().isoformat(),
+        "results": results
+    }
     with open(EVAL_REPORT_PATH, "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2, ensure_ascii=False)
+        json.dump(report, f, indent=2, ensure_ascii=False)
 
     print(f"\n✓ Report salvato in {EVAL_REPORT_PATH}")
     return results
