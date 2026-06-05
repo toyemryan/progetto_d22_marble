@@ -126,7 +126,10 @@ def main():
     elif args.all:
         run_all()
     elif args.evaluate:
-        asyncio.run(evaluate_all())
+        try:
+            asyncio.run(evaluate_all())
+        finally:
+            os._exit(0) #forza la chiusura dei thread rimasti
     elif args.case:
         run_case(args.case)
     else:
