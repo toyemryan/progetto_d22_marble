@@ -7,9 +7,8 @@ L'inferenza dell'emozione complessa è delegata a Llama (build_marble_prompt.py)
 """
 
 from config.emotions import EMOTIONS, HF_TO_EMOTION, Emotion, EmotionLabel
-from utils.translator import translate_it_to_en
 import os
-from huggingface_hub import InferenceClient, errors
+import json
 
 # Pesi dal documento tecnico (sezione 9.3)
 PRIMING_WEIGHT = 0.35
@@ -54,29 +53,33 @@ def score_realtime(realtime_face_emotion):
 
 def score_text(user_message: str) -> dict:
     """
-    Traduce il testo ed esegue l'analisi con il classificatore SamLowe/roberta-base-go_emotions
+    Analisi emozionale del testo tramite Llama.
+    Carica il prompt da prompts/emotion_text_analysis_prompt.txt
     Restituisce un dizionario emozione -> score normalizzato 0-1.
     """
     if not user_message or not user_message.strip():
         return {"Neutral": 1.0}
 
-    translated = translate_it_to_en(user_message)
-    token = os.getenv("HF_TOKEN")
-    client = InferenceClient(token=token)
+    from build_marble_prompt import call_llama
+    from utils.file_utils import load_from_file
+
+    prompt_path = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        "prompts", "emotion_text_analysis_prompt.txt"
+    )
+    prompt = load_from_file(prompt_path).replace("{user_message}", user_message)
+
     try:
-        results = client.text_classification(translated, model="SamLowe/roberta-base-go_emotions")
-        scores: dict[EmotionLabel, float] = {}
-
-        for item in results:
-            label = item["label"].lower()
-            if label in HF_TO_EMOTION and item["score"] > 0.05:
-                emotion = HF_TO_EMOTION[label]
-                scores[emotion] = scores.get(emotion, 0.0) + item["score"]
+        result = call_llama(prompt, "Analisi emozionale del testo")
+        if result:
+            parsed = json.loads(result.strip())
+            scores = {k: v for k, v in parsed.items() if isinstance(v, (int, float)) and v > 0.05}
+            if scores:
+                return scores
     except Exception as e:
-        print(f"[score_text] HF API fallita, uso fallback: {e}")
-        scores = base_score_text(user_message)
+        print(f"[score_text] Llama fallita, uso fallback keywords: {e}")
 
-    return scores
+    return base_score_text(user_message)
 
 def base_score_text(user_message: str):
     """

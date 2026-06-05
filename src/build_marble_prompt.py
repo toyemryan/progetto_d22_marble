@@ -238,7 +238,7 @@ def extract_from_raw_text(text):
     return result
 
 
-async def generate_marble_prompt(normalized_case, fusion_profile, cardinal_context, start_vpn = False):
+async def generate_marble_prompt(normalized_case, fusion_profile, cardinal_context, start_vpn = False): # La chiamata di questa funzione senza fornire start_vpn, da False come valore predefinito.
     """
     Funzione principale: assembla, chiama Llama, salva il risultato.
 

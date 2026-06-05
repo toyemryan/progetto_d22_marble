@@ -17,18 +17,20 @@ import os
 # Aggiungi src al path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+from dotenv import load_dotenv
+load_dotenv()
+
 from input_case import collect_case
 from parse_cases import parse_and_normalize, parse_all
 from emotion_fusion import fuse_emotions
 from cardinal_point import prepare_cardinal_context
 from build_marble_prompt import generate_marble_prompt
 from evaluate_outputs import evaluate_all
-from dotenv import load_dotenv
 
-load_dotenv()
 
-def process_case(normalized_case):
-    """Processa un singolo caso attraverso tutta la pipeline."""
+async def process_case_async(normalized_case):
+    """Processa un singolo caso attraverso tutta la pipeline.
+    Il tunnel SSH deve essere già aperto se CONNECT_TO_REMOTE=true."""
     case_id = normalized_case["case_id"]
     print(f"\n{'='*60}")
     print(f"  Elaborazione {case_id}")
@@ -47,9 +49,9 @@ def process_case(normalized_case):
     print(f"  Hint: {cardinal['hint']}")
 
     # Fase 4 — Generazione prompt Marble (Llama)
+    # start_vpn=False perché il tunnel è già aperto dal wrapper
     print("\n🎨 Fase 4: Generazione prompt Marble...")
-    start_vpn = os.getenv("CONNECT_TO_REMOTE", "false").lower() == "true"
-    result = asyncio.run(generate_marble_prompt(normalized_case, fusion, cardinal, start_vpn=start_vpn))
+    result = await generate_marble_prompt(normalized_case, fusion, cardinal, start_vpn=False)
 
     if result:
         marble_prompt = result.get("marble_prompt", "")
@@ -63,6 +65,20 @@ def process_case(normalized_case):
         print("  ❌ Generazione fallita.")
 
     return result
+
+
+def process_case(normalized_case):
+    """Wrapper che apre il tunnel SSH una sola volta per tutta la pipeline."""
+    use_remote = os.getenv("CONNECT_TO_REMOTE", "false").lower() == "true"
+
+    if use_remote:
+        from vpn_utils.vpn import vpn_tunnel
+        async def run_with_vpn():
+            async with vpn_tunnel():
+                return await process_case_async(normalized_case)
+        return asyncio.run(run_with_vpn())
+    else:
+        return asyncio.run(process_case_async(normalized_case))
 
 
 def run_new():
@@ -89,10 +105,25 @@ def run_all():
     cases = parse_all()
     print(f"\n🔄 Elaborazione di {len(cases)} casi...\n")
     results = []
-    for case in cases:
-        result = process_case(case)
-        results.append(result)
-    return results
+
+    use_remote = os.getenv("CONNECT_TO_REMOTE", "false").lower() == "true"
+
+    if use_remote:
+        from vpn_utils.vpn import vpn_tunnel
+        async def run_all_with_vpn():
+            async with vpn_tunnel():
+                for case in cases:
+                    result = await process_case_async(case)
+                    results.append(result)
+            return results
+        return asyncio.run(run_all_with_vpn())
+    else:
+        async def run_all_local():
+            for case in cases:
+                result = await process_case_async(case)
+                results.append(result)
+            return results
+        return asyncio.run(run_all_local())
 
 
 def main():
@@ -126,10 +157,7 @@ def main():
     elif args.all:
         run_all()
     elif args.evaluate:
-        try:
-            asyncio.run(evaluate_all())
-        finally:
-            os._exit(0) #forza la chiusura dei thread rimasti
+        asyncio.run(evaluate_all())
     elif args.case:
         run_case(args.case)
     else:

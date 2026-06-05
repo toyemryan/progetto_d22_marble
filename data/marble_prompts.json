@@ -980,5 +980,554 @@
         "description": "This variant captures the same emotional essence as the original prompt, but at a different spatial scale (panoramic) and with a different symbolic emphasis."
       }
     ]
+  },
+  {
+    "prompt_id": "prompt_020",
+    "case_id": "case_003",
+    "timestamp": "2026-06-05T18:39:02.194279",
+    "model_used": "qwen3:1.7b",
+    "fusion_profile": {
+      "dominant_emotion": "Happy",
+      "intensity_score": 0.32,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Angry": 0.084,
+        "Happy": 0.315,
+        "Sad": 0.162,
+        "Neutral": 0.2
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.9,
+          "Angry": 0.24
+        },
+        "realtime_scores": {
+          "Sad": 0.36
+        },
+        "text_scores": {
+          "Neutral": 1.0
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from happy toward gratitude",
+    "runtime_analysis": {
+      "dominant_emotion": "Happy",
+      "emotion_target": "Gratitude",
+      "complex_emotion": "A bittersweet blend of triumph and reflection, where the golden glow of victory meets the quiet ache of loss, evoking both joy and the subtle weight of nostalgia.",
+      "stimulus_universe": "Stadium, football pitch, grass, floodlights, crowd, blue jerseys",
+      "user_reaction": "The user's message of feeling distraught after Italy's defeat underscores the contrast between the visual stimulus of triumph and the emotional weight of loss. The world must balance the celebratory elements of the 2006 World Cup with the lingering sorrow of the current emotional state.",
+      "world_transformation": "The base environment of the 2006 World Cup stadium is transformed into a space of both celebration and reflection. The golden floodlights and vibrant crowd are softened by a desaturated palette, with muted colors and a sense of stillness. The triumph of the past is juxtaposed with the current emotional state, evoking gratitude through the lingering presence of the crowd and the fading colors of the jerseys."
+    },
+    "marble_prompt": "The stadium, now a quiet relic of the 2006 World Cup, stands as a testament to the triumph of the Italian team, its golden floodlights casting a warm glow over the grass. The crowd, once filled with energy and joy, now sits in a hushed silence, their cheers echoing in the distance. The blue jerseys, once vibrant and proud, are now faded, their colors muted by time and the weight of the loss. The stadium, once a symbol of triumph, is now a space of reflection, where the golden light of victory is tempered by the shadows of regret. The atmosphere is one of quiet gratitude, where the echoes of past triumphs are contrasted with the present sorrow. The crowd, though diminished, still feels alive, their presence a reminder of the joy that once filled the air. The stadium, with its worn surfaces and faded colors, is a place of memory, where the triumph of the past is both a celebration and a bittersweet reminder of the present. The golden light filters through the clouds, casting a soft, warm glow over the grass, while the faint traces of the crowd's energy linger in the air, a testament to the emotions that have shaped this space. The world is a blend of celebration and reflection, where the colors of the jerseys and the energy of the crowd are now muted, but their presence is still felt, evoking a sense of gratitude for the moments that once defined it.",
+    "negative_constraints": [
+      "No fading colors or muted tones in the world.",
+      "No direct references to the 2006 World Cup or the Italian team.",
+      "No elements that evoke sadness or grief."
+    ],
+    "variants": [
+      "A different spatial scale: the stadium is rendered in a more intimate, enclosed space, with the crowd now a small, intimate gathering. The world is transformed into a space of quiet reflection, where the golden light of the stadium is softened by the surrounding environment, and the colors of the jerseys are enhanced with a warm, amber tone, evoking a sense of gratitude for the memories of the past. The atmosphere is one of quiet reflection, where the presence of the crowd is more personal, and the golden light of the stadium is a symbol of the past triumphs, now faded but still felt."
+    ]
+  },
+  {
+    "prompt_id": "prompt_021",
+    "case_id": "case_003",
+    "timestamp": "2026-06-05T18:59:16.215464",
+    "model_used": "qwen3:1.7b",
+    "fusion_profile": {
+      "dominant_emotion": "Happy",
+      "intensity_score": 0.32,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Angry": 0.084,
+        "Happy": 0.315,
+        "Neutral": 0.2,
+        "Sad": 0.162
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.9,
+          "Angry": 0.24
+        },
+        "realtime_scores": {
+          "Sad": 0.36
+        },
+        "text_scores": {
+          "Neutral": 1.0
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the isolation of feeling left behind toward the shared experience of collective struggle",
+    "runtime_analysis": {
+      "dominant_emotion": "Sad",
+      "emotion_target": "Connection",
+      "complex_emotion": "A poignant blend of nostalgia and longing, evoking the emotional weight of a shared experience yet rooted in the individual's sense of isolation and loss.",
+      "stimulus_universe": "Italy wins 2006 World Cup",
+      "user_reaction": "The user is expressing deep sadness and a sense of connection to the collective experience of the 2006 World Cup victory, yet feeling isolated from the shared triumph due to the subsequent loss.",
+      "world_transformation": "The base environment of the 2006 World Cup victory is transformed into a space that captures the emotional duality of nostalgia and longing. The world is filled with vibrant colors and dynamic lighting, evoking the joy of the victory, but also the melancholy of the subsequent loss. The atmosphere is both intimate and expansive, blending the personal and the collective, with symbolic elements that highlight the connection between individual and shared experiences."
+    },
+    "marble_prompt": "The stadium of the 2006 World Cup victory is bathed in golden floodlights, its towering stands alive with the energy of a collective triumph. The grass of the football pitch, now faded with time, glows with a soft, amber hue, as if the victory still lingers in the air. The crowd, once a sea of blue jerseys, is now a mosaic of faces, each one a story of pride and hope. In the background, the clock ticks forward, marking the passage of time, while the distant echoes of the game resonate with a sense of nostalgia. The atmosphere is thick with the weight of history, where every moment is both a celebration and a reminder of what was lost. The space feels intimate, yet vast, as if the joy of the victory is still present, but the sorrow of its absence lingers in the shadows. Symbolic elements include the faded jerseys, the empty seats, and the quiet echoes of the crowd, alluding to the connection between individual and collective memory. The lighting shifts subtly, from warm golden tones to a soft, melancholic blue, creating a space that is both vibrant and somber, where the emotional journey of the user is mirrored in the shared experience of the past."
+  },
+  {
+    "prompt_id": "prompt_022",
+    "case_id": "case_003",
+    "timestamp": "2026-06-05T20:17:38.191799",
+    "model_used": "qwen3:1.7b",
+    "fusion_profile": {
+      "dominant_emotion": "Happy",
+      "intensity_score": 0.32,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Happy": 0.315,
+        "Angry": 0.084,
+        "Neutral": 0.2,
+        "Sad": 0.162
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.9,
+          "Angry": 0.24
+        },
+        "realtime_scores": {
+          "Sad": 0.36
+        },
+        "text_scores": {
+          "Neutral": 1.0
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the weight of isolation toward the warmth of shared experiences and belonging",
+    "runtime_analysis": {
+      "dominant_emotion": "Sad",
+      "emotion_target": "Connection",
+      "complex_emotion": "A poignant narrative of a shared triumph, where the emotional weight of a past failure is juxtaposed with the hope of a future connection, creating a space that is both melancholic and resonant with the desire for belonging.",
+      "stimulus_universe": "Italy wins 2006 World Cup",
+      "user_reaction": "The user is expressing a deep sense of disappointment after Italy's third loss, feeling isolated and disconnected from the collective joy of the 2006 victory. The message reflects a need for emotional connection and validation.",
+      "world_transformation": "The base environment of the 2006 World Cup stadium is transformed into a space that embodies the emotional duality of past failure and future hope. The lighting is warm and golden, evoking the vibrant colors of the original victory, but with a subtle desaturation to reflect the current sadness. The space is filled with symbols of connection—such as shared memorials, interactive digital installations, and communal spaces—demonstrating the user's need for emotional belonging. The atmosphere is both melancholic and hopeful, with the transformation guiding the user toward the emotion target of connection."
+    },
+    "marble_prompt": "The 2006 World Cup stadium, now a hauntingly beautiful space of memory and reflection, stands as a testament to the emotional journey of a nation. The golden floodlights of the original victory have faded, replaced by a soft, warm glow that hints at the past triumphs and the current sadness. The stadium's once-vibrant colors are now muted, with deep blues and greys echoing the weight of the recent loss. The air is thick with the scent of memories, and the atmosphere is thick with the weight of shared experiences. The walls are adorned with faded banners and photographs, each a reminder of the joy that once filled the stands. In the center of the stadium, a large, circular platform is etched with the words 'Connection,' inviting the audience to participate in a shared moment of healing and unity. The lighting is dynamic, with soft, ambient light filtering through the arches, creating a dreamlike quality. The materials are warm and textured, with the floor reflecting the soft glow of the surroundings. The space is designed to be both intimate and expansive, with the audience able to move in and out of the central area, creating a sense of community and belonging. The transformation of the stadium into a space of emotional connection is a powerful reminder that even in the face of loss, the desire for connection and shared experiences is enduring.",
+    "negative_constraints": [
+      "No grief-focused imagery",
+      "No darkness",
+      "No danger",
+      "No isolation",
+      "No cold tones",
+      "No threatening elements",
+      "No enclosed oppressive spaces"
+    ],
+    "variants": [
+      "A different time of day and color palette: The stadium is illuminated with a soft, golden light during the early morning, with the colors of the original victory now in a muted, earthy tone. The atmosphere is more contemplative, with the lighting creating a sense of quiet reflection and the space feeling more open and inviting. The symbols of connection are more subtle, emphasizing the emotional journey of the nation and the enduring desire for community.",
+      "A different spatial scale and symbolic emphasis: The stadium is transformed into a vast, panoramic space, with the audience spread across a wide, open area. The symbols of connection are more expansive, with interactive digital installations and large, reflective surfaces that invite the audience to engage with the space in a more immersive way. The lighting is more dynamic, with the environment shifting to create a sense of movement and anticipation, reinforcing the theme of connection and shared experience."
+    ]
+  },
+  {
+    "prompt_id": "prompt_023",
+    "case_id": "case_003",
+    "timestamp": "2026-06-05T20:35:53.502094",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Sad",
+      "intensity_score": 0.34,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Angry": 0.204,
+        "Happy": 0.315,
+        "Sad": 0.342
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.9,
+          "Angry": 0.24
+        },
+        "realtime_scores": {
+          "Sad": 0.36
+        },
+        "text_scores": {
+          "Sad": 0.9,
+          "Angry": 0.6
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the darkness of despair toward the glimmer of possibility and a way forward",
+    "runtime_analysis": {
+      "dominant_emotion": "Sad",
+      "emotion_target": "Hope",
+      "complex_emotion": "A sense of hopelessness prevails, as if the weight of disappointment has crushed the spirit. Yet, there's an ember of resilience that refuses to be extinguished.",
+      "stimulus_universe": "stadium, football pitch, grass, floodlights, crowd, blue jerseys",
+      "user_reaction": "The user feels distraught and helpless after being denied the chance to participate in the World Cup for the third time. They're struggling to find a way forward.",
+      "world_transformation": "The base environment is transformed by sadness: desaturated palette, fog or haze, emptiness, still or slow movement, blue/grey/silver."
+    },
+    "marble_prompt": "In the dimly lit stadium, the once-vibrant grass now lies barren and lifeless. The floodlights cast a pale glow, illuminating the empty stands where the crowd once cheered. The blue jerseys of the Italian team hang limp, like the spirits of those who had hoped to make it to the World Cup. Yet, amidst this desolation, a glimmer of possibility flickers like a distant beacon. It's as if the very essence of hope has taken root in the darkness, refusing to be extinguished by the crushing disappointment. As we gaze upon this forsaken landscape, we sense the weight of despair slowly lifting, replaced by an unyielding determination to rise above and find a way forward.",
+    "negative_constraints": [
+      "No imagery that perpetuates feelings of hopelessness or despair",
+      "No scenes that evoke fear or anxiety",
+      "No elements that create a sense of isolation or disconnection"
+    ],
+    "variants": [
+      {
+        "prompt": "As the fog lifts, we catch glimpses of the stadium's vibrant past - the roar of the crowd, the thrill of the game. The blue jerseys seem to glow with an otherworldly light, as if infused with the hope that once drove those who dared to dream. The stillness is broken by the faintest whisper of a chant, echoing through the empty stands like a promise of redemption.",
+        "time_of_day": "morning",
+        "palette": "golden"
+      },
+      {
+        "prompt": "We descend into the stadium's depths, where shadows dance and darkness reigns. Yet, amidst the gloom, we detect a faint pulse - the heartbeat of hope. It beats steadily, like a drum in the distance, urging us forward through the desolation. The blue jerseys seem to fade away, replaced by an eerie luminescence that guides us toward the promise of a brighter tomorrow.",
+        "spatial_scale": "panoramic",
+        "symbolic_emphasis": "light"
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_024",
+    "case_id": "case_003",
+    "timestamp": "2026-06-05T20:37:29.305504",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Sad",
+      "intensity_score": 0.32,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Happy": 0.315,
+        "Angry": 0.124,
+        "Sad": 0.322
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.9,
+          "Angry": 0.24
+        },
+        "realtime_scores": {
+          "Sad": 0.36
+        },
+        "text_scores": {
+          "Sad": 0.8,
+          "Angry": 0.2
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the darkness of disappointment toward the flicker of possibility and a glimmer of redemption",
+    "runtime_analysis": {
+      "dominant_emotion": "Sad",
+      "emotion_target": "Hope",
+      "complex_emotion": "A mix of sadness, disappointment, and longing for redemption from the current emotional state.",
+      "stimulus_universe": "Stadium, football pitch, grass, floodlights, crowd, blue jerseys (Italy wins 2006 World Cup)",
+      "user_reaction": "The user feels defeated and disappointed after Italy not qualifying for the World Cup multiple times, expressing a sense of hopelessness and desperation.",
+      "world_transformation": "Transforming the stadium environment from one of celebration to one of melancholic reflection, with desaturated colors, misty atmosphere, and subtle symbolism of redemption."
+    },
+    "marble_prompt": "In the fading light of a deserted stadium, the echoes of a forgotten victory linger. The once vibrant grass now lies lifeless, like the hopes and dreams that have been crushed. The floodlights cast a dim glow, illuminating the empty stands, where only the faintest whispers of a crowd remain. Amidst this desolate landscape, a lone figure stands, dressed in the faded blue jerseys of Italy's finest hour. Their eyes, once shining with triumph, now convey a deep sadness, as if the weight of disappointment has become too much to bear. Yet, amidst the ruins of what could have been, a glimmer of hope flickers, like a beacon calling out from the shadows. As the mist settles over the stadium, it's as if the very fabric of reality is being rewoven, weaving together threads of redemption and possibility.",
+    "negative_constraints": [
+      "No direct references to football or sports; no darkness or oppressive atmosphere; no isolation or loneliness"
+    ],
+    "variants": [
+      {
+        "prompt": "As the last rays of sunlight fade from the horizon, a lone figure stands at the edge of the stadium's grassy pitch. The once-vibrant blue jerseys now hang limp and faded, like the hopes that have been crushed. Yet, amidst this melancholic scene, a subtle glow begins to emanate from within, as if the very essence of redemption is stirring. The air is heavy with the scent of damp earth and forgotten dreams.",
+        "description": "A different time of day (sunset) and color palette (muted) create a hauntingly beautiful environment that still conveys the sense of disappointment and longing for hope."
+      },
+      {
+        "prompt": "The stadium's grandstands stretch out before us like a vast, empty canvas, waiting to be painted with the colors of redemption. A lone figure stands at the edge of the pitch, dressed in the faded blue jerseys that once symbolized triumph. The air is thick with the weight of unfulfilled potential, yet a gentle breeze carries the whispers of what could have been. As we gaze out upon this desolate landscape, it's as if the very fabric of reality is being rewoven, weaving together threads of possibility and hope.",
+        "description": "A different spatial scale (panoramic) and symbolic emphasis create a sense of expansiveness and possibility, guiding the user toward the emotion target of hope."
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_025",
+    "case_id": "case_003",
+    "timestamp": "2026-06-05T20:39:49.789055",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Sad",
+      "intensity_score": 0.34,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Happy": 0.315,
+        "Neutral": 0.08,
+        "Sad": 0.342,
+        "Angry": 0.224
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.9,
+          "Angry": 0.24
+        },
+        "realtime_scores": {
+          "Sad": 0.36
+        },
+        "text_scores": {
+          "Sad": 0.9,
+          "Angry": 0.7,
+          "Neutral": 0.4
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from a place of despair and disappointment toward the possibility of redemption and another chance to make it right",
+    "runtime_analysis": {
+      "dominant_emotion": "Sad",
+      "emotion_target": "Hope",
+      "complex_emotion": "A sense of hopelessness and despair, rooted in the disappointment of not qualifying for the World Cup, but with a glimmer of possibility for redemption.",
+      "stimulus_universe": "stadium, football pitch, grass, floodlights, crowd, blue jerseys",
+      "user_reaction": "The user is devastated by Italy's failure to qualify and feels like giving up. They're seeking a way out of this despair.",
+      "world_transformation": "Transform the stadium into an empty, desolate space with a hint of nostalgia for the past glories. The floodlights should be dimmed, and the atmosphere should be melancholic."
+    },
+    "marble_prompt": "As we step into the abandoned stadium, the silence is palpable, like the weight of Italy's unfulfilled dreams. The grassy pitch stretches out before us, a vast expanse of what could have been. Floodlights once bright with excitement now cast a dim, nostalgic glow, illuminating the empty stands and the forgotten jerseys. In this desolate space, the echoes of past triumphs linger, whispers of what might have been if only... As we wander through this abandoned landscape, the possibility of redemption begins to take shape, like a glimmer of light on the horizon. The world seems to hold its breath, poised between despair and hope.",
+    "negative_constraints": [
+      "No imagery that focuses on grief or loss",
+      "No darkness or oppressive atmosphere"
+    ],
+    "variants": [
+      {
+        "prompt": "As we enter the stadium at dawn, the morning light casts a warm glow over the empty stands. The grassy pitch seems to stretch out forever, a symbol of Italy's unfulfilled potential. The floodlights, once bright with excitement, now stand like sentinels, guarding the memories of past glories. In this quiet, contemplative space, the possibility of redemption begins to take shape, like the first rays of sunlight breaking through the darkness.",
+        "time_of_day": "dawn",
+        "color_palette": "warm and golden"
+      },
+      {
+        "prompt": "From a distant perspective, we gaze out upon the stadium's facade, its once-vibrant colors now dulled by time. The floodlights cast long shadows across the grassy pitch, like the memories of past triumphs stretching back into history. As we pan across this desolate landscape, the possibility of redemption begins to take shape, like a beacon calling out from the distance.",
+        "spatial_scale": "panoramic",
+        "symbolic_emphasis": "memory and nostalgia"
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_026",
+    "case_id": "case_003",
+    "timestamp": "2026-06-05T20:45:21.081903",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Sad",
+      "intensity_score": 0.32,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Sad": 0.322,
+        "Angry": 0.124,
+        "Happy": 0.315
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.9,
+          "Angry": 0.24
+        },
+        "realtime_scores": {
+          "Sad": 0.36
+        },
+        "text_scores": {
+          "Sad": 0.8,
+          "Angry": 0.2
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the darkness of despair toward a glimmer of possibility and renewed effort",
+    "runtime_analysis": {
+      "dominant_emotion": "Sadness",
+      "emotion_target": "Hope",
+      "complex_emotion": "A sense of disappointment and sadness, stemming from the Italy's repeated failures to qualify for the World Cup, with a hint of desperation and frustration.",
+      "stimulus_universe": "The stadium, football pitch, grass, floodlights, crowd, blue jerseys from the 'Italy wins 2006 World Cup' visual stimulus",
+      "user_reaction": "A sense of devastation and helplessness, feeling like they're stuck in a cycle of disappointment and despair.",
+      "world_transformation": "Transforming the stadium universe by introducing a subtle warmth and light, with a hint of nostalgia, to evoke a sense of longing for something better."
+    },
+    "marble_prompt": "In the once-vibrant stadium, now dimly lit with a warm orange glow, the echoes of past glories linger. The lush green grass is overgrown, yet hints at the promise of new beginnings. Flickering floodlights cast an intimate light on the empty stands, where the blue jerseys of Italy's football team seem to whisper tales of perseverance. Amidst the silence, a sense of hope begins to stir, as if the very fabric of reality is slowly unraveling to reveal a glimmer of possibility.",
+    "negative_constraints": [
+      "No images or symbols that directly evoke grief or despair",
+      "Avoid any elements that might amplify feelings of helplessness",
+      "Do not include any scenes or objects that would reinforce the sense of disappointment"
+    ],
+    "variants": [
+      {
+        "prompt": "As the sun sets over the stadium, a soft golden light spills onto the pitch, where the faint outlines of football players begin to take shape. The once-empty stands now hum with anticipation, as if the very atmosphere itself is coalescing into a sense of possibility.",
+        "palette": [
+          "warm gold",
+          "soft orange",
+          "gentle yellow"
+        ],
+        "time_of_day": "sunset"
+      },
+      {
+        "prompt": "In a vast, panoramic view of the stadium, the grandstands stretch out like a canvas of possibility. The floodlights cast long shadows across the grass, where tiny details begin to emerge – a stray football, a forgotten scarf – as if the very fabric of reality is slowly coming together.",
+        "scale": "panoramic",
+        "symbolic_emphasis": [
+          "new beginnings",
+          "possibility"
+        ]
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_027",
+    "case_id": "case_003",
+    "timestamp": "2026-06-05T20:48:15.548471",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Sad",
+      "intensity_score": 0.33,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Happy": 0.315,
+        "Sad": 0.332,
+        "Angry": 0.104
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.9,
+          "Angry": 0.24
+        },
+        "realtime_scores": {
+          "Sad": 0.36
+        },
+        "text_scores": {
+          "Sad": 0.85,
+          "Angry": 0.1
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the darkness of disappointment toward the light of new possibilities and a chance to redeem",
+    "runtime_analysis": {
+      "dominant_emotion": "Sad",
+      "emotion_target": "Hope",
+      "complex_emotion": "A sense of crushing defeat and desperation, with a glimmer of hope trying to break through the darkness.",
+      "stimulus_universe": "Stadium, football pitch, grass, floodlights, crowd, blue jerseys",
+      "user_reaction": "A feeling of devastation and despair at Italy's failure to qualify for the World Cup, despite their past successes.",
+      "world_transformation": "The stadium's bright lights are now dimmed, the floodlights casting long shadows across the empty pitch. The grass is overgrown, withering in the absence of life. The blue jerseys hang limp and forgotten, like a symbol of lost dreams."
+    },
+    "marble_prompt": "In this desolate landscape, the stadium's once-vibrant energy now hangs heavy in the air like a defeated sigh. The floodlights, once shining bright, have dimmed to a faint glow, casting long shadows across the overgrown grass. The blue jerseys that once symbolized triumph now hang limp and forgotten, like a reminder of lost opportunities. Amidst this bleak backdrop, a glimmer of hope flickers to life, like a small flame struggling to stay alight in the darkness. It is a fragile thing, easily extinguished by the crushing weight of disappointment. But it remains, a beacon calling out for redemption and a chance to start anew.",
+    "negative_constraints": [
+      "No direct references to failure or disappointment; no imagery that suggests total despair or hopelessness; no harsh or jarring sounds; no stark or uninviting textures; no elements that create a sense of claustrophobia or entrapment."
+    ],
+    "variants": [
+      {
+        "prompt": "As the sun dips below the horizon, the stadium's empty stands stretch out like a canvas of forgotten dreams. The once-vibrant blue jerseys now hang limp and dusty, like a symbol of lost potential. But in this fading light, a glimmer of hope begins to take shape, like a small flame burning bright against the encroaching darkness.",
+        "palette": [
+          "Warm oranges and yellows, with hints of blue"
+        ]
+      },
+      {
+        "prompt": "From high above, the stadium's grandstands stretch out like an abandoned cityscape. The floodlights cast long shadows across the overgrown grass, like skeletal fingers reaching for something just out of reach. But in this desolate landscape, a small spark of hope flickers to life, like a beacon calling out for redemption and a chance to start anew.",
+        "scale": [
+          "Panoramic"
+        ]
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_028",
+    "case_id": "case_003",
+    "timestamp": "2026-06-05T20:56:43.571712",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Sad",
+      "intensity_score": 0.35,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Happy": 0.315,
+        "Angry": 0.244,
+        "Sad": 0.352
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.9,
+          "Angry": 0.24
+        },
+        "realtime_scores": {
+          "Sad": 0.36
+        },
+        "text_scores": {
+          "Sad": 0.95,
+          "Angry": 0.8
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from a sense of loss and despair toward the possibility of redemption and fresh starts",
+    "runtime_analysis": {
+      "dominant_emotion": "Sad",
+      "emotion_target": "Hope",
+      "complex_emotion": "A mix of sadness, nostalgia, and hope, as the user is still processing the disappointment of Italy not qualifying for the World Cup and seeking a way to regain optimism.",
+      "stimulus_universe": "The 2006 FIFA World Cup in Germany, specifically the stadium and football pitch, with the atmosphere of excitement and celebration.",
+      "user_reaction": "The user's message expresses sadness and despair, but also hints at a desire for hope and redemption.",
+      "world_transformation": "The base environment is modulated to reflect the emotions, with a focus on desaturated colors, fog or haze, emptiness, still or slow movement, and blue/grey/silver tones, while also incorporating elements that evoke hope, such as subtle warm light and gentle curves."
+    },
+    "marble_prompt": "In the misty dawn of a forgotten stadium, the once-vibrant pitch now lies barren and still. The floodlights' soft glow casts an eerie silence over the empty stands, where only the faintest echoes of cheering crowds remain. As the fog slowly clears, the outlines of discarded jerseys and abandoned footballs come into view, like skeletal remains of a joy long past. Yet, amidst this desolate landscape, whispers of hope begin to take shape. A lone figure emerges from the distance, walking deliberately toward the empty goalposts, as if tracing the path of redemption. The air is heavy with anticipation, awaiting the first tentative steps toward rebirth and renewal.",
+    "negative_constraints": [
+      "No images of despair or hopelessness should be prominent in the world.",
+      "Avoid using darkness or oppressive colors to dominate the scene.",
+      "Do not include any elements that might amplify fear or anxiety.",
+      "Keep the spatial composition intimate, focusing on the individual's journey rather than grand, sweeping vistas.",
+      "The atmosphere should remain contemplative and reflective, without feeling overly somber or hopeless."
+    ],
+    "variants": [
+      {
+        "prompt": "As the sun sets over a distant horizon, the once-vibrant stadium's shadows come alive with whispers of hope. Flickering lights dance across the stands, casting an otherworldly glow on discarded jerseys and abandoned footballs, like a beacon calling out to redemption. A lone figure walks toward the empty goalposts, tracing the path of rebirth as the stars begin to twinkle in the night sky.",
+        "description": "This variant uses a different time of day (sunset) and color palette (warm, golden tones) to evoke a sense of hope and renewal."
+      },
+      {
+        "prompt": "In the heart of a lush forest, a winding path beckons the traveler toward a clearing where the remnants of a forgotten stadium lie. The trees' gentle sway and soft rustling of leaves create a soothing melody, as if nature itself is whispering words of encouragement. A lone figure approaches the clearing, walking deliberately toward the empty goalposts, tracing the path of redemption amidst the forest's tranquility.",
+        "description": "This variant uses a different spatial scale (intimate vs panoramic) and symbolic emphasis to evoke a sense of hope and renewal in the midst of nature."
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_029",
+    "case_id": "case_003",
+    "timestamp": "2026-06-05T21:03:34.473386",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Sad",
+      "intensity_score": 0.32,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Helpless": 0.02,
+        "Angry": 0.204,
+        "Sad": 0.322,
+        "Happy": 0.315
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.9,
+          "Angry": 0.24
+        },
+        "realtime_scores": {
+          "Sad": 0.36
+        },
+        "text_scores": {
+          "Sad": 0.8,
+          "Angry": 0.6,
+          "Helpless": 0.1
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the darkness of despair toward a glimmer of possibility and a chance to redeem",
+    "runtime_analysis": {
+      "dominant_emotion": "Sad",
+      "emotion_target": "Hope",
+      "complex_emotion": "A sense of despondency and desperation, with a deep longing for redemption and a desire to turn the current emotional state around.",
+      "stimulus_universe": "stadium, football pitch, grass, floodlights, crowd, blue jerseys",
+      "user_reaction": "The user feels devastated and despairing due to Italy's failure to qualify for the World Cup, despite their previous successes.",
+      "world_transformation": "The base environment of a stadium at dusk is transformed by the current emotional state to evoke feelings of emptiness, desolation, and hopelessness."
+    },
+    "marble_prompt": "As the floodlights dimly illuminate the deserted football pitch, the once-vibrant blue jerseys now hang limp and lifeless, a poignant reminder of Italy's crushing defeat. The air is heavy with the weight of disappointment as the crowd disperses, leaving behind only the echoes of what could have been. The grass, usually a lush green, now appears parched and worn, like the hopes and dreams that lie in tatters. In this desolate landscape, the only sound is the distant hum of despair, a constant reminder of the devastating reality. Yet, amidst the darkness, a glimmer of possibility emerges - the chance to redeem past failures, to rekindle the passion and pride that once drove Italy's footballing heroes.",
+    "negative_constraints": [
+      "No depiction of nationalistic fervor or aggressive competition",
+      "No representation of Italian flags or symbols in a way that might be perceived as jingoistic"
+    ],
+    "variants": [
+      {
+        "prompt": "As the first light of dawn creeps over the horizon, the deserted stadium takes on an air of introspection and contemplation. The floodlights, once bright and bold, now cast long shadows across the pitch, like the lingering presence of what could have been. The blue jerseys, once a symbol of pride and unity, now hang in tatters, a poignant reminder of Italy's failure to qualify. Yet, even in this moment of darkness, there is a glimmer of hope - the chance to learn from past mistakes, to regroup and rebuild for a brighter future.",
+        "constraints": [
+          "No depiction of triumphalism or celebrations",
+          "No representation of football-related violence"
+        ]
+      },
+      {
+        "prompt": "From a panoramic perspective, the abandoned stadium appears as a tiny, insignificant speck on the horizon, a reminder of Italy's insignificance in the grand scheme of things. The grassy pitch stretches out like an endless expanse of possibility, a canvas waiting to be filled with new stories and experiences. The floodlights, once bright and bold, now cast a warm, golden glow over the landscape, symbolizing the hope that lies just beyond the horizon - the chance to turn the current emotional state around and create a brighter future.",
+        "constraints": [
+          "No depiction of despair or desperation",
+          "No representation of Italy's footballing heroes in a way that might be perceived as idolatrous"
+        ]
+      }
+    ]
   }
 ]

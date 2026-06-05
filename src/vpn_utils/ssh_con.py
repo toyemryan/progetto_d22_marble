@@ -11,7 +11,6 @@ def _ssh_connect():
         ssh_config.parse(f)
     
     host_config = ssh_config.lookup("ollama-tunnel")
-
     forward_info = host_config.get("localforward", ["11434 127.0.0.1:11434"])[0].split()
     local_port = int(forward_info[0])
     remote_host, remote_port = forward_info[1].split(":")
@@ -24,7 +23,8 @@ def _ssh_connect():
             ssh_password=os.getenv("SSH_PASSWORD"),
             ssh_pkey=None,
             remote_bind_address=(remote_host, int(remote_port)),
-            local_bind_address=("127.0.0.1", local_port)
+            local_bind_address=("127.0.0.1", local_port),
+            set_keepalive=10,  # envoie un signal toutes les 10 secondes
         )
         tunnel.start()
     except Exception as e:
@@ -38,12 +38,15 @@ def _ssh_connect():
         port=int(host_config.get("port", 22)),
         key_filename=host_config.get("identityfile", None),
         password=os.getenv("SSH_PASSWORD"),
-    ) 
+    )
+    # Keepalive sur le client SSH aussi
+    transport = client.get_transport()
+    if transport:
+        transport.set_keepalive(10)
     
     return client, tunnel
 
 async def run_remote():
-    # paramiko è sincrono, lo eseguiamo in un thread separato
     loop = asyncio.get_event_loop()
     client, tunnel = await loop.run_in_executor(None, _ssh_connect)
     return client, tunnel
@@ -57,6 +60,4 @@ async def close_remote(client, tunnel):
         loop = asyncio.get_event_loop()
         await loop.run_in_executor(None, client.close)
         print("Client SSH chiuso con successo.")
-    return 
-
-    
+    return

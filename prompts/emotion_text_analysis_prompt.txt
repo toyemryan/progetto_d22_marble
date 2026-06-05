@@ -1,0 +1,18 @@
+Analyze the emotional content of the following Italian text.
+
+Text: "{user_message}"
+
+Classify the emotions present and assign a score between 0.0 and 1.0 to each.
+Only include emotions with a score greater than 0.05.
+
+Use ONLY these emotion labels: Happy, Sad, Angry, Fear, Surprised, Disgust, Neutral, Tenderness
+
+RULES:
+- Understand the Italian text directly, do not translate it.
+- Consider context, irony, and implicit emotions.
+- If the text mentions negative words (e.g. "tristezza", "morte") but the overall sentiment is positive, score accordingly.
+- The scores do not need to sum to 1.0. Each score represents the intensity of that emotion independently.
+- Respond ONLY in valid JSON, no markdown, no explanation, no text before or after.
+
+EXPECTED OUTPUT FORMAT:
+{"Happy": 0.0, "Sad": 0.0, "Angry": 0.0, "Fear": 0.0, "Surprised": 0.0, "Disgust": 0.0, "Neutral": 0.0, "Tenderness": 0.0}
