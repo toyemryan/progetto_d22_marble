@@ -91,5 +91,38 @@
       "arousal_label": "MEDIUM"
     },
     "user_message": "Per la terza volta l'Italia non va ai mondiali e mi sento distrutto. Aiuto!"
+  },
+  {
+    "case_id": "case_004",
+    "timestamp": "2026-06-05T21:37:59.660654",
+    "stimulus": "interstellar of christofer nolan",
+    "priming_emotion": {
+      "Tenderness": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "HIGH",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.8
+      },
+      "Happy": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "NEUTRAL",
+        "emotion_probability": 0.7
+      },
+      "Disgust": {
+        "avg_intensity": "LOW",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.3
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Tenderness",
+      "probability": 0.6,
+      "intensity_label": "MEDIUM",
+      "valence_label": "POSITIVE",
+      "arousal_label": "MEDIUM"
+    },
+    "user_message": "la speranza legato alla famiglia ma soprattutto all'umanità ci deve far andare avanti"
   }
 ]

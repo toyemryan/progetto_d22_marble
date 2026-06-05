@@ -1529,5 +1529,89 @@
         ]
       }
     ]
+  },
+  {
+    "prompt_id": "prompt_030",
+    "case_id": "case_003",
+    "timestamp": "2026-06-05T21:09:35.294223",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Sad",
+      "intensity_score": 0.34,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Angry": 0.184,
+        "Happy": 0.315,
+        "Sad": 0.342
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.9,
+          "Angry": 0.24
+        },
+        "realtime_scores": {
+          "Sad": 0.36
+        },
+        "text_scores": {
+          "Sad": 0.9,
+          "Angry": 0.5
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the darkness of despair toward the faint light of possibility and a glimmer of salvation",
+    "runtime_analysis": {
+      "dominant_emotion": "Sad",
+      "emotion_target": "Hope",
+      "complex_emotion": "A sense of crushing disappointment and despair slowly giving way to the faintest glimmer of hope and resilience.",
+      "stimulus_universe": "stadium, football pitch, grass, floodlights, crowd, blue jerseys",
+      "user_reaction": "The user is devastated by the Italy's failure to qualify for the World Cup, feeling a deep sense of loss and disappointment.",
+      "world_transformation": "Transform the stadium environment into a desolate and empty space with dim lighting, overcast skies, and a lingering sense of sadness. Modulate the atmosphere to convey a sense of hopelessness, but subtly introduce hints of resilience and determination."
+    },
+    "marble_prompt": "In the aftermath of Italy's defeat, the once-vibrant stadium now lies in ruin, its empty stands a haunting reminder of the team's failure to qualify for the World Cup. The floodlights cast long shadows across the desolate pitch, where the grass is dry and brittle, like the hopes of the Italian fans. The air is heavy with the weight of disappointment, as if the very atmosphere itself has been drained of its color and vitality. Yet, amidst this sea of sadness, a glimmer of hope begins to flicker, a spark that refuses to be extinguished by the darkness. It's a fragile flame, but it's there, burning brightly enough to guide us forward, toward a future where Italy can once again rise to the challenge and claim its rightful place among the world's best."
+  },
+  {
+    "prompt_id": "prompt_031",
+    "case_id": "case_004",
+    "timestamp": "2026-06-05T21:38:28.801133",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Tenderness",
+      "intensity_score": 0.58,
+      "valence": "positive",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Tenderness": 0.582,
+        "Disgust": 0.0315,
+        "Happy": 0.187
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Tenderness": 0.8,
+          "Happy": 0.42,
+          "Disgust": 0.09
+        },
+        "realtime_scores": {
+          "Tenderness": 0.36
+        },
+        "text_scores": {
+          "Happy": 0.2,
+          "Tenderness": 0.7
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from a sense of disconnection to an embracing unity",
+    "runtime_analysis": {
+      "dominant_emotion": "Tenderness",
+      "emotion_target": "Hope",
+      "complex_emotion": "The emotional resonance of hope arises from the tender connection between humanity and family, transcending the vastness of space.",
+      "stimulus_universe": "Interstellar by Christopher Nolan: futuristic spacecraft, cosmic landscapes, stars, galaxies, spacesuits, distant planets, and mysterious phenomena.",
+      "user_reaction": "The user's message emphasizes the importance of hope in overcoming challenges and connecting with others, echoing the themes of unity and resilience.",
+      "world_transformation": "The interstellar universe is transformed by tenderness to create a hopeful atmosphere, where gentle curves, intimate scale, and soft diffused light evoke a sense of connection and guidance."
+    },
+    "marble_prompt": "In the vast expanse of space, a lone spacecraft drifts through the cosmos, its crew searching for answers in the stars. The tender glow of distant planets illuminates their journey, as they navigate the unknown to find solace in the unity of humanity. Amidst the silence of the void, the gentle hum of lifeboats and the soft whispers of loved ones on the comms channel remind them that even in isolation, hope can be a guiding light. As they approach a distant galaxy, a beacon of light appears, symbolizing the connection to others and the resilience of the human spirit.",
+    "negative_constraints": [
+      "No scenes of desperation or despair; no hints of hopelessness; no dark or foreboding tones; no oppressive atmospheres; no sense of isolation."
+    ]
   }
 ]
