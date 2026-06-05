@@ -1,6 +1,7 @@
 import threading
 import itertools
 import time
+from random import random
 
 def spinner(stop_event: threading.Event, message: str = "") -> None:
     start = time.time()
@@ -9,5 +10,5 @@ def spinner(stop_event: threading.Event, message: str = "") -> None:
             break
         elapsed = int(time.time() - start)
         print(f"\r{message} {frame} {elapsed}s", end="", flush=True)
-        time.sleep(0.1)
-    print("\r" + " " * 50 + "\r", end="", flush=True)  # pulizia riga
+        time.sleep(random())
+    print("\r" + " " * 200 + "\r", end="", flush=True)  # pulizia riga
