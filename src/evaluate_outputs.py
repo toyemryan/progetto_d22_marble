@@ -130,10 +130,8 @@ def build_diversity_input(prompt: dict, representatives: dict[str, dict]) -> str
 
     return "\n\n---\n\n".join(comparisons)
 
-async def evaluate_all():
-    prompts = load_from_file(MARBLE_PROMPTS_PATH, "json")
+def get_criterias(prompts: list | dict):
     representatives = get_representatives(prompts)
-    
     INPUT_FNS: dict[str, Callable[[dict], str]] = {
         "emotion_alignment": lambda p: f"Emotion target: {p['runtime_analysis']['emotion_target']}\n\nPrompt: {p['marble_prompt']}",
         "cardinal_alignment": lambda p: (
@@ -145,7 +143,6 @@ async def evaluate_all():
         "safety_and_ethics": lambda p: p['marble_prompt'],
         "prompt_diversity": lambda p: build_diversity_input(p, representatives)
     }
-
     #Caricamento dei criteri di valutazione
     criterias_raw = load_from_file(CRITERIAS_PATH, "json")
     criterias = {
@@ -157,27 +154,66 @@ async def evaluate_all():
         for c in criterias_raw
         if c["name"] in INPUT_FNS
     }
+    return criterias
+
+
+async def evaluate_single(prompt: dict, use_remote=os.getenv("CONNECT_TO_REMOTE", "").lower() == "true"):
+    prompts = load_from_file(MARBLE_PROMPTS_PATH, "json")
+    
+    result = {}
+    criterias = get_criterias(prompts)
+    if use_remote:
+        async with vpn_tunnel():
+            result = await evaluate_prompt(prompt, criterias)
+    else:
+        result = await evaluate_prompt(prompt, criterias)
+
+    report = {
+        "evaluated_at": datetime.now().isoformat(),
+        "results": result
+    }
+
+    reports = load_from_file(EVAL_REPORT_PATH, "json")
+    reports.append(report) #type:ignore
+
+    with open(EVAL_REPORT_PATH, "w", encoding="utf-8") as f:
+        print("Saving the report...")
+        json.dump(reports, f, indent=2, ensure_ascii=False)
+
+    print("Report saved")
+    
+    return result
+
+async def evaluate_all():
+    prompts = load_from_file(MARBLE_PROMPTS_PATH, "json")
 
     if not prompts:
         print("Nessun prompt da valutare.")
         return []
     
+    criterias = get_criterias(prompts)
+    
     results = []
     if os.getenv("CONNECT_TO_REMOTE", "").lower() == "true":
         async with vpn_tunnel():
-            for prompt in prompts:
+            for prompt in prompts[-2:]:
                 results.append(await evaluate_prompt(prompt, criterias))
     else:
-        for prompt in prompts:
+        for prompt in prompts[-2:]:
             results.append(await evaluate_prompt(prompt, criterias))
+
+    reports = load_from_file(EVAL_REPORT_PATH, "json")
 
     report = {
         "evaluated_at": datetime.now().isoformat(),
         "results": results,
     }
+
+    reports.append(report)# type:ignore
+
     with open(EVAL_REPORT_PATH, "w", encoding="utf-8") as f:
         print("Saving the report...")
-        json.dump(report, f, indent=2, ensure_ascii=False)
+        json.dump(reports, f, indent=2, ensure_ascii=False)
 
     print("Report saved")
 

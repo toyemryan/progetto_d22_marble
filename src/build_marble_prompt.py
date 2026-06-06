@@ -27,7 +27,7 @@ META_PROMPT_PATH = os.path.join(PROMPTS_DIR, "meta_prompt_v2.txt")
 MARBLE_PROMPTS_PATH = os.path.join(DATA_DIR, "marble_prompts.json")
 
 # Configurazione Ollama
-OLLAMA_URL = os.getenv("OLLAMA_URL")
+OLLAMA_URL = os.getenv("OLLAMA_URL", "")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL")
 
 def load_marble_prompts():

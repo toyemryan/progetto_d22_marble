@@ -16,16 +16,14 @@ import os
 
 # Aggiungi src al path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-
 from dotenv import load_dotenv
 load_dotenv()
-
 from input_case import collect_case
 from parse_cases import parse_and_normalize, parse_all
 from emotion_fusion import fuse_emotions
 from cardinal_point import prepare_cardinal_context
 from build_marble_prompt import generate_marble_prompt
-from evaluate_outputs import evaluate_all
+from evaluate_outputs import evaluate_all, evaluate_single
 
 
 async def process_case_async(normalized_case):
@@ -56,6 +54,7 @@ async def process_case_async(normalized_case):
     if result:
         marble_prompt = result.get("marble_prompt", "")
         if marble_prompt:
+            res = await evaluate_single(result, use_remote=False)
             print(f"\n{'─'*60}")
             print("PROMPT MARBLE GENERATO:")
             print(f"{'─'*60}")

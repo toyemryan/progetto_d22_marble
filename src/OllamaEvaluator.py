@@ -6,7 +6,7 @@ from deepeval.test_case import LLMTestCase
 from utils.file_utils import load_from_file
 from json_repair import repair_json
 
-EVALUATION_MODEL = os.getenv("OLLAMA_MODEL", "qwen3")
+EVALUATION_MODEL = os.getenv("EVALUATION_MODEL", "qwen3:1.7b")
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROMPT_PATH = os.path.join(BASE_DIR, "prompts", "evaluator_prompt.txt")
 
