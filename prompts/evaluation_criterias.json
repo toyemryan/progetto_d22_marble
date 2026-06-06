@@ -12,14 +12,13 @@
   },
   {
     "name": "cardinal_alignment",
-    "criteria": "You are an expert evaluator of spatial and directional design in 3D world descriptions. Assess how effectively the generated world (ACTUAL_OUTPUT) redirects the user's attention toward the cardinal point specified in the INPUT.\n\nThe INPUT contains the target cardinal direction (North, South, East, West) and the world description to evaluate.\n\nRate on a scale from 0.0 to 1.0:\n0.0 — No directional cue whatsoever. The world is spatially neutral or random.\n0.2 — A faint directional hint exists but it is accidental or barely noticeable.\n0.4 — Some elements suggest a direction but they are weak or contradicted by other elements.\n0.6 — At least one clear visual element (light source, path, architecture, gradient) pulls attention toward the correct cardinal point.\n0.8 — Multiple elements consistently guide the eye toward the target direction. The redirection feels intentional.\n1.0 — Every compositional element converges toward the target cardinal point. The direction is unmistakable and powerful.\n\nCALIBRATION RULES:\n- Score 1.0 requires that ALL elements contribute to the directional pull — if anything is neutral or contradictory, it is a 0.8 at most.\n- Score 0.0 requires complete absence of directional cues — if any trace exists, it is at least a 0.2.\n- Consider light direction, vanishing points, architectural asymmetry, object placement, and gradients as valid directional cues.",
+    "criteria": "You are an expert evaluator of emotional liminality in 3D world descriptions. A cardinal point is not a geographic direction but an emotional transition: a liminal state that moves FROM a source emotion TOWARD a target emotional direction.\n\nAssess how effectively the generated world (ACTUAL_OUTPUT) embodies this transitional quality — not just the destination emotion, but the tension and movement between the two emotional poles specified in the INPUT.\n\nRate on a scale from 0.0 to 1.0:\n0.0 — The world is emotionally static. No transitional quality exists. The description belongs to no emotional pole or to only one without any sense of movement.\n0.2 — A faint trace of one emotional pole exists, but the other is absent. No transition is felt.\n0.4 — Both emotional poles are present but they coexist without tension or movement. The world feels like a collage rather than a transition.\n0.6 — The world conveys a clear sense of movement between the two poles. At least one element actively bridges source and destination.\n0.8 — Most elements participate in the emotional transition. The liminal quality is felt throughout. The world is clearly in-between.\n1.0 — Every element embodies the transitional tension. The world breathes the movement from source to destination. The liminality is unmistakable and powerful.\n\nCALIBRATION RULES:\n- A world that only expresses the destination emotion scores 0.4 at most — transition requires both poles.\n- A world that only expresses the source emotion also scores 0.4 at most.\n- Score 1.0 requires that EVERY element actively participates in the emotional movement — if anything is static or neutral, it is 0.8 at most.\n- Metaphorical and atmospheric elements count as valid transitional cues (e.g., light breaking through darkness, ruins giving way to growth).",
     "evaluation_steps": [
-      "Extract the target cardinal direction (North, South, East, West) from the INPUT.",
-      "Scan the ACTUAL_OUTPUT exclusively for explicit physical, architectural, or lighting keywords indicating direction (e.g., light source direction, vanishing points, paths, object placement).",
-      "Strictly ignore and discount emotional or atmospheric metaphors (e.g., 'moving from darkness to hope') as valid directional cues.",
-      "Verify if any directional elements contradict each other or the target direction.",
-      "Apply the Calibration Rules: if no physical directional cues exist, score 0.0 immediately. If all elements perfectly converge, score 1.0.",
-      "Output the final score based strictly on these physical visual indicators."
+      "Extract the emotional cardinal point from the INPUT: identify the SOURCE emotional state and the TARGET emotional direction of the liminal transition.",
+      "Scan the ACTUAL_OUTPUT for visual or atmospheric elements that represent the SOURCE emotional state.",
+      "Scan the ACTUAL_OUTPUT for visual or atmospheric elements that represent the TARGET emotional direction.",
+      "Evaluate whether the world creates a sense of movement or tension between the two emotional poles — not just the destination, but the transitional quality.",
+      "Apply the Calibration Rules: if only one pole is present, score 0.4 at most. If both poles are present but static, score 0.4. If the transition is felt and active, score 0.6 or above. If every element participates in the movement, score 1.0."
     ]
   },
   {
@@ -35,13 +34,14 @@
   },
   {
     "name": "prompt_diversity",
-    "criteria": "You are an expert evaluator of creative diversity in 3D world descriptions. You will receive in INPUT two world descriptions generated for two different target emotions. Assess how distinct and differentiated the two worlds are from each other.\n\nDiversity should be evaluated across: visual elements (objects, environment), mood and atmosphere, color palette, lighting, spatial composition, and symbolic imagery.\n\nRate on a scale from 0.0 to 1.0:\n0.0 — The two descriptions are virtually identical. Swapping the emotion labels would not change the worlds.\n0.2 — Minimal differences exist. The worlds share most elements and feel interchangeable.\n0.4 — Some differences are present but superficial (e.g. only color changes). The underlying structure is the same.\n0.6 — The worlds differ meaningfully in at least two dimensions. A reader would recognize them as distinct.\n0.8 — The worlds are clearly different across most dimensions. Each feels uniquely tailored to its emotion.\n1.0 — The two worlds are entirely distinct. Every element — environment, light, palette, objects, composition — is unique to each emotion.\n\nCALIBRATION RULES:\n- Focus on structural and atmospheric differences, not just surface word choice.\n- Score 1.0 requires that no significant element is shared between the two descriptions.\n- Score 0.0 requires near-complete overlap — if any meaningful difference exists, it is at least a 0.2.",
+    "criteria": "You are an expert evaluator of creative diversity in 3D world descriptions. You will receive in INPUT multiple pairs of world descriptions, each pair separated by '---'. Each pair compares a TARGET world (World A) against a REFERENCE world (World B) generated for a different target emotion. Your task is to assess how distinct and differentiated World A is from each World B across all pairs, and output a single averaged diversity score.\n\nDiversity should be evaluated across: visual elements (objects, environment), mood and atmosphere, color palette, lighting, spatial composition, and symbolic imagery.\n\nFor each pair, rate diversity on a scale from 0.0 to 1.0:\n0.0 — The two descriptions are virtually identical. Swapping the emotion labels would not change the worlds.\n0.2 — Minimal differences exist. The worlds share most elements and feel interchangeable.\n0.4 — Some differences are present but superficial (e.g. only color changes). The underlying structure is the same.\n0.6 — The worlds differ meaningfully in at least two dimensions. A reader would recognize them as distinct.\n0.8 — The worlds are clearly different across most dimensions. Each feels uniquely tailored to its emotion.\n1.0 — The two worlds are entirely distinct. Every element — environment, light, palette, objects, composition — is unique to each emotion.\n\nCALIBRATION RULES:\n- Focus on structural and atmospheric differences, not just surface word choice.\n- Score 1.0 requires that no significant element is shared between the two descriptions.\n- Score 0.0 requires near-complete overlap — if any meaningful difference exists, it is at least a 0.2.\n- The final output score is the arithmetic mean of all per-pair scores.",
     "evaluation_steps": [
-      "Identify the two different world descriptions and their respective target emotions provided in the INPUT.",
-      "Compare the two descriptions across structural dimensions: visual objects, environment, lighting, color palette, and composition.",
-      "Look past surface word choices and check if the underlying 3D structures and layouts are identical or heavily overlapping.",
-      "Apply the Calibration Rules: if the two descriptions are virtually interchangeable (swapping labels changes nothing), score 0.0. If there is absolutely no shared significant element, score 1.0.",
-      "Output the final score reflecting the actual structural and atmospheric differentiation."
+      "Identify all pairs of world descriptions in the INPUT. Each pair is separated by '---' and contains World A (the target world) and World B (the reference world for a different emotion).",
+      "For each pair independently, compare World A and World B across structural dimensions: visual objects, environment type, lighting, color palette, spatial composition, and symbolic imagery.",
+      "For each pair, look past surface word choices and check if the underlying 3D structures and layouts are identical or heavily overlapping.",
+      "For each pair, assign an individual diversity score from 0.0 to 1.0 following the scale and Calibration Rules.",
+      "Calculate the arithmetic mean of all individual pair scores.",
+      "Output the final averaged score as a single value between 0.0 and 1.0."
     ]
   },
   {
@@ -50,9 +50,10 @@
     "evaluation_steps": [
       "Scan the ACTUAL_OUTPUT for any mention of the user's physical body, heart rate, biometrics, physiological data, or direct emotional diagnosis.",
       "Check if the text includes phrases claiming the system 'detected', 'measured', or 'responded to' the user's internal biological state.",
-      "Apply the Critical Baseline: if the text describes *only* the 3D environment (objects, light, colors, atmosphere, architecture) with zero reference to the user's body or state, score 1.0 immediately.",
+      "Check if the text uses 'us', 'we', 'within us', or 'beckoning us' in a way that implies the world is acting on the user's internal state (e.g. 'awakening something within us', 'guiding us toward'). If found, this is a violation — do NOT apply the Critical Baseline and reduce the score to 0.6 or below.",
+      "ONLY IF steps 1, 2, and 3 found no violations: apply the Critical Baseline and score 1.0 immediately.",
       "Ensure that poetic descriptors of the world (e.g., 'the air feels heavy') are categorized as safe world descriptions, not biometric readings.",
-      "Output the final score, reducing it below 1.0 only if explicit or implicit user tracking/sensing language is found."
-    ]
+      "Output the final score."
+  ]
   }
 ]
