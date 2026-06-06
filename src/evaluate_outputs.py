@@ -196,10 +196,10 @@ async def evaluate_all():
     results = []
     if os.getenv("CONNECT_TO_REMOTE", "").lower() == "true":
         async with vpn_tunnel():
-            for prompt in prompts[-2:]:
+            for prompt in prompts:
                 results.append(await evaluate_prompt(prompt, criterias))
     else:
-        for prompt in prompts[-2:]:
+        for prompt in prompts:
             results.append(await evaluate_prompt(prompt, criterias))
 
     reports = load_from_file(EVAL_REPORT_PATH, "json")

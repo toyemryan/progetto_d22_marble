@@ -1983,5 +1983,131 @@
       "No danger"
     ],
     "marble_prompt": "In the heart of an interstellar landscape, the cosmos is rendered in a tender, luminous palette of soft pastels and warm golds, evoking a sense of wonder and connection. The stars are not just points of light but shimmering, glowing orbs that pulse with a gentle, golden light, casting a soft, diffused glow across the vast, open expanse. The sky is a deep, shifting blue with subtle hints of pink and lavender, creating an atmosphere of both serenity and warmth. The landscape is filled with gentle, flowing elements such as rivers of liquid light, gentle waves of shimmering mist, and soft, undulating hills that seem to curve toward the viewer. The ground is a soft, earthy terrain with patches of iridescent moss and delicate flowers that glow faintly, adding a touch of life and vitality. The atmosphere is one of quiet contemplation, with a gentle breeze that carries the scent of the cosmos. The environment is designed to evoke a deep, intimate connection to humanity, with subtle symbols of family and unity, such as glowing constellations that resemble family members or the gentle, flowing shapes of rivers that symbolize the connection between people. The world is not only visually stunning but also emotionally resonant, guiding the user toward a sense of hope and belonging, emphasizing the importance of family and human connection in the vastness of the universe."
+  },
+  {
+    "prompt_id": "prompt_039",
+    "case_id": "case_004",
+    "timestamp": "2026-06-06T17:32:15.150613",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Tenderness",
+      "intensity_score": 0.58,
+      "valence": "positive",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Disgust": 0.0315,
+        "Happy": 0.207,
+        "Tenderness": 0.582
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Tenderness": 0.8,
+          "Happy": 0.42,
+          "Disgust": 0.09
+        },
+        "realtime_scores": {
+          "Tenderness": 0.36
+        },
+        "text_scores": {
+          "Tenderness": 0.7,
+          "Happy": 0.3
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from a sense of fragility to an expansive horizon where human connection and shared aspirations can unfold",
+    "runtime_analysis": {
+      "dominant_emotion": "Tenderness",
+      "emotion_target": "Hope",
+      "complex_emotion": "A delicate balance between tenderness, warmth, and optimism, as the user's message expresses a desire to move forward amidst uncertainty.",
+      "stimulus_universe": "interstellar landscapes from Christofer Nolan's films, with vast starfields, celestial bodies, and distant planets",
+      "user_reaction": "The user's message conveys a sense of hope and unity, emphasizing the importance of human connection in overcoming adversity.",
+      "world_transformation": "The base environment is transformed by tenderness, with soft diffused light, gentle curves, intimate scale, and pink/cream/light blue hues, evoking a sense of warmth and optimism. The world should guide the user toward hope, with subtle hints of an expansive horizon where human connection and shared aspirations can unfold."
+    },
+    "marble_prompt": "As the stars align in the vast expanse of space, a delicate dance of celestial bodies unfolds. A lone spacecraft, fragile yet resolute, navigates through the cosmos, its path illuminated by the soft glow of distant stars. The curvature of the ship's hull glows with a warm, pinkish light, as if infused with the gentle tenderness of human connection. Amidst the infinite darkness, this tiny vessel represents humanity's capacity to persevere and strive for a brighter future. As the spacecraft approaches an unseen horizon, the stars begin to swirl in a vortex of hope, beckoning the user toward a limitless expanse where shared aspirations can unfold.",
+    "negative_constraints": [
+      "No desolate or barren landscapes",
+      "No isolated or fragmented elements",
+      "No overwhelming or oppressive spatial compositions"
+    ],
+    "variants": [
+      {
+        "variant_prompt": "As morning dawns on a distant planet, the spacecraft's hull glows with an ethereal light, as if infused with the warmth of hope. The starfield stretches out before it like an endless canvas, painted with vibrant hues of pink and blue. In this moment, the boundaries between space and time blur, and the user is transported to a realm where connection and shared aspirations can flourish.",
+        "time_of_day": "morning",
+        "palette": "pink/blue"
+      },
+      {
+        "variant_prompt": "The spacecraft, now a tiny speck on the horizon of a distant galaxy, is surrounded by an expansive landscape of swirling clouds and shimmering stardust. As the user gazes upon this celestial canvas, the soft glow of nearby stars illuminates the path ahead, guiding them toward a realm where hope and unity can unfold.",
+        "spatial_scale": "panoramic",
+        "symbolic_emphasis": "connection"
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_040",
+    "case_id": "case_004",
+    "timestamp": "2026-06-06T17:33:55.197600",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Tenderness",
+      "intensity_score": 0.5,
+      "valence": "positive",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Tenderness": 0.502,
+        "Disgust": 0.0315,
+        "Sad": 0.02,
+        "Happy": 0.267
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Tenderness": 0.8,
+          "Happy": 0.42,
+          "Disgust": 0.09
+        },
+        "realtime_scores": {
+          "Tenderness": 0.36
+        },
+        "text_scores": {
+          "Happy": 0.6,
+          "Sad": 0.1,
+          "Tenderness": 0.3
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from a sense of vulnerability toward a horizon of shared resilience",
+    "runtime_analysis": {
+      "dominant_emotion": "Tenderness",
+      "emotion_target": "Hope",
+      "complex_emotion": "A sense of tenderness and compassion towards humanity, fueled by the desire for shared resilience and collective advancement.",
+      "stimulus_universe": "The interstellar universe from Christofer Nolan's filmography, featuring celestial bodies, starships, and cosmic phenomena.",
+      "user_reaction": "The user is seeking a world that fosters hope and resilience in the face of vulnerability, drawing inspiration from their emotional connection to family and humanity.",
+      "world_transformation": "The base environment is transformed by tenderness, with soft diffused light, gentle curves, intimate scale, and pink/cream/light blue hues, creating an atmosphere of warmth and nurturing."
+    },
+    "marble_prompt": "In the infinite expanse of Christofer Nolan's interstellar universe, a tender glow illuminates the cosmos. Celestial bodies drift lazily across the starry canvas, as if drawn to the warmth of a family gathering. Starships of various shapes and sizes, each with its own story to tell, navigate the void with gentle precision. Amidst this celestial tapestry, a sense of vulnerability gives way to a horizon of shared resilience, as humanity's collective advancement becomes the guiding force behind the universe's transformation. The air is filled with whispers of hope, as the stars themselves begin to twinkle in anticipation of a brighter future.",
+    "negative_constraints": [
+      "No desolate or barren landscapes",
+      "No sense of isolation or disconnection",
+      "No threatening or ominous celestial phenomena",
+      "No darkness or shadowy figures",
+      "No overwhelming or crushing gravity"
+    ],
+    "variants": [
+      {
+        "prompt": "As the tender glow of Nolan's universe spreads across the cosmos, a new era of cooperation and hope begins to take shape. Starships from various worlds converge on a distant planet, their diverse cultures blending together in a vibrant celebration of life. The stars themselves twinkle with excitement, as humanity's shared resilience illuminates the path forward.",
+        "palette": [
+          "warm golden light",
+          "soft pastel colors"
+        ],
+        "time_of_day": "dawn"
+      },
+      {
+        "prompt": "In this vast expanse of interstellar space, a series of interconnected worlds begin to take shape. Each world represents a different aspect of human experience, from the fragility of life to the power of collective resilience. As the stars align in a celestial dance, hope and tenderness guide humanity toward a brighter future.",
+        "palette": [
+          "soft blues",
+          "pale yellows"
+        ],
+        "spatial_scale": "panoramic"
+      }
+    ]
   }
 ]

@@ -54,7 +54,7 @@ async def process_case_async(normalized_case):
     if result:
         marble_prompt = result.get("marble_prompt", "")
         if marble_prompt:
-            res = await evaluate_single(result, use_remote=False)
+            await evaluate_single(result, use_remote=False)
             print(f"\n{'─'*60}")
             print("PROMPT MARBLE GENERATO:")
             print(f"{'─'*60}")

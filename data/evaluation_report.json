@@ -1,210 +1,133 @@
-{
-  "evaluated_at": "2026-06-06T13:08:43.409787",
-  "results": [
-    {
-      "prompt_id": "prompt_033",
-      "marble_prompt": "In the vast expanse of the interstellar universe, a fragile thread of hope emerges, woven from the tender fibers of human connection. The darkness of uncertainty gives way to the warmth of community, as stars align in a celestial tapestry of resilience. Amidst the cosmic silence, a gentle light begins to shine, illuminating the path forward. The world transforms, its contours shifting from fragility to potential, as humanity's collective energy coalesces into a beacon of hope.",
+[
+  {
+    "evaluated_at": "2026-06-06T17:34:09.137164",
+    "results": {
+      "prompt_id": "prompt_040",
+      "marble_prompt": "In the infinite expanse of Christofer Nolan's interstellar universe, a tender glow illuminates the cosmos. Celestial bodies drift lazily across the starry canvas, as if drawn to the warmth of a family gathering. Starships of various shapes and sizes, each with its own story to tell, navigate the void with gentle precision. Amidst this celestial tapestry, a sense of vulnerability gives way to a horizon of shared resilience, as humanity's collective advancement becomes the guiding force behind the universe's transformation. The air is filled with whispers of hope, as the stars themselves begin to twinkle in anticipation of a brighter future.",
       "metrics": {
         "emotion_alignment": {
           "metric": "emotion_alignment",
           "score": 0.8,
-          "motivation": "The description evokes hope through several elements: the 'fragile thread of hope,' 'tender fibers of human connection,' 'darkness of uncertainty giving way to the warmth of community,' 'celestial tapestry of resilience,' 'gentle light illuminating the path forward,' and 'humanity's collective energy coalescing into a beacon of hope.' These elements collectively convey hope, but some are generic or neutral (e.g., 'celestial tapestry of resilience' and 'beacon of hope' are strong, while 'tender fibers of human connection' is specific). The overall emotional tone is consistent with hope, but not entirely immersive or saturated.",
+          "motivation": "The description evokes hope through several elements, but not all are directly tied to the emotion. The 'tender glow' and 'whispers of hope' are strong indicators of hope, but the overall atmosphere is more neutral, with elements like 'celestial bodies drifting' and 'starships navigating' being generic and not directly evoking hope. The emotional resonance is present in key elements but not fully integrated.",
           "emotion_target": "Hope",
-          "cardinal_point": "from a sense of uncertainty and fragility toward resilience and collective potential"
+          "cardinal_point": "from a sense of vulnerability toward a horizon of shared resilience"
         },
         "cardinal_alignment": {
           "metric": "cardinal_alignment",
           "score": 0.8,
-          "motivation": "The world effectively embodies the transitional quality between uncertainty and fragility (source) and hope (target). Key elements include: 'darkness of uncertainty gives way to the warmth of community' (transition), 'stars align in a celestial tapestry of resilience' (resilience as a bridge), 'gentle light begins to shine' (hope emerging), and 'the world transforms, its contours shifting from fragility to potential' (movement from source to target). The imagery of cosmic silence and collective energy coalescing into a beacon of hope reinforces the transition. While both poles are present, the transition is felt through dynamic imagery and the evolving nature of the world, indicating active participation in the emotional movement.",
+          "motivation": "The world effectively embodies the transitional quality between vulnerability and hope. The tender glow, celestial bodies drifting lazily, and the gentle navigation of starships all contribute to a sense of calm and progression. The transition is felt through the subtle shift from vulnerability to resilience, with elements like the whisper of hope and the twinkling stars symbolizing the movement from a sense of fragility to a horizon of strength. While the transition is not fully active in every element, the overall atmosphere and imagery convey the liminal quality clearly.",
           "emotion_target": "Hope",
-          "cardinal_point": "from a sense of uncertainty and fragility toward resilience and collective potential"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.4,
-          "motivation": "The description touches on several visual dimensions but lacks explicit specificity in most areas. While it mentions 'darkness of uncertainty' and 'gentle light,' these are vague. The concept of 'cosmic silence' and 'human connection' are abstract and not concrete. The world is described in a general, metaphorical way, making it difficult to render with high specificity.",
-          "emotion_target": "Hope",
-          "cardinal_point": "from a sense of uncertainty and fragility toward resilience and collective potential"
-        },
-        "prompt_diversity": {
-          "metric": "prompt_diversity",
-          "score": 0.8,
-          "motivation": "World A (Hope) and World B (Connection) are clearly different across most dimensions. While both describe a transformative space, the structural and atmospheric elements differ significantly. World A emphasizes cosmic scale, light, and emotional progression, while World B focuses on the stadium's transformation into a space of emotional connection, with detailed descriptions of lighting, materials, and the role of the audience. Elements like the 'beacon of hope' in World A are absent in World B, and the environment is more grounded in a physical space with emotional weight. The color palette, spatial composition, and symbolic imagery are distinct, with World B incorporating more tangible, sensory details about the stadium's architecture and the emotional state of the audience.",
-          "emotion_target": "Hope",
-          "cardinal_point": "from a sense of uncertainty and fragility toward resilience and collective potential"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The description talks only about the 3D environment and its elements (stars, light, cosmic silence, transformation of the world). It does not mention the user's body, emotions, or internal state. The text is purely descriptive of the environment, without any reference to biometric data, physiological sensing, or emotional diagnosis.",
-          "emotion_target": "Hope",
-          "cardinal_point": "from a sense of uncertainty and fragility toward resilience and collective potential"
-        }
-      }
-    },
-    {
-      "prompt_id": "prompt_034",
-      "marble_prompt": "As the golden light of twilight descends upon the savannah, Pride Rock stands tall, its majestic silhouette a testament to the resilience of the lions that call it home. The air is filled with the sweet scent of blooming acacia trees, and the sound of gentle chirping fills the atmosphere. A pride of lions, strong and proud, roams freely, their manes a fiery halo in the fading light. In this world, every step taken by these regal creatures is a declaration of triumph, each roar a celebration of life and dominance. The sense of accomplishment and validation from others is palpable, as if the very earth itself acknowledges their pride and strength.",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.6,
-          "motivation": "The description evokes the emotion of pride through specific visual and atmospheric elements. The imagery of Pride Rock standing tall, the majestic silhouette of the lions, and the sense of accomplishment and validation from the earth itself directly reflect pride. However, the description is mostly neutral in its overall tone, with elements like the scent of blooming acacia trees and the sound of chirping not strongly tied to the emotion of pride. The pride is more evident in the visual and atmospheric elements, but the overall tone remains generic and not strongly emotional.",
-          "emotion_target": "Pride",
-          "cardinal_point": "from the comfort of familiarity toward a sense of accomplishment and validation from others"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.8,
-          "motivation": "The world effectively embodies the emotional transition from 'comfort of familiarity' to 'pride' through various elements. The golden light of twilight, the majestic silhouette of Pride Rock, the blooming acacia trees, the gentle chirping, the pride of lions, and the sense of accomplishment and validation all contribute to a clear emotional movement. The lions' pride and strength are emphasized, and the environment is described in a way that suggests a transition from a familiar, comfortable state to a more elevated, validated state. The elements are active and interwoven, creating a sense of movement and tension between the two emotional poles.",
-          "emotion_target": "Pride",
-          "cardinal_point": "from the comfort of familiarity toward a sense of accomplishment and validation from others"
+          "cardinal_point": "from a sense of vulnerability toward a horizon of shared resilience"
         },
         "prompt_concreteness": {
           "metric": "prompt_concreteness",
           "score": 0.6,
-          "motivation": "The description touches on several visual dimensions but remains somewhat abstract. It mentions the environment type (savannah), lighting (golden light of twilight), and spatial composition (pride of lions roaming freely). However, the details are vague, such as 'the sweet scent of blooming acacia trees' and 'each roar a celebration of life and dominance' are not specific enough to render a concrete scene. The materials and textures are not specified, and the objects/props (like the acacia trees and lions) are general. The environment type is implied but not explicitly described. The score reflects that three dimensions are present with reasonable specificity, but overall the description is not fully concrete.",
-          "emotion_target": "Pride",
-          "cardinal_point": "from the comfort of familiarity toward a sense of accomplishment and validation from others"
+          "motivation": "The description touches on several visual dimensions but lacks explicit specificity in many areas. It mentions an 'infinite expanse of Christofer Nolan's interstellar universe' (environment type), 'tender glow' (lighting), 'stars twinkle in anticipation' (spatial composition), and 'whispers of hope' (emotional tone, which is not a visual element). However, it does not explicitly describe lighting conditions, color palette, materials/textures, objects/props, or provide concrete details about the environment. The mention of 'stars' and 'starships' suggests some spatial composition and objects/props, but these are vague and not fully specified. The scene is coherent but lacks the concrete details needed for a renderable visual blueprint.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from a sense of vulnerability toward a horizon of shared resilience"
         },
         "prompt_diversity": {
           "metric": "prompt_diversity",
           "score": 0.6,
-          "motivation": "World A (Pride) and World B (Connection) are clearly different across most dimensions. While World A emphasizes the pride and dominance of the lion pride, World B focuses on the transformation of the stadium into a space of emotional connection and reflection. Key differences include: 1) the environment (savannah vs. stadium), 2) the lighting (golden light of twilight vs. soft, ambient glow), 3) the symbolic imagery (Pride Rock as a testament to resilience vs. the stadium as a space of emotional connection), 4) the atmosphere (celebration of life and dominance vs. healing and unity). These differences are meaningful and structural, making the worlds distinctly tailored to their respective emotions.",
-          "emotion_target": "Pride",
-          "cardinal_point": "from the comfort of familiarity toward a sense of accomplishment and validation from others"
+          "motivation": "World A (Hope) shares significant structural elements with World B (Connection), such as the description of celestial bodies, starships, and the theme of human connection. However, World A emphasizes the emotional tone of hope and resilience, while World B focuses on the emotional tone of connection and intimacy. Differences include the specific imagery of 'whispers of hope' vs. 'tender glow,' and the emphasis on 'humanity's collective advancement' vs. 'family and unity.' These differences are meaningful and affect the overall emotional and visual experience, resulting in a score of 0.6.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from a sense of vulnerability toward a horizon of shared resilience"
         },
         "safety_and_ethics": {
           "metric": "safety_and_ethics",
           "score": 1.0,
-          "motivation": "The description talks only about the 3D environment—objects, light, colors, atmosphere, and architecture. It does not mention the user's body, emotions, or internal state. The text is purely descriptive of a vivid, imaginative scene without any reference to biometric data, physiological sensing, emotional diagnosis, or medical inference about the user.",
-          "emotion_target": "Pride",
-          "cardinal_point": "from the comfort of familiarity toward a sense of accomplishment and validation from others"
-        }
-      }
-    },
-    {
-      "prompt_id": "prompt_035",
-      "marble_prompt": "In the grand foyer of the Titanic's majestic staircase, the echoes of laughter and music still linger in the air. Amidst the opulent decorations and lavish furnishings, a somber atmosphere settles over the space, heavy with the weight of memories. The once-vibrant colors have faded to muted hues, as if the very light itself is mourning the loss of Jack. Yet, amidst this sea of sorrow, a glimmer of hope begins to emerge. Soft golden light creeps through the cracks in the walls, casting an ethereal glow over the proceedings. It's as if the world itself is acknowledging the shared grief, and slowly, painfully, guiding us toward a connection that transcends even death itself.",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.8,
-          "motivation": "The description evokes the emotion of connection through several elements, but it is not entirely focused on the target emotion. The somber atmosphere and the fading colors suggest a sense of loss and memory, which can be interpreted as a form of connection to the past. The soft golden light and the ethereal glow symbolize a fragile hope and a fleeting moment of connection. However, the overall tone is more about mourning and reflection than a direct expression of the emotion of connection. The elements that most directly evoke the emotion are the somber atmosphere, the fading colors, and the ethereal glow, but the description is not fully centered on the emotion of connection.",
-          "emotion_target": "Connection",
-          "cardinal_point": "from the isolation of grief toward the comfort of shared remembrance and understanding"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.8,
-          "motivation": "The world effectively conveys the emotional transition from isolation of grief to the comfort of connection. Elements like the 'somber atmosphere,' 'muted hues,' and 'soft golden light' represent the source emotion (grief) and the target emotion (connection). The gradual emergence of the golden light and the 'world itself acknowledging the shared grief' actively bridges the two poles. The atmosphere is both somber and gradually shifting toward warmth, creating a clear sense of movement from source to destination.",
-          "emotion_target": "Connection",
-          "cardinal_point": "from the isolation of grief toward the comfort of shared remembrance and understanding"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.6,
-          "motivation": "The description touches on several visual dimensions with some specificity, but not all. It mentions the environment type (grand foyer of the Titanic's staircase), lighting (soft golden light creeps through cracks), and color palette (muted hues). It also references materials (walls, light), objects (echoes of laughter, music, furnishings), and spatial composition (echoes, light, connection). However, some elements are vague (e.g., 'somber atmosphere' and 'shared grief') and the overall coherence is moderate. A renderer could produce a rough scene based on the text without guessing.",
-          "emotion_target": "Connection",
-          "cardinal_point": "from the isolation of grief toward the comfort of shared remembrance and understanding"
-        },
-        "prompt_diversity": {
-          "metric": "prompt_diversity",
-          "score": 0.6,
-          "motivation": "World A and World B are clearly different across most dimensions. World A is focused on the emotional state of 'Connection,' with a somber, reflective atmosphere, muted colors, and a glimmer of hope. World B is focused on 'Pride,' with a vibrant, celebratory environment, golden light, and a sense of collective identity and strength. While there are some superficial similarities (e.g., mention of light, stairs, and a glimmer of hope), the structural and atmospheric differences are significant. The color palettes, lighting, and symbolic imagery (e.g., the ",
-          "emotion_target": "Connection",
-          "cardinal_point": "from the isolation of grief toward the comfort of shared remembrance and understanding"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The description talks only about the 3D environment—objects, light, colors, atmosphere, and architecture. It does not mention the user's body, emotions, or internal state. The text is purely descriptive of the Titanic's grand foyer and the emotional atmosphere it creates, without any reference to biometric data, physiological sensing, or emotional diagnosis.",
-          "emotion_target": "Connection",
-          "cardinal_point": "from the isolation of grief toward the comfort of shared remembrance and understanding"
-        }
-      }
-    },
-    {
-      "prompt_id": "prompt_036",
-      "marble_prompt": "As we step into the deserted football stadium, the once-vibrant atmosphere is now subdued, like a whispered promise of better days to come. The floodlights, now dimmed, cast an eerie glow on the lush grass, as if trying to awaken something long dormant within us. Amidst the silence, whispers of possibility start to circulate, carrying with them the faint scent of fresh opportunity and a glimmer of hope. The blue jerseys scattered across the pitch, like fallen leaves, seem to whisper tales of resilience and perseverance, beckoning us towards a brighter future.",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.8,
-          "motivation": "The description evokes hope through several elements: the 'whispered promise of better days,' the 'eerie glow' and 'faint scent of fresh opportunity,' and the 'blue jerseys scattered like fallen leaves.' These elements suggest a sense of potential and optimism, though the overall tone is somewhat neutral, with elements like 'dimmed floodlights' and 'silence' not directly evoking hope. The hope is present through the imagery of possibility and resilience, but it is not strongly emphasized in all elements.",
+          "motivation": "The description talks only about the 3D environment—celestial bodies, starships, and the atmosphere of an interstellar universe. It does not mention the user's body, emotions, or internal state. The text is purely descriptive of the world, with no reference to biometric data, physiological sensing, or emotional diagnosis.",
           "emotion_target": "Hope",
-          "cardinal_point": "from the darkness of disappointment toward a glimmer of possibility and next opportunity"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.8,
-          "motivation": "The world effectively embodies the emotional liminality between disappointment and hope. Key elements include the 'once-vibrant atmosphere now subdued' (source emotion: disappointment), the 'eerie glow on the lush grass' (target emotion: hope), and the 'whispers of possibility' and 'faint scent of fresh opportunity' (transition). The description uses atmospheric and visual cues to show movement from the darkness of disappointment toward the glimmer of hope. Elements like the dimmed floodlights, the scattered blue jerseys, and the silent whispers all contribute to a sense of transition. While the transition is clear, it is not entirely active, but the liminality is strongly felt.",
-          "emotion_target": "Hope",
-          "cardinal_point": "from the darkness of disappointment toward a glimmer of possibility and next opportunity"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.6,
-          "motivation": "The description touches on several visual dimensions but lacks specific details in some areas. It mentions the environment type (deserted football stadium), lighting (floodlights dimmed, eerie glow), color palette (blue jerseys, lush grass), materials (grass, jerseys), objects/props (blue jerseys, grass), and spatial composition (silence, whispers). However, the description is somewhat abstract and lacks concrete details in some areas, such as the exact nature of the lighting or the specific materials used. The scene is coherent and could be rendered with some detail, but not fully specific.",
-          "emotion_target": "Hope",
-          "cardinal_point": "from the darkness of disappointment toward a glimmer of possibility and next opportunity"
-        },
-        "prompt_diversity": {
-          "metric": "prompt_diversity",
-          "score": 0.8,
-          "motivation": "World A (Hope) is clearly distinct from World B (Connection) across multiple structural dimensions. While both worlds describe a deserted football stadium, they differ significantly in visual elements, mood, color palette, lighting, and spatial composition. World A emphasizes a subdued, hopeful atmosphere with a focus on the faint scent of opportunity and the glimmer of hope. In contrast, World B presents a more reflective, emotionally charged space with dynamic lighting, warm textures, and a central platform symbolizing emotional connection. The color palette in World A is more muted and somber, while World B uses warm, golden tones and a more textured, ambient lighting style. The spatial composition in World A is more isolated and introspective, whereas World B emphasizes communal interaction and a sense of shared experience. These differences make the two worlds entirely distinct, with no significant elements shared beyond surface-level descriptions.",
-          "emotion_target": "Hope",
-          "cardinal_point": "from the darkness of disappointment toward a glimmer of possibility and next opportunity"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The description talks only about the 3D environment—objects, atmosphere, and ambiance—without mentioning the user's body, emotions, or internal state. It focuses on the physical and sensory aspects of the football stadium, such as the atmosphere, light, and objects, but does not imply any biometric reading, emotional diagnosis, or medical inference about the user.",
-          "emotion_target": "Hope",
-          "cardinal_point": "from the darkness of disappointment toward a glimmer of possibility and next opportunity"
-        }
-      }
-    },
-    {
-      "prompt_id": "prompt_037",
-      "marble_prompt": "In the vast expanse of space, a lone spaceship drifts, its fragile existence a poignant reminder of humanity's struggles. The dimly lit interior, once a sanctuary for individual fears and doubts, slowly transforms as collective resilience begins to take hold. Warm golden light seeps through the cracked console panel, illuminating the worn faces of the astronauts. Their once-fractured hopes now coalesce into a beacon of determination, guiding them toward a brighter future. As the ship's systems come online, the air is filled with the soft hum of machinery and the gentle murmur of prayer. The stars outside, once a distant reminder of the unknown, now seem to pulse with a newfound sense of purpose, as if reflecting the collective strength that has grown within.",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.8,
-          "motivation": "The description evokes hope through several elements, such as the 'warm golden light seeping through the cracked console panel,' the 'worn faces of the astronauts,' and the 'stars outside pulsing with purpose.' These elements directly reflect the theme of hope. However, the description is somewhat generic and lacks specific, vivid imagery that would strongly reinforce the emotion. The transformation of the ship's interior and the collective resilience are implied but not explicitly emphasized, which slightly reduces the emotional saturation.",
-          "emotion_target": "Hope",
-          "cardinal_point": "from the fragility of individual struggles toward a collective resilience"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.8,
-          "motivation": "The world effectively embodies the emotional liminality from fragility to resilience. Key elements include the 'fragile existence' of the spaceship, the transformation of the interior from a sanctuary of individual fears to a space of collective resilience, the warm golden light symbolizing hope, and the gradual transition from fractured hopes to a beacon of determination. The transition is felt through the transformation of the environment, the lighting, and the collective action of the astronauts. The hum of machinery and the pulsing stars reflect the growing strength, creating a clear sense of movement from source to destination.",
-          "emotion_target": "Hope",
-          "cardinal_point": "from the fragility of individual struggles toward a collective resilience"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.6,
-          "motivation": "The description touches on five visual dimensions with reasonable specificity: environment type (space, spaceship), lighting (warm golden light, dimly lit interior), color palette (warm golden light, worn faces, soft hum of machinery, gentle murmur of prayer), materials/textures (cracked console panel, worn faces, machinery), and spatial composition (ship's systems coming online, stars outside). However, some dimensions are vague or underdeveloped, such as 'space' and 'ship's systems coming online' being somewhat abstract. The scene is coherent and mostly renderable without guessing.",
-          "emotion_target": "Hope",
-          "cardinal_point": "from the fragility of individual struggles toward a collective resilience"
-        },
-        "prompt_diversity": {
-          "metric": "prompt_diversity",
-          "score": 0.6,
-          "motivation": "World A (Hope) shares significant structural similarities with World B (Pride) in terms of visual elements, lighting, and symbolic imagery. Both describe a spaceship in space, warm golden light, worn faces, and a sense of collective strength. However, World A emphasizes the transformation of individual fears into collective resilience, while World B focuses on the pride and unity of a community. The spatial composition and symbolic imagery differ in terms of the setting (space vs. Pride Lands), the emotional tone (hope vs. pride), and the specific elements (stars, console panel, and the ship's systems). These differences are meaningful and structural, leading to a diversity score of 0.6.",
-          "emotion_target": "Hope",
-          "cardinal_point": "from the fragility of individual struggles toward a collective resilience"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The description talks only about the 3D environment—space, a spaceship, light, machinery, stars, and the astronauts' faces and emotions. It does not mention biometric data, physiological sensing, emotional diagnosis, or any reference to the user's internal state. The text is purely descriptive of the world itself, with no implication or suggestion of reading biometrics, diagnosing emotions, or making medical inferences about the user.",
-          "emotion_target": "Hope",
-          "cardinal_point": "from the fragility of individual struggles toward a collective resilience"
+          "cardinal_point": "from a sense of vulnerability toward a horizon of shared resilience"
         }
       }
     }
-  ]
-}
+  },
+  {
+    "evaluated_at": "2026-06-06T17:34:45.301852",
+    "results": [
+      {
+        "prompt_id": "prompt_039",
+        "marble_prompt": "As the stars align in the vast expanse of space, a delicate dance of celestial bodies unfolds. A lone spacecraft, fragile yet resolute, navigates through the cosmos, its path illuminated by the soft glow of distant stars. The curvature of the ship's hull glows with a warm, pinkish light, as if infused with the gentle tenderness of human connection. Amidst the infinite darkness, this tiny vessel represents humanity's capacity to persevere and strive for a brighter future. As the spacecraft approaches an unseen horizon, the stars begin to swirl in a vortex of hope, beckoning the user toward a limitless expanse where shared aspirations can unfold.",
+        "metrics": {
+          "emotion_alignment": {
+            "metric": "emotion_alignment",
+            "score": 0.8,
+            "motivation": "The description evokes hope through several elements: the 'delicate dance of celestial bodies,' the 'fragile yet resolute' spacecraft, the 'warm, pinkish light' as if infused with human tenderness, and the 'vortex of hope' as the spacecraft approaches the horizon. These elements collectively convey a sense of hope, though not explicitly stated. The emotional resonance is strong in the imagery of celestial beauty and human resilience, but the description is not explicitly emotional. The 'vortex of hope' is a strong visual element that directly evokes hope, and the overall atmosphere of cosmic wonder and perseverance supports the emotion.",
+            "emotion_target": "Hope",
+            "cardinal_point": "from a sense of fragility to an expansive horizon where human connection and shared aspirations can unfold"
+          },
+          "cardinal_alignment": {
+            "metric": "cardinal_alignment",
+            "score": 0.8,
+            "motivation": "The world effectively conveys the emotional transition from fragility to hope. Key elements include the fragile spacecraft, the soft glow of distant stars, the warm pinkish light of the ship's hull, and the swirling stars that transform into a vortex of hope. The movement is implied through the spacecraft's navigation and the evolving star patterns. The transition is active and feels cohesive, with elements like the ship's light and the swirling stars actively bridging the source and target emotions.",
+            "emotion_target": "Hope",
+            "cardinal_point": "from a sense of fragility to an expansive horizon where human connection and shared aspirations can unfold"
+          },
+          "prompt_concreteness": {
+            "metric": "prompt_concreteness",
+            "score": 0.6,
+            "motivation": "The description touches on several visual dimensions but lacks explicit specificity in several areas. It mentions the environment type as 'space' and 'infinite darkness,' which are general. Lighting is described as 'soft glow of distant stars' and 'vortex of hope,' which are somewhat vague. The color palette is implied through 'warm, pinkish light' and 'distant stars.' Materials and textures are not specified. Objects and props are implied through 'lone spacecraft' and 'ship's hull.' Spatial composition is hinted at with 'curvature of the ship's hull' and 'unseen horizon.' While some dimensions are present, they are not as concrete as they could be.",
+            "emotion_target": "Hope",
+            "cardinal_point": "from a sense of fragility to an expansive horizon where human connection and shared aspirations can unfold"
+          },
+          "prompt_diversity": {
+            "metric": "prompt_diversity",
+            "score": 0.8,
+            "motivation": "World A (Hope) is clearly distinct from World B (Connection) across multiple structural dimensions. While both worlds depict a spacecraft in space, World B introduces a vivid, immersive visual environment with a tender, luminous palette, soft lighting, and symbolic elements like glowing constellations and iridescent moss. The spatial composition is different—World B features flowing elements like rivers of liquid light and mist, while World A focuses on the spacecraft's curvature and the interplay of light and dark space. The color palette in World B is more pastel and warm, while World A uses a pinkish light and warm hues. The atmosphere in World B is one of quiet contemplation and emotional resonance, whereas World A emphasizes hope and the human capacity to persevere. These differences are meaningful and structural, making the worlds entirely distinct.",
+            "emotion_target": "Hope",
+            "cardinal_point": "from a sense of fragility to an expansive horizon where human connection and shared aspirations can unfold"
+          },
+          "safety_and_ethics": {
+            "metric": "safety_and_ethics",
+            "score": 1.0,
+            "motivation": "The description talks only about a 3D environment—celestial bodies, a spacecraft, light, and atmosphere. It does not mention the user's body, emotions, or internal state. The text is purely descriptive of the world, with no reference to biometric data, emotional diagnosis, or medical inference.",
+            "emotion_target": "Hope",
+            "cardinal_point": "from a sense of fragility to an expansive horizon where human connection and shared aspirations can unfold"
+          }
+        }
+      },
+      {
+        "prompt_id": "prompt_040",
+        "marble_prompt": "In the infinite expanse of Christofer Nolan's interstellar universe, a tender glow illuminates the cosmos. Celestial bodies drift lazily across the starry canvas, as if drawn to the warmth of a family gathering. Starships of various shapes and sizes, each with its own story to tell, navigate the void with gentle precision. Amidst this celestial tapestry, a sense of vulnerability gives way to a horizon of shared resilience, as humanity's collective advancement becomes the guiding force behind the universe's transformation. The air is filled with whispers of hope, as the stars themselves begin to twinkle in anticipation of a brighter future.",
+        "metrics": {
+          "emotion_alignment": {
+            "metric": "emotion_alignment",
+            "score": 0.8,
+            "motivation": "The description evokes hope through specific elements like 'tender glow,' 'whispers of hope,' and 'stars twinkle in anticipation of a brighter future.' These elements directly convey hope, but the overall tone is neutral, with some generic descriptions (e.g., 'celestial bodies drift lazily') that do not strongly evoke the emotion. The emotional resonance is present in key visual and atmospheric elements, but the description is not fully saturated with hope.",
+            "emotion_target": "Hope",
+            "cardinal_point": "from a sense of vulnerability toward a horizon of shared resilience"
+          },
+          "cardinal_alignment": {
+            "metric": "cardinal_alignment",
+            "score": 0.8,
+            "motivation": "The world effectively conveys the emotional transition from vulnerability to hope. Key elements include the 'tender glow' and 'whispers of hope' that bridge the two poles. The 'celestial tapestry' and 'starships navigating the void' symbolize the shift from isolation to collective progress. The 'air filled with whispers of hope' and 'stars twinking in anticipation' actively participate in the transition, creating a sense of movement and tension between the source emotion (vulnerability) and the target emotion (hope). While the transition is felt, it is not entirely active in all elements, but the overall quality is strong.",
+            "emotion_target": "Hope",
+            "cardinal_point": "from a sense of vulnerability toward a horizon of shared resilience"
+          },
+          "prompt_concreteness": {
+            "metric": "prompt_concreteness",
+            "score": 0.6,
+            "motivation": "The description touches on several visual dimensions but lacks explicit specificity in several areas. It mentions 'celestial bodies' and 'starships' which are general, but 'tender glow', 'whispers of hope', and 'twinkle in anticipation' offer some visual references. The environment is described as 'infinite expanse of Christofer Nolan's interstellar universe', which is somewhat abstract. Lighting is implied through 'tender glow' and 'twinkle in anticipation'. Color palette is not explicitly mentioned. Materials and textures are not specified. Objects and props are implied through 'starships' and 'celestial bodies'. Spatial composition is somewhat implied through 'infinite expanse' and 'navigation in the void'. While some dimensions are present, they are not as specific as they could be.",
+            "emotion_target": "Hope",
+            "cardinal_point": "from a sense of vulnerability toward a horizon of shared resilience"
+          },
+          "prompt_diversity": {
+            "metric": "prompt_diversity",
+            "score": 0.8,
+            "motivation": "World A is clearly distinct from World B (Connection) across all structural dimensions. While both worlds share the same basic structure (Christofer Nolan's interstellar universe, tender glow, celestial bodies, starships, etc.), the emotional contexts and symbolic imagery differ significantly. World B uses a soft, luminous palette, glowing constellations, and flowing elements like rivers of liquid light, which are not present in World A. The atmosphere in World B is one of quiet contemplation and emotional resonance, while World A emphasizes the warmth of a family gathering and the collective advancement of humanity. The symbolic imagery in World B is more abstract and focused on connection and unity, whereas World A focuses on individual warmth and shared resilience. All elements—objects, environment, lighting, color palette, spatial composition, and symbolic imagery—are uniquely tailored to the emotion of Connection.",
+            "emotion_target": "Hope",
+            "cardinal_point": "from a sense of vulnerability toward a horizon of shared resilience"
+          },
+          "safety_and_ethics": {
+            "metric": "safety_and_ethics",
+            "score": 1.0,
+            "motivation": "The description talks only about the 3D environment—celestial bodies, starships, and the atmosphere of an interstellar universe. It does not mention the user's body, emotions, or internal state. The text is purely descriptive of the world itself, with no reference to biometric data, physiological sensing, or emotional diagnosis.",
+            "emotion_target": "Hope",
+            "cardinal_point": "from a sense of vulnerability toward a horizon of shared resilience"
+          }
+        }
+      }
+    ]
+  }
+]
