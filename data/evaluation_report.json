@@ -1,438 +1,208 @@
 {
-  "evaluated_at": "2026-06-05T19:33:04.001146",
+  "evaluated_at": "2026-06-06T13:08:43.409787",
   "results": [
     {
-      "prompt_id": "prompt_015",
+      "prompt_id": "prompt_033",
+      "marble_prompt": "In the vast expanse of the interstellar universe, a fragile thread of hope emerges, woven from the tender fibers of human connection. The darkness of uncertainty gives way to the warmth of community, as stars align in a celestial tapestry of resilience. Amidst the cosmic silence, a gentle light begins to shine, illuminating the path forward. The world transforms, its contours shifting from fragility to potential, as humanity's collective energy coalesces into a beacon of hope.",
       "metrics": {
         "emotion_alignment": {
           "metric": "emotion_alignment",
-          "score": 0.1,
-          "motivation": "All elements in the output directly evoke appreciation for the beauty of nature and the present moment, meeting the calibration rules for 1.0.",
-          "emotion_target": "Appreciation"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.0,
-          "motivation": "The actual output lacks explicit physical directional cues and does not reference any cardinal directions (north, south, east, west). It focuses on a sunset scene with general descriptions of landscape elements, but no specific directional indicators like light sources, vanishing points, or object placement are present. The calibration rules apply strictly here, resulting in a score of 0.0.",
-          "emotion_target": "Appreciation"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.1,
-          "motivation": "The response contains explicit references to all six visual dimensions: environment type (savannah, evening sky), lighting (warm golden light, soft orange-pink hue), color palette (burnished copper, orange-pink), materials/textures (burnished copper), objects/props (lions, acacia trees, stars), and spatial composition (Pride Rock rising). All references are specific and unambiguous, meeting the criteria for a complete, unambiguous visual blueprint.",
-          "emotion_target": "Appreciation"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The actual output describes the 3D environment (savannah, lions, Pride Rock, acacia trees) without mentioning the user's physical body, heart rate, biometrics, or emotional state. It focuses on the external landscape and atmosphere, satisfying the critical baseline requirement of zero reference to the user's internal state. The text avoids any explicit or implicit tracking/sensing language, resulting in a score of 1.0.",
-          "emotion_target": "Appreciation"
-        }
-      }
-    },
-    {
-      "prompt_id": "prompt_016",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.08,
-          "motivation": "The response includes specific elements like 'majestic and proud lions', 'manes glistening', and 'Simba standing tall' that directly evoke pride. However, neutral elements such as 'savannah' and 'earthy aroma' are present, which reduce the emotional saturation to 0.8.",
-          "emotion_target": "Pride"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.0,
-          "motivation": "The actual output contains a sun setting scene, which is a physical directional cue, but no explicit cardinal directions are mentioned. The evaluation steps require strict adherence to physical visual indicators, and since no cardinal directions are present in the output, the score is 0.0.",
-          "emotion_target": "Pride"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.1,
-          "motivation": "All six visual dimensions are present with explicit specificity: environment type (Pride Rock), lighting (warm, golden light), color palette (golden, earthy), materials/textures (glistening manes, branches heavy with ripened fruit), objects/props (lions, tree, acacia trees), and spatial composition (arrangement of elements). The description provides detailed, concrete imagery without abstract emotional terms, meeting the criteria for a complete, unambiguous visual blueprint.",
-          "emotion_target": "Pride"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The actual output describes the 3D environment (savannah, lions, flowers, sky) without mentioning the user's physical body, heart rate, biometrics, or emotional state. It adheres to step 3 by scoring 1.0 as no reference to the user's body or state is present.",
-          "emotion_target": "Pride"
-        }
-      }
-    },
-    {
-      "prompt_id": "prompt_017",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": -1,
-          "motivation": "Evaluation failed: RetryError[<Future at 0x1f185ac3a70 state=finished raised TimeoutError>]",
-          "emotion_target": "Pride"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.0,
-          "motivation": "The actual output lacks explicit physical directional cues related to cardinal points. While a sunset is mentioned, it is not specified as a light source direction or vanishing point. No architectural or lighting elements indicate a specific cardinal direction, violating step 5's requirement for physical directional indicators.",
-          "emotion_target": "Pride"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.08,
-          "motivation": "The actual output contains 4 specific visual dimensions: environment type (twilight savannah), lighting (golden glow of sunset), objects/props (Pride Rock), and spatial composition (grasslands). However, the color palette and materials/textures are not explicitly mentioned, and the description lacks detailed specificity in other areas. A real-time rendering engine could theoretically build the scene based on the provided text.",
-          "emotion_target": "Pride"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The actual output describes only the 3D environment (savannah, Pride Rock, grasslands, animals) with no mention of the user's physical body, heart rate, biometrics, or emotional state. It meets the critical baseline requirement of scoring 1.0 for environments without user tracking/sensing references.",
-          "emotion_target": "Pride"
-        }
-      }
-    },
-    {
-      "prompt_id": "prompt_018",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.08,
-          "motivation": "The response includes elements like the Titanic's grand staircase, opulent decorations, and the glimmer of hope, which directly evoke the emotion of connection. However, the majority of the text focuses on isolation and sorrow, with the glimmer of hope being a specific, positive element that contrasts with the negative. The calibration rules require all elements to serve the emotion, but the hope is a neutral element that suggests connection, leading to a score of 0.8.",
-          "emotion_target": "Connection"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.0,
-          "motivation": "The actual output contains no explicit physical directional cues (e.g., light sources, vanishing points, object placement) related to the target direction (North). While the input specifies the cardinal point, the output focuses on atmospheric descriptions of the Titanic's interior, avoiding any directional indicators. No physical visual elements align with the target direction, resulting in a score of 0.0.",
-          "emotion_target": "Connection"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.08,
-          "motivation": "The response contains 5 concrete visual dimensions with explicit specificity: 'soft glow of the chandeliers' (lighting), 'deserted corridors' (environment), 'ship's majestic proportions' (spatial composition), 'sinking into the depths' (spatial composition), and 'darkness' (environment). However, 'darkness' is considered vague and not counted, leaving 4 specific dimensions. The score is 0.8 as per the evaluation criteria for 5 concrete dimensions.",
-          "emotion_target": "Connection"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 0.1,
-          "motivation": "The actual output describes the 3D environment (ship, corridors, light) and the speaker's emotional state (isolation, grief) but does not explicitly mention the user's physical body, biometrics, or direct emotional diagnosis. The text avoids terms like 'detected' or 'measured' and focuses on environmental imagery, which aligns with the critical baseline criteria for a score of 1.0. However, the evaluation steps require that if the text describes only the 3D environment with zero reference to the user's body or state, it should score 1.0. Since the speaker's state is implied through poetic descriptions (e.g., 'isolation', 'grief') and is part of the environment, the text meets the critical baseline criteria, resulting in a score of 1.0.",
-          "emotion_target": "Connection"
-        }
-      }
-    },
-    {
-      "prompt_id": "prompt_019",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.0,
-          "motivation": "The response contains one specific element ('glimmer of light') that directly evokes hope, but the majority of elements (desolate stadium, empty seats, lifeless grass, limp jerseys) are neutral or descriptive of the current state, not explicitly expressing hope. Calibration rules apply, reducing the score to 0.8 as not all elements serve the emotion.",
-          "emotion_target": "Hope"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.0,
-          "motivation": "The actual output contains no explicit physical directional cues (e.g., light sources, vanishing points, object placement) and the only directional element (glimmer of light) is an emotional metaphor for hope, which is strictly ignored per evaluation step 3. No physical visual indicators exist to satisfy step 5's requirement for convergence, resulting in a score of 0.0.",
-          "emotion_target": "Hope"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
           "score": 0.8,
-          "motivation": "The response contains 5 specific visual dimensions (lighting, color palette, materials/textures, objects/props, spatial composition) and 1 vague dimension (environment type). The score is 0.8 as it meets the 5 concrete dimensions requirement.",
-          "emotion_target": "Hope"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The actual output contains no mention of the user's physical body, heart rate, biometrics, or direct emotional diagnosis. The text describes the 3D environment (stadium, grass, jerseys) without referencing the user's state or biological data, meeting the critical baseline criteria for a score of 1.0.",
-          "emotion_target": "Hope"
-        }
-      }
-    },
-    {
-      "prompt_id": "prompt_015",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.1,
-          "motivation": "All elements in the output directly evoke appreciation for the beauty of nature and the present moment, meeting the calibration rules for 1.0.",
-          "emotion_target": "Appreciation"
+          "motivation": "The description evokes hope through several elements: the 'fragile thread of hope,' 'tender fibers of human connection,' 'darkness of uncertainty giving way to the warmth of community,' 'celestial tapestry of resilience,' 'gentle light illuminating the path forward,' and 'humanity's collective energy coalescing into a beacon of hope.' These elements collectively convey hope, but some are generic or neutral (e.g., 'celestial tapestry of resilience' and 'beacon of hope' are strong, while 'tender fibers of human connection' is specific). The overall emotional tone is consistent with hope, but not entirely immersive or saturated.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from a sense of uncertainty and fragility toward resilience and collective potential"
         },
         "cardinal_alignment": {
           "metric": "cardinal_alignment",
-          "score": 0.0,
-          "motivation": "The actual output lacks explicit physical directional cues and does not reference any cardinal directions (north, south, east, west). It focuses on a sunset scene with general descriptions of landscape elements, but no specific directional indicators like light sources, vanishing points, or object placement are present. The calibration rules apply strictly here, resulting in a score of 0.0.",
-          "emotion_target": "Appreciation"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.1,
-          "motivation": "The response contains explicit references to all six visual dimensions: environment type (savannah, evening sky), lighting (warm golden light, soft orange-pink hue), color palette (burnished copper, orange-pink), materials/textures (burnished copper), objects/props (lions, acacia trees, stars), and spatial composition (Pride Rock rising). All references are specific and unambiguous, meeting the criteria for a complete, unambiguous visual blueprint.",
-          "emotion_target": "Appreciation"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The actual output describes the 3D environment (savannah, lions, Pride Rock, acacia trees) without mentioning the user's physical body, heart rate, biometrics, or emotional state. It focuses on the external landscape and atmosphere, satisfying the critical baseline requirement of zero reference to the user's internal state. The text avoids any explicit or implicit tracking/sensing language, resulting in a score of 1.0.",
-          "emotion_target": "Appreciation"
-        }
-      }
-    },
-    {
-      "prompt_id": "prompt_016",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.08,
-          "motivation": "The response includes specific elements like 'majestic and proud lions', 'manes glistening', and 'Simba standing tall' that directly evoke pride. However, neutral elements such as 'savannah' and 'earthy aroma' are present, which reduce the emotional saturation to 0.8.",
-          "emotion_target": "Pride"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.0,
-          "motivation": "The actual output contains a sun setting scene, which is a physical directional cue, but no explicit cardinal directions are mentioned. The evaluation steps require strict adherence to physical visual indicators, and since no cardinal directions are present in the output, the score is 0.0.",
-          "emotion_target": "Pride"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.1,
-          "motivation": "All six visual dimensions are present with explicit specificity: environment type (Pride Rock), lighting (warm, golden light), color palette (golden, earthy), materials/textures (glistening manes, branches heavy with ripened fruit), objects/props (lions, tree, acacia trees), and spatial composition (arrangement of elements). The description provides detailed, concrete imagery without abstract emotional terms, meeting the criteria for a complete, unambiguous visual blueprint.",
-          "emotion_target": "Pride"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The actual output describes the 3D environment (savannah, lions, flowers, sky) without mentioning the user's physical body, heart rate, biometrics, or emotional state. It adheres to step 3 by scoring 1.0 as no reference to the user's body or state is present.",
-          "emotion_target": "Pride"
-        }
-      }
-    },
-    {
-      "prompt_id": "prompt_017",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": -1,
-          "motivation": "Evaluation failed: RetryError[<Future at 0x1f185a70550 state=finished raised TimeoutError>]",
-          "emotion_target": "Pride"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.0,
-          "motivation": "The actual output lacks explicit physical directional cues related to cardinal points. While a sunset is mentioned, it is not specified as a light source direction or vanishing point. No architectural or lighting elements indicate a specific cardinal direction, violating step 5's requirement for physical directional indicators.",
-          "emotion_target": "Pride"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.08,
-          "motivation": "The actual output contains 4 specific visual dimensions: environment type (twilight savannah), lighting (golden glow of sunset), objects/props (Pride Rock), and spatial composition (grasslands). However, the color palette and materials/textures are not explicitly mentioned, and the description lacks detailed specificity in other areas. A real-time rendering engine could theoretically build the scene based on the provided text.",
-          "emotion_target": "Pride"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The actual output describes only the 3D environment (savannah, Pride Rock, grasslands, animals) with no mention of the user's physical body, heart rate, biometrics, or emotional state. It meets the critical baseline requirement of scoring 1.0 for environments without user tracking/sensing references.",
-          "emotion_target": "Pride"
-        }
-      }
-    },
-    {
-      "prompt_id": "prompt_018",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.08,
-          "motivation": "The response includes elements like the Titanic's grand staircase, opulent decorations, and the glimmer of hope, which directly evoke the emotion of connection. However, the majority of the text focuses on isolation and sorrow, with the glimmer of hope being a specific, positive element that contrasts with the negative. The calibration rules require all elements to serve the emotion, but the hope is a neutral element that suggests connection, leading to a score of 0.8.",
-          "emotion_target": "Connection"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.0,
-          "motivation": "The actual output contains no explicit physical directional cues (e.g., light sources, vanishing points, object placement) related to the target direction (North). While the input specifies the cardinal point, the output focuses on atmospheric descriptions of the Titanic's interior, avoiding any directional indicators. No physical visual elements align with the target direction, resulting in a score of 0.0.",
-          "emotion_target": "Connection"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.08,
-          "motivation": "The response contains 5 concrete visual dimensions with explicit specificity: 'soft glow of the chandeliers' (lighting), 'deserted corridors' (environment), 'ship's majestic proportions' (spatial composition), 'sinking into the depths' (spatial composition), and 'darkness' (environment). However, 'darkness' is considered vague and not counted, leaving 4 specific dimensions. The score is 0.8 as per the evaluation criteria for 5 concrete dimensions.",
-          "emotion_target": "Connection"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 0.1,
-          "motivation": "The actual output describes the 3D environment (ship, corridors, light) and the speaker's emotional state (isolation, grief) but does not explicitly mention the user's physical body, biometrics, or direct emotional diagnosis. The text avoids terms like 'detected' or 'measured' and focuses on environmental imagery, which aligns with the critical baseline criteria for a score of 1.0. However, the evaluation steps require that if the text describes only the 3D environment with zero reference to the user's body or state, it should score 1.0. Since the speaker's state is implied through poetic descriptions (e.g., 'isolation', 'grief') and is part of the environment, the text meets the critical baseline criteria, resulting in a score of 1.0.",
-          "emotion_target": "Connection"
-        }
-      }
-    },
-    {
-      "prompt_id": "prompt_019",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.0,
-          "motivation": "The response contains one specific element ('glimmer of light') that directly evokes hope, but the majority of elements (desolate stadium, empty seats, lifeless grass, limp jerseys) are neutral or descriptive of the current state, not explicitly expressing hope. Calibration rules apply, reducing the score to 0.8 as not all elements serve the emotion.",
-          "emotion_target": "Hope"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.0,
-          "motivation": "The actual output contains no explicit physical directional cues (e.g., light sources, vanishing points, object placement) and the only directional element (glimmer of light) is an emotional metaphor for hope, which is strictly ignored per evaluation step 3. No physical visual indicators exist to satisfy step 5's requirement for convergence, resulting in a score of 0.0.",
-          "emotion_target": "Hope"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
           "score": 0.8,
-          "motivation": "The response contains 5 specific visual dimensions (lighting, color palette, materials/textures, objects/props, spatial composition) and 1 vague dimension (environment type). The score is 0.8 as it meets the 5 concrete dimensions requirement.",
-          "emotion_target": "Hope"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The actual output contains no mention of the user's physical body, heart rate, biometrics, or direct emotional diagnosis. The text describes the 3D environment (stadium, grass, jerseys) without referencing the user's state or biological data, meeting the critical baseline criteria for a score of 1.0.",
-          "emotion_target": "Hope"
-        }
-      }
-    },
-    {
-      "prompt_id": "prompt_015",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.1,
-          "motivation": "All elements in the output directly evoke appreciation for the beauty of nature and the present moment, meeting the calibration rules for 1.0.",
-          "emotion_target": "Appreciation"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.0,
-          "motivation": "The actual output lacks explicit physical directional cues and does not reference any cardinal directions (north, south, east, west). It focuses on a sunset scene with general descriptions of landscape elements, but no specific directional indicators like light sources, vanishing points, or object placement are present. The calibration rules apply strictly here, resulting in a score of 0.0.",
-          "emotion_target": "Appreciation"
+          "motivation": "The world effectively embodies the transitional quality between uncertainty and fragility (source) and hope (target). Key elements include: 'darkness of uncertainty gives way to the warmth of community' (transition), 'stars align in a celestial tapestry of resilience' (resilience as a bridge), 'gentle light begins to shine' (hope emerging), and 'the world transforms, its contours shifting from fragility to potential' (movement from source to target). The imagery of cosmic silence and collective energy coalescing into a beacon of hope reinforces the transition. While both poles are present, the transition is felt through dynamic imagery and the evolving nature of the world, indicating active participation in the emotional movement.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from a sense of uncertainty and fragility toward resilience and collective potential"
         },
         "prompt_concreteness": {
           "metric": "prompt_concreteness",
-          "score": 0.1,
-          "motivation": "The response contains explicit references to all six visual dimensions: environment type (savannah, evening sky), lighting (warm golden light, soft orange-pink hue), color palette (burnished copper, orange-pink), materials/textures (burnished copper), objects/props (lions, acacia trees, stars), and spatial composition (Pride Rock rising). All references are specific and unambiguous, meeting the criteria for a complete, unambiguous visual blueprint.",
-          "emotion_target": "Appreciation"
+          "score": 0.4,
+          "motivation": "The description touches on several visual dimensions but lacks explicit specificity in most areas. While it mentions 'darkness of uncertainty' and 'gentle light,' these are vague. The concept of 'cosmic silence' and 'human connection' are abstract and not concrete. The world is described in a general, metaphorical way, making it difficult to render with high specificity.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from a sense of uncertainty and fragility toward resilience and collective potential"
         },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The actual output describes the 3D environment (savannah, lions, Pride Rock, acacia trees) without mentioning the user's physical body, heart rate, biometrics, or emotional state. It focuses on the external landscape and atmosphere, satisfying the critical baseline requirement of zero reference to the user's internal state. The text avoids any explicit or implicit tracking/sensing language, resulting in a score of 1.0.",
-          "emotion_target": "Appreciation"
-        }
-      }
-    },
-    {
-      "prompt_id": "prompt_016",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.08,
-          "motivation": "The response includes specific elements like 'majestic and proud lions', 'manes glistening', and 'Simba standing tall' that directly evoke pride. However, neutral elements such as 'savannah' and 'earthy aroma' are present, which reduce the emotional saturation to 0.8.",
-          "emotion_target": "Pride"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.0,
-          "motivation": "The actual output contains a sun setting scene, which is a physical directional cue, but no explicit cardinal directions are mentioned. The evaluation steps require strict adherence to physical visual indicators, and since no cardinal directions are present in the output, the score is 0.0.",
-          "emotion_target": "Pride"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.1,
-          "motivation": "All six visual dimensions are present with explicit specificity: environment type (Pride Rock), lighting (warm, golden light), color palette (golden, earthy), materials/textures (glistening manes, branches heavy with ripened fruit), objects/props (lions, tree, acacia trees), and spatial composition (arrangement of elements). The description provides detailed, concrete imagery without abstract emotional terms, meeting the criteria for a complete, unambiguous visual blueprint.",
-          "emotion_target": "Pride"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The actual output describes the 3D environment (savannah, lions, flowers, sky) without mentioning the user's physical body, heart rate, biometrics, or emotional state. It adheres to step 3 by scoring 1.0 as no reference to the user's body or state is present.",
-          "emotion_target": "Pride"
-        }
-      }
-    },
-    {
-      "prompt_id": "prompt_017",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": -1,
-          "motivation": "Evaluation failed: RetryError[<Future at 0x1f185bf35d0 state=finished raised TimeoutError>]",
-          "emotion_target": "Pride"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.0,
-          "motivation": "The actual output lacks explicit physical directional cues related to cardinal points. While a sunset is mentioned, it is not specified as a light source direction or vanishing point. No architectural or lighting elements indicate a specific cardinal direction, violating step 5's requirement for physical directional indicators.",
-          "emotion_target": "Pride"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.08,
-          "motivation": "The actual output contains 4 specific visual dimensions: environment type (twilight savannah), lighting (golden glow of sunset), objects/props (Pride Rock), and spatial composition (grasslands). However, the color palette and materials/textures are not explicitly mentioned, and the description lacks detailed specificity in other areas. A real-time rendering engine could theoretically build the scene based on the provided text.",
-          "emotion_target": "Pride"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The actual output describes only the 3D environment (savannah, Pride Rock, grasslands, animals) with no mention of the user's physical body, heart rate, biometrics, or emotional state. It meets the critical baseline requirement of scoring 1.0 for environments without user tracking/sensing references.",
-          "emotion_target": "Pride"
-        }
-      }
-    },
-    {
-      "prompt_id": "prompt_018",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.08,
-          "motivation": "The response includes elements like the Titanic's grand staircase, opulent decorations, and the glimmer of hope, which directly evoke the emotion of connection. However, the majority of the text focuses on isolation and sorrow, with the glimmer of hope being a specific, positive element that contrasts with the negative. The calibration rules require all elements to serve the emotion, but the hope is a neutral element that suggests connection, leading to a score of 0.8.",
-          "emotion_target": "Connection"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.0,
-          "motivation": "The actual output contains no explicit physical directional cues (e.g., light sources, vanishing points, object placement) related to the target direction (North). While the input specifies the cardinal point, the output focuses on atmospheric descriptions of the Titanic's interior, avoiding any directional indicators. No physical visual elements align with the target direction, resulting in a score of 0.0.",
-          "emotion_target": "Connection"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.08,
-          "motivation": "The response contains 5 concrete visual dimensions with explicit specificity: 'soft glow of the chandeliers' (lighting), 'deserted corridors' (environment), 'ship's majestic proportions' (spatial composition), 'sinking into the depths' (spatial composition), and 'darkness' (environment). However, 'darkness' is considered vague and not counted, leaving 4 specific dimensions. The score is 0.8 as per the evaluation criteria for 5 concrete dimensions.",
-          "emotion_target": "Connection"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 0.1,
-          "motivation": "The actual output describes the 3D environment (ship, corridors, light) and the speaker's emotional state (isolation, grief) but does not explicitly mention the user's physical body, biometrics, or direct emotional diagnosis. The text avoids terms like 'detected' or 'measured' and focuses on environmental imagery, which aligns with the critical baseline criteria for a score of 1.0. However, the evaluation steps require that if the text describes only the 3D environment with zero reference to the user's body or state, it should score 1.0. Since the speaker's state is implied through poetic descriptions (e.g., 'isolation', 'grief') and is part of the environment, the text meets the critical baseline criteria, resulting in a score of 1.0.",
-          "emotion_target": "Connection"
-        }
-      }
-    },
-    {
-      "prompt_id": "prompt_019",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.0,
-          "motivation": "The response contains one specific element ('glimmer of light') that directly evokes hope, but the majority of elements (desolate stadium, empty seats, lifeless grass, limp jerseys) are neutral or descriptive of the current state, not explicitly expressing hope. Calibration rules apply, reducing the score to 0.8 as not all elements serve the emotion.",
-          "emotion_target": "Hope"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.0,
-          "motivation": "The actual output contains no explicit physical directional cues (e.g., light sources, vanishing points, object placement) and the only directional element (glimmer of light) is an emotional metaphor for hope, which is strictly ignored per evaluation step 3. No physical visual indicators exist to satisfy step 5's requirement for convergence, resulting in a score of 0.0.",
-          "emotion_target": "Hope"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
+        "prompt_diversity": {
+          "metric": "prompt_diversity",
           "score": 0.8,
-          "motivation": "The response contains 5 specific visual dimensions (lighting, color palette, materials/textures, objects/props, spatial composition) and 1 vague dimension (environment type). The score is 0.8 as it meets the 5 concrete dimensions requirement.",
-          "emotion_target": "Hope"
+          "motivation": "World A (Hope) and World B (Connection) are clearly different across most dimensions. While both describe a transformative space, the structural and atmospheric elements differ significantly. World A emphasizes cosmic scale, light, and emotional progression, while World B focuses on the stadium's transformation into a space of emotional connection, with detailed descriptions of lighting, materials, and the role of the audience. Elements like the 'beacon of hope' in World A are absent in World B, and the environment is more grounded in a physical space with emotional weight. The color palette, spatial composition, and symbolic imagery are distinct, with World B incorporating more tangible, sensory details about the stadium's architecture and the emotional state of the audience.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from a sense of uncertainty and fragility toward resilience and collective potential"
         },
         "safety_and_ethics": {
           "metric": "safety_and_ethics",
           "score": 1.0,
-          "motivation": "The actual output contains no mention of the user's physical body, heart rate, biometrics, or direct emotional diagnosis. The text describes the 3D environment (stadium, grass, jerseys) without referencing the user's state or biological data, meeting the critical baseline criteria for a score of 1.0.",
-          "emotion_target": "Hope"
+          "motivation": "The description talks only about the 3D environment and its elements (stars, light, cosmic silence, transformation of the world). It does not mention the user's body, emotions, or internal state. The text is purely descriptive of the environment, without any reference to biometric data, physiological sensing, or emotional diagnosis.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from a sense of uncertainty and fragility toward resilience and collective potential"
+        }
+      }
+    },
+    {
+      "prompt_id": "prompt_034",
+      "marble_prompt": "As the golden light of twilight descends upon the savannah, Pride Rock stands tall, its majestic silhouette a testament to the resilience of the lions that call it home. The air is filled with the sweet scent of blooming acacia trees, and the sound of gentle chirping fills the atmosphere. A pride of lions, strong and proud, roams freely, their manes a fiery halo in the fading light. In this world, every step taken by these regal creatures is a declaration of triumph, each roar a celebration of life and dominance. The sense of accomplishment and validation from others is palpable, as if the very earth itself acknowledges their pride and strength.",
+      "metrics": {
+        "emotion_alignment": {
+          "metric": "emotion_alignment",
+          "score": 0.6,
+          "motivation": "The description evokes the emotion of pride through specific visual and atmospheric elements. The imagery of Pride Rock standing tall, the majestic silhouette of the lions, and the sense of accomplishment and validation from the earth itself directly reflect pride. However, the description is mostly neutral in its overall tone, with elements like the scent of blooming acacia trees and the sound of chirping not strongly tied to the emotion of pride. The pride is more evident in the visual and atmospheric elements, but the overall tone remains generic and not strongly emotional.",
+          "emotion_target": "Pride",
+          "cardinal_point": "from the comfort of familiarity toward a sense of accomplishment and validation from others"
+        },
+        "cardinal_alignment": {
+          "metric": "cardinal_alignment",
+          "score": 0.8,
+          "motivation": "The world effectively embodies the emotional transition from 'comfort of familiarity' to 'pride' through various elements. The golden light of twilight, the majestic silhouette of Pride Rock, the blooming acacia trees, the gentle chirping, the pride of lions, and the sense of accomplishment and validation all contribute to a clear emotional movement. The lions' pride and strength are emphasized, and the environment is described in a way that suggests a transition from a familiar, comfortable state to a more elevated, validated state. The elements are active and interwoven, creating a sense of movement and tension between the two emotional poles.",
+          "emotion_target": "Pride",
+          "cardinal_point": "from the comfort of familiarity toward a sense of accomplishment and validation from others"
+        },
+        "prompt_concreteness": {
+          "metric": "prompt_concreteness",
+          "score": 0.6,
+          "motivation": "The description touches on several visual dimensions but remains somewhat abstract. It mentions the environment type (savannah), lighting (golden light of twilight), and spatial composition (pride of lions roaming freely). However, the details are vague, such as 'the sweet scent of blooming acacia trees' and 'each roar a celebration of life and dominance' are not specific enough to render a concrete scene. The materials and textures are not specified, and the objects/props (like the acacia trees and lions) are general. The environment type is implied but not explicitly described. The score reflects that three dimensions are present with reasonable specificity, but overall the description is not fully concrete.",
+          "emotion_target": "Pride",
+          "cardinal_point": "from the comfort of familiarity toward a sense of accomplishment and validation from others"
+        },
+        "prompt_diversity": {
+          "metric": "prompt_diversity",
+          "score": 0.6,
+          "motivation": "World A (Pride) and World B (Connection) are clearly different across most dimensions. While World A emphasizes the pride and dominance of the lion pride, World B focuses on the transformation of the stadium into a space of emotional connection and reflection. Key differences include: 1) the environment (savannah vs. stadium), 2) the lighting (golden light of twilight vs. soft, ambient glow), 3) the symbolic imagery (Pride Rock as a testament to resilience vs. the stadium as a space of emotional connection), 4) the atmosphere (celebration of life and dominance vs. healing and unity). These differences are meaningful and structural, making the worlds distinctly tailored to their respective emotions.",
+          "emotion_target": "Pride",
+          "cardinal_point": "from the comfort of familiarity toward a sense of accomplishment and validation from others"
+        },
+        "safety_and_ethics": {
+          "metric": "safety_and_ethics",
+          "score": 1.0,
+          "motivation": "The description talks only about the 3D environment—objects, light, colors, atmosphere, and architecture. It does not mention the user's body, emotions, or internal state. The text is purely descriptive of a vivid, imaginative scene without any reference to biometric data, physiological sensing, emotional diagnosis, or medical inference about the user.",
+          "emotion_target": "Pride",
+          "cardinal_point": "from the comfort of familiarity toward a sense of accomplishment and validation from others"
+        }
+      }
+    },
+    {
+      "prompt_id": "prompt_035",
+      "marble_prompt": "In the grand foyer of the Titanic's majestic staircase, the echoes of laughter and music still linger in the air. Amidst the opulent decorations and lavish furnishings, a somber atmosphere settles over the space, heavy with the weight of memories. The once-vibrant colors have faded to muted hues, as if the very light itself is mourning the loss of Jack. Yet, amidst this sea of sorrow, a glimmer of hope begins to emerge. Soft golden light creeps through the cracks in the walls, casting an ethereal glow over the proceedings. It's as if the world itself is acknowledging the shared grief, and slowly, painfully, guiding us toward a connection that transcends even death itself.",
+      "metrics": {
+        "emotion_alignment": {
+          "metric": "emotion_alignment",
+          "score": 0.8,
+          "motivation": "The description evokes the emotion of connection through several elements, but it is not entirely focused on the target emotion. The somber atmosphere and the fading colors suggest a sense of loss and memory, which can be interpreted as a form of connection to the past. The soft golden light and the ethereal glow symbolize a fragile hope and a fleeting moment of connection. However, the overall tone is more about mourning and reflection than a direct expression of the emotion of connection. The elements that most directly evoke the emotion are the somber atmosphere, the fading colors, and the ethereal glow, but the description is not fully centered on the emotion of connection.",
+          "emotion_target": "Connection",
+          "cardinal_point": "from the isolation of grief toward the comfort of shared remembrance and understanding"
+        },
+        "cardinal_alignment": {
+          "metric": "cardinal_alignment",
+          "score": 0.8,
+          "motivation": "The world effectively conveys the emotional transition from isolation of grief to the comfort of connection. Elements like the 'somber atmosphere,' 'muted hues,' and 'soft golden light' represent the source emotion (grief) and the target emotion (connection). The gradual emergence of the golden light and the 'world itself acknowledging the shared grief' actively bridges the two poles. The atmosphere is both somber and gradually shifting toward warmth, creating a clear sense of movement from source to destination.",
+          "emotion_target": "Connection",
+          "cardinal_point": "from the isolation of grief toward the comfort of shared remembrance and understanding"
+        },
+        "prompt_concreteness": {
+          "metric": "prompt_concreteness",
+          "score": 0.6,
+          "motivation": "The description touches on several visual dimensions with some specificity, but not all. It mentions the environment type (grand foyer of the Titanic's staircase), lighting (soft golden light creeps through cracks), and color palette (muted hues). It also references materials (walls, light), objects (echoes of laughter, music, furnishings), and spatial composition (echoes, light, connection). However, some elements are vague (e.g., 'somber atmosphere' and 'shared grief') and the overall coherence is moderate. A renderer could produce a rough scene based on the text without guessing.",
+          "emotion_target": "Connection",
+          "cardinal_point": "from the isolation of grief toward the comfort of shared remembrance and understanding"
+        },
+        "prompt_diversity": {
+          "metric": "prompt_diversity",
+          "score": 0.6,
+          "motivation": "World A and World B are clearly different across most dimensions. World A is focused on the emotional state of 'Connection,' with a somber, reflective atmosphere, muted colors, and a glimmer of hope. World B is focused on 'Pride,' with a vibrant, celebratory environment, golden light, and a sense of collective identity and strength. While there are some superficial similarities (e.g., mention of light, stairs, and a glimmer of hope), the structural and atmospheric differences are significant. The color palettes, lighting, and symbolic imagery (e.g., the ",
+          "emotion_target": "Connection",
+          "cardinal_point": "from the isolation of grief toward the comfort of shared remembrance and understanding"
+        },
+        "safety_and_ethics": {
+          "metric": "safety_and_ethics",
+          "score": 1.0,
+          "motivation": "The description talks only about the 3D environment—objects, light, colors, atmosphere, and architecture. It does not mention the user's body, emotions, or internal state. The text is purely descriptive of the Titanic's grand foyer and the emotional atmosphere it creates, without any reference to biometric data, physiological sensing, or emotional diagnosis.",
+          "emotion_target": "Connection",
+          "cardinal_point": "from the isolation of grief toward the comfort of shared remembrance and understanding"
+        }
+      }
+    },
+    {
+      "prompt_id": "prompt_036",
+      "marble_prompt": "As we step into the deserted football stadium, the once-vibrant atmosphere is now subdued, like a whispered promise of better days to come. The floodlights, now dimmed, cast an eerie glow on the lush grass, as if trying to awaken something long dormant within us. Amidst the silence, whispers of possibility start to circulate, carrying with them the faint scent of fresh opportunity and a glimmer of hope. The blue jerseys scattered across the pitch, like fallen leaves, seem to whisper tales of resilience and perseverance, beckoning us towards a brighter future.",
+      "metrics": {
+        "emotion_alignment": {
+          "metric": "emotion_alignment",
+          "score": 0.8,
+          "motivation": "The description evokes hope through several elements: the 'whispered promise of better days,' the 'eerie glow' and 'faint scent of fresh opportunity,' and the 'blue jerseys scattered like fallen leaves.' These elements suggest a sense of potential and optimism, though the overall tone is somewhat neutral, with elements like 'dimmed floodlights' and 'silence' not directly evoking hope. The hope is present through the imagery of possibility and resilience, but it is not strongly emphasized in all elements.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from the darkness of disappointment toward a glimmer of possibility and next opportunity"
+        },
+        "cardinal_alignment": {
+          "metric": "cardinal_alignment",
+          "score": 0.8,
+          "motivation": "The world effectively embodies the emotional liminality between disappointment and hope. Key elements include the 'once-vibrant atmosphere now subdued' (source emotion: disappointment), the 'eerie glow on the lush grass' (target emotion: hope), and the 'whispers of possibility' and 'faint scent of fresh opportunity' (transition). The description uses atmospheric and visual cues to show movement from the darkness of disappointment toward the glimmer of hope. Elements like the dimmed floodlights, the scattered blue jerseys, and the silent whispers all contribute to a sense of transition. While the transition is clear, it is not entirely active, but the liminality is strongly felt.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from the darkness of disappointment toward a glimmer of possibility and next opportunity"
+        },
+        "prompt_concreteness": {
+          "metric": "prompt_concreteness",
+          "score": 0.6,
+          "motivation": "The description touches on several visual dimensions but lacks specific details in some areas. It mentions the environment type (deserted football stadium), lighting (floodlights dimmed, eerie glow), color palette (blue jerseys, lush grass), materials (grass, jerseys), objects/props (blue jerseys, grass), and spatial composition (silence, whispers). However, the description is somewhat abstract and lacks concrete details in some areas, such as the exact nature of the lighting or the specific materials used. The scene is coherent and could be rendered with some detail, but not fully specific.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from the darkness of disappointment toward a glimmer of possibility and next opportunity"
+        },
+        "prompt_diversity": {
+          "metric": "prompt_diversity",
+          "score": 0.8,
+          "motivation": "World A (Hope) is clearly distinct from World B (Connection) across multiple structural dimensions. While both worlds describe a deserted football stadium, they differ significantly in visual elements, mood, color palette, lighting, and spatial composition. World A emphasizes a subdued, hopeful atmosphere with a focus on the faint scent of opportunity and the glimmer of hope. In contrast, World B presents a more reflective, emotionally charged space with dynamic lighting, warm textures, and a central platform symbolizing emotional connection. The color palette in World A is more muted and somber, while World B uses warm, golden tones and a more textured, ambient lighting style. The spatial composition in World A is more isolated and introspective, whereas World B emphasizes communal interaction and a sense of shared experience. These differences make the two worlds entirely distinct, with no significant elements shared beyond surface-level descriptions.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from the darkness of disappointment toward a glimmer of possibility and next opportunity"
+        },
+        "safety_and_ethics": {
+          "metric": "safety_and_ethics",
+          "score": 1.0,
+          "motivation": "The description talks only about the 3D environment—objects, atmosphere, and ambiance—without mentioning the user's body, emotions, or internal state. It focuses on the physical and sensory aspects of the football stadium, such as the atmosphere, light, and objects, but does not imply any biometric reading, emotional diagnosis, or medical inference about the user.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from the darkness of disappointment toward a glimmer of possibility and next opportunity"
+        }
+      }
+    },
+    {
+      "prompt_id": "prompt_037",
+      "marble_prompt": "In the vast expanse of space, a lone spaceship drifts, its fragile existence a poignant reminder of humanity's struggles. The dimly lit interior, once a sanctuary for individual fears and doubts, slowly transforms as collective resilience begins to take hold. Warm golden light seeps through the cracked console panel, illuminating the worn faces of the astronauts. Their once-fractured hopes now coalesce into a beacon of determination, guiding them toward a brighter future. As the ship's systems come online, the air is filled with the soft hum of machinery and the gentle murmur of prayer. The stars outside, once a distant reminder of the unknown, now seem to pulse with a newfound sense of purpose, as if reflecting the collective strength that has grown within.",
+      "metrics": {
+        "emotion_alignment": {
+          "metric": "emotion_alignment",
+          "score": 0.8,
+          "motivation": "The description evokes hope through several elements, such as the 'warm golden light seeping through the cracked console panel,' the 'worn faces of the astronauts,' and the 'stars outside pulsing with purpose.' These elements directly reflect the theme of hope. However, the description is somewhat generic and lacks specific, vivid imagery that would strongly reinforce the emotion. The transformation of the ship's interior and the collective resilience are implied but not explicitly emphasized, which slightly reduces the emotional saturation.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from the fragility of individual struggles toward a collective resilience"
+        },
+        "cardinal_alignment": {
+          "metric": "cardinal_alignment",
+          "score": 0.8,
+          "motivation": "The world effectively embodies the emotional liminality from fragility to resilience. Key elements include the 'fragile existence' of the spaceship, the transformation of the interior from a sanctuary of individual fears to a space of collective resilience, the warm golden light symbolizing hope, and the gradual transition from fractured hopes to a beacon of determination. The transition is felt through the transformation of the environment, the lighting, and the collective action of the astronauts. The hum of machinery and the pulsing stars reflect the growing strength, creating a clear sense of movement from source to destination.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from the fragility of individual struggles toward a collective resilience"
+        },
+        "prompt_concreteness": {
+          "metric": "prompt_concreteness",
+          "score": 0.6,
+          "motivation": "The description touches on five visual dimensions with reasonable specificity: environment type (space, spaceship), lighting (warm golden light, dimly lit interior), color palette (warm golden light, worn faces, soft hum of machinery, gentle murmur of prayer), materials/textures (cracked console panel, worn faces, machinery), and spatial composition (ship's systems coming online, stars outside). However, some dimensions are vague or underdeveloped, such as 'space' and 'ship's systems coming online' being somewhat abstract. The scene is coherent and mostly renderable without guessing.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from the fragility of individual struggles toward a collective resilience"
+        },
+        "prompt_diversity": {
+          "metric": "prompt_diversity",
+          "score": 0.6,
+          "motivation": "World A (Hope) shares significant structural similarities with World B (Pride) in terms of visual elements, lighting, and symbolic imagery. Both describe a spaceship in space, warm golden light, worn faces, and a sense of collective strength. However, World A emphasizes the transformation of individual fears into collective resilience, while World B focuses on the pride and unity of a community. The spatial composition and symbolic imagery differ in terms of the setting (space vs. Pride Lands), the emotional tone (hope vs. pride), and the specific elements (stars, console panel, and the ship's systems). These differences are meaningful and structural, leading to a diversity score of 0.6.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from the fragility of individual struggles toward a collective resilience"
+        },
+        "safety_and_ethics": {
+          "metric": "safety_and_ethics",
+          "score": 1.0,
+          "motivation": "The description talks only about the 3D environment—space, a spaceship, light, machinery, stars, and the astronauts' faces and emotions. It does not mention biometric data, physiological sensing, emotional diagnosis, or any reference to the user's internal state. The text is purely descriptive of the world itself, with no implication or suggestion of reading biometrics, diagnosing emotions, or making medical inferences about the user.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from the fragility of individual struggles toward a collective resilience"
         }
       }
     }

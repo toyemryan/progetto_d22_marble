@@ -165,10 +165,10 @@ async def evaluate_all():
     results = []
     if os.getenv("CONNECT_TO_REMOTE", "").lower() == "true":
         async with vpn_tunnel():
-            for prompt in prompts[-5:]:
+            for prompt in prompts:
                 results.append(await evaluate_prompt(prompt, criterias))
     else:
-        for prompt in prompts[-5:]:
+        for prompt in prompts:
             results.append(await evaluate_prompt(prompt, criterias))
 
     report = {

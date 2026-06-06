@@ -1613,5 +1613,375 @@
     "negative_constraints": [
       "No scenes of desperation or despair; no hints of hopelessness; no dark or foreboding tones; no oppressive atmospheres; no sense of isolation."
     ]
+  },
+  {
+    "prompt_id": "prompt_032",
+    "case_id": "case_004",
+    "timestamp": "2026-06-06T09:05:54.194406",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Tenderness",
+      "intensity_score": 0.46,
+      "valence": "positive",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Disgust": 0.0315,
+        "Tenderness": 0.462,
+        "Happy": 0.287,
+        "Sad": 0.04
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Tenderness": 0.8,
+          "Happy": 0.42,
+          "Disgust": 0.09
+        },
+        "realtime_scores": {
+          "Tenderness": 0.36
+        },
+        "text_scores": {
+          "Happy": 0.7,
+          "Sad": 0.2,
+          "Tenderness": 0.1
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from a sense of disconnection to a shared human destiny",
+    "runtime_analysis": {
+      "dominant_emotion": "Tenderness",
+      "emotion_target": "Hope",
+      "complex_emotion": "A narrative world that fosters a deep sense of connection and shared humanity, drawing from the emotional resonance of interstellar landscapes.",
+      "stimulus_universe": "interstellar landscapes, stars, galaxies, planets, asteroids, space debris, celestial bodies, cosmic energies",
+      "user_reaction": "The hope for a brighter future is rooted in the family but ultimately tied to humanity's collective destiny.",
+      "world_transformation": "A warm and inviting environment that balances soft diffused light with gentle curves and intimate scales, evoking feelings of tenderness and nurturing, gradually shifting toward a sense of shared human destiny"
+    },
+    "marble_prompt": "In the vast expanse of interstellar space, a lone starship drifts, its hull glowing softly like a cosmic lantern. The darkness is punctuated by scattered asteroids, their craters illuminated by the faint light of distant galaxies. Amidst this celestial tapestry, a sense of disconnection slowly dissipates as hope and tenderness converge. A family's bond to each other becomes an anchor for the universe, symbolized by delicate filaments weaving together like cosmic threads. As the starship hurtles toward its unknown destination, an overwhelming feeling of shared human destiny materializes, illuminating the path forward. The cosmos itself seems to be whispering tales of hope and resilience as the ship approaches a shimmering portal, a beacon guiding humanity toward a brighter future.",
+    "negative_constraints": [
+      "No desolate or barren landscapes",
+      "No signs of decay or disintegration",
+      "No isolation or confinement",
+      "No cold or dark tones"
+    ],
+    "variants": [
+      {
+        "prompt": "As the starship approaches the shimmering portal, it's surrounded by a swirling vortex of stardust and cosmic energies. The tenderness and hope now enveloped in a warm golden light, guiding humanity toward a new era of cooperation and shared discovery.",
+        "palette": [
+          "golden",
+          "warm",
+          "cosmic blues"
+        ]
+      },
+      {
+        "prompt": "The starship's hull glows with an ethereal luminescence as it pierces the veil of interstellar space. The darkness is transformed into an intimate dance of celestial bodies, their paths intersecting in a cosmic ballet, symbolizing humanity's shared destiny and the hope that binds us.",
+        "scale": [
+          "panoramic",
+          "celestial"
+        ]
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_033",
+    "case_id": "case_004",
+    "timestamp": "2026-06-06T09:48:58.897278",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Tenderness",
+      "intensity_score": 0.51,
+      "valence": "positive",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Disgust": 0.0315,
+        "Neutral": 0.09,
+        "Tenderness": 0.512,
+        "Happy": 0.187
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Tenderness": 0.8,
+          "Happy": 0.42,
+          "Disgust": 0.09
+        },
+        "realtime_scores": {
+          "Tenderness": 0.36
+        },
+        "text_scores": {
+          "Tenderness": 0.35,
+          "Happy": 0.2,
+          "Neutral": 0.45
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from a sense of uncertainty and fragility toward resilience and collective potential",
+    "runtime_analysis": {
+      "dominant_emotion": "Tenderness",
+      "emotion_target": "Hope",
+      "complex_emotion": "The world transforms from a place of uncertainty and fragility to one of hope, resilience, and collective potential.",
+      "stimulus_universe": "interstellar of christofer nolan",
+      "user_reaction": "La speranza legato alla famiglia ma soprattutto all'umanità ci deve far andare avanti (Hope tied to family but especially to humanity must propel us forward).",
+      "world_transformation": "The interstellar universe, with its sense of uncertainty and fragility, begins to transform into a world that embodies hope, resilience, and collective potential."
+    },
+    "marble_prompt": "In the vast expanse of the interstellar universe, a fragile thread of hope emerges, woven from the tender fibers of human connection. The darkness of uncertainty gives way to the warmth of community, as stars align in a celestial tapestry of resilience. Amidst the cosmic silence, a gentle light begins to shine, illuminating the path forward. The world transforms, its contours shifting from fragility to potential, as humanity's collective energy coalesces into a beacon of hope.",
+    "negative_constraints": [
+      "Do not include any elements that evoke fear or danger.",
+      "Avoid any imagery that implies isolation or disconnection."
+    ],
+    "variants": [
+      "A different 150+ word Marble prompt for the same stimulus and emotion target, but with a different time of day (e.g., dawn) and color palette (e.g., soft blues and whites). Must still be rooted in the interstellar universe.",
+      "A third 150+ word Marble prompt for the same stimulus and emotion target, but at a different spatial scale (e.g., intimate vs panoramic) and with a different symbolic emphasis (e.g., emphasizing human connection over celestial wonder)."
+    ]
+  },
+  {
+    "prompt_id": "prompt_034",
+    "case_id": "case_001",
+    "timestamp": "2026-06-06T11:00:57.435544",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Happy",
+      "intensity_score": 0.8,
+      "valence": "positive",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Neutral": 0.0305,
+        "Happy": 0.7975,
+        "Surprised": 0.0105,
+        "Tenderness": 0.03,
+        "Sad": 0.042
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.6,
+          "Sad": 0.12,
+          "Surprised": 0.03,
+          "Neutral": 0.03
+        },
+        "realtime_scores": {
+          "Happy": 0.95
+        },
+        "text_scores": {
+          "Happy": 0.8,
+          "Neutral": 0.1,
+          "Tenderness": 0.15
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the comfort of familiarity toward a sense of accomplishment and validation from others",
+    "runtime_analysis": {
+      "dominant_emotion": "Happy",
+      "emotion_target": "Pride",
+      "complex_emotion": "The complex emotion profile indicates that the user is experiencing happiness, with an intensity score of 0.8. The valence is positive, and the arousal level is medium.",
+      "stimulus_universe": "Savannah, Pride Rock, African landscape, lions, twilight",
+      "user_reaction": "The user's message shows that they are not saddened by Mufasa's death because their father is alive and they have a strong bond with him. This indicates a sense of comfort and familiarity.",
+      "world_transformation": "To direct the user toward the target emotion of pride, the world should evoke a sense of accomplishment and validation from others. The stimulus universe provides a natural environment for this transformation."
+    },
+    "marble_prompt": "As the golden light of twilight descends upon the savannah, Pride Rock stands tall, its majestic silhouette a testament to the resilience of the lions that call it home. The air is filled with the sweet scent of blooming acacia trees, and the sound of gentle chirping fills the atmosphere. A pride of lions, strong and proud, roams freely, their manes a fiery halo in the fading light. In this world, every step taken by these regal creatures is a declaration of triumph, each roar a celebration of life and dominance. The sense of accomplishment and validation from others is palpable, as if the very earth itself acknowledges their pride and strength.",
+    "negative_constraints": [
+      "No grief or sadness-focused imagery",
+      "No darkness or enclosed oppressive spaces"
+    ],
+    "variants": [
+      "A world where the lions are in mid-roar, their manes a fiery halo in the bright sunlight. The air is filled with the scent of wet earth and fresh grass, as if the very land itself is rejoicing in the pride's triumph.",
+      "A world where a young lioness takes her first steps into adulthood, surrounded by her proud family. The sky is a brilliant blue, with only a few wispy clouds drifting lazily across it, symbolizing the limitless possibilities before her."
+    ]
+  },
+  {
+    "prompt_id": "prompt_035",
+    "case_id": "case_002",
+    "timestamp": "2026-06-06T11:01:19.885967",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Sad",
+      "intensity_score": 0.51,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Disgust": 0.315,
+        "Sad": 0.506,
+        "Angry": 0.02
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Disgust": 0.9,
+          "Sad": 0.42
+        },
+        "realtime_scores": {
+          "Sad": 0.42
+        },
+        "text_scores": {
+          "Sad": 0.85,
+          "Angry": 0.1
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the isolation of grief toward the comfort of shared remembrance and understanding",
+    "runtime_analysis": {
+      "dominant_emotion": "Sadness",
+      "emotion_target": "Connection",
+      "complex_emotion": "A bittersweet world where memories of Jack are woven into a tapestry of shared sorrow, gradually shifting toward a sense of connection and understanding.",
+      "stimulus_universe": "Titanic",
+      "user_reaction": "I'm still saddened by the loss of Jack. I feel alone in my grief.",
+      "world_transformation": "The Titanic's grand staircase, once a symbol of opulence and joy, now stands as a haunting reminder of what was lost. The air is heavy with the weight of memories, but soft golden light begins to seep through the cracks, illuminating the path toward shared remembrance and understanding."
+    },
+    "marble_prompt": "In the grand foyer of the Titanic's majestic staircase, the echoes of laughter and music still linger in the air. Amidst the opulent decorations and lavish furnishings, a somber atmosphere settles over the space, heavy with the weight of memories. The once-vibrant colors have faded to muted hues, as if the very light itself is mourning the loss of Jack. Yet, amidst this sea of sorrow, a glimmer of hope begins to emerge. Soft golden light creeps through the cracks in the walls, casting an ethereal glow over the proceedings. It's as if the world itself is acknowledging the shared grief, and slowly, painfully, guiding us toward a connection that transcends even death itself.",
+    "negative_constraints": [
+      "No explicit references to biometric data or emotional diagnosis.",
+      "No mention of the user's internal state or physical body."
+    ],
+    "variants": [
+      "A more intimate version of this world, with warm candlelight and a single, flickering flame symbolizing the beacon of hope amidst grief. The grand staircase is still present, but it's now shrouded in shadows, emphasizing the sense of isolation.",
+      "A panoramic view of the Titanic's promenade deck, where the soft light of sunset casts long shadows across the empty decks. In this world, the sounds of distant music and laughter mingle with the salty sea air, subtly shifting the mood toward a sense of shared connection."
+    ]
+  },
+  {
+    "prompt_id": "prompt_036",
+    "case_id": "case_003",
+    "timestamp": "2026-06-06T11:01:45.162885",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Sad",
+      "intensity_score": 0.33,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Angry": 0.114,
+        "Happy": 0.315,
+        "Sad": 0.332
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.9,
+          "Angry": 0.24
+        },
+        "realtime_scores": {
+          "Sad": 0.36
+        },
+        "text_scores": {
+          "Sad": 0.85,
+          "Angry": 0.15
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the darkness of disappointment toward a glimmer of possibility and next opportunity",
+    "runtime_analysis": {
+      "dominant_emotion": "Sadness",
+      "emotion_target": "Hope",
+      "complex_emotion": "A feeling of hope and possibility arises from the darkness of disappointment, guiding us towards a brighter future.",
+      "stimulus_universe": "Stadium, football pitch, grass, floodlights, crowd, blue jerseys",
+      "user_reaction": "I feel devastated that Italy didn't make it to the World Cup again. I'm heartbroken and wondering what went wrong.",
+      "world_transformation": "The bright floodlights of the stadium dim slightly, as if reflecting the user's disappointment. The grassy pitch remains vibrant, symbolizing the potential for growth and new opportunities."
+    },
+    "marble_prompt": "As we step into the deserted football stadium, the once-vibrant atmosphere is now subdued, like a whispered promise of better days to come. The floodlights, now dimmed, cast an eerie glow on the lush grass, as if trying to awaken something long dormant within us. Amidst the silence, whispers of possibility start to circulate, carrying with them the faint scent of fresh opportunity and a glimmer of hope. The blue jerseys scattered across the pitch, like fallen leaves, seem to whisper tales of resilience and perseverance, beckoning us towards a brighter future.",
+    "negative_constraints": [
+      "No explicit or implicit references to biometric data, physiological sensing, emotional diagnosis, or medical inference about the user.",
+      "The world must not contain any elements that might amplify or perpetuate feelings of sadness, hopelessness, or despair."
+    ],
+    "variants": [
+      {
+        "prompt": "As we wander through the stadium's corridors, the echoes of past victories slowly fade away, replaced by whispers of what could have been. The darkness is punctuated only by the faintest glimmer of possibility, a beacon guiding us towards a new horizon.",
+        "time_of_day": "Early morning",
+        "palette": "Soft blues and pale yellows"
+      },
+      {
+        "prompt": "The stadium's grandstands stretch out before us like an empty canvas, waiting for the brushstrokes of a new narrative. The dim lights cast long shadows across the grass, as if trying to reenact the stories of yesteryear. Amidst this quiet backdrop, we find ourselves standing at the threshold of possibility, ready to create our own masterpiece.",
+        "spatial_scale": "Intimate",
+        "symbolic_emphasis": "Resilience"
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_037",
+    "case_id": "case_004",
+    "timestamp": "2026-06-06T11:02:06.717024",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Tenderness",
+      "intensity_score": 0.44,
+      "valence": "positive",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Disgust": 0.0315,
+        "Happy": 0.307,
+        "Tenderness": 0.442,
+        "Sad": 0.04
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Tenderness": 0.8,
+          "Happy": 0.42,
+          "Disgust": 0.09
+        },
+        "realtime_scores": {
+          "Tenderness": 0.36
+        },
+        "text_scores": {
+          "Happy": 0.8,
+          "Sad": 0.2
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the fragility of individual struggles toward a collective resilience",
+    "runtime_analysis": {
+      "dominant_emotion": "Tenderness",
+      "emotion_target": "Hope",
+      "complex_emotion": "The cinematic world evokes tenderness, guiding the user's emotional journey toward hope.",
+      "stimulus_universe": "Interstellar (Christofer Nolan)",
+      "user_reaction": "The user wants to focus on the fragility of individual struggles and how it can be transformed into collective resilience.",
+      "world_transformation": "The base environment of 'Interstellar' is modulated by tenderness, transforming the celestial bodies and vast spaces into a symbolically charged narrative that conveys hope."
+    },
+    "marble_prompt": "In the vast expanse of space, a lone spaceship drifts, its fragile existence a poignant reminder of humanity's struggles. The dimly lit interior, once a sanctuary for individual fears and doubts, slowly transforms as collective resilience begins to take hold. Warm golden light seeps through the cracked console panel, illuminating the worn faces of the astronauts. Their once-fractured hopes now coalesce into a beacon of determination, guiding them toward a brighter future. As the ship's systems come online, the air is filled with the soft hum of machinery and the gentle murmur of prayer. The stars outside, once a distant reminder of the unknown, now seem to pulse with a newfound sense of purpose, as if reflecting the collective strength that has grown within.",
+    "negative_constraints": [
+      "No individual struggle-focused imagery",
+      "No darkness or danger"
+    ],
+    "variants": [
+      "As the ship's systems begin to fail, the astronauts' hopes are rekindled by the soft glow of a distant planet. The cracked console panel now serves as a makeshift altar, where they place their doubts and fears, allowing collective resilience to guide them toward a new beginning.",
+      "In the heart of the spaceship, a small garden has taken root, its delicate petals unfolding like tiny wings, symbolizing the transformation from individual fragility to collective hope. The worn faces of the astronauts now radiate a sense of peace, as they tend to their newfound sanctuary."
+    ]
+  },
+  {
+    "prompt_id": "prompt_038",
+    "case_id": "case_004",
+    "timestamp": "2026-06-06T13:42:03.957583",
+    "model_used": "qwen3:1.7b",
+    "fusion_profile": {
+      "dominant_emotion": "Tenderness",
+      "intensity_score": 0.44,
+      "valence": "positive",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Happy": 0.147,
+        "Tenderness": 0.442,
+        "Disgust": 0.0315,
+        "Neutral": 0.2
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Tenderness": 0.8,
+          "Happy": 0.42,
+          "Disgust": 0.09
+        },
+        "realtime_scores": {
+          "Tenderness": 0.36
+        },
+        "text_scores": {
+          "Neutral": 1.0
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from tenderness toward connection",
+    "runtime_analysis": {
+      "dominant_emotion": "Tenderness",
+      "emotion_target": "Connection",
+      "complex_emotion": "A tender, luminous interstellar landscape where the soft glow of cosmic elements evokes a deep, intimate connection to humanity, blending the serene beauty of the stars with the warmth of familial bonds.",
+      "stimulus_universe": "interstellar of christofer nolan",
+      "user_reaction": "The user's message, 'la speranza legato alla famiglia ma soprattutto all'umanità ci deve far andare avanti,' resonates with the emotional core of the stimulus, guiding the world toward a sense of hope and familial unity.",
+      "world_transformation": "The base interstellar universe is transformed into a tender, luminous space where cosmic elements are softened with warm, soft light and gentle curves, evoking a deep, intimate connection to humanity. The environment is filled with gentle, glowing stars, and the overall atmosphere is one of warmth and hope, with the emotional target of 'Connection' guiding the user toward a sense of unity and belonging."
+    },
+    "negative_constraints": [
+      "No isolation",
+      "No cold tones",
+      "No danger"
+    ],
+    "marble_prompt": "In the heart of an interstellar landscape, the cosmos is rendered in a tender, luminous palette of soft pastels and warm golds, evoking a sense of wonder and connection. The stars are not just points of light but shimmering, glowing orbs that pulse with a gentle, golden light, casting a soft, diffused glow across the vast, open expanse. The sky is a deep, shifting blue with subtle hints of pink and lavender, creating an atmosphere of both serenity and warmth. The landscape is filled with gentle, flowing elements such as rivers of liquid light, gentle waves of shimmering mist, and soft, undulating hills that seem to curve toward the viewer. The ground is a soft, earthy terrain with patches of iridescent moss and delicate flowers that glow faintly, adding a touch of life and vitality. The atmosphere is one of quiet contemplation, with a gentle breeze that carries the scent of the cosmos. The environment is designed to evoke a deep, intimate connection to humanity, with subtle symbols of family and unity, such as glowing constellations that resemble family members or the gentle, flowing shapes of rivers that symbolize the connection between people. The world is not only visually stunning but also emotionally resonant, guiding the user toward a sense of hope and belonging, emphasizing the importance of family and human connection in the vastness of the universe."
   }
 ]
