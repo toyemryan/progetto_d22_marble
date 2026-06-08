@@ -29,41 +29,44 @@ from evaluate_outputs import evaluate_all, evaluate_single
 async def process_case_async(normalized_case):
     """Processa un singolo caso attraverso tutta la pipeline.
     Il tunnel SSH deve essere già aperto se CONNECT_TO_REMOTE=true."""
-    case_id = normalized_case["case_id"]
-    print(f"\n{'='*60}")
-    print(f"  Elaborazione {case_id}")
-    print(f"{'='*60}")
+    try:
+        case_id = normalized_case["case_id"]
+        print(f"\n{'='*60}")
+        print(f"  Elaborazione {case_id}")
+        print(f"{'='*60}")
 
-    # Fase 2 — Fusione emozionale
-    print("\n📊 Fase 2: Fusione emozionale...")
-    fusion = fuse_emotions(normalized_case)
-    print(f"  Emozione dominante: {fusion['dominant_emotion']}")
-    print(f"  Score: {fusion['intensity_score']}")
-    print(f"  Valence: {fusion['valence']} | Arousal: {fusion['arousal']}")
+        # Fase 2 — Fusione emozionale
+        print("\n📊 Fase 2: Fusione emozionale...")
+        fusion = fuse_emotions(normalized_case)
+        print(f"  Emozione dominante: {fusion['dominant_emotion']}")
+        print(f"  Score: {fusion['intensity_score']}")
+        print(f"  Valence: {fusion['valence']} | Arousal: {fusion['arousal']}")
 
-    # Fase 3 — Contesto punto cardinale
-    print("\n🧭 Fase 3: Analisi punto cardinale...")
-    cardinal = prepare_cardinal_context(normalized_case, fusion)
-    print(f"  Hint: {cardinal['hint']}")
+        # Fase 3 — Contesto punto cardinale
+        print("\n🧭 Fase 3: Analisi punto cardinale...")
+        cardinal = prepare_cardinal_context(normalized_case, fusion)
+        print(f"  Hint: {cardinal['hint']}")
 
-    # Fase 4 — Generazione prompt Marble (Llama)
-    # start_vpn=False perché il tunnel è già aperto dal wrapper
-    print("\n🎨 Fase 4: Generazione prompt Marble...")
-    result = await generate_marble_prompt(normalized_case, fusion, cardinal, start_vpn=False)
+        # Fase 4 — Generazione prompt Marble (Llama)
+        # start_vpn=False perché il tunnel è già aperto dal wrapper
+        print("\n🎨 Fase 4: Generazione prompt Marble...")
+        result = await generate_marble_prompt(normalized_case, fusion, cardinal, start_vpn=False)
 
-    if result:
-        marble_prompt = result.get("marble_prompt", "")
-        if marble_prompt:
-            await evaluate_single(result, use_remote=False)
-            print(f"\n{'─'*60}")
-            print("PROMPT MARBLE GENERATO:")
-            print(f"{'─'*60}")
-            print(marble_prompt[:500] + "..." if len(marble_prompt) > 500 else marble_prompt)
-            print(f"{'─'*60}")
-    else:
-        print("  ❌ Generazione fallita.")
+        if result:
+            marble_prompt = result.get("marble_prompt", "")
+            if marble_prompt:
+                await evaluate_single(result, use_remote=False)
+                print(f"\n{'─'*60}")
+                print("PROMPT MARBLE GENERATO:")
+                print(f"{'─'*60}")
+                print(marble_prompt[:500] + "..." if len(marble_prompt) > 500 else marble_prompt)
+                print(f"{'─'*60}")
+        else:
+            print("  ❌ Generazione fallita.")
 
-    return result
+        return result
+    except Exception as e:
+        return None
 
 
 def process_case(normalized_case):
