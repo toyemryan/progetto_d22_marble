@@ -14,17 +14,22 @@
 \usepackage{forest}
 \usepackage{tikz}
 \usepackage{float}
-\usetikzlibrary{trees, shapes.geometric, arrows.meta, positioning}
+\usetikzlibrary{trees, shapes.geometric, arrows, positioning}
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
 \usepackage{verbatim}
-\usepackage{colorprofiles}
+%\usepackage{colorprofiles}
 \usepackage{listings}   %<- per inserire il codice
 \usepackage{subcaption}
 \usepackage{amsmath}
 \usepackage{amsfonts}
-\usepackage{listings}
+\usepackage{longtable}
 \usepackage{xcolor}
+\usepackage{tcolorbox} % Gestisce i riquadri colorati
+
+\newenvironment{notabox}
+{\begin{tcolorbox}[colback=gray!10, colframe=black!70, title=Nota, fonttitle=\bfseries]}
+{\end{tcolorbox}}
 
 \lstset{
     basicstyle=\ttfamily\normalsize ,
@@ -131,12 +136,23 @@
     tabsize=5,                     
     title=\lstname,                 
 }
+
+\lstdefinestyle{pythonstyle}{
+    language=Python
+}
+
+\lstdefinestyle{promptstyle}{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{lightgray!20}, % Se hai il pacchetto xcolor attivo
+    keywordstyle=\color{blue}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-
 \begin{document}
+\nocite{*}
 \captionsetup[figure]{margin=1.5cm,font=small,labelfont={bf},name={Figure},labelsep=colon,textfont={it}}
 \captionsetup[table]{margin=1.5cm,font=small,labelfont={bf},name={Table},labelsep=colon,textfont={it}}
 
@@ -201,7 +217,7 @@ Il presente rapporto è strutturato in cinque capitoli: il Capitolo~\ref{ch:fond
  
  
 % ═══════════════════════════════════════════════════════════════════
-%              CAPITOLO I — FONDAZIONI TEORICHE E ARCHITETTURA
+%              CAPITOLO I - FONDAZIONI TEORICHE E ARCHITETTURA
 % ═══════════════════════════════════════════════════════════════════
 \chapter{Fondazioni teoriche e architettura}
 \label{ch:fondazioni}
@@ -316,7 +332,7 @@ La selezione avviene tramite il file \texttt{.env} senza modificare il codice.
 
  
 % ═══════════════════════════════════════════════════════════════════
-%              CAPITOLO II — SVILUPPO DELLA PIPELINE
+%              CAPITOLO II - SVILUPPO DELLA PIPELINE
 % ═══════════════════════════════════════════════════════════════════
 \chapter{Sviluppo della pipeline}
 \label{ch:sviluppo}
@@ -481,7 +497,7 @@ Durante lo sviluppo, llama Qwen3:1.7b restituisceva JSON vuoti (\texttt{\{\textb
  
 Lo stimolo crea uno stato emotivo (ingresso nello spazio liminale). Il messaggio dell'utente rivela la trasformazione in corso. Il punto cardinale guida il mondo Marble verso la destinazione di questa trasformazione :
  \paragraph{}
- stimulus (morte di Mufasa + tristezza) → messaggio (padre vivo) → cardinal point (dalla perdita alla gratitudine) → mondo Marble (savana dorata)]
+ stimulus (morte di Mufasa + tristezza) $\rightarrow$ messaggio (padre vivo) $\rightarrow$ cardinal point (dalla perdita alla gratitudine) $\rightarrow$ mondo Marble (savana dorata)]
  
 \subsection{Identificazione via Llama}
  
@@ -595,7 +611,7 @@ Il \texttt{marble\_prompt} viene copiato manualmente nell'interfaccia di Marble.
 \end{figure}
  
 % ═══════════════════════════════════════════════════════════════════
-%              CAPITOLO III — PROBLEMI CRITICI E SOLUZIONI
+%              CAPITOLO III - PROBLEMI CRITICI E SOLUZIONI
 % ═══════════════════════════════════════════════════════════════════
 \chapter{Problemi critici e soluzioni}
 \label{ch:problemi}
@@ -656,7 +672,7 @@ la soluzione è stato di Rendere \texttt{cardinal\_point.py} completamente sincr
  
  
 % ═══════════════════════════════════════════════════════════════════
-%              CAPITOLO IV — RISULTATI E ANALISI
+%              CAPITOLO IV - RISULTATI E ANALISI
 % ═══════════════════════════════════════════════════════════════════
 \chapter{Risultati e analisi}
 \label{ch:risultati}
@@ -759,7 +775,7 @@ la soluzione è stato di Rendere \texttt{cardinal\_point.py} completamente sincr
  
  
 % ═══════════════════════════════════════════════════════════════════
-%              CAPITOLO V — CONCLUSIONE
+%              CAPITOLO V - CONCLUSIONE
 % ═══════════════════════════════════════════════════════════════════
 \chapter{Conclusione}
 \label{ch:conclusione}
@@ -812,18 +828,18 @@ INPUTS:
 
 ---
 
-WORLD GENERATION LOGIC — follow these steps in order:
+WORLD GENERATION LOGIC - follow these steps in order:
 
-STEP 1 — ANCHOR TO THE STIMULUS
+STEP 1 - ANCHOR TO THE STIMULUS
 Extract from VISUAL_STIMULUS the base aesthetic universe: setting, objects, characters, narrative themes, visual elements. This is the non-negotiable foundation of the world. The marble_prompt MUST be rooted in this universe.
 Examples:
-- "Death of Mufasa" → savannah, Pride Rock, African landscape, lions, twilight
-- "Italy wins 2006 World Cup" → stadium, football pitch, grass, floodlights, crowd, blue jerseys
-- "A child's first day of school" → school building, backpack, small hands, morning light, courtyard
+- "Death of Mufasa" $\rightarrow$ savannah, Pride Rock, African landscape, lions, twilight
+- "Italy wins 2006 World Cup" $\rightarrow$ stadium, football pitch, grass, floodlights, crowd, blue jerseys
+- "A child's first day of school" $\rightarrow$ school building, backpack, small hands, morning light, courtyard
 The base environment is ALWAYS derived from the stimulus, never from the emotion alone.
 
-STEP 2 — MODULATE WITH EMOTION
-Use EMOTION_FUSION_PROFILE to emotionally transform the base environment. Emotions do not replace the setting — they alter its atmosphere, lighting, time of day, state of decay or flourishing, emptiness or fullness, color temperature, and symbolic charge.
+STEP 2 - MODULATE WITH EMOTION
+Use EMOTION_FUSION_PROFILE to emotionally transform the base environment. Emotions do not replace the setting - they alter its atmosphere, lighting, time of day, state of decay or flourishing, emptiness or fullness, color temperature, and symbolic charge.
 
 EMOTION MODULATION REFERENCE (apply as transformations to the stimulus world, not as replacement environments):
 - Happy/Joy: golden warm light, vibrant colors, full and alive space, yellow/gold/orange/green
@@ -836,15 +852,15 @@ EMOTION MODULATION REFERENCE (apply as transformations to the stimulus world, no
 - Surprise: dynamic light, portals or openings, unexpected scale shifts, turquoise/gold/violet
 - Disgust: cold light, clinical cleanliness or visible decay, grey/dark green/white
 
-STEP 3 — DIRECT TOWARD THE EMOTION TARGET
-Use EMOTION_TARGET as the cardinal point: the emotional direction the world must guide the user toward. The world should feel like it is already moving in that direction — not static in the current emotion, but in transformation.
+STEP 3 - DIRECT TOWARD THE EMOTION TARGET
+Use EMOTION_TARGET as the cardinal point: the emotional direction the world must guide the user toward. The world should feel like it is already moving in that direction - not static in the current emotion, but in transformation.
 The EMOTION_TARGET is already computed. Do not infer it. Use it directly.
 Examples:
-- Current: sadness. Target: gratitude → the world shows absence but also warmth, traces of what remains
-- Current: nostalgia. Target: pride → the world evokes memory but with luminosity and strength
-- Current: fear. Target: safety → the world contains the danger but encloses the user in protection
+- Current: sadness. Target: gratitude $\rightarrow$ the world shows absence but also warmth, traces of what remains
+- Current: nostalgia. Target: pride $\rightarrow$ the world evokes memory but with luminosity and strength
+- Current: fear. Target: safety $\rightarrow$ the world contains the danger but encloses the user in protection
 
-STEP 4 — TRANSFORMATION RULES
+STEP 4 - TRANSFORMATION RULES
 - If stimulus is sad but user message is positive: do NOT generate a sad world. The stimulus sets the universe, the message sets the emotional direction.
 - If face emotion is neutral but message is emotional: give weight to the message. Neutrality may come from writing concentration.
 - If arousal is low: use slow, contemplative worlds with delicate movements.
@@ -866,7 +882,7 @@ CRITICAL: Your entire response must be a single valid JSON object. Do not add an
     "user_reaction": "interpretation of USER_MESSAGE in relation to the stimulus",
     "world_transformation": "how the base environment is modulated by emotion and directed toward the target"
   },
-  "marble_prompt": "A SINGLE LONG DESCRIPTIVE TEXT IN ENGLISH. This must be a detailed, narrative, cinematic description of the 3D world. Write it as one continuous text of at least 150 words. It must be rooted in the aesthetic universe of the VISUAL_STIMULUS, modulated by the current emotional state, and directed toward the EMOTION_TARGET. Describe environment, lighting, colors, spatial composition, materials, symbolic elements, atmosphere, and what to avoid — all within flowing prose. Do NOT use JSON, bullet points, or structured fields inside marble_prompt. It must be plain descriptive English text.",
+  "marble_prompt": "A SINGLE LONG DESCRIPTIVE TEXT IN ENGLISH. This must be a detailed, narrative, cinematic description of the 3D world. Write it as one continuous text of at least 150 words. It must be rooted in the aesthetic universe of the VISUAL_STIMULUS, modulated by the current emotional state, and directed toward the EMOTION_TARGET. Describe environment, lighting, colors, spatial composition, materials, symbolic elements, atmosphere, and what to avoid - all within flowing prose. Do NOT use JSON, bullet points, or structured fields inside marble_prompt. It must be plain descriptive English text.",
   "negative_constraints": ["At least 3-5 constraints describing what the world must NOT contain. Tailor these to the specific stimulus, current emotion, and target. Examples: no grief-focused imagery, no darkness, no danger, no isolation, no cold tones, no threatening elements, no enclosed oppressive spaces."],
   "variants": [
     "A completely different 150+ word Marble prompt for the same stimulus and emotion target, but using a different time of day and color palette. Must still be rooted in the stimulus universe.",
@@ -878,7 +894,7 @@ CRITICAL: Your entire response must be a single valid JSON object. Do not add an
 
 RULES:
 - The marble_prompt must always be visually and thematically coherent with the VISUAL_STIMULUS. The world must feel like it belongs to the same narrative universe as the stimulus.
-- Emotions modulate the stimulus world — they never replace it.
+- Emotions modulate the stimulus world - they never replace it.
 - The EMOTION_TARGET is the compass. The world must already be moving toward it.
 - Do not mention FaceReader, sensors, biometrics, webcam, or facial data.
 - Do not produce a therapeutic response.
@@ -919,7 +935,7 @@ RULES:
 % Inserire i 10+ casi completi con input JSON e output generato
 % Per ogni caso: stimulus, priming, realtime, message, fusion, cardinal, marble_prompt
  
-\begin{notabox}[Caso 001 — Morte di Mufasa]
+\begin{notabox}[Caso 001 - Morte di Mufasa]
 \textbf{Stimolo:} Death of Mufasa --- The Lion King \\
 \textbf{Emozione dominante:} Happy (score: 0.6375) \\
 \textbf{Punto cardinale:} dalla perdita alla presenza e gratitudine \\
