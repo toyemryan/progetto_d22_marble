@@ -156,6 +156,11 @@ def get_criterias(prompts: list | dict):
     }
     return criterias
 
+def load_evaluation_reports():
+    if os.path.exists(EVAL_REPORT_PATH):
+        with open(EVAL_REPORT_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
 
 async def evaluate_single(prompt: dict, use_remote=os.getenv("CONNECT_TO_REMOTE", "").lower() == "true"):
     prompts = load_from_file(MARBLE_PROMPTS_PATH, "json")
@@ -173,7 +178,7 @@ async def evaluate_single(prompt: dict, use_remote=os.getenv("CONNECT_TO_REMOTE"
         "results": result
     }
 
-    reports = load_from_file(EVAL_REPORT_PATH, "json")
+    reports = load_evaluation_reports()
     reports.append(report) #type:ignore
 
     with open(EVAL_REPORT_PATH, "w", encoding="utf-8") as f:
@@ -202,7 +207,7 @@ async def evaluate_all():
         for prompt in prompts:
             results.append(await evaluate_prompt(prompt, criterias))
 
-    reports = load_from_file(EVAL_REPORT_PATH, "json")
+    reports = load_evaluation_reports()
 
     report = {
         "evaluated_at": datetime.now().isoformat(),

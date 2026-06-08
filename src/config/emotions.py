@@ -12,6 +12,7 @@ class EmotionLabel(StrEnum):
     DISGUST    = "Disgust"
     TENDERNESS = "Tenderness"
     NEUTRAL    = "Neutral"
+    FEARFUL = "Fearful"
 
 
 class EmotionTarget(StrEnum):
@@ -64,6 +65,9 @@ EMOTIONS: list[Emotion] = [
         label=EmotionLabel.HAPPY,
         normalize_aliases=(
             "happy", "felice", "felicità", "gioia",
+            "joy", "joyful", "cheerful", "glad", "pleased", "content",
+            "gioioso", "allegro", "contento", "entusiasta", "euforico",
+            "soddisfatto", "raggiante", "sereno", "positivo", "eccitato",
         ),
         text_keywords=(
             "felice", "gioia", "contento", "bello", "voglio bene",
@@ -74,6 +78,9 @@ EMOTIONS: list[Emotion] = [
         label=EmotionLabel.SAD,
         normalize_aliases=(
             "sad", "triste", "tristezza",
+            "sadness", "unhappy", "sorrowful", "melancholic", "depressed", "gloomy",
+            "malinconico", "abbattuto", "affranto", "dispiaciuto", "addolorato",
+            "rattristato", "melanconico", "cupo", "desolato", "avvilito",
         ),
         text_keywords=(
             "triste", "tristezza", "piangere", "lacrime", "dolore",
@@ -84,6 +91,9 @@ EMOTIONS: list[Emotion] = [
         label=EmotionLabel.ANGRY,
         normalize_aliases=(
             "angry", "arrabbiato", "rabbia",
+            "anger", "mad", "furious", "rage", "irritated", "outraged",
+            "furibondo", "incazzato", "irato", "indignato", "esasperato",
+            "risentito", "alterato", "fumante", "infuriato", "esasperato",
         ),
         text_keywords=(
             "arrabbiato", "rabbia", "furioso", "ingiusto", "odio",
@@ -93,7 +103,10 @@ EMOTIONS: list[Emotion] = [
     Emotion(
         label=EmotionLabel.FEAR,
         normalize_aliases=(
-            "fear", "paura", "spaventato",
+            "fear", "paura", "spaventato", "fearful",
+            "scared", "afraid", "terrified", "anxious", "frightened", "horrified",
+            "timoroso", "impaurito", "terrorizzato", "angosciato", "agitato",
+            "ansioso", "preoccupato", "inquieto", "in ansia", "apprensivo",
         ),
         text_keywords=(
             "paura", "spaventato", "terrore", "ansia", "agitazione",
@@ -104,6 +117,9 @@ EMOTIONS: list[Emotion] = [
         label=EmotionLabel.SURPRISED,
         normalize_aliases=(
             "surprised", "sorpreso", "sorpresa",
+            "surprise", "astonished", "amazed", "shocked", "stunned", "startled",
+            "stupito", "meravigliato", "sbigottito", "incredulo", "sbalordito",
+            "colpito", "scioccato", "esterrefatto", "allibito", "senza parole",
         ),
         text_keywords=(
             "sorpreso", "sorpresa", "incredibile", "assurdo", "wow",
@@ -114,6 +130,9 @@ EMOTIONS: list[Emotion] = [
         label=EmotionLabel.DISGUST,
         normalize_aliases=(
             "disgust", "disgusto",
+            "disgusted", "revolted", "repulsed", "nauseated", "appalled",
+            "disgustato", "schifato", "nauseato", "rivoltato", "ripugnato",
+            "stomacato", "indignato", "orripilato", "inorridito",
         ),
         text_keywords=(
             "schifo", "disgusto", "orribile", "rivoltante", "ripugnante",
@@ -123,6 +142,9 @@ EMOTIONS: list[Emotion] = [
         label=EmotionLabel.TENDERNESS,
         normalize_aliases=(
             "tenderness", "tenerezza", "tenero",
+            "tender", "affectionate", "loving", "warm", "caring", "gentle",
+            "affettuoso", "amorevole", "dolce", "premuroso", "affezionato",
+            "protettivo", "caldo", "empatico", "compassionevole", "benevolo",
         ),
         text_keywords=(
             "tenero", "tenerezza", "dolce", "amorevole", "affetto",
@@ -133,6 +155,9 @@ EMOTIONS: list[Emotion] = [
         label=EmotionLabel.NEUTRAL,
         normalize_aliases=(
             "neutral", "neutro", "neutrale",
+            "indifferent", "calm", "composed", "detached", "impassive",
+            "indifferente", "calmo", "distaccato", "impassibile", "tranquillo",
+            "sereno", "equilibrato", "pacato", "apatico", "inespressivo",
         ),
         text_keywords=(),
     ),
