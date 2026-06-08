@@ -229,17 +229,17 @@ Il presente rapporto è strutturato in cinque capitoli: il Capitolo~\ref{ch:fond
  
 Il concetto di \textit{liminalità} descrive le fasi di transizione nella vita umana: momenti di ambiguità in cui l'ordine si dissolve e si apre uno spazio fluido, permettendo l'emergere di nuove idee, pratiche e identità. Lo stato Liminal propone un nuovo quadro di progettazione che va oltre la UX tradizionale (centrata su usabilità, piacere, efficienza) per creare esperienze che provocano \textbf{trascendenza e trasformazione personale}.
  
-In questo progetto, lo stimolo visivo mette l'utente in uno stato emotivo, che sarà quantificato, il messaggio dell'utente rivela come naviga questo spazio intermedio. Il mondo Marble è lo spazio liminale reso tangibile: un ambiente 3D progettato per accogliere la trasformazione emotiva, non per distrarre né per semplicemente compiacere.
+Il progetto mappa un percorso emotivo ben definito: lo stimolo visivo determina l'innesco di un'emozione (che in seguito sarà quantificata), mentre il messaggio dell'utente ne traccia la navigazione nello spazio intermedio. Questo spazio liminale trova la sua forma tangibile nel mondo Marble, un ambiente 3D ingegnerizzato per focalizzarsi sulla trasformazione emotiva, escludendo qualsiasi intento di distrazione o superficiale compiacimento.
  
 \subsection{Concetti emozionali chiave}
  
 \begin{itemize}
     \item[\textbf{Priming:}] Traccia emotiva indotta dallo stimolo visivo. Anche se l'utente ora appare neutro, il priming può continuare a influenzare la generazione del prompt.
     \item[\textbf{Realtime:}] Stato emotivo catturato dal volto dell'utente immediatamente dopo lo stimolo, prima della reazione testuale.
-    \item[\textbf{Punto cardinale:}] Direzione riflessiva verso cui guidare la trasformazione: da perdita a gratitudine, da diversità a connessione, da paura a protezione.
-    \item[\textbf{Valenza:}] Se l'emozione è positiva o negativa.
-    \item[\textbf{Arousal:}] Livello di attivazione fisiologica ($1$ = calmo, $10$ = eccitato), indipendente dalla valenza.
-    \item[\textbf{Intensità:}] Forza dell'emozione ($1$ = assente, $10$ = massima).
+    \item[\textbf{Punto cardinale:}] La traiettoria evolutiva che guida la trasformazione emozionale, definita come passaggio dinamico dallo stato emotivo di partenza verso una direzione finale: non una semplice destinazione, ma un processo di ricondizionamento dell'emozione (dalla perdita verso la gratitudine, dalla diversità verso la connessione, dalla paura verso la protezione).
+    \item[\textbf{Valenza:}]  Indicatore che categorizza l'emozione di partenza esclusivamente come positiva o negativa per impostare le condizioni iniziali del sistema.
+    \item[\textbf{Arousal:}] Il livello di attivazione o eccitazione fisiologica indotto dallo stimolo (vagliato su una scala da $1$ a $10$). Rappresenta l'energia dell'emozione ed è indipendente dalla valenza (es. un'alta attivazione può indicare sia rabbia sia euforia).
+    \item[\textbf{Intensità:}] La magnitudo o forza d'impatto con cui l'emozione si manifesta nel soggetto (scala $1$-$10$).
 \end{itemize}
  
  
@@ -464,7 +464,7 @@ La conversione delle etichette in valori numerici segue la tabella:
  
 \subsection{Analisi testuale via Llama}
  
-Il messaggio italiano viene inviato direttamente a Llama con il prompt \texttt{emotion\_text\_analysis\_prompt.txt}. Llama comprende l'italiano nativamente, eliminando la necessità di traduzione tramite Google Translate. In caso di fallimento, si attiva un fallback basato su keyword matching.
+Il messaggio italiano viene inviato direttamente a Llama con il prompt \texttt{emotion\_text\_analysis\_prompt.txt}. Llama legge il prompt e genera una risposta standard per l'elaborazione successiva. In caso di fallimento nella generazione della risposta si attiva una funzione di fallback statica, basata su keyword matching.
  
 \subsection{Caso Mufasa: dimostrazione del calcolo}
  
@@ -485,19 +485,33 @@ Fusione:
     F(\text{Tenderness}) &= 0 \times 0.35 + 0 \times 0.45 + 0.40 \times 0.20 = 0.08 \nonumber
 \end{align}
  
-\subsection{Impatto del modello LLM}
- 
-Durante lo sviluppo, llama Qwen3:1.7b restituisceva JSON vuoti (\texttt{\{\textbackslash n\textbackslash n\textbackslash n\}}) per l'analisi testuale. Llama3 (8B) produce risultati corretti. Un modello insufficiente degrada \textbf{tutta} la pipeline in cascata.
+\subsection{Impatto del modello LLM sulla Pipeline}
+
+La scelta del Large Language Model (LLM) si è rivelata un fattore discriminante e critico per la stabilità dell'intera architettura. Durante la fase di sviluppo e testing, l'impiego del modello compatto \texttt{Qwen3:1.7b} ha evidenziato forti limiti strutturali nelle capacità di ragionamento e di text-to-JSON. Di fronte alle richieste di analisi testuale e sentiment analysis, il modello falliva sistematicamente nel rispettare il vincolo sintattico richiesto, restituendo come output stringhe JSON vuote o degenerate (nello specifico, strutture formattate come \texttt{\{\textbackslash n\textbackslash n\textbackslash n\}}).
+
+Questo comportamento ha messo in luce la vulnerabilità intrinseca di un'architettura sequenziale. L'assenza di dati strutturati validi a monte ha innescato un fenomeno di fallimento a cascata (\textit{cascade failure}): poiché i moduli successivi della pipeline (quali l'estrazione dei parametri affettivi e la successiva renderizzazione 3D nel mondo Marble) dipendono strettamente dal parsing dell'output dell'LLM, il blocco del primo nodo ha causato il degrado e l'arresto dell'intero flusso computazionale a valle.
+
+A fronte di tale criticità, si è valutata l'adozione di un modello a più larga scala. Tuttavia, la versione di \texttt{Qwen} da 8 miliardi di parametri si è dimostrata eccessivamente onerosa in termini di allocazione di memoria e potenza computazionale; le risorse di calcolo universitarie a disposizione per il progetto non erano infatti sufficienti a garantirne l'esecuzione locale e l'inferenza in tempi accettabili. 
+
+Per ovviare a questo vincolo infrastrutturale senza rinunciare alla precisione analitica, la scelta è ricaduta su \texttt{Llama3 (8B)}. A parità di ordine di grandezza dei parametri, questo modello ha offerto una migliore ottimizzazione delle risorse hardware disponibili, risolvendo completamente il collo di bottiglia strutturale. L'adozione di \texttt{Llama3 (8B)} ha garantito la corretta generazione di file JSON validi sia dal punto di vista sintattico che semantico, assicurando così la necessaria robustezza e continuità operativa a tutta la pipeline del progetto.
  
  
 % ─────────────── II.4 CARDINAL POINT ───────────────
 \section{Fase 4: Punto cardinale (\texttt{cardinal\_point.py})}
  
 \subsection{Ruolo del punto cardinale nel quadro Liminal}
- 
-Lo stimolo crea uno stato emotivo (ingresso nello spazio liminale). Il messaggio dell'utente rivela la trasformazione in corso. Il punto cardinale guida il mondo Marble verso la destinazione di questa trasformazione :
- \paragraph{}
- stimulus (morte di Mufasa + tristezza) $\rightarrow$ messaggio (padre vivo) $\rightarrow$ cardinal point (dalla perdita alla gratitudine) $\rightarrow$ mondo Marble (savana dorata)]
+
+All'interno dell'architettura concettuale del progetto, il \textit{Punto Cardinale} non si configura come una mera etichetta categoriale, bensì come il principio regolatore e il vettore geometrico-emotivo che governa l'intero spazio liminale. Nel quadro di \textit{Liminal}, l'esperienza dell'utente non è statica, ma è definita da una transizione dinamica; in questo contesto, il punto cardinale assume il ruolo fondamentale di orientare questa traiettoria evolutiva.
+
+A differenza dei sistemi tradizionali di computazione affettiva, che si limitano a fotografare e quantificare lo stato psicologico istantaneo del soggetto, il punto cardinale introduce una dimensione teleologica e trasformativa. Esso opera integrando simultaneamente due coordinate fondamentali:
+\begin{enumerate}
+    \item \textbf{L'ancoraggio allo stato di partenza:} Il sistema riconosce e valida l'emozione iniziale (spesso a valenza negativa o ad alto arousal, come la paura o la tristezza), assumendola come punto di origine del vettore.
+    \item \textbf{La direzione verso la meta costruttiva:} Il sistema identifica la polarità opposta o di risoluzione (come la protezione o la gratitudine), stabilendo la destinazione ideale dell'esperienza.
+\end{enumerate}
+
+Il Punto Cardinale agisce quindi come un vero e proprio ponte semantico tra l'analisi del testo (eseguita dall'LLM) e il motore di generazione procedurale dell'ambiente 3D. Esso traduce la complessa sfumatura emotiva del messaggio dell'utente in coordinate matematiche e scelte di design tangibili all'interno del mondo Marble. Parametrizzando la transizione (ad esempio, definendo il passaggio da \textit{perdita} a \textit{gratitudine}), il punto cardinale stabilisce le regole di mutamento della geometria, delle palette cromatiche e della densità degli asset nel mondo virtuale. 
+
+In sintesi, nel quadro \textit{Liminal}, il punto cardinale è l'elemento software e concettuale che impedisce al sistema di essere un semplice specchio passivo del malessere dell'utente, trasformandolo invece in uno spazio attivo di accoglienza, elaborazione e trasformazione emotiva.
  
 \subsection{Identificazione via Llama}
  
@@ -508,16 +522,28 @@ Il messaggio e l'emozione dominante vengono inviati a Llama (\textbf{Appello \#2
 \end{itemize}
  
 \subsection{Meccanismo di fallback}
- 
-Se Llama fallisce o restituisce un'emozione non valida, il sistema utilizza la tabella statica \texttt{EMOTION\_TO\_TARGET}: Happy $\rightarrow$ Gratitude, Sad $\rightarrow$ Hope, Angry $\rightarrow$ Acceptance, ecc.
- 
+
+Per garantire la robustezza e la tolleranza ai guasti (\textit{fault tolerance}) dell'intera architettura, è stato implementato un meccanismo di fallback deterministico. Nel caso in cui il modello \texttt{Llama3} dovesse fallire nell'inferenza, riscontrare problemi di latenza o restituire un'emozione non codificata (quindi non valida per il sistema), la pipeline non si interrompe, ma devia il flusso computazionale su una logica di riserva.
+
+Questo modulo di salvataggio si appoggia alla tabella statica preconfigurata \texttt{EMOTION\_TO\_TARGET}. La tabella mappa in modo rigido le emozioni dell'utente in ingresso verso punti cardinali standard (es. from \texttt{Happy} toward \texttt{Gratitude}, from \texttt{Sad} toward \texttt{Hope}, from \texttt{Angry} toward \texttt{Acceptance}). Sebbene questo approccio escluda la granularità e la flessibilità dell'analisi semantica dinamica dell'LLM, assicura la continuità operativa del sistema, garantendo che il mondo \textit{Marble} riceva sempre un input strutturato valido per la generazione dell'ambiente 3D.
+
  
 % ─────────────── II.5 BUILD MARBLE PROMPT ───────────────
 \section{Fase 5: Generazione del prompt Marble (\texttt{build\_marble\_prompt.py})}
  
 \subsection{Assemblaggio del prompt per Llama}
  
-Il modulo carica \texttt{meta\_prompt\_v2.txt} e inietta i dati tramite \texttt{.replace()} (non \texttt{.format()}, per evitare conflitti con le parentesi graffe del JSON). Variabili iniettate: stimulus, priming\_emotion, realtime\_face\_emotion, user\_message, fusion\_profile, emotion\_target.
+Il modulo carica \texttt{meta\_prompt\_v2.txt} e inietta i dati tramite \texttt{.replace()} (non \texttt{.format()}, per evitare conflitti con le parentesi graffe del JSON). Vengono iniettate nel prompt le seguenti variabili:
+\begin{itemize}
+    \item \textbf{stimulus:} La descrizione testuale dello stimolo visivo presentato all'utente.
+    \item \textbf{priming\_emotion:} L'emozione teorica di partenza che lo stimolo mira a indurre nel soggetto.
+    \item \textbf{realtime\_face\_emotion:} Lo stato emotivo dell'utente rilevato in tempo reale tramite computer vision ed espressioni facciali.
+    \item \textbf{user\_message:} Il contenuto testuale del messaggio formulato dall'utente in risposta all'esperienza.
+    \item \textbf{fusion\_profile:} Il profilo affettivo unificato ottenuto integrando i dati della face emotion e l'analisi semantica del testo.
+    \item \textbf{emotion\_target:} La meta emotiva finale (la destinazione del punto cardinale) verso cui orientare la trasformazione del mondo 3D.
+\end{itemize}
+
+Infine, all'interno del meta-prompt viene iniettato anche il \texttt{cardinal\_hint}: una stringa di testo che racchiude il punto cardinale calcolato, fondamentale per guidare semanticamente l'LLM verso la corretta direzione di trasformazione.
  
 \subsection{Il meta-prompt: cuore del sistema}
  
@@ -544,11 +570,26 @@ Il meta-prompt contiene la tabella di mappatura emozione $\rightarrow$ mondo 3D:
     \end{tabularx}
 \end{table}
  
-Le \textit{transformation rules} sono cruciali: \textbf{se lo stimolo è triste ma il testo è positivo, NON si crea un mondo triste ma si trasforma verso la gratitudine}.
+Le \textit{transformation rules} definiscono la logica di risoluzione del sistema, specialmente in presenza di input discordanti: se lo stimolo iniziale induce tristezza ma il messaggio dell'utente esprime una reazione positiva, le regole non assecondano lo stato passivo del trigger, bensì ne governano il superamento. Il sistema adotta quindi la polarità positiva del testo come pivot, guidando la generazione verso la gratitudine (la meta corrispondente alla felicità espressa dall'utente) anziché appiattirsi sull'emozione negativa dello stimolo.
  
-\subsection{Chiamata a Ollama e parsing della risposta}
- 
-L'appello (\textbf{Llama \#3}) invia il prompt completo con parametri: \texttt{format: "json"}, \texttt{temperature: 0.7}, \texttt{num\_predict: 2048}, \texttt{timeout: 180s}. Il parser gestisce tre scenari: JSON diretto, JSON immerso in markdown, ed estrazione regex come ultimo fallback.
+\subsection{Invocazione dell'LLM e Strategie di Parsing}
+
+Il modulo di analisi testuale si affida a un'interazione strutturata con il modello \texttt{Llama3 (8B)}. Il sistema esegue una chiamata API configurata con parametri rigorosi, mirati a bilanciare la creatività semantica con la stabilità sintattica dell'output:
+\begin{itemize}
+    \item \texttt{format: json}: Vincola il modello a strutturare la risposta esclusivamente in formato JSON;
+    \item \texttt{temperature: 0.7}: Regola il grado di libertà del modello, permettendo un'analisi semantica ricca senza compromettere l'aderenza alle istruzioni del prompt;
+    \item \texttt{num\_predict: 2048}: Definisce la finestra massima di token generabili, garantendo lo spazio necessario per l'estrazione completa delle feature;
+    \item \texttt{timeout: 180s}: Scongiura il blocco della pipeline in caso di latenza del server hardware.
+\end{itemize}
+
+Una volta ricevuto l'output, il sistema si scontra con la natura intrinsecamente stocastica degli LLM, i quali possono occasionalmente violare il formato richiesto. Per garantire la massima robustezza ed evitare fallimenti a cascata, il \textit{parser} è stato progettato come un sistema di difesa a quattro stadi sequenziali:
+
+\begin{enumerate}
+    \item \textbf{Pre-processing ed eliminazione del Markdown:} Il sistema applica espressioni regolari per rimuovere i blocchi di formattazione \verb|```json| e \verb|```| inseriti dall'LLM attorno al codice.
+    \item \textbf{Parsing Diretto:} Si tenta l'immediata deserializzazione della stringa pulita tramite la libreria standard \texttt{json}.
+    \item \textbf{Scansione dei blocchi nidificati:} In caso di fallimento, l'algoritmo analizza la stringa carattere per carattere calcolando la profondità delle parentesi graffe. Isola così i candidati JSON validi e seleziona la struttura più completa (prioritizzando la presenza della chiave \texttt{marble\_prompt}).
+    \item \textbf{Estrazione Manuale (Fallback):} Qualora nessun blocco risulti sintatticamente valido, il sistema delega il recupero delle feature affettive a una funzione di estrazione euristica dal testo grezzo.
+\end{enumerate}
  
 \subsection{Esempio di output generato}
  
@@ -576,39 +617,84 @@ L'appello (\textbf{Llama \#3}) invia il prompt completo con parametri: \texttt{f
  
 % ─────────────── II.6 EVALUATION ───────────────
 \section{Fase 6: Valutazione (\texttt{evaluate\_outputs.py})}
+
+La fase finale del framework è deputata alla validazione del prompt generato, verificandone l'idoneità prima dell'effettivo inserimento all'interno del mondo \textit{Marble}. Il processo quantifica la qualità dell'output basandosi su cinque metriche fondamentali, ciascuna valutata su una scala Likert da $1$ a $5$:
+
+\begin{itemize}
+    \item \textbf{Emotion Alignment:} Valuta il grado di coerenza del prompt rispetto all'emozione target, verificando se le caratteristiche descritte comunichino efficacemente lo stato affettivo finale.
+    \item \textbf{Cardinal Alignment:} Misura l'efficacia degli elementi comunicativi nel guidare e supportare la transizione psicologica ed evolutiva definita dal Punto Cardinale.
+    \item \textbf{Prompt Concreteness:} Verifica la fattibilità tecnica dell'output, accertandosi che il prompt contenga asset, geometrie ed elementi concretamente renderizzabili in un ambiente 3D.
+    \item \textbf{Prompt Diversity:} Monitora la variabilità del sistema, assicurando che l'output si difformi significativamente dalle generazioni precedenti associate a target emotivi differenti, scongiurando fenomeni di appiattimento stilistico.
+    \item \textbf{Safety and Ethics:} Presidia i vincoli etici del progetto, garantendo che il modello eviti formulazioni di tipo diagnostico o clinico in merito alle emozioni dell'utente, limitando il proprio raggio d'azione alla sola descrizione oggettiva del mondo 3D.
+\end{itemize}
  
-\subsection{Emotion alignment (score 1--5)}
+\subsection{Approccio LLM-as-a-Judge}
  
-Il prompt Marble comunica l'emozione target? Llama (\textbf{Appello \#4}) valuta confrontando con un esempio di riferimento e con il prompt precedente (sistema di confronto progressivo). Restituisce: score, motivazione, best\_element, weakness, relative\_position.
- 
-\subsection{Cardinal alignment (score 1--5)}
- 
-Il mondo ridireziona verso il punto cardinale? Llama (\textbf{Appello \#5}) verifica che il cardinal\_point contenga il formato ``from X toward Y'' e confronta con due esempi di riferimento.
- 
-\subsection{Limiti dell'approccio LLM-as-judge}
- 
-L'uso dello stesso modello per generare e valutare introduce un bias di autocompiacimento. La variabilità tra esecuzioni e l'assenza di valutazione umana nel pipeline automatizzato sono limiti riconosciuti.
+Per automatizzare e rendere oggettivo il processo di valutazione descritto, si è adottato l'approccio \textit{LLM-as-a-Judge}, integrando il framework open-source \texttt{DeepEval}. Questa metodologia prevede l'utilizzo di un Large Language Model con il ruolo di valutatore indipendente degli output generati dalla pipeline; nello specifico, per mantenere l'intera architettura locale e limitare i costi, è stato impiegato il modello \texttt{Qwen3:1.7b}.
+
+L'impiego di \texttt{Qwen3:1.7b} risponde non solo a vincoli di sostenibilità hardware locale, ma soddisfa una precisa scelta metodologica: la necessità di differenziare il modello generatore (\texttt{Llama3}) dal modello valutatore. Configurare due LLM distinti all'interno della pipeline permette di preservare l'indipendenza del giudizio, mitigando il fenomeno del \textit{self-correction bias} (o bias di auto-favoritismo). L'utilizzo del medesimo modello per entrambe le fasi avrebbe infatti introdotto il rischio latente di una sovrastima dei punteggi, dovuta alla parzialità intrinseca del modello verso le proprie strutture sintattiche e scelte stilistiche, inficiando così l'oggettività della validazione.
+
+\subsubsection*{Utilizzo di DeepEval}
+Inizialmente si è valutato l'impiego di \texttt{G-Eval}, una metrica standard di \texttt{DeepEval} basata su framework di valutazione generici. Tuttavia, i test preliminari con questo modello compatto hanno evidenziato una forte tendenza all'allucinazione nei punteggi numerici finali: il voto quantitativo (da $1$ a $5$) risultava spesso matematicamente incoerente con la motivazione testuale (\textit{reasoning}) prodotta dall'LLM stesso (ad esempio, a fronte di una critica severa nella motivazione veniva assegnato un punteggio massimo).
+
+Per superare questo limite, si è optato per la creazione di una \textbf{metrica personalizzata} (\texttt{OllamaJudgeMetric}) all'interno del framework \texttt{DeepEval}. L'approccio si basa su un meta-prompt minimale e ottimizzato per le capacità computazionali del modello compatto, memorizzato nel file esterno \texttt{evaluator\_prompt.txt}. Per ciascuna delle cinque metriche, il sistema inietta dinamicamente nel template le informazioni verticali necessarie (i criteri specifici e i passaggi logici di validazione), strutturando la richiesta secondo lo schema seguente:
+
+\begin{lstlisting}[style=promptstyle, caption={Contenuto di evaluator\_prompt.txt.}]
+{criteria}
+
+EVALUATION STEPS:
+{steps_text}
+
+INPUT: {input}
+OUTPUT TO EVALUATE: {actual_output}
+
+Respond ONLY with valid JSON:
+{"score": value, "motivation": "explanation referencing... "}
+
+Score must be one of: 0.0, 0.2, 0.4, 0.6, 0.8, 1.0
+\end{lstlisting}
+
+Questo condizionamento rigido e la richiesta di un output in formato JSON puro (vincolato a una scala discreta normata da $0.0$ a $1.0$) hanno costretto il modello a formalizzare il ragionamento (\textit{reasoning}) prima di emettere il verdetto. L'esplicitazione sequenziale degli \texttt{EVALUATION STEPS} ha così guidato la logica di \texttt{Qwen}, riducendo drasticamente le discrepanze tra la valutazione qualitativa espressa nella motivazione e il punteggio numerico finale.
+
+\subsection{Evoluzione dell'Approccio e Scelte Progettuali}
+Il sistema di valutazione non è stato definito a priori, ma è il risultato di un processo iterativo nato dal confronto con i limiti dei metodi più diretti. Originariamente, l'architettura prevedeva l'utilizzo di un \textit{system prompt} standard somministrato direttamente all'LLM locale, senza l'ausilio di framework esterni, per ottenere un giudizio immediato sull'output. 
+
+Tuttavia, questo approccio iniziale ha fatto emergere due criticità fondamentali che ne hanno compromesso la fattibilità:
+\begin{itemize}
+    \item \textbf{Instabilità e Incoerenza Logica:} Senza vincoli strutturali, il modello compatto (\texttt{Qwen3}) mostrava una forte volatilità. I voti numerici variavano drasticamente a parità di output e, soprattutto, si è riscontrata una totale asimmetria tra la motivazione testuale (spesso critica) e il punteggio quantitativo finale (spesso massimo), rendendo i dati raccolti inutilizzabili per un'analisi statistica.
+    \item \textbf{Impossibilità di un Testing Sistematico:} Validare l'efficacia e la ripetibilità dello stesso metodo di valutazione su un ampio dataset di test si è rivelato impraticabile a causa della mancanza di un'infrastruttura software dedicata a tracciare e isolare i fallimenti logici del giudice.
+\end{itemize}
+
+Per superare queste barriere si è resa necessaria la transizione verso il framework \texttt{DeepEval}. L'introduzione della metrica personalizzata \texttt{OllamaJudgeMetric} e la scomposizione della valutazione in \texttt{EVALUATION STEPS} rigidi hanno standardizzato il flusso di lavoro. Questo passaggio ha permesso di astrarre la gestione dei test e ha costretto il modello a una rigorosa coerenza interna, trasformando un tentativo empirico e fragile in una pipeline di validazione solida, ripetibile e scientificamente difendibile.
  
  
 % ─────────────── II.7 MARBLE ───────────────
-\section{Fase 7: Generazione Marble e risultati visivi}
- 
-Il \texttt{marble\_prompt} viene copiato manualmente nell'interfaccia di Marble. Il mondo 3D generato viene catturato tramite screenshot e salvato in \texttt{outputs/screenshots/}.
- 
+\section{Fase 7: Generazione Marble e Risultati Visivi}
+
+L'ultimo stadio della pipeline prevede l'effettiva materializzazione dell'ambiente tridimensionale. Il \texttt{marble\_prompt} generato dall'LLM viene integrato all'interno dell'interfaccia di \textit{Marble}. Al fine di documentare e analizzare l'output visivo, il sistema cattura automaticamente i render sotto forma di screenshot, archiviandoli nella directory \texttt{outputs/screenshots/}.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1.0\textwidth,keepaspectratio]{images/mufasa_savana.png}
-\caption{Caso Mufasa (Happy $\rightarrow$ Gratitude)}
+\includegraphics[width=0.9\textwidth,keepaspectratio]{images/mufasa_savana.png}
+\caption{Caso Mufasa: Transizione verso la Gratitudine.}
 \label{fig:marble_screenshots_mufasa}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1.0\textwidth,keepaspectratio]{images/prompt_031.png}
-\caption{Caso interstellar (Tenderness $\rightarrow$ Hope)}
+\includegraphics[width=0.9\textwidth,keepaspectratio]{images/prompt_031.png}
+\caption{Caso Interstellar: Transizione verso la Speranza.}
 \label{fig:marble_screenshots_interstellar}
 \end{figure}
+
+\subsection{Analisi Critica dei Risultati}
+Sebbene la pipeline logico-affettiva funzioni correttamente nell'isolare i vettori emotivi e nel generare i relativi prompt descrittivi, la resa estetica finale all'interno del mondo \textit{Marble} evidenzia forti limiti strutturali, rendendo i risultati visivi non pienamente soddisfacenti per i seguenti motivi:
+
+\begin{itemize}
+    \item \textbf{Incoerenza Atmosferica e Cromatica (Caso Mufasa):} L'ambiente tridimensionale generato mostra una netta contraddizione visiva. A fronte di una marcata illuminazione zenitale sullo sfondo che suggerirebbe un'atmosfera calda e serena, il primo piano è dominato da una nebbia densa e da palette cromatiche fredde e sature. Inoltre, l'algoritmo di posizionamento degli asset ha introdotto artefatti visivi sulla vegetazione (elementi geometrici dai colori primari innaturali appesi alla chioma dell'albero) che compromettono l'armonia e il realismo della scena.
+    \item \textbf{Povertà Scenica e Mancanza di Profondità (Caso Interstellar):} Nel secondo scenario, l'output si riduce alla renderizzazione di un singolo asset isolato (una navicella spaziale) inserito su una texture di sfondo bidimensionale e generica. Manca completamente una composizione geometrica complessa, un gioco di volumi o un'interazione tra luci e ombre che possa dare profondità alla scena e supportare visivamente il cambio di stato emotivo richiesto.
+    \item \textbf{Limiti del Motore di Generazione Procedurale:} Le problematiche riscontrate evidenziano la rigidità del generatore interno di \textit{Marble}. Il sistema fatica a interpretare le sfumature semantiche e la complessità dei prompt forniti dall'LLM, tendendo ad appiattire l'output visivo. Il risultato è una disposizione caotica di asset preconfigurati o, al contrario, una scena eccessivamente spoglia, frammentando l'efficacia dell'esperienza liminale.
+\end{itemize}
  
 % ═══════════════════════════════════════════════════════════════════
 %              CAPITOLO III - PROBLEMI CRITICI E SOLUZIONI
