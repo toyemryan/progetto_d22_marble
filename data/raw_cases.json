@@ -36,7 +36,7 @@
       "valence_label": "POSITIVE",
       "arousal_label": "MEDIUM"
     },
-    "user_message": "Sai che la morte di Mufasa non mi mette tristezza perche mio padre e vivo e gli voglio molto bene!"
+    "user_message": "Guardando questa scena mi sono reso conto di quanto sono fortunato ad avere ancora mio padre vicino a me. Lui mi ha sempre protetto come Mufasa."
   },
   {
     "case_id": "case_002",
@@ -94,35 +94,461 @@
   },
   {
     "case_id": "case_004",
-    "timestamp": "2026-06-05T21:37:59.660654",
-    "stimulus": "interstellar of christofer nolan",
+    "timestamp": "2026-06-01T09:15:00",
+    "stimulus": "Scena finale di Schindler's List",
     "priming_emotion": {
-      "Tenderness": {
+      "Sad": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.85
+      },
+      "Neutral": {
+        "avg_intensity": "LOW",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEUTRAL",
+        "emotion_probability": 0.1
+      },
+      "Surprised": {
+        "avg_intensity": "LOW",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "NEUTRAL",
+        "emotion_probability": 0.05
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Sad",
+      "probability": 0.82,
+      "intensity_label": "HIGH",
+      "valence_label": "NEGATIVE",
+      "arousal_label": "LOW"
+    },
+    "user_message": "Questa scena mi fa sempre piangere. Ho perso mio nonno l'anno scorso e mi manca tantissimo."
+  },
+  {
+    "case_id": "case_005",
+    "timestamp": "2026-06-01T14:30:22",
+    "stimulus": "Goal di Totti nella finale di Champions League",
+    "priming_emotion": {
+      "Happy": {
         "avg_intensity": "HIGH",
         "avg_arousal": "HIGH",
         "avg_valence": "POSITIVE",
-        "emotion_probability": 0.8
+        "emotion_probability": 0.88
       },
-      "Happy": {
-        "avg_intensity": "MEDIUM",
+      "Surprised": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "HIGH",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.65
+      },
+      "Angry": {
+        "avg_intensity": "LOW",
         "avg_arousal": "MEDIUM",
-        "avg_valence": "NEUTRAL",
-        "emotion_probability": 0.7
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.1
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Happy",
+      "probability": 0.91,
+      "intensity_label": "HIGH",
+      "valence_label": "POSITIVE",
+      "arousal_label": "HIGH"
+    },
+    "user_message": "Che emozione! Ricordo ancora dove ero quando lo vidi dal vivo, ero con mio padre allo stadio!"
+  },
+  {
+    "case_id": "case_006",
+    "timestamp": "2026-06-02T11:05:44",
+    "stimulus": "Scena dell'abbandono di Dumbo dalla madre",
+    "priming_emotion": {
+      "Sad": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.78
       },
       "Disgust": {
         "avg_intensity": "LOW",
         "avg_arousal": "LOW",
         "avg_valence": "NEGATIVE",
-        "emotion_probability": 0.3
+        "emotion_probability": 0.12
+      },
+      "Neutral": {
+        "avg_intensity": "LOW",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEUTRAL",
+        "emotion_probability": 0.1
       }
     },
     "realtime_face_emotion": {
-      "dominant_emotion": "Tenderness",
-      "probability": 0.6,
+      "dominant_emotion": "Neutral",
+      "probability": 0.55,
+      "intensity_label": "LOW",
+      "valence_label": "NEUTRAL",
+      "arousal_label": "LOW"
+    },
+    "user_message": "Non ho trovato questa scena particolarmente triste, forse perché l'ho vista troppe volte da bambino."
+  },
+  {
+    "case_id": "case_007",
+    "timestamp": "2026-06-03T20:18:09",
+    "stimulus": "Esplosione dell'Hindenburg (filmato storico)",
+    "priming_emotion": {
+      "Surprised": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "HIGH",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.82
+      },
+      "Fearful": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "HIGH",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.55
+      },
+      "Sad": {
+        "avg_intensity": "LOW",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.2
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Fearful",
+      "probability": 0.68,
+      "intensity_label": "MEDIUM",
+      "valence_label": "NEGATIVE",
+      "arousal_label": "HIGH"
+    },
+    "user_message": "Mi ha fatto paura anche se è storia passata. Ho sempre avuto terrore di volare e questo non aiuta."
+  },
+  {
+    "case_id": "case_008",
+    "timestamp": "2026-06-04T16:50:33",
+    "stimulus": "Matrimonio dalla commedia romantica 'Quattro matrimoni e un funerale'",
+    "priming_emotion": {
+      "Happy": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.7
+      },
+      "Sad": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.45
+      },
+      "Surprised": {
+        "avg_intensity": "LOW",
+        "avg_arousal": "LOW",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.15
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Happy",
+      "probability": 0.63,
       "intensity_label": "MEDIUM",
       "valence_label": "POSITIVE",
       "arousal_label": "MEDIUM"
     },
-    "user_message": "la speranza legato alla famiglia ma soprattutto all'umanità ci deve far andare avanti"
+    "user_message": "Mi ha fatto venire voglia di sposarmi ma anche un po' nostalgia perché il mio ex mi ha lasciato proprio il giorno del mio compleanno."
+  },
+  {
+    "case_id": "case_009",
+    "timestamp": "2026-06-05T10:12:00",
+    "stimulus": "Morte di Mufasa - Il Re Leone",
+    "priming_emotion": {
+      "Sad": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.75
+      },
+      "Happy": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.4
+      },
+      "Neutral": {
+        "avg_intensity": "LOW",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEUTRAL",
+        "emotion_probability": 0.1
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Happy",
+      "probability": 0.78,
+      "intensity_label": "MEDIUM",
+      "valence_label": "POSITIVE",
+      "arousal_label": "MEDIUM"
+    },
+    "user_message": "Sai che la morte di Mufasa non mi mette tristezza perche mio padre e vivo e gli voglio molto bene!"
+  },
+  {
+    "case_id": "case_010",
+    "timestamp": "2026-06-05T11:45:00",
+    "stimulus": "Danza spaziale di Wall-E ed EVE",
+    "priming_emotion": {
+      "Happy": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.82
+      },
+      "Surprised": {
+        "avg_intensity": "LOW",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.2
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Happy",
+      "probability": 0.85,
+      "intensity_label": "HIGH",
+      "valence_label": "POSITIVE",
+      "arousal_label": "MEDIUM"
+    },
+    "user_message": "È stato simpatico, i due robot erano felici, amorevoli l'un l'altro, e in seguito anche gli abitanti dell'astronave, ho provato simpatia e tenerezza."
+  },
+  {
+    "case_id": "case_011",
+    "timestamp": "2026-06-05T13:20:00",
+    "stimulus": "Danza spaziale di Wall-E ed EVE",
+    "priming_emotion": {
+      "Happy": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.8
+      },
+      "Surprised": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "HIGH",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.55
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Surprised",
+      "probability": 0.62,
+      "intensity_label": "MEDIUM",
+      "valence_label": "POSITIVE",
+      "arousal_label": "HIGH"
+    },
+    "user_message": "Quando si sono scontrati ed e partita la scintilla, ma anche la simpatia di Wall-E che cercava di avvicinarsi all'altro robot tramite un estintore è stato molto tenero."
+  },
+  {
+    "case_id": "case_012",
+    "timestamp": "2026-06-05T15:00:00",
+    "stimulus": "Danza spaziale di Wall-E ed EVE",
+    "priming_emotion": {
+      "Happy": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "LOW",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.85
+      },
+      "Sad": {
+        "avg_intensity": "LOW",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.1
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Happy",
+      "probability": 0.79,
+      "intensity_label": "MEDIUM",
+      "valence_label": "POSITIVE",
+      "arousal_label": "LOW"
+    },
+    "user_message": "Sembrava ci fosse un legame simpatico, come se wall-e fosse un po' buffo e goffo, ma l'altro robot lo adorasse proprio per queste sue caratteristiche."
+  },
+  {
+    "case_id": "case_013",
+    "timestamp": "2026-06-05T16:30:00",
+    "stimulus": "Danza spaziale di Wall-E ed EVE",
+    "priming_emotion": {
+      "Happy": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.65
+      },
+      "Neutral": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEUTRAL",
+        "emotion_probability": 0.35
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Neutral",
+      "probability": 0.58,
+      "intensity_label": "LOW",
+      "valence_label": "NEUTRAL",
+      "arousal_label": "LOW"
+    },
+    "user_message": "Mi ha colpito il fatto che molto spesso si vanno a ricercare persone che sembrano vicine a noi, ma in realtà anche le persone che possono essere diverse ci possono assomigliare più di quanto crediamo."
+  },
+  {
+    "case_id": "case_014",
+    "timestamp": "2026-06-06T09:00:00",
+    "stimulus": "Scena di separazione o perdita",
+    "priming_emotion": {
+      "Sad": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.88
+      },
+      "Neutral": {
+        "avg_intensity": "LOW",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEUTRAL",
+        "emotion_probability": 0.12
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Sad",
+      "probability": 0.74,
+      "intensity_label": "MEDIUM",
+      "valence_label": "NEGATIVE",
+      "arousal_label": "LOW"
+    },
+    "user_message": "Mi ha fatto pensare a quando una persona importante non c'è più, ma resta qualcosa di lei. Certi ricordi non se ne vanno mai davvero."
+  },
+  {
+    "case_id": "case_015",
+    "timestamp": "2026-06-06T11:15:00",
+    "stimulus": "Scena intensa o minacciosa",
+    "priming_emotion": {
+      "Fearful": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "HIGH",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.8
+      },
+      "Surprised": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "HIGH",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.5
+      },
+      "Neutral": {
+        "avg_intensity": "LOW",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEUTRAL",
+        "emotion_probability": 0.1
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Fearful",
+      "probability": 0.76,
+      "intensity_label": "HIGH",
+      "valence_label": "NEGATIVE",
+      "arousal_label": "HIGH"
+    },
+    "user_message": "Mi ha messo agitazione, come se qualcosa potesse succedere da un momento all'altro. Non riuscivo a distogliere lo sguardo anche se mi faceva paura."
+  },
+  {
+    "case_id": "case_016",
+    "timestamp": "2026-06-06T14:00:00",
+    "stimulus": "Scena di ingiustizia o conflitto",
+    "priming_emotion": {
+      "Angry": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "HIGH",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.87
+      },
+      "Sad": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.45
+      },
+      "Disgust": {
+        "avg_intensity": "LOW",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.2
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Angry",
+      "probability": 0.81,
+      "intensity_label": "HIGH",
+      "valence_label": "NEGATIVE",
+      "arousal_label": "HIGH"
+    },
+    "user_message": "Mi ha fatto arrabbiare perché sembrava tutto ingiusto."
+  },
+  {
+    "case_id": "case_017",
+    "timestamp": "2026-06-07T10:30:00",
+    "stimulus": "Scena inattesa o rivelatoria",
+    "priming_emotion": {
+      "Surprised": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "HIGH",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.78
+      },
+      "Happy": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.55
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Surprised",
+      "probability": 0.69,
+      "intensity_label": "MEDIUM",
+      "valence_label": "POSITIVE",
+      "arousal_label": "HIGH"
+    },
+    "user_message": "Non me lo aspettavo, e per un attimo mi ha fatto vedere tutto in modo diverso."
+  },
+  {
+    "case_id": "case_018",
+    "timestamp": "2026-06-07T15:45:00",
+    "stimulus": "Scena contemplativa o ambigua",
+    "priming_emotion": {
+      "Neutral": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEUTRAL",
+        "emotion_probability": 0.7
+      },
+      "Surprised": {
+        "avg_intensity": "LOW",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEUTRAL",
+        "emotion_probability": 0.2
+      },
+      "Happy": {
+        "avg_intensity": "LOW",
+        "avg_arousal": "LOW",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.1
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Neutral",
+      "probability": 0.72,
+      "intensity_label": "LOW",
+      "valence_label": "NEUTRAL",
+      "arousal_label": "LOW"
+    },
+    "user_message": "Non saprei dire cosa ho provato, però mi ha fatto pensare."
   }
 ]

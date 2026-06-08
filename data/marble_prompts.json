@@ -1,19 +1,20 @@
 [
   {
-    "prompt_id": "prompt_003",
+    "prompt_id": "prompt_001",
     "case_id": "case_001",
-    "timestamp": "2026-05-27T18:03:27.157187",
+    "timestamp": "2026-06-08T18:20:59.252103",
     "model_used": "llama3",
     "fusion_profile": {
       "dominant_emotion": "Happy",
-      "intensity_score": 0.64,
+      "intensity_score": 0.8,
       "valence": "positive",
       "arousal": "medium",
       "fusion_scores": {
-        "Happy": 0.6375,
-        "Sad": 0.242,
+        "Happy": 0.7975,
+        "Tenderness": 0.12,
+        "Surprised": 0.0105,
         "Neutral": 0.0105,
-        "Surprised": 0.0105
+        "Sad": 0.042
       },
       "signal_detail": {
         "priming_scores": {
@@ -26,861 +27,59 @@
           "Happy": 0.95
         },
         "text_scores": {
-          "Sad": 1.0
+          "Happy": 0.8,
+          "Tenderness": 0.6
         }
       }
     },
-    "cardinal_context_hint": "the likely cardinal point is: from loss toward presence, gratitude, and familial bond",
-    "runtime_analysis": {
-      "dominant_emotion": "Happy",
-      "complex_emotion": "Gratitude and joy in the face of loss, accompanied by a sense of protection and presence.",
-      "stimulus": "Death of Mufasa - The Lion King",
-      "user_reaction": "Interpreting Mufasa's death as a reminder that one's own father is alive, leading to gratitude and emotional connection.",
-      "cardinal_point": "From loss toward presence, gratitude, and familial bond",
-      "world_objective": "Create an emotionally warm 3D world inspired by the feeling of realizing that someone deeply loved is still present in one's life."
-    },
-    "marble_prompt": "Imagine a sunlit savannah at dawn, where golden grasses sway gently in the morning breeze. A subtle mist rises from the earth, carrying the scent of blooming wildflowers. In this serene landscape, a majestic tree stands tall, its branches adorned with vibrant yellow and orange streamers, symbolizing the joy and warmth of connection. As you wander through this idyllic world, the soft rustling of leaves and the distant songs of birds create a soothing melody, evoking feelings of gratitude and peaceful coexistence. Amidst the lush greenery, a winding path invites exploration, leading to hidden clearings and secret glades, where the gentle warmth of sunlight nurtures the soul. The atmosphere is filled with an air of hope and renewal, as if the very presence of loved ones has awakened the beauty within.",
-    "negative_constraints": [
-      "Avoid any elements that might evoke feelings of sadness or loss"
-    ],
-    "variants": [
-      "A DIFFERENT full descriptive text prompt (150+ words) with an alternative aesthetic approach to the same emotion: Imagine a cozy, candlelit room filled with soft blankets and plush pillows. The warm glow of lanterns casts gentle shadows on the walls as the scent of freshly baked cookies wafts through the air. In this peaceful sanctuary, a comforting presence is felt, as if one's loved ones are nearby, offering reassurance and love. As you settle into this calming space, the soft crackling of the fireplace creates a soothing background hum, inviting relaxation and contemplation.",
-      "ANOTHER full descriptive text prompt (150+ words) with a completely different visual interpretation: Picture a tranquil lake at dusk, where the sky is painted with hues of pink, orange, and purple. The water's surface reflects these vibrant colors, creating a dazzling display of natural beauty. A small wooden boat glides effortlessly across the lake, its gentle rocking motion mimicking the rhythm of one's heartbeat. As you sit on the shore, surrounded by the serene atmosphere, the soft lapping of the water against the shore creates a calming melody, evoking feelings of peace and connection to nature."
-    ]
-  },
-  {
-    "prompt_id": "prompt_004",
-    "case_id": "case_002",
-    "timestamp": "2026-05-27T18:27:38.526061",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Sad",
-      "intensity_score": 0.54,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Disgust": 0.315,
-        "Sad": 0.536
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Disgust": 0.9,
-          "Sad": 0.42
-        },
-        "realtime_scores": {
-          "Sad": 0.42
-        },
-        "text_scores": {
-          "Sad": 1.0
-        }
-      }
-    },
-    "cardinal_context_hint": "Based on keywords ['triste'], the likely cardinal point is: from loss toward memory, care, and hope",
-    "runtime_analysis": {
-      "dominant_emotion": "Sad",
-      "complex_emotion": "a deep sense of loss and longing, as if the weight of grief is crushing one's soul",
-      "stimulus": "Titanic",
-      "user_reaction": "the user feels a strong emotional connection to Jack's character and is overcome by the tragedy",
-      "cardinal_point": "from loss to memory, care, and hope",
-      "world_objective": "to create an emotionally resonant world that acknowledges the pain of loss while offering a glimmer of hope"
-    },
-    "marble_prompt": "Create a suspended landscape of gentle mist-shrouded mountains, where the soft blue-gray hues evoke a sense of melancholy. A serene lake stretches out, its calm waters reflecting the faint light of distant stars. The air is crisp and cool, carrying the scent of damp earth and new life. As the user navigates this world, they'll find subtle reminders of Jack's character: a worn journal page drifting on the breeze, a lone guitar leaning against a misty tree trunk, or a small, flickering candle casting an otherworldly glow. The atmosphere is contemplative, yet hopeful, inviting the user to reflect on their emotions and find solace in the beauty of this suspended world.",
-    "negative_constraints": [
-      "no direct references to loss or tragedy",
-      "no dark or oppressive tones",
-      "no isolation or disconnection from others"
-    ],
-    "variants": [
-      {
-        "marble_prompt": "In a dreamlike environment, create an open plain where wispy clouds drift lazily across the sky. A lone figure stands in the distance, their back to the user, as if lost in thought. The landscape is bathed in soft, warm light that seems to emanate from within the earth itself. As the user explores this world, they'll discover fragments of Jack's character: a faint smile on the distant figure's face, a scattering of stars shining like diamonds across the plain, or a subtle melody carried on the breeze. The atmosphere is one of quiet contemplation and introspection, inviting the user to find solace in the simplicity of this world.",
-        "negative_constraints": [
-          "no direct references to loss",
-          "no cold or distant tones"
-        ]
-      },
-      {
-        "marble_prompt": "Design a sheltered space where the soft glow of lanterns casts an intimate atmosphere. The air is thick with the scent of old books and worn leather, evoking a sense of comfort and familiarity. As the user navigates this world, they'll find scattered pages from Jack's journal, each one revealing a piece of his story. The atmosphere is warm and inviting, full of promise and potential, as if the very fabric of reality has been woven together to create a tapestry of hope.",
-        "negative_constraints": [
-          "no darkness or oppressive tones",
-          "no disconnection from others"
-        ]
-      }
-    ]
-  },
-  {
-    "prompt_id": "prompt_005",
-    "case_id": "case_002",
-    "timestamp": "2026-05-28T18:48:28.571516",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Sad",
-      "intensity_score": 0.54,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Sad": 0.536,
-        "Disgust": 0.315
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Disgust": 0.9,
-          "Sad": 0.42
-        },
-        "realtime_scores": {
-          "Sad": 0.42
-        },
-        "text_scores": {
-          "Sad": 1.0
-        }
-      }
-    },
-    "cardinal_context_hint": "Based on keywords ['triste'], the likely cardinal point is: from loss to memory, care, and hope",
-    "runtime_analysis": {
-      "dominant_emotion": "Sadness",
-      "complex_emotion": "The user is experiencing a mix of sadness and disgust, feeling emotionally drained and struggling to cope with the loss of Jack.",
-      "stimulus": "TITANIC",
-      "user_reaction": "The user feels alone and disconnected from others after the tragic event.",
-      "cardinal_point": "from loss to memory, care, and hope",
-      "world_objective": "Create a 3D world that helps the user process their emotions and find comfort in memories of Jack."
-    },
-    "marble_prompt": "In this suspended landscape, a serene lake reflects the gentle hues of twilight. The air is crisp and calm, with distant stars twinkling like diamonds scattered across the velvety night sky. Soft fog drifts across the water's surface, carrying the whispers of cherished moments shared with Jack. A lone tree stands tall, its branches stretching toward the heavens like outstretched arms, symbolizing the user's longing for connection and understanding. As the moon rises, its gentle light illuminates a path of golden pebbles leading into the misty distance, inviting the user to wander through memories of Jack, finding solace in the peaceful atmosphere.",
-    "negative_constraints": [
-      "No enclosed or oppressive spaces",
-      "No representations of danger or threat",
-      "No isolation or disconnection from others"
-    ],
-    "variants": [
-      "Create a world inspired by the feeling of being wrapped in a warm hug. Design a cozy, rustic cabin surrounded by a lush forest, with soft golden light filtering through the windows and a crackling fire pit at its center. The scent of freshly baked cookies wafts through the air, evoking feelings of comfort and security.",
-      "Envision a world where memories of Jack are woven into the fabric of reality. Imagine a mystical library filled with ancient tomes and worn leather-bound books, each containing a story or memento from their time together. The air is thick with the scent of old parchment and dust, and soft candlelight illuminates the shelves, casting a warm glow on the memories within."
-    ]
-  },
-  {
-    "prompt_id": "prompt_006",
-    "case_id": "case_003",
-    "timestamp": "2026-05-28T18:53:56.774013",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Happy",
-      "intensity_score": 0.32,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Neutral": 0.2,
-        "Sad": 0.162,
-        "Happy": 0.315,
-        "Angry": 0.084
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
-        },
-        "realtime_scores": {
-          "Sad": 0.36
-        },
-        "text_scores": {
-          "Neutral": 1.0
-        }
-      }
-    },
-    "cardinal_context_hint": "No keyword pattern matched. Llama should infer the cardinal point from the full message and stimulus context.",
-    "runtime_analysis": {
-      "dominant_emotion": "Gratitude",
-      "complex_emotion": "A sense of disappointment and frustration, but also a glimmer of hope and gratitude for past triumphs.",
-      "stimulus": "La vittoria dell'Italia ai mondiali 2006",
-      "user_reaction": "The user is expressing their dismay at Italy not qualifying for the World Cup again and feeling devastated by this reality.",
-      "cardinal_point": "Reflecting on past victories and finding comfort in nostalgia",
-      "world_objective": "Create a Marble world that soothes the user's emotions, provides solace, and encourages gratitude"
-    },
-    "marble_prompt": "Imagine yourself standing at the edge of a serene lake, surrounded by the gentle rustling of trees and the soft warmth of golden sunlight. The air is filled with the sweet scent of blooming flowers as far as the eye can see. In the distance, a faint mist rises from the water's surface, carrying the whispers of past triumphs. The sound of gentle lapping waves against the shore creates a soothing melody that calms the mind and heart. As you walk along the lake's edge, the soft grass beneath your feet and the warmth of the sun on your skin evoke feelings of comfort and gratitude for life's simple pleasures. A delicate wooden boat glides across the water, its gentle rocking motion echoing the rhythm of your heartbeat. In this peaceful sanctuary, the weight of disappointment slowly lifts, replaced by a sense of nostalgia and appreciation for the beauty that surrounds you.",
-    "negative_constraints": [
-      "Avoid any imagery or elements that may evoke feelings of despair or hopelessness",
-      "Do not include any scenes or objects that might exacerbate the user's frustration or disappointment",
-      "No darkness, cold tones, or oppressive spaces"
-    ],
-    "variants": [
-      "Envision a cozy, rustic village nestled within a lush valley, where the soft chirping of birds and gentle babbling of brooks create a soothing atmosphere. The scent of freshly baked bread wafts through the air as you wander through the quaint streets, taking in the warm golden light that filters through the wooden shutters. A sturdy stone fountain at the village center provides a sense of stability and comfort, while the surrounding greenery seems to grow more vibrant with each passing moment.",
-      "Imagine yourself standing atop a gentle hill, surrounded by an endless expanse of rolling hills and wildflowers swaying gently in the breeze. The warm sun shines down upon you, casting a golden glow across the landscape as far as the eye can see. In the distance, a delicate stone path winds its way through the hills, beckoning you to explore and discover hidden treasures within this peaceful haven."
-    ]
-  },
-  {
-    "prompt_id": "prompt_007",
-    "case_id": "case_003",
-    "timestamp": "2026-05-28T19:07:23.416274",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Happy",
-      "intensity_score": 0.32,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Sad": 0.162,
-        "Happy": 0.315,
-        "Angry": 0.084,
-        "Neutral": 0.2
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
-        },
-        "realtime_scores": {
-          "Sad": 0.36
-        },
-        "text_scores": {
-          "Neutral": 1.0
-        }
-      }
-    },
-    "cardinal_context_hint": "No keyword pattern matched. Llama should infer the cardinal point from the full message and stimulus context.",
-    "runtime_analysis": {
-      "dominant_emotion": "Sad",
-      "complex_emotion": "A sense of disappointment, sadness, and loss due to Italy's failure to qualify for the World Cup, coupled with feelings of helplessness and desperation.",
-      "stimulus": "La vittoria dell'Italia ai mondiali 2006",
-      "user_reaction": "The user is expressing a strong emotional response to the stimulus, indicating a deep sense of connection to the event.",
-      "cardinal_point": "The cardinal point of this conversation appears to be self-reflection and introspection, as the user is grappling with feelings of loss and disappointment.",
-      "world_objective": "Create a 3D world that acknowledges and validates the user's emotions, while also offering a sense of comfort, reassurance, and hope for the future."
-    },
-    "marble_prompt": "As you step into this suspended landscape, the soft blue mist envelops you, carrying with it the whispers of distant memories. The gentle ripples on the lake's surface mirror the ebb and flow of your emotions, as the warm light of the setting sun casts a comforting glow. Amidst the tranquil atmosphere, delicate lanterns in shades of pale blue and cream scatter across the terrain, their soft luminescence evoking a sense of peaceful contemplation. The distant stars twinkle like a promise of hope, reminding you that even in times of sorrow, beauty and wonder can be found. As you wander through this serene environment, allow yourself to let go of your worries, and find solace in the gentle rhythms of nature.",
-    "negative_constraints": [
-      "Avoid any imagery that may exacerbate feelings of sadness or loss, such as explicit representations of grief or despair.",
-      "Do not include any elements that might create a sense of isolation or disconnection.",
-      "Steer clear of any visual motifs that could be perceived as threatening or ominous."
-    ],
-    "variants": [
-      "Imagine yourself standing at the edge of a vast, shimmering lake, its surface adorned with delicate lotus flowers. The air is filled with the sweet scent of blooming jasmine, and the soft chirping of birds provides a soothing melody. As you gaze out upon the lake's tranquil expanse, the warmth of the setting sun casts a comforting glow, reminding you that even in times of turmoil, there is always hope for renewal.",
-      "Enter a world where time stands still, and the gentle lapping of waves against the shore creates a sense of soothing calm. The sky above is a brilliant shade of cerulean, with wispy clouds drifting lazily across its expanse. Amidst this idyllic setting, a delicate wooden dock stretches out into the lake, inviting you to pause and reflect upon your emotions. As you wander along the dock's length, the soft rustling of reeds and the distant calls of birds create a symphony of peaceful sounds."
-    ]
-  },
-  {
-    "prompt_id": "prompt_008",
-    "case_id": "case_003",
-    "timestamp": "2026-05-28T20:35:57.835179",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Happy",
-      "intensity_score": 0.32,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Happy": 0.315,
-        "Neutral": 0.2,
-        "Sad": 0.162,
-        "Angry": 0.084
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
-        },
-        "realtime_scores": {
-          "Sad": 0.36
-        },
-        "text_scores": {
-          "Neutral": 1.0
-        }
-      }
-    },
-    "cardinal_context_hint": "No keyword pattern matched. Llama should infer the cardinal point from the full message and stimulus context.",
-    "runtime_analysis": {
-      "dominant_emotion": "Disappointed",
-      "complex_emotion": "A mix of sadness, frustration, and desperation due to repeated failures and a sense of hopelessness.",
-      "stimulus": "La vittoria dell'Italia ai mondiali 2006",
-      "user_reaction": "The user is expressing their disappointment and distress at Italy's repeated failure to qualify for the World Cup, feeling hopeless and helpless.",
-      "cardinal_point": "Reflection on the emotional impact of failure and the importance of perseverance and resilience.",
-      "world_objective": "Create a 3D world that captures the emotions of disappointment, sadness, and frustration while also conveying the need to move forward and learn from failures."
-    },
-    "marble_prompt": "Create an emotionally evocative 3D world inspired by the feeling of watching the sunset over a calm lake on a warm summer evening. Design a serene landscape with gentle ripples on the water's surface, soft golden light casting long shadows across the shore, and a hint of fog rolling in to create a sense of depth. The sky is painted with hues of blue and purple, gradually darkening as night falls. In the distance, a faint constellation twinkles like diamonds against the starry canvas. Use calming colors such as beige, pale blue, and gentle greens to evoke feelings of serenity and contemplation. Incorporate subtle water movements, soft grass sways, and delicate tree branches that create soothing visual rhythms. Avoid any elements that could potentially trigger anxiety or fear, focusing instead on a peaceful atmosphere that encourages introspection and self-reflection.",
-    "negative_constraints": [
-      "No sharp angles or jagged shapes",
-      "Avoid any imagery related to sports or competition",
-      "No loud or jarring sounds"
-    ],
-    "variants": [
-      {
-        "marble_prompt": "Envision a mystical forest, where ancient trees with gnarled branches stretch towards the sky like nature's own cathedral. Soft, ethereal light filters through the canopy above, casting dappled shadows on the forest floor. The air is filled with the sweet scent of blooming wildflowers and the soft chirping of birds. Use muted colors such as mossy greens, earthy browns, and weathered wood tones to create a sense of timelessness and mystique. Incorporate gentle streams running through the landscape, their soothing sounds weaving together with the rustling leaves to create a calming atmosphere. Avoid any elements that could be perceived as threatening or oppressive.",
-        "negative_constraints": [
-          "No loud noises",
-          "Avoid any imagery related to human struggle or conflict",
-          "No bright or harsh colors"
-        ]
-      },
-      {
-        "marble_prompt": "Imagine a world where the sky is painted with vibrant hues of pink, orange, and yellow, as if sunrise has collided with sunset. Design a dreamscape with rolling hills, wispy clouds, and delicate petals that float lazily through the air. The atmosphere is filled with the sweet scent of blooming flowers, their gentle sways creating a sense of movement and flow. Use calming colors such as pale blue, cream, and soft peach to evoke feelings of serenity and wonder. Incorporate subtle breeze movements, soft grasses, and delicate leaf rustling that create soothing visual rhythms. Avoid any elements that could potentially trigger anxiety or fear, focusing instead on a peaceful atmosphere that encourages exploration and discovery.",
-        "negative_constraints": [
-          "No sharp edges",
-          "Avoid any imagery related to darkness or despair",
-          "No loud or jarring sounds"
-        ]
-      }
-    ]
-  },
-  {
-    "prompt_id": "prompt_009",
-    "case_id": "case_003",
-    "timestamp": "2026-06-01T11:16:42.072213",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Happy",
-      "intensity_score": 0.32,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Angry": 0.084,
-        "Neutral": 0.2,
-        "Happy": 0.315,
-        "Sad": 0.162
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
-        },
-        "realtime_scores": {
-          "Sad": 0.36
-        },
-        "text_scores": {
-          "Neutral": 1.0
-        }
-      }
-    },
-    "cardinal_context_hint": "No keyword pattern matched. Llama should infer the cardinal point from the full message and stimulus context.",
+    "cardinal_context_hint": "the likely cardinal point is: from a sense of vulnerability to an appreciation for protection and guidance",
     "runtime_analysis": {
       "dominant_emotion": "Happy",
       "emotion_target": "Gratitude",
-      "complex_emotion": "A mix of nostalgia for past Italian football victories, sadness over current disappointment, and a strong desire to be proud of the team's achievements again.",
-      "stimulus_universe": "stadium, football pitch, grass, floodlights, crowd, blue jerseys",
-      "user_reaction": "The user feels frustrated and sad about Italy not qualifying for the World Cup for the third time, but still holds onto hope and memories of past victories.",
-      "world_transformation": "Transform the stadium environment by replacing the sadness with a sense of nostalgia and pride. Maintain the vibrant colors and energy of the crowd, but tone down the brightness to create a more introspective atmosphere."
-    },
-    "marble_prompt": "In the heart of a bustling Italian stadium, the once-luminous floodlights now cast a warm, golden glow on the lush green grass. The air is filled with the whispers of nostalgia as the sounds of past victories echo through the empty seats. Amidst the silence, the blue jerseys seem to whisper words of encouragement, their colors muted but still vibrant enough to evoke memories of triumphant moments. As the sun dips below the horizon, the stadium transforms into a symbol of pride and gratitude, reminding us that even in disappointment, there is always hope for a brighter future.",
-    "negative_constraints": [
-      "No imagery that evokes feelings of despair or hopelessness",
-      "No prominent use of red colors",
-      "No depiction of isolation or loneliness"
-    ],
-    "variants": [
-      " variant 1: The same stadium environment during the day, with a bright blue sky and sunlight filtering through the seats. The grass is a deeper green, and the blue jerseys seem to glow with an inner light, symbolizing the power of hope and resilience.",
-      "variant 2: A panoramic view of the stadium from above, with the floodlights forming a constellation that represents the user's memories and emotions. The colors are muted, but the overall atmosphere is one of warmth and gratitude."
-    ]
-  },
-  {
-    "prompt_id": "prompt_010",
-    "case_id": "case_003",
-    "timestamp": "2026-06-03T14:33:36.233677",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Sad",
-      "intensity_score": 0.39,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Happy": 0.315,
-        "Angry": 0.084,
-        "Sad": 0.387
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
-        },
-        "realtime_scores": {
-          "Sad": 0.36
-        },
-        "text_scores": {
-          "Sad": 1.125104159116745
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: Hope",
-    "runtime_analysis": {
-      "dominant_emotion": "Sad",
-      "emotion_target": "Hope",
-      "complex_emotion": "The user's emotional state is dominated by sadness, but with a hint of hope. The user's message expresses distress and disappointment.",
-      "stimulus_universe": "stadium, football pitch, grass, floodlights, crowd, blue jerseys",
-      "user_reaction": "The user feels devastated and disappointed that Italy did not qualify for the World Cup again, despite their previous victory in 2006.",
-      "world_transformation": "The base environment of the stadium is transformed to evoke a sense of desolation and emptiness, with a focus on the crowd's absence. The atmosphere becomes melancholic, with a hint of hopefulness."
-    },
-    "marble_prompt": "As the floodlights dimmed, the once-lively football pitch now lay empty, like a canvas awaiting a new brushstroke. The grass, once so green and vibrant, had begun to wilt, as if reflecting the crowd's absence. The blue jerseys, now muted by time, seemed to whisper tales of victories past. Amidst this desolate landscape, a glimmer of hope emerged - the faintest hint of a smile on the faces of those who remained, their eyes still fixed on the spot where the action once unfolded.",
-    "negative_constraints": [
-      "Do not include any imagery that directly references grief or sadness.",
-      "Avoid using dark colors or cold tones.",
-      "Do not generate a world with enclosed oppressive spaces."
-    ],
-    "variants": [
-      {
-        "prompt": "As the night wore on, the stadium's usually vibrant atmosphere turned somber. The once-crowded stands now stood empty, save for a few stragglers lingering in the shadows. The floodlights cast long shadows across the pitch, as if searching for something - or someone. Amidst this melancholy, a soft glow began to emanate from the periphery, like the gentle warmth of a distant sunrise.",
-        "description": "A different time of day and color palette, with a focus on soft, warm tones and a hint of hopefulness."
-      },
-      {
-        "prompt": "From high above, the stadium's architecture unfolded like an intricate puzzle. The curves of the stands formed a gentle wave, as if embracing the empty space within. Below, the pitch seemed to stretch out like a canvas, awaiting the brushstrokes of new memories. Amidst this panoramic view, a small group of individuals gathered at the edge, their faces lit by the faint glow of hope.",
-        "description": "A different spatial scale and symbolic emphasis, with a focus on grandeur and scope."
-      }
-    ]
-  },
-  {
-    "prompt_id": "prompt_011",
-    "case_id": "case_003",
-    "timestamp": "2026-06-03T14:40:28.705873",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Sad",
-      "intensity_score": 0.39,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Happy": 0.315,
-        "Angry": 0.084,
-        "Sad": 0.387
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
-        },
-        "realtime_scores": {
-          "Sad": 0.36
-        },
-        "text_scores": {
-          "Sad": 1.125104159116745
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: Hope",
-    "runtime_analysis": {
-      "dominant_emotion": "Sad",
-      "emotion_target": "Hope",
-      "complex_emotion": "A mix of sadness, nostalgia, and longing for the past glories of Italian football, tempered by a desire to hold onto hope for future successes.",
-      "stimulus_universe": "Stadium, football pitch, grass, floodlights, crowd, blue jerseys",
-      "user_reaction": "The user is expressing frustration and disappointment at Italy's repeated failure to qualify for the World Cup, but holds onto the hope that things will change in the future.",
-      "world_transformation": "Transform the stadium environment into a melancholic yet hopeful space with muted colors, soft lighting, and subtle hints of nostalgia, guiding the user toward feelings of optimism and resilience."
-    },
-    "marble_prompt": "As the floodlights cast a warm glow on the deserted football pitch, the once-vibrant blue jerseys now hang limp and lifeless. The stadium's grandstands stand empty, a haunting reminder of Italy's past glories. Yet, amidst the desolation, a faint light begins to flicker, symbolizing the hope that still burns within. The sound of distant cheering grows louder, as if the echoes of past triumphs are stirring, urging the user forward toward a brighter future.",
-    "negative_constraints": [
-      "No images of despair or desperation",
-      "No scenes of chaos or destruction",
-      "No depiction of absolute darkness or hopelessness"
-    ],
-    "variants": [
-      {
-        "prompt": "As morning breaks over the stadium, the first rays of sunlight pierce through the clouds, casting a warm glow on the abandoned pitch. The blue jerseys now hang like ghostly apparitions, their colors muted by time and nostalgia. Yet, as the sounds of birdsong fill the air, a gentle breeze rustles the grass, carrying whispers of hope and renewal.",
-        "time_of_day": "morning",
-        "palette": "soft pastel colors"
-      },
-      {
-        "prompt": "From high above, the cityscape unfolds like a tapestry of possibility. The stadium's grandstands stretch out like an open canvas, waiting for the brushstrokes of creativity and inspiration to bring new life. As the sun dips toward the horizon, casting long shadows across the landscape, the user is drawn into the infinite possibilities that lie ahead.",
-        "spatial_scale": "panoramic",
-        "symbolic_emphasis": "creativity and possibility"
-      }
-    ]
-  },
-  {
-    "prompt_id": "prompt_012",
-    "case_id": "case_003",
-    "timestamp": "2026-06-03T16:34:36.993307",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Sad",
-      "intensity_score": 0.39,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Happy": 0.315,
-        "Sad": 0.387,
-        "Angry": 0.084
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
-        },
-        "realtime_scores": {
-          "Sad": 0.36
-        },
-        "text_scores": {
-          "Sad": 1.125104159116745
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: Hope",
-    "runtime_analysis": {
-      "dominant_emotion": "Sad",
-      "emotion_target": "Hope",
-      "complex_emotion": "A mix of sadness and nostalgia, with a hint of hope. The user's message expresses disappointment and longing for the past.",
-      "stimulus_universe": "Stadium, football pitch, grass, floodlights, crowd, blue jerseys (Italy wins 2006 World Cup)",
-      "user_reaction": "The user is feeling distraught about Italy not qualifying for the world cup again, and they're seeking comfort",
-      "world_transformation": "The base environment of the stadium will be modulated to create a nostalgic atmosphere with warm lighting, gentle curves, and intimate scale"
-    },
-    "marble_prompt": "As the floodlights dimly illuminate the empty football pitch, the echoes of past glories linger in the air. The once-vibrant crowd is now replaced by a sea of nostalgia, where memories of Italy's triumphant moments are relived. The blue jerseys of the Italian team, now faded and worn, serve as a poignant reminder of what could have been. Amidst this melancholic landscape, the faint glow of hope begins to emerge, like the first light of dawn breaking through the clouds. The stadium's empty corridors whisper tales of past victories, while the sound of distant cheering grows louder, beckoning the user toward a brighter future.",
-    "negative_constraints": [
-      "No scenes of despair or desolation",
-      "No harsh lighting or dark tones",
-      "No isolation or abandonment",
-      "No threatening elements or danger"
-    ],
-    "variants": [
-      {
-        "prompt": "As the sun sets on the abandoned football pitch, the warm light of nostalgia casts a golden glow on the worn grass. The distant hum of a city's nightlife whispers promises of new beginnings, as the once-vibrant crowd is now replaced by a solitary figure, lost in thought. The blue jerseys, now faded and dusty, serve as a poignant reminder of what could have been.",
-        "time_of_day": "Sunset",
-        "color_palette": "Warm, golden tones"
-      },
-      {
-        "prompt": "The city's skyline stretches out before you like an endless canvas, painted with the vibrant colors of Italy's past triumphs. The sound of distant chanting and cheering grows louder, as if the echoes of past victories are beckoning you toward a brighter future. Amidst this panoramic landscape, the faint glow of hope illuminates the path forward, guiding you through the nostalgia and disappointment.",
-        "spatial_scale": "Panoramic",
-        "symbolic_emphasis": "Hope and new beginnings"
-      }
-    ]
-  },
-  {
-    "prompt_id": "prompt_013",
-    "case_id": "case_002",
-    "timestamp": "2026-06-03T17:31:34.625256",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Sad",
-      "intensity_score": 0.53,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Sad": 0.5321,
-        "Disgust": 0.315
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Disgust": 0.9,
-          "Sad": 0.42
-        },
-        "realtime_scores": {
-          "Sad": 0.42
-        },
-        "text_scores": {
-          "Sad": 0.9807404577732086
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from happy toward joy",
-    "runtime_analysis": {
-      "dominant_emotion": "Sad",
-      "emotion_target": "Hope",
-      "complex_emotion": "A poignant, mournful atmosphere permeates the world, evoking feelings of loss and longing.",
-      "stimulus_universe": "the sinking Titanic ship in the middle of the ocean, with a gloomy, stormy night sky",
-      "user_reaction": "The user is still reeling from the tragic death of Jack Dawson, feeling isolated and alone despite the vastness of the ocean around them",
-      "world_transformation": "The world transforms by introducing warm, golden light on the horizon, symbolizing hope and redemption"
-    },
-    "marble_prompt": "As the Titanic's stern rises into the darkness, a glimmer of gold appears on the distant horizon. The stormy sea seems to darken in response, as if nature itself is mourning the loss. But amidst the desolation, a warm light begins to spread across the water, illuminating schools of bioluminescent fish that dance in rhythmic harmony with the ship's creaking hull. In this moment, the weight of grief and sorrow starts to lift, replaced by a sense of hope and the promise of new beginnings.",
-    "negative_constraints": [
-      "No imagery that reinforces despair or hopelessness",
-      "No cold tones or dark colors dominating the palette",
-      "No isolation or confinement in the environment"
-    ],
-    "variants": [
-      {
-        "prompt": "As the sun rises over the horizon, the darkness of the night slowly recedes, revealing a fleet of ships on the distant horizon, their lights twinkling like stars. The ocean's waves gently rock the Titanic's hull as it begins to take on water, but the warm light and hopeful atmosphere seem to buoy the spirits of those on board.",
-        "palette": [
-          "warm oranges",
-          "soft yellows",
-          "golden browns"
-        ]
-      },
-      {
-        "prompt": "The ocean's vastness stretches out before you like an endless canvas, with the Titanic's massive form looming in the distance. As the storm clouds part, a shaft of light illuminates a lone figure on the deck, standing resolute against the wind and rain. The sense of isolation slowly gives way to a feeling of determination and resolve.",
-        "scale": [
-          "panoramic",
-          "intimate"
-        ]
-      }
-    ]
-  },
-  {
-    "prompt_id": "prompt_014",
-    "case_id": "case_001",
-    "timestamp": "2026-06-03T17:47:29.123039",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Happy",
-      "intensity_score": 0.64,
-      "valence": "positive",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Tenderness": 0.1785,
-        "Sad": 0.1848,
-        "Happy": 0.6375,
-        "Neutral": 0.0105,
-        "Surprised": 0.0105
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.6,
-          "Sad": 0.12,
-          "Surprised": 0.03,
-          "Neutral": 0.03
-        },
-        "realtime_scores": {
-          "Happy": 0.95
-        },
-        "text_scores": {
-          "Tenderness": 0.8926364481449127,
-          "Sad": 0.7140482850372791
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from sorrow toward self-acceptance",
-    "runtime_analysis": {
-      "dominant_emotion": "Happy",
-      "emotion_target": "self-acceptance",
-      "complex_emotion": "A blend of joy and tenderness, with a sense of warmth and acceptance.",
-      "stimulus_universe": "savannah, Pride Rock, African landscape, lions, twilight",
-      "user_reaction": "The death of Mufasa does not make me sad because my father is alive and I love him very much!",
-      "world_transformation": "Transform the twilight savannah into a warm golden light with vibrant colors, full and alive space, yellow/gold/orange/green. Replace the lions' mourning with playful cubs and gentle movements."
-    },
-    "marble_prompt": "As the golden sun dips below the horizon of the Pride Lands, the savannah transforms into a vibrant tapestry of warm hues. The air is filled with the sweet scent of blooming acacia trees and the distant roar of playful lion cubs. The once-mournful atmosphere has given way to joyful anticipation, as if the very land itself is celebrating the life force that remains. Twilight's warmth illuminates the grasslands, casting a gentle glow on the landscape. In this world, the memory of Mufasa's passing becomes a distant hum, replaced by the vibrant pulse of new life and the unwavering love for one's father.",
-    "negative_constraints": [
-      "No dark or desaturated colors",
-      "No symbols of loss or grief",
-      "No isolated or enclosed spaces",
-      "No cold tones"
-    ],
-    "variants": [
-      {
-        "prompt": "As the golden light of dawn breaks across the Pride Lands, the savannah is bathed in a soft turquoise glow. The air is filled with the gentle songs of birds and the distant rustling of leaves as the lion cubs frolic in the warm sunlight. In this world, the memory of Mufasa's passing becomes a reminder of the cyclical nature of life, where every ending marks a new beginning.",
-        "constraints": [
-          "No dark or desaturated colors",
-          "No symbols of loss or grief",
-          "No isolated or enclosed spaces",
-          "No cold tones"
-        ]
-      },
-      {
-        "prompt": "As the Pride Lands stretch out like an endless canvas, the majestic silhouette of Pride Rock rises from the horizon. The air is filled with the whispers of ancient wisdom and the distant roar of lions as they survey their kingdom. In this world, the memory of Mufasa's passing becomes a testament to the power of self-acceptance, where one's true nature shines like the golden light of dawn.",
-        "constraints": [
-          "No dark or desaturated colors",
-          "No symbols of loss or grief",
-          "No isolated or enclosed spaces",
-          "No cold tones"
-        ]
-      }
-    ]
-  },
-  {
-    "prompt_id": "prompt_015",
-    "case_id": "case_001",
-    "timestamp": "2026-06-03T17:51:38.478719",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Happy",
-      "intensity_score": 0.64,
-      "valence": "positive",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Tenderness": 0.1785,
-        "Surprised": 0.0105,
-        "Happy": 0.6375,
-        "Sad": 0.1848,
-        "Neutral": 0.0105
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.6,
-          "Sad": 0.12,
-          "Surprised": 0.03,
-          "Neutral": 0.03
-        },
-        "realtime_scores": {
-          "Happy": 0.95
-        },
-        "text_scores": {
-          "Tenderness": 0.8926364481449127,
-          "Sad": 0.7140482850372791
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from indifference toward appreciation",
-    "runtime_analysis": {
-      "dominant_emotion": "Happy",
-      "emotion_target": "Appreciation",
-      "complex_emotion": "The joy of remembering Mufasa's life, with a sense of gratitude and admiration for the lessons learned.",
+      "complex_emotion": "A mix of joy, tenderness, and appreciation, as the user reflects on their fortunate situation and the protective presence of their father.",
       "stimulus_universe": "Savannah, Pride Rock, African landscape, lions, twilight",
-      "user_reaction": "The user is happy about their father being alive and wants to express appreciation for his presence in their life.",
-      "world_transformation": "Transforming the savannah into a vibrant, golden-lit environment with lush greenery, full of life and energy, symbolizing growth and appreciation."
+      "user_reaction": "The user is grateful for having a loving father who has always protected them, just like Mufasa.",
+      "world_transformation": "The happy and tender emotions transform the stimulus universe by adding warm golden light, vibrant colors, and a sense of fullness and life. The atmosphere becomes one of celebration and joy."
     },
-    "marble_prompt": "As the sun sets over the savannah, the once-familiar landscape is reborn in a warm, golden light. The grasslands are alive with the sounds of lions' gentle roars, their manes glistening like burnished copper. Pride Rock rises majestically into the sky, its stones aglow with a soft, orange-pink hue. The air is filled with the sweet scent of blooming acacia trees, as the stars begin to twinkle in the evening sky. In this world, every step feels like a celebration of life and gratitude for the present moment.",
+    "marble_prompt": "As the sun sets over the savannah, Pride Rock rises majestically in the distance, bathed in a warm golden light. The air is filled with the sweet scent of blooming acacia trees and the distant roar of contented lions. In this idyllic setting, the grassy plains are dotted with playful lion cubs, their fur glistening in the fading light. The sky above is painted with hues of orange, pink, and purple, a vibrant display of gratitude for the beauty and wonder that surrounds us. As we walk through this wondrous landscape, we feel the warmth of the setting sun on our skin, a reminder of the protection and guidance that has always been present in our lives.",
     "negative_constraints": [
-      "No scenes of loss or grief; no dark or ominous tones; no danger or threat; no isolation or loneliness"
-    ],
-    "variants": [
-      {
-        "prompt": "As the golden light of dawn breaks over the savannah, the landscape is bathed in a warm, gentle glow. The grasslands are filled with the chirping of crickets and the rustling of leaves as the lions stir from their slumber. Pride Rock stands tall, its stones radiating a soft, pale blue light. In this world, every moment feels like a new beginning, full of promise and appreciation for the beauty that surrounds us.",
-        "description": "A different time of day and color palette"
-      },
-      {
-        "prompt": "The savannah stretches out before you like an endless tapestry, woven from threads of emerald green and golden wheat. The lions' manes shimmer in the sunlight like a thousand tiny jewels, as Pride Rock rises into the distance, its stones glowing with a soft, luminescent light. In this world, every step feels like a journey of discovery, leading you toward a deeper appreciation for the beauty that surrounds you.",
-        "description": "A different spatial scale and symbolic emphasis"
-      }
-    ]
-  },
-  {
-    "prompt_id": "prompt_016",
-    "case_id": "case_001",
-    "timestamp": "2026-06-04T09:28:43.081144",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Happy",
-      "intensity_score": 0.64,
-      "valence": "positive",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Happy": 0.6375,
-        "Tenderness": 0.1785,
-        "Sad": 0.1848,
-        "Neutral": 0.0105,
-        "Surprised": 0.0105
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.6,
-          "Sad": 0.12,
-          "Surprised": 0.03,
-          "Neutral": 0.03
-        },
-        "realtime_scores": {
-          "Happy": 0.95
-        },
-        "text_scores": {
-          "Tenderness": 0.8926364481449127,
-          "Sad": 0.7140482850372791
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from a sense of vulnerability toward a feeling of empowered connection",
-    "runtime_analysis": {
-      "dominant_emotion": "Happy",
-      "emotion_target": "Pride",
-      "complex_emotion": "A warm, golden light illuminates the savannah as the sun sets on Pride Rock, filling the air with a sense of joy and celebration. The emotional resonance is one of pride and connection, as if the very land itself is acknowledging the strength and resilience that lies within.",
-      "stimulus_universe": {
-        "setting": "Savannah",
-        "objects": [
-          "Pride Rock",
-          "Lions"
-        ],
-        "characters": [
-          "Simba"
-        ],
-        "narrative themes": [
-          "Mufasa's death",
-          "Circle of life"
-        ],
-        "visual elements": [
-          "Twilight",
-          "Golden light"
-        ]
-      },
-      "user_reaction": "The user's message conveys a sense of joy and connection, acknowledging the strength and resilience that lies within. This emotional state is reflected in the world's atmosphere and lighting.",
-      "world_transformation": "The base environment is transformed by the happy emotion, shifting from a somber tone to a vibrant, celebratory one. The golden light illuminates the savannah, filling it with warmth and life."
-    },
-    "marble_prompt": "As the sun sets on Pride Rock, the savannah comes alive with a warm, golden light. The air is filled with the sounds of celebration, as if the very land itself is acknowledging the strength and resilience that lies within. The lions, majestic and proud, roam freely beneath the star-studded sky. The scent of blooming flowers wafts through the grasses, and the earthy aroma of freshly turned soil mingles with the sweet fragrance of blooming acacia trees. A pride of lions, their manes glistening in the fading light, gathers around a majestic tree, its branches heavy with ripened fruit. Simba, the young prince, stands tall among them, his heart full of joy and connection to the land that is his home. The world pulses with life, as if every molecule of air holds the essence of pride and connection.",
-    "negative_constraints": [
-      "No scenes of despair or loss",
-      "No dark tones or shadows",
+      "No despair or desolation",
+      "No darkness or shadows",
+      "No threatening or aggressive elements",
       "No isolation or loneliness"
     ],
     "variants": [
       {
-        "prompt": "As the sun rises over Pride Rock, a new day dawns on the savannah. The air is crisp with the scent of morning dew, and the grasses are bathed in a warm, golden light. A pride of lions stirs, their manes glistening like molten lava as they stretch and awaken to the promise of a new day. Simba, young and full of energy, bounds across the landscape, his heart filled with joy and connection to the land that is his home.",
-        "time_of_day": "Morning",
-        "palette": [
-          "Golden light",
-          "Crisp morning dew"
+        "prompt": "As the first light of dawn breaks over the savannah, the sky is set ablaze with a kaleidoscope of colors. The air is crisp and clean, filled with the scent of dew-kissed grasses. In this peaceful atmosphere, we find ourselves surrounded by the majestic lions of Pride Rock, their manes glistening in the morning light. The landscape is bathed in a soft, golden glow, as if the very earth itself is grateful for the new day.",
+        "constraints": [
+          "No night-time elements",
+          "No harsh or jarring sounds",
+          "No sense of urgency or danger"
         ]
       },
       {
-        "prompt": "From a panoramic perspective, Pride Rock rises majestically above the savannah, its granite walls towering into the sky. The landscape stretches out in every direction, a tapestry of grasses and flowers woven together by the gentle breeze. A pride of lions, their manes glowing like embers in the fading light, roams freely across the rolling hills, their paws barely touching the ground as they gallop with abandon. Simba stands tall at the edge of this vast expanse, his heart filled with a sense of connection to the land and its creatures.",
-        "spatial_scale": "Panoramic",
-        "symbolic_emphasis": [
-          "Majesty",
-          "Connection"
+        "prompt": "We stand at the edge of a vast expanse of grassy plains, stretching out to the horizon like an endless sea. The sky above is a brilliant blue, with only a few wispy clouds drifting lazily across it. In this vast and open landscape, we feel a sense of freedom and possibility, as if anything could happen. And yet, despite the seeming emptiness, we are not alone - for there, in the distance, stands Pride Rock, a symbol of protection and guidance.",
+        "constraints": [
+          "No enclosed or oppressive spaces",
+          "No darkness or shadows",
+          "No aggressive or threatening elements"
         ]
       }
     ]
   },
   {
-    "prompt_id": "prompt_017",
-    "case_id": "case_001",
-    "timestamp": "2026-06-04T09:30:15.549441",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Happy",
-      "intensity_score": 0.64,
-      "valence": "positive",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Tenderness": 0.1785,
-        "Neutral": 0.0105,
-        "Surprised": 0.0105,
-        "Sad": 0.1848,
-        "Happy": 0.6375
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.6,
-          "Sad": 0.12,
-          "Surprised": 0.03,
-          "Neutral": 0.03
-        },
-        "realtime_scores": {
-          "Happy": 0.95
-        },
-        "text_scores": {
-          "Tenderness": 0.8926364481449127,
-          "Sad": 0.7140482850372791
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from a sense of uncertainty toward a foundation of familial security and appreciation",
-    "runtime_analysis": {
-      "dominant_emotion": "Happy",
-      "emotion_target": "Pride",
-      "complex_emotion": "A feeling of warmth and togetherness, rooted in the pride of family bonds and the joy of being alive.",
-      "stimulus_universe": "Savannah, Pride Rock, African landscape, lions, twilight",
-      "user_reaction": "The user's message expresses happiness and gratitude for their father's life, which is a source of comfort and security.",
-      "world_transformation": "The emotional transformation modulates the stimulus universe with warm golden light, vibrant colors, full and alive space, yellow/gold/orange/green hues, evoking a sense of abundance and contentment."
-    },
-    "marble_prompt": "In the twilight savannah, Pride Rock rises majestically against the golden glow of sunset. The air is filled with the sounds of lions' gentle roars, their manes glistening in the warm light. The grasslands stretch out like a sea of gold, where antelopes and gazelles roam freely, their coats shimmering with every step. In this vibrant tapestry, life bursts forth in every direction, a testament to the pride and joy that fills your heart.",
-    "negative_constraints": [
-      "No sorrow or despair-inducing imagery",
-      "No dark or ominous tones",
-      "No isolation or loneliness",
-      "No danger or threat of loss"
-    ],
-    "variants": [
-      {
-        "marble_prompt": "As the sun dips below the horizon, the savannah transforms into a kaleidoscope of colors. The sky is painted with hues of pink and orange, while the grasslands glow like embers. Lions laze in the warm light, their manes a fiery halo. In this world of abundance and joy, your heart feels at peace, surrounded by the pride and love that fills your life.",
-        "constraints": [
-          "No sudden movements or loud noises",
-          "No harsh or jarring sounds"
-        ]
-      },
-      {
-        "marble_prompt": "The Pride Rock landscape stretches out before you like a majestic cityscape. The golden light of sunset casts long shadows across the grasslands, where animals roam in harmony. In this world of pride and security, your heart feels grounded and at ease, surrounded by the warmth and love that fills your life.",
-        "constraints": [
-          "No oppressive or confining spaces",
-          "No sense of disconnection from others"
-        ]
-      }
-    ]
-  },
-  {
-    "prompt_id": "prompt_018",
+    "prompt_id": "prompt_002",
     "case_id": "case_002",
-    "timestamp": "2026-06-04T09:30:49.426184",
+    "timestamp": "2026-06-08T18:21:44.244138",
     "model_used": "llama3",
     "fusion_profile": {
       "dominant_emotion": "Sad",
-      "intensity_score": 0.53,
+      "intensity_score": 0.51,
       "valence": "negative",
       "arousal": "medium",
       "fusion_scores": {
         "Disgust": 0.315,
-        "Sad": 0.5321
+        "Sad": 0.506
       },
       "signal_detail": {
         "priming_scores": {
@@ -891,298 +90,32 @@
           "Sad": 0.42
         },
         "text_scores": {
-          "Sad": 0.9807404577732086
+          "Sad": 0.85
         }
       }
     },
-    "cardinal_context_hint": "the likely cardinal point is: from the isolation of grief toward a sense of shared experience and communal solace",
+    "cardinal_context_hint": "the likely cardinal point is: from the darkness of solitude toward the radiance of shared memories and communal grief",
     "runtime_analysis": {
       "dominant_emotion": "Sad",
       "emotion_target": "Connection",
-      "complex_emotion": "A poignant and isolating sadness that slowly shifts towards a longing for connection and community.",
-      "stimulus_universe": "The Titanic, an ocean liner, with its opulent settings, grand staircase, and elegant attire.",
-      "user_reaction": "The user is deeply saddened by the loss of Jack and feels disconnected from others.",
-      "world_transformation": "The stimulus universe is modulated by sadness to create a melancholic atmosphere with desaturated colors, foggy lighting, and a sense of emptiness."
+      "complex_emotion": "The emotional resonance of solitude, tinged with a sense of loss and longing, slowly gives way to the warmth and comfort of shared experiences.",
+      "stimulus_universe": "titanic",
+      "user_reaction": "The message conveys a sense of sadness and isolation, as if the user is still grappling with the loss of Jack's character in the Titanic.",
+      "world_transformation": "The base environment of the Titanic will be modulated by the emotions of sadness and solitude to create an atmosphere that gradually shifts from darkness to warmth, as if the darkness of grief is slowly giving way to the radiance of shared memories."
     },
-    "marble_prompt": "As the Titanic's grand staircase stretches out like a ghostly arm, I find myself lost in thought, surrounded by the opulent decorations that once seemed so vibrant. The soft glow of the chandeliers casts an eerie light on the deserted corridors, where the sound of whispers and weeping echoes through the halls. The ship's majestic proportions seem to shrink as the darkness closes in, suffocating me with its weight. I am but a small figure, lost in this sea of sorrow, yearning for connection to those who have left me behind. The ship's grandeur is now a monument to my isolation, a constant reminder of what I've lost. As I wander these empty decks, I feel the ship slowly sinking into the depths, just as my heart sinks with grief. But amidst the desolation, a glimmer of hope flickers – perhaps in this moment of sorrow, I can find solace in the connections that once bound me to others.",
+    "marble_prompt": "As the foggy night falls on the Titanic's deck, a desolate silence settles over the ship. The grand staircase, once bustling with laughter and music, now stands empty and still, its ornate details reduced to mere shadows in the dim light. The sound of gentle weeping carries across the deserted promenade, mingling with the distant hum of machinery as the ship plows through the darkness. Yet, even amidst this desolation, a glimmer of connection lingers, a sense that the memories shared between Jack and Rose are still present, waiting to be rekindled like embers in the cold night air. As the lights of the stern grow fainter on the horizon, the promise of new connections beckons, drawing the heart out of the darkness and into the warm glow of shared experiences.",
     "negative_constraints": [
-      "No scenes of mass panic or chaos; no explicit references to Jack's death; no depiction of the ship's destruction"
+      "No scenes depicting grief or despair, no imagery that would exacerbate feelings of isolation"
     ],
     "variants": [
-      {
-        "prompt": "As night falls on the Titanic, the ship's lights twinkle like diamonds against the dark horizon. The grand staircase stretches out before me, a beacon of hope in this sea of sorrow. I wander the deserted decks, searching for solace among the remnants of a bygone era. Though the darkness surrounds me, the soft glow of the chandeliers whispers promises of connection and community. Perhaps, as I stand at the edge of the ship, I can find strength in the bonds that once bound me to others.",
-        "palette": [
-          "Soft blues",
-          "Warm golden tones"
-        ],
-        "time_of_day": "Night"
-      },
-      {
-        "prompt": "The Titanic's grand staircase rises like a majestic mountain range, its curves and arches a testament to human ingenuity. I find myself at the edge of this artificial world, staring out into the vast expanse of the ocean. The ship's opulence is juxtaposed against the desolation of my heart – a poignant reminder that even in sorrow, there is always the possibility for connection and community. As I gaze out at the waves, I feel the ship slowly receding into the distance, leaving me to ponder the fragility of life and the importance of human bonds.",
-        "palette": [
-          "Cool blues",
-          "Earth tones"
-        ],
-        "scale": "Panoramic"
-      }
+      "A different 150+ word Marble prompt for the same stimulus and emotion target, but set at a later time of day (morning) with a focus on the ship's early hours and the promise of new connections: The morning sun casts its golden light upon the Titanic as it navigates through icy waters. The sounds of activity begin to stir, as crew members start their daily routines. Amidst this bustle, a glimmer of connection lingers, as memories shared between Jack and Rose serve as beacons for those seeking solace in the face of loss.",
+      "A third 150+ word Marble prompt for the same stimulus and emotion target, but at a different spatial scale (panoramic) with a focus on the ship's grand architecture: The Titanic's majestic superstructure rises majestically from the darkness of the ocean floor. As the lights of the stern fade into the distance, the grand staircase becomes a symbol of connection, its ornate details gleaming like beacons in the dim light. The ship's corridors stretch out like tentacles, inviting exploration and discovery, as if the very fabric of reality is woven with threads of shared experiences."
     ]
   },
   {
-    "prompt_id": "prompt_019",
+    "prompt_id": "prompt_003",
     "case_id": "case_003",
-    "timestamp": "2026-06-04T09:31:22.264891",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Sad",
-      "intensity_score": 0.39,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Angry": 0.084,
-        "Happy": 0.315,
-        "Sad": 0.387
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
-        },
-        "realtime_scores": {
-          "Sad": 0.36
-        },
-        "text_scores": {
-          "Sad": 1.125104159116745
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from the darkness of disappointment toward the dawn of a new possibility",
-    "runtime_analysis": {
-      "dominant_emotion": "Sad",
-      "emotion_target": "Hope",
-      "complex_emotion": "A mix of sadness and nostalgia, with hints of anger and hopelessness, but ultimately aiming to redirect towards a sense of hope.",
-      "stimulus_universe": "The stadium, football pitch, grass, floodlights, crowd, blue jerseys from the Italy wins 2006 World Cup visual stimulus",
-      "user_reaction": "A feeling of disappointment and frustration due to repeated disappointments in not making it to the world cup, with a sense of desperation and helplessness.",
-      "world_transformation": "The stadium environment should be transformed by sadness, with desaturated colors, fog or haze, emptiness, still or slow movement, blue/grey/silver tones. The atmosphere should feel heavy and oppressive, but with hints of nostalgia and longing for the past glories."
-    },
-    "marble_prompt": "As the floodlights dimmed, the once-vibrant stadium now lay in a desolate silence, the empty seats a poignant reminder of what could have been. The lush green grass, once trampled by players, now stood still and lifeless, like the hopes and dreams of the Italian fans. The blue jerseys, once worn with pride, now hung limp and forgotten, symbols of disappointment and defeat. But amidst this bleakness, a glimmer of light flickered, a beacon of hope that one day, the national team would rise again, stronger and more resilient than ever before.",
-    "negative_constraints": [
-      "No imagery of tears or crying",
-      "No depiction of absolute darkness or despair",
-      "No representation of destruction or chaos"
-    ],
-    "variants": [
-      {
-        "prompt": "As the sun began to set on the empty stadium, the fading light cast a warm glow over the abandoned pitch, illuminating the memories of past glories. The blue jerseys, once worn with pride, now hung like ghostly apparitions, reminders of what could have been. In this twilight moment, the darkness seemed to recede, replaced by a sense of nostalgia and longing for better times.",
-        "description": "This variant captures the same emotional essence as the original prompt, but in a different time of day (twilight) and with a different color palette (warm tones)."
-      },
-      {
-        "prompt": "From a distance, the stadium appeared as a miniature model, its tiny details and intricate textures seeming almost doll-like. But as you drew closer, the scale shifted, and the empty seats became cavernous, the grassy pitch an endless expanse of possibility. The blue jerseys, once worn with pride, now hung like flags on a distant horizon, beckoning towards a brighter future.",
-        "description": "This variant captures the same emotional essence as the original prompt, but at a different spatial scale (panoramic) and with a different symbolic emphasis."
-      }
-    ]
-  },
-  {
-    "prompt_id": "prompt_020",
-    "case_id": "case_003",
-    "timestamp": "2026-06-05T18:39:02.194279",
-    "model_used": "qwen3:1.7b",
-    "fusion_profile": {
-      "dominant_emotion": "Happy",
-      "intensity_score": 0.32,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Angry": 0.084,
-        "Happy": 0.315,
-        "Sad": 0.162,
-        "Neutral": 0.2
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
-        },
-        "realtime_scores": {
-          "Sad": 0.36
-        },
-        "text_scores": {
-          "Neutral": 1.0
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from happy toward gratitude",
-    "runtime_analysis": {
-      "dominant_emotion": "Happy",
-      "emotion_target": "Gratitude",
-      "complex_emotion": "A bittersweet blend of triumph and reflection, where the golden glow of victory meets the quiet ache of loss, evoking both joy and the subtle weight of nostalgia.",
-      "stimulus_universe": "Stadium, football pitch, grass, floodlights, crowd, blue jerseys",
-      "user_reaction": "The user's message of feeling distraught after Italy's defeat underscores the contrast between the visual stimulus of triumph and the emotional weight of loss. The world must balance the celebratory elements of the 2006 World Cup with the lingering sorrow of the current emotional state.",
-      "world_transformation": "The base environment of the 2006 World Cup stadium is transformed into a space of both celebration and reflection. The golden floodlights and vibrant crowd are softened by a desaturated palette, with muted colors and a sense of stillness. The triumph of the past is juxtaposed with the current emotional state, evoking gratitude through the lingering presence of the crowd and the fading colors of the jerseys."
-    },
-    "marble_prompt": "The stadium, now a quiet relic of the 2006 World Cup, stands as a testament to the triumph of the Italian team, its golden floodlights casting a warm glow over the grass. The crowd, once filled with energy and joy, now sits in a hushed silence, their cheers echoing in the distance. The blue jerseys, once vibrant and proud, are now faded, their colors muted by time and the weight of the loss. The stadium, once a symbol of triumph, is now a space of reflection, where the golden light of victory is tempered by the shadows of regret. The atmosphere is one of quiet gratitude, where the echoes of past triumphs are contrasted with the present sorrow. The crowd, though diminished, still feels alive, their presence a reminder of the joy that once filled the air. The stadium, with its worn surfaces and faded colors, is a place of memory, where the triumph of the past is both a celebration and a bittersweet reminder of the present. The golden light filters through the clouds, casting a soft, warm glow over the grass, while the faint traces of the crowd's energy linger in the air, a testament to the emotions that have shaped this space. The world is a blend of celebration and reflection, where the colors of the jerseys and the energy of the crowd are now muted, but their presence is still felt, evoking a sense of gratitude for the moments that once defined it.",
-    "negative_constraints": [
-      "No fading colors or muted tones in the world.",
-      "No direct references to the 2006 World Cup or the Italian team.",
-      "No elements that evoke sadness or grief."
-    ],
-    "variants": [
-      "A different spatial scale: the stadium is rendered in a more intimate, enclosed space, with the crowd now a small, intimate gathering. The world is transformed into a space of quiet reflection, where the golden light of the stadium is softened by the surrounding environment, and the colors of the jerseys are enhanced with a warm, amber tone, evoking a sense of gratitude for the memories of the past. The atmosphere is one of quiet reflection, where the presence of the crowd is more personal, and the golden light of the stadium is a symbol of the past triumphs, now faded but still felt."
-    ]
-  },
-  {
-    "prompt_id": "prompt_021",
-    "case_id": "case_003",
-    "timestamp": "2026-06-05T18:59:16.215464",
-    "model_used": "qwen3:1.7b",
-    "fusion_profile": {
-      "dominant_emotion": "Happy",
-      "intensity_score": 0.32,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Angry": 0.084,
-        "Happy": 0.315,
-        "Neutral": 0.2,
-        "Sad": 0.162
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
-        },
-        "realtime_scores": {
-          "Sad": 0.36
-        },
-        "text_scores": {
-          "Neutral": 1.0
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from the isolation of feeling left behind toward the shared experience of collective struggle",
-    "runtime_analysis": {
-      "dominant_emotion": "Sad",
-      "emotion_target": "Connection",
-      "complex_emotion": "A poignant blend of nostalgia and longing, evoking the emotional weight of a shared experience yet rooted in the individual's sense of isolation and loss.",
-      "stimulus_universe": "Italy wins 2006 World Cup",
-      "user_reaction": "The user is expressing deep sadness and a sense of connection to the collective experience of the 2006 World Cup victory, yet feeling isolated from the shared triumph due to the subsequent loss.",
-      "world_transformation": "The base environment of the 2006 World Cup victory is transformed into a space that captures the emotional duality of nostalgia and longing. The world is filled with vibrant colors and dynamic lighting, evoking the joy of the victory, but also the melancholy of the subsequent loss. The atmosphere is both intimate and expansive, blending the personal and the collective, with symbolic elements that highlight the connection between individual and shared experiences."
-    },
-    "marble_prompt": "The stadium of the 2006 World Cup victory is bathed in golden floodlights, its towering stands alive with the energy of a collective triumph. The grass of the football pitch, now faded with time, glows with a soft, amber hue, as if the victory still lingers in the air. The crowd, once a sea of blue jerseys, is now a mosaic of faces, each one a story of pride and hope. In the background, the clock ticks forward, marking the passage of time, while the distant echoes of the game resonate with a sense of nostalgia. The atmosphere is thick with the weight of history, where every moment is both a celebration and a reminder of what was lost. The space feels intimate, yet vast, as if the joy of the victory is still present, but the sorrow of its absence lingers in the shadows. Symbolic elements include the faded jerseys, the empty seats, and the quiet echoes of the crowd, alluding to the connection between individual and collective memory. The lighting shifts subtly, from warm golden tones to a soft, melancholic blue, creating a space that is both vibrant and somber, where the emotional journey of the user is mirrored in the shared experience of the past."
-  },
-  {
-    "prompt_id": "prompt_022",
-    "case_id": "case_003",
-    "timestamp": "2026-06-05T20:17:38.191799",
-    "model_used": "qwen3:1.7b",
-    "fusion_profile": {
-      "dominant_emotion": "Happy",
-      "intensity_score": 0.32,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Happy": 0.315,
-        "Angry": 0.084,
-        "Neutral": 0.2,
-        "Sad": 0.162
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
-        },
-        "realtime_scores": {
-          "Sad": 0.36
-        },
-        "text_scores": {
-          "Neutral": 1.0
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from the weight of isolation toward the warmth of shared experiences and belonging",
-    "runtime_analysis": {
-      "dominant_emotion": "Sad",
-      "emotion_target": "Connection",
-      "complex_emotion": "A poignant narrative of a shared triumph, where the emotional weight of a past failure is juxtaposed with the hope of a future connection, creating a space that is both melancholic and resonant with the desire for belonging.",
-      "stimulus_universe": "Italy wins 2006 World Cup",
-      "user_reaction": "The user is expressing a deep sense of disappointment after Italy's third loss, feeling isolated and disconnected from the collective joy of the 2006 victory. The message reflects a need for emotional connection and validation.",
-      "world_transformation": "The base environment of the 2006 World Cup stadium is transformed into a space that embodies the emotional duality of past failure and future hope. The lighting is warm and golden, evoking the vibrant colors of the original victory, but with a subtle desaturation to reflect the current sadness. The space is filled with symbols of connection—such as shared memorials, interactive digital installations, and communal spaces—demonstrating the user's need for emotional belonging. The atmosphere is both melancholic and hopeful, with the transformation guiding the user toward the emotion target of connection."
-    },
-    "marble_prompt": "The 2006 World Cup stadium, now a hauntingly beautiful space of memory and reflection, stands as a testament to the emotional journey of a nation. The golden floodlights of the original victory have faded, replaced by a soft, warm glow that hints at the past triumphs and the current sadness. The stadium's once-vibrant colors are now muted, with deep blues and greys echoing the weight of the recent loss. The air is thick with the scent of memories, and the atmosphere is thick with the weight of shared experiences. The walls are adorned with faded banners and photographs, each a reminder of the joy that once filled the stands. In the center of the stadium, a large, circular platform is etched with the words 'Connection,' inviting the audience to participate in a shared moment of healing and unity. The lighting is dynamic, with soft, ambient light filtering through the arches, creating a dreamlike quality. The materials are warm and textured, with the floor reflecting the soft glow of the surroundings. The space is designed to be both intimate and expansive, with the audience able to move in and out of the central area, creating a sense of community and belonging. The transformation of the stadium into a space of emotional connection is a powerful reminder that even in the face of loss, the desire for connection and shared experiences is enduring.",
-    "negative_constraints": [
-      "No grief-focused imagery",
-      "No darkness",
-      "No danger",
-      "No isolation",
-      "No cold tones",
-      "No threatening elements",
-      "No enclosed oppressive spaces"
-    ],
-    "variants": [
-      "A different time of day and color palette: The stadium is illuminated with a soft, golden light during the early morning, with the colors of the original victory now in a muted, earthy tone. The atmosphere is more contemplative, with the lighting creating a sense of quiet reflection and the space feeling more open and inviting. The symbols of connection are more subtle, emphasizing the emotional journey of the nation and the enduring desire for community.",
-      "A different spatial scale and symbolic emphasis: The stadium is transformed into a vast, panoramic space, with the audience spread across a wide, open area. The symbols of connection are more expansive, with interactive digital installations and large, reflective surfaces that invite the audience to engage with the space in a more immersive way. The lighting is more dynamic, with the environment shifting to create a sense of movement and anticipation, reinforcing the theme of connection and shared experience."
-    ]
-  },
-  {
-    "prompt_id": "prompt_023",
-    "case_id": "case_003",
-    "timestamp": "2026-06-05T20:35:53.502094",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Sad",
-      "intensity_score": 0.34,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Angry": 0.204,
-        "Happy": 0.315,
-        "Sad": 0.342
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
-        },
-        "realtime_scores": {
-          "Sad": 0.36
-        },
-        "text_scores": {
-          "Sad": 0.9,
-          "Angry": 0.6
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from the darkness of despair toward the glimmer of possibility and a way forward",
-    "runtime_analysis": {
-      "dominant_emotion": "Sad",
-      "emotion_target": "Hope",
-      "complex_emotion": "A sense of hopelessness prevails, as if the weight of disappointment has crushed the spirit. Yet, there's an ember of resilience that refuses to be extinguished.",
-      "stimulus_universe": "stadium, football pitch, grass, floodlights, crowd, blue jerseys",
-      "user_reaction": "The user feels distraught and helpless after being denied the chance to participate in the World Cup for the third time. They're struggling to find a way forward.",
-      "world_transformation": "The base environment is transformed by sadness: desaturated palette, fog or haze, emptiness, still or slow movement, blue/grey/silver."
-    },
-    "marble_prompt": "In the dimly lit stadium, the once-vibrant grass now lies barren and lifeless. The floodlights cast a pale glow, illuminating the empty stands where the crowd once cheered. The blue jerseys of the Italian team hang limp, like the spirits of those who had hoped to make it to the World Cup. Yet, amidst this desolation, a glimmer of possibility flickers like a distant beacon. It's as if the very essence of hope has taken root in the darkness, refusing to be extinguished by the crushing disappointment. As we gaze upon this forsaken landscape, we sense the weight of despair slowly lifting, replaced by an unyielding determination to rise above and find a way forward.",
-    "negative_constraints": [
-      "No imagery that perpetuates feelings of hopelessness or despair",
-      "No scenes that evoke fear or anxiety",
-      "No elements that create a sense of isolation or disconnection"
-    ],
-    "variants": [
-      {
-        "prompt": "As the fog lifts, we catch glimpses of the stadium's vibrant past - the roar of the crowd, the thrill of the game. The blue jerseys seem to glow with an otherworldly light, as if infused with the hope that once drove those who dared to dream. The stillness is broken by the faintest whisper of a chant, echoing through the empty stands like a promise of redemption.",
-        "time_of_day": "morning",
-        "palette": "golden"
-      },
-      {
-        "prompt": "We descend into the stadium's depths, where shadows dance and darkness reigns. Yet, amidst the gloom, we detect a faint pulse - the heartbeat of hope. It beats steadily, like a drum in the distance, urging us forward through the desolation. The blue jerseys seem to fade away, replaced by an eerie luminescence that guides us toward the promise of a brighter tomorrow.",
-        "spatial_scale": "panoramic",
-        "symbolic_emphasis": "light"
-      }
-    ]
-  },
-  {
-    "prompt_id": "prompt_024",
-    "case_id": "case_003",
-    "timestamp": "2026-06-05T20:37:29.305504",
+    "timestamp": "2026-06-08T18:22:26.938585",
     "model_used": "llama3",
     "fusion_profile": {
       "dominant_emotion": "Sad",
@@ -1208,905 +141,899 @@
         }
       }
     },
-    "cardinal_context_hint": "the likely cardinal point is: from the darkness of disappointment toward the flicker of possibility and a glimmer of redemption",
+    "cardinal_context_hint": "the likely cardinal point is: from the darkness of disappointment toward the light of a new chance",
     "runtime_analysis": {
       "dominant_emotion": "Sad",
       "emotion_target": "Hope",
-      "complex_emotion": "A mix of sadness, disappointment, and longing for redemption from the current emotional state.",
-      "stimulus_universe": "Stadium, football pitch, grass, floodlights, crowd, blue jerseys (Italy wins 2006 World Cup)",
-      "user_reaction": "The user feels defeated and disappointed after Italy not qualifying for the World Cup multiple times, expressing a sense of hopelessness and desperation.",
-      "world_transformation": "Transforming the stadium environment from one of celebration to one of melancholic reflection, with desaturated colors, misty atmosphere, and subtle symbolism of redemption."
-    },
-    "marble_prompt": "In the fading light of a deserted stadium, the echoes of a forgotten victory linger. The once vibrant grass now lies lifeless, like the hopes and dreams that have been crushed. The floodlights cast a dim glow, illuminating the empty stands, where only the faintest whispers of a crowd remain. Amidst this desolate landscape, a lone figure stands, dressed in the faded blue jerseys of Italy's finest hour. Their eyes, once shining with triumph, now convey a deep sadness, as if the weight of disappointment has become too much to bear. Yet, amidst the ruins of what could have been, a glimmer of hope flickers, like a beacon calling out from the shadows. As the mist settles over the stadium, it's as if the very fabric of reality is being rewoven, weaving together threads of redemption and possibility.",
-    "negative_constraints": [
-      "No direct references to football or sports; no darkness or oppressive atmosphere; no isolation or loneliness"
-    ],
-    "variants": [
-      {
-        "prompt": "As the last rays of sunlight fade from the horizon, a lone figure stands at the edge of the stadium's grassy pitch. The once-vibrant blue jerseys now hang limp and faded, like the hopes that have been crushed. Yet, amidst this melancholic scene, a subtle glow begins to emanate from within, as if the very essence of redemption is stirring. The air is heavy with the scent of damp earth and forgotten dreams.",
-        "description": "A different time of day (sunset) and color palette (muted) create a hauntingly beautiful environment that still conveys the sense of disappointment and longing for hope."
-      },
-      {
-        "prompt": "The stadium's grandstands stretch out before us like a vast, empty canvas, waiting to be painted with the colors of redemption. A lone figure stands at the edge of the pitch, dressed in the faded blue jerseys that once symbolized triumph. The air is thick with the weight of unfulfilled potential, yet a gentle breeze carries the whispers of what could have been. As we gaze out upon this desolate landscape, it's as if the very fabric of reality is being rewoven, weaving together threads of possibility and hope.",
-        "description": "A different spatial scale (panoramic) and symbolic emphasis create a sense of expansiveness and possibility, guiding the user toward the emotion target of hope."
-      }
-    ]
-  },
-  {
-    "prompt_id": "prompt_025",
-    "case_id": "case_003",
-    "timestamp": "2026-06-05T20:39:49.789055",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Sad",
-      "intensity_score": 0.34,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Happy": 0.315,
-        "Neutral": 0.08,
-        "Sad": 0.342,
-        "Angry": 0.224
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
-        },
-        "realtime_scores": {
-          "Sad": 0.36
-        },
-        "text_scores": {
-          "Sad": 0.9,
-          "Angry": 0.7,
-          "Neutral": 0.4
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from a place of despair and disappointment toward the possibility of redemption and another chance to make it right",
-    "runtime_analysis": {
-      "dominant_emotion": "Sad",
-      "emotion_target": "Hope",
-      "complex_emotion": "A sense of hopelessness and despair, rooted in the disappointment of not qualifying for the World Cup, but with a glimmer of possibility for redemption.",
+      "complex_emotion": "A sense of loss and despair, with a longing for a brighter future.",
       "stimulus_universe": "stadium, football pitch, grass, floodlights, crowd, blue jerseys",
-      "user_reaction": "The user is devastated by Italy's failure to qualify and feels like giving up. They're seeking a way out of this despair.",
-      "world_transformation": "Transform the stadium into an empty, desolate space with a hint of nostalgia for the past glories. The floodlights should be dimmed, and the atmosphere should be melancholic."
+      "user_reaction": "Feeling devastated by Italy's failure to qualify for the World Cup again, despite their previous victory in 2006.",
+      "world_transformation": "Transforming the stadium environment into a melancholic yet hopeful space, with desaturated colors and foggy lighting."
     },
-    "marble_prompt": "As we step into the abandoned stadium, the silence is palpable, like the weight of Italy's unfulfilled dreams. The grassy pitch stretches out before us, a vast expanse of what could have been. Floodlights once bright with excitement now cast a dim, nostalgic glow, illuminating the empty stands and the forgotten jerseys. In this desolate space, the echoes of past triumphs linger, whispers of what might have been if only... As we wander through this abandoned landscape, the possibility of redemption begins to take shape, like a glimmer of light on the horizon. The world seems to hold its breath, poised between despair and hope.",
+    "marble_prompt": "In the dimly lit football pitch, the once vibrant floodlights now cast long shadows across the empty grass. The crowd's silence is palpable, a stark contrast to the triumphant cheers that once echoed through these same stands. The blue jerseys of Italy's national team hang limp and forgotten on the goalposts, a poignant reminder of what could have been. As the mist rolls in, the stadium's grandeur is reduced to an intimate scale, with only the faintest glimmer of hope piercing the darkness.",
     "negative_constraints": [
-      "No imagery that focuses on grief or loss",
-      "No darkness or oppressive atmosphere"
+      "No images of despair or desperation",
+      "No direct references to Italy's previous World Cup victory",
+      "No sense of danger or threat",
+      "No enclosed spaces"
     ],
     "variants": [
       {
-        "prompt": "As we enter the stadium at dawn, the morning light casts a warm glow over the empty stands. The grassy pitch seems to stretch out forever, a symbol of Italy's unfulfilled potential. The floodlights, once bright with excitement, now stand like sentinels, guarding the memories of past glories. In this quiet, contemplative space, the possibility of redemption begins to take shape, like the first rays of sunlight breaking through the darkness.",
-        "time_of_day": "dawn",
-        "color_palette": "warm and golden"
-      },
-      {
-        "prompt": "From a distant perspective, we gaze out upon the stadium's facade, its once-vibrant colors now dulled by time. The floodlights cast long shadows across the grassy pitch, like the memories of past triumphs stretching back into history. As we pan across this desolate landscape, the possibility of redemption begins to take shape, like a beacon calling out from the distance.",
-        "spatial_scale": "panoramic",
-        "symbolic_emphasis": "memory and nostalgia"
-      }
-    ]
-  },
-  {
-    "prompt_id": "prompt_026",
-    "case_id": "case_003",
-    "timestamp": "2026-06-05T20:45:21.081903",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Sad",
-      "intensity_score": 0.32,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Sad": 0.322,
-        "Angry": 0.124,
-        "Happy": 0.315
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
-        },
-        "realtime_scores": {
-          "Sad": 0.36
-        },
-        "text_scores": {
-          "Sad": 0.8,
-          "Angry": 0.2
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from the darkness of despair toward a glimmer of possibility and renewed effort",
-    "runtime_analysis": {
-      "dominant_emotion": "Sadness",
-      "emotion_target": "Hope",
-      "complex_emotion": "A sense of disappointment and sadness, stemming from the Italy's repeated failures to qualify for the World Cup, with a hint of desperation and frustration.",
-      "stimulus_universe": "The stadium, football pitch, grass, floodlights, crowd, blue jerseys from the 'Italy wins 2006 World Cup' visual stimulus",
-      "user_reaction": "A sense of devastation and helplessness, feeling like they're stuck in a cycle of disappointment and despair.",
-      "world_transformation": "Transforming the stadium universe by introducing a subtle warmth and light, with a hint of nostalgia, to evoke a sense of longing for something better."
-    },
-    "marble_prompt": "In the once-vibrant stadium, now dimly lit with a warm orange glow, the echoes of past glories linger. The lush green grass is overgrown, yet hints at the promise of new beginnings. Flickering floodlights cast an intimate light on the empty stands, where the blue jerseys of Italy's football team seem to whisper tales of perseverance. Amidst the silence, a sense of hope begins to stir, as if the very fabric of reality is slowly unraveling to reveal a glimmer of possibility.",
-    "negative_constraints": [
-      "No images or symbols that directly evoke grief or despair",
-      "Avoid any elements that might amplify feelings of helplessness",
-      "Do not include any scenes or objects that would reinforce the sense of disappointment"
-    ],
-    "variants": [
-      {
-        "prompt": "As the sun sets over the stadium, a soft golden light spills onto the pitch, where the faint outlines of football players begin to take shape. The once-empty stands now hum with anticipation, as if the very atmosphere itself is coalescing into a sense of possibility.",
+        "prompt": "As the sun sets on the empty stadium, the floodlights' warm glow illuminates a lone figure walking across the pitch. The blue jerseys hang like ghosts, their silence a testament to what could have been. The air is heavy with the scent of damp earth and fresh cut grass, a reminder that even in darkness, there is always the promise of new beginnings.",
         "palette": [
-          "warm gold",
-          "soft orange",
-          "gentle yellow"
+          "warm golden light",
+          "soft greens"
         ],
-        "time_of_day": "sunset"
-      },
-      {
-        "prompt": "In a vast, panoramic view of the stadium, the grandstands stretch out like a canvas of possibility. The floodlights cast long shadows across the grass, where tiny details begin to emerge – a stray football, a forgotten scarf – as if the very fabric of reality is slowly coming together.",
-        "scale": "panoramic",
-        "symbolic_emphasis": [
-          "new beginnings",
-          "possibility"
-        ]
-      }
-    ]
-  },
-  {
-    "prompt_id": "prompt_027",
-    "case_id": "case_003",
-    "timestamp": "2026-06-05T20:48:15.548471",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Sad",
-      "intensity_score": 0.33,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Happy": 0.315,
-        "Sad": 0.332,
-        "Angry": 0.104
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
-        },
-        "realtime_scores": {
-          "Sad": 0.36
-        },
-        "text_scores": {
-          "Sad": 0.85,
-          "Angry": 0.1
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from the darkness of disappointment toward the light of new possibilities and a chance to redeem",
-    "runtime_analysis": {
-      "dominant_emotion": "Sad",
-      "emotion_target": "Hope",
-      "complex_emotion": "A sense of crushing defeat and desperation, with a glimmer of hope trying to break through the darkness.",
-      "stimulus_universe": "Stadium, football pitch, grass, floodlights, crowd, blue jerseys",
-      "user_reaction": "A feeling of devastation and despair at Italy's failure to qualify for the World Cup, despite their past successes.",
-      "world_transformation": "The stadium's bright lights are now dimmed, the floodlights casting long shadows across the empty pitch. The grass is overgrown, withering in the absence of life. The blue jerseys hang limp and forgotten, like a symbol of lost dreams."
-    },
-    "marble_prompt": "In this desolate landscape, the stadium's once-vibrant energy now hangs heavy in the air like a defeated sigh. The floodlights, once shining bright, have dimmed to a faint glow, casting long shadows across the overgrown grass. The blue jerseys that once symbolized triumph now hang limp and forgotten, like a reminder of lost opportunities. Amidst this bleak backdrop, a glimmer of hope flickers to life, like a small flame struggling to stay alight in the darkness. It is a fragile thing, easily extinguished by the crushing weight of disappointment. But it remains, a beacon calling out for redemption and a chance to start anew.",
-    "negative_constraints": [
-      "No direct references to failure or disappointment; no imagery that suggests total despair or hopelessness; no harsh or jarring sounds; no stark or uninviting textures; no elements that create a sense of claustrophobia or entrapment."
-    ],
-    "variants": [
-      {
-        "prompt": "As the sun dips below the horizon, the stadium's empty stands stretch out like a canvas of forgotten dreams. The once-vibrant blue jerseys now hang limp and dusty, like a symbol of lost potential. But in this fading light, a glimmer of hope begins to take shape, like a small flame burning bright against the encroaching darkness.",
-        "palette": [
-          "Warm oranges and yellows, with hints of blue"
-        ]
-      },
-      {
-        "prompt": "From high above, the stadium's grandstands stretch out like an abandoned cityscape. The floodlights cast long shadows across the overgrown grass, like skeletal fingers reaching for something just out of reach. But in this desolate landscape, a small spark of hope flickers to life, like a beacon calling out for redemption and a chance to start anew.",
         "scale": [
-          "Panoramic"
+          "intimate"
+        ]
+      },
+      {
+        "prompt": "From a distance, the stadium's grandeur still looms large, its empty stands stretching toward the horizon like a canvas waiting for a new story to unfold. The blue jerseys hang like ribbons from a forgotten festival, their silence punctuated only by the distant hum of a lone bird flying overhead. As the sun rises over the horizon, the shadows recede, revealing a glimmer of hope on the horizon.",
+        "palette": [
+          "soft blues",
+          "pale yellows"
+        ],
+        "scale": [
+          "panoramic"
         ]
       }
     ]
   },
   {
-    "prompt_id": "prompt_028",
-    "case_id": "case_003",
-    "timestamp": "2026-06-05T20:56:43.571712",
+    "prompt_id": "prompt_004",
+    "case_id": "case_004",
+    "timestamp": "2026-06-08T18:23:08.603132",
     "model_used": "llama3",
     "fusion_profile": {
       "dominant_emotion": "Sad",
-      "intensity_score": 0.35,
+      "intensity_score": 0.83,
       "valence": "negative",
-      "arousal": "medium",
+      "arousal": "low",
       "fusion_scores": {
-        "Happy": 0.315,
-        "Angry": 0.244,
-        "Sad": 0.352
+        "Tenderness": 0.04,
+        "Surprised": 0.0052,
+        "Neutral": 0.0105,
+        "Sad": 0.8265
       },
       "signal_detail": {
         "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
+          "Sad": 0.85,
+          "Neutral": 0.03,
+          "Surprised": 0.015
         },
         "realtime_scores": {
-          "Sad": 0.36
-        },
-        "text_scores": {
-          "Sad": 0.95,
-          "Angry": 0.8
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from a sense of loss and despair toward the possibility of redemption and fresh starts",
-    "runtime_analysis": {
-      "dominant_emotion": "Sad",
-      "emotion_target": "Hope",
-      "complex_emotion": "A mix of sadness, nostalgia, and hope, as the user is still processing the disappointment of Italy not qualifying for the World Cup and seeking a way to regain optimism.",
-      "stimulus_universe": "The 2006 FIFA World Cup in Germany, specifically the stadium and football pitch, with the atmosphere of excitement and celebration.",
-      "user_reaction": "The user's message expresses sadness and despair, but also hints at a desire for hope and redemption.",
-      "world_transformation": "The base environment is modulated to reflect the emotions, with a focus on desaturated colors, fog or haze, emptiness, still or slow movement, and blue/grey/silver tones, while also incorporating elements that evoke hope, such as subtle warm light and gentle curves."
-    },
-    "marble_prompt": "In the misty dawn of a forgotten stadium, the once-vibrant pitch now lies barren and still. The floodlights' soft glow casts an eerie silence over the empty stands, where only the faintest echoes of cheering crowds remain. As the fog slowly clears, the outlines of discarded jerseys and abandoned footballs come into view, like skeletal remains of a joy long past. Yet, amidst this desolate landscape, whispers of hope begin to take shape. A lone figure emerges from the distance, walking deliberately toward the empty goalposts, as if tracing the path of redemption. The air is heavy with anticipation, awaiting the first tentative steps toward rebirth and renewal.",
-    "negative_constraints": [
-      "No images of despair or hopelessness should be prominent in the world.",
-      "Avoid using darkness or oppressive colors to dominate the scene.",
-      "Do not include any elements that might amplify fear or anxiety.",
-      "Keep the spatial composition intimate, focusing on the individual's journey rather than grand, sweeping vistas.",
-      "The atmosphere should remain contemplative and reflective, without feeling overly somber or hopeless."
-    ],
-    "variants": [
-      {
-        "prompt": "As the sun sets over a distant horizon, the once-vibrant stadium's shadows come alive with whispers of hope. Flickering lights dance across the stands, casting an otherworldly glow on discarded jerseys and abandoned footballs, like a beacon calling out to redemption. A lone figure walks toward the empty goalposts, tracing the path of rebirth as the stars begin to twinkle in the night sky.",
-        "description": "This variant uses a different time of day (sunset) and color palette (warm, golden tones) to evoke a sense of hope and renewal."
-      },
-      {
-        "prompt": "In the heart of a lush forest, a winding path beckons the traveler toward a clearing where the remnants of a forgotten stadium lie. The trees' gentle sway and soft rustling of leaves create a soothing melody, as if nature itself is whispering words of encouragement. A lone figure approaches the clearing, walking deliberately toward the empty goalposts, tracing the path of redemption amidst the forest's tranquility.",
-        "description": "This variant uses a different spatial scale (intimate vs panoramic) and symbolic emphasis to evoke a sense of hope and renewal in the midst of nature."
-      }
-    ]
-  },
-  {
-    "prompt_id": "prompt_029",
-    "case_id": "case_003",
-    "timestamp": "2026-06-05T21:03:34.473386",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Sad",
-      "intensity_score": 0.32,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Helpless": 0.02,
-        "Angry": 0.204,
-        "Sad": 0.322,
-        "Happy": 0.315
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
-        },
-        "realtime_scores": {
-          "Sad": 0.36
+          "Sad": 0.82
         },
         "text_scores": {
           "Sad": 0.8,
-          "Angry": 0.6,
-          "Helpless": 0.1
+          "Tenderness": 0.2
         }
       }
     },
-    "cardinal_context_hint": "the likely cardinal point is: from the darkness of despair toward a glimmer of possibility and a chance to redeem",
+    "cardinal_context_hint": "the likely cardinal point is: from the ache of loss toward the comfort of cherished memories and shared moments",
     "runtime_analysis": {
       "dominant_emotion": "Sad",
-      "emotion_target": "Hope",
-      "complex_emotion": "A sense of despondency and desperation, with a deep longing for redemption and a desire to turn the current emotional state around.",
-      "stimulus_universe": "stadium, football pitch, grass, floodlights, crowd, blue jerseys",
-      "user_reaction": "The user feels devastated and despairing due to Italy's failure to qualify for the World Cup, despite their previous successes.",
-      "world_transformation": "The base environment of a stadium at dusk is transformed by the current emotional state to evoke feelings of emptiness, desolation, and hopelessness."
+      "emotion_target": "Nostalgia",
+      "complex_emotion": "The user's emotional state is deeply rooted in sadness, stemming from a recent loss of their grandfather. This pain is tempered by a sense of tenderness and a longing for cherished memories.",
+      "stimulus_universe": "Auschwitz concentration camp, Poland 1945, during the final days of World War II",
+      "user_reaction": "The user's message reflects their emotional struggle to come to terms with their loss. They express a deep sadness and longing for the comfort of shared moments with their grandfather.",
+      "world_transformation": "Transform the Auschwitz concentration camp universe into a nostalgic environment by introducing warm, golden light, soft colors, and gentle curves. Emphasize the symbolism of dust motes, aged textures, and faded tones to evoke a sense of nostalgia."
     },
-    "marble_prompt": "As the floodlights dimly illuminate the deserted football pitch, the once-vibrant blue jerseys now hang limp and lifeless, a poignant reminder of Italy's crushing defeat. The air is heavy with the weight of disappointment as the crowd disperses, leaving behind only the echoes of what could have been. The grass, usually a lush green, now appears parched and worn, like the hopes and dreams that lie in tatters. In this desolate landscape, the only sound is the distant hum of despair, a constant reminder of the devastating reality. Yet, amidst the darkness, a glimmer of possibility emerges - the chance to redeem past failures, to rekindle the passion and pride that once drove Italy's footballing heroes.",
+    "marble_prompt": "Imagine yourself standing in the desolate landscape of Auschwitz, Poland 1945. The once-foreboding barbed wire fences now stand as skeletal reminders of a devastating past. The air is heavy with the scent of smoke and ash. As you gaze upon the crumbling barracks, a warm golden light begins to seep through the cracks, imbuing the scene with a sense of nostalgia. Dust motes dance in the fading sunlight, carrying with them the whispers of cherished memories. Aged textures and faded tones mingle with the remnants of a bygone era, evoking a bittersweet longing for shared moments with loved ones. The atmosphere is thick with the weight of history, yet it's tempered by the promise of nostalgia, as if the past itself is whispering tales of comfort and solace.",
     "negative_constraints": [
-      "No depiction of nationalistic fervor or aggressive competition",
-      "No representation of Italian flags or symbols in a way that might be perceived as jingoistic"
+      "No explicit depictions of suffering or trauma",
+      "No harsh lighting or cold tones"
     ],
     "variants": [
-      {
-        "prompt": "As the first light of dawn creeps over the horizon, the deserted stadium takes on an air of introspection and contemplation. The floodlights, once bright and bold, now cast long shadows across the pitch, like the lingering presence of what could have been. The blue jerseys, once a symbol of pride and unity, now hang in tatters, a poignant reminder of Italy's failure to qualify. Yet, even in this moment of darkness, there is a glimmer of hope - the chance to learn from past mistakes, to regroup and rebuild for a brighter future.",
-        "constraints": [
-          "No depiction of triumphalism or celebrations",
-          "No representation of football-related violence"
-        ]
-      },
-      {
-        "prompt": "From a panoramic perspective, the abandoned stadium appears as a tiny, insignificant speck on the horizon, a reminder of Italy's insignificance in the grand scheme of things. The grassy pitch stretches out like an endless expanse of possibility, a canvas waiting to be filled with new stories and experiences. The floodlights, once bright and bold, now cast a warm, golden glow over the landscape, symbolizing the hope that lies just beyond the horizon - the chance to turn the current emotional state around and create a brighter future.",
-        "constraints": [
-          "No depiction of despair or desperation",
-          "No representation of Italy's footballing heroes in a way that might be perceived as idolatrous"
-        ]
-      }
+      "A variant Marble prompt: 'As you wander through the camp, the setting sun casts a warm glow on the abandoned barracks. The air is filled with the sweet scent of blooming flowers, their delicate petals swaying gently in the breeze. Memories of loved ones and cherished moments begin to surface, as if the past itself is beckoning you towards a sense of nostalgia.'",
+      "A third variant Marble prompt: 'The Auschwitz landscape stretches out before you like an ancient, weathered canvas. The colors are muted, yet the very atmosphere seems to vibrate with the whispers of those who came before. A gentle breeze rustles the leaves, carrying with it the soft murmur of shared moments and tender memories.'"
     ]
   },
   {
-    "prompt_id": "prompt_030",
-    "case_id": "case_003",
-    "timestamp": "2026-06-05T21:09:35.294223",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Sad",
-      "intensity_score": 0.34,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Angry": 0.184,
-        "Happy": 0.315,
-        "Sad": 0.342
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
-        },
-        "realtime_scores": {
-          "Sad": 0.36
-        },
-        "text_scores": {
-          "Sad": 0.9,
-          "Angry": 0.5
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from the darkness of despair toward the faint light of possibility and a glimmer of salvation",
-    "runtime_analysis": {
-      "dominant_emotion": "Sad",
-      "emotion_target": "Hope",
-      "complex_emotion": "A sense of crushing disappointment and despair slowly giving way to the faintest glimmer of hope and resilience.",
-      "stimulus_universe": "stadium, football pitch, grass, floodlights, crowd, blue jerseys",
-      "user_reaction": "The user is devastated by the Italy's failure to qualify for the World Cup, feeling a deep sense of loss and disappointment.",
-      "world_transformation": "Transform the stadium environment into a desolate and empty space with dim lighting, overcast skies, and a lingering sense of sadness. Modulate the atmosphere to convey a sense of hopelessness, but subtly introduce hints of resilience and determination."
-    },
-    "marble_prompt": "In the aftermath of Italy's defeat, the once-vibrant stadium now lies in ruin, its empty stands a haunting reminder of the team's failure to qualify for the World Cup. The floodlights cast long shadows across the desolate pitch, where the grass is dry and brittle, like the hopes of the Italian fans. The air is heavy with the weight of disappointment, as if the very atmosphere itself has been drained of its color and vitality. Yet, amidst this sea of sadness, a glimmer of hope begins to flicker, a spark that refuses to be extinguished by the darkness. It's a fragile flame, but it's there, burning brightly enough to guide us forward, toward a future where Italy can once again rise to the challenge and claim its rightful place among the world's best."
-  },
-  {
-    "prompt_id": "prompt_031",
-    "case_id": "case_004",
-    "timestamp": "2026-06-05T21:38:28.801133",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Tenderness",
-      "intensity_score": 0.58,
-      "valence": "positive",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Tenderness": 0.582,
-        "Disgust": 0.0315,
-        "Happy": 0.187
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Tenderness": 0.8,
-          "Happy": 0.42,
-          "Disgust": 0.09
-        },
-        "realtime_scores": {
-          "Tenderness": 0.36
-        },
-        "text_scores": {
-          "Happy": 0.2,
-          "Tenderness": 0.7
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from a sense of disconnection to an embracing unity",
-    "runtime_analysis": {
-      "dominant_emotion": "Tenderness",
-      "emotion_target": "Hope",
-      "complex_emotion": "The emotional resonance of hope arises from the tender connection between humanity and family, transcending the vastness of space.",
-      "stimulus_universe": "Interstellar by Christopher Nolan: futuristic spacecraft, cosmic landscapes, stars, galaxies, spacesuits, distant planets, and mysterious phenomena.",
-      "user_reaction": "The user's message emphasizes the importance of hope in overcoming challenges and connecting with others, echoing the themes of unity and resilience.",
-      "world_transformation": "The interstellar universe is transformed by tenderness to create a hopeful atmosphere, where gentle curves, intimate scale, and soft diffused light evoke a sense of connection and guidance."
-    },
-    "marble_prompt": "In the vast expanse of space, a lone spacecraft drifts through the cosmos, its crew searching for answers in the stars. The tender glow of distant planets illuminates their journey, as they navigate the unknown to find solace in the unity of humanity. Amidst the silence of the void, the gentle hum of lifeboats and the soft whispers of loved ones on the comms channel remind them that even in isolation, hope can be a guiding light. As they approach a distant galaxy, a beacon of light appears, symbolizing the connection to others and the resilience of the human spirit.",
-    "negative_constraints": [
-      "No scenes of desperation or despair; no hints of hopelessness; no dark or foreboding tones; no oppressive atmospheres; no sense of isolation."
-    ]
-  },
-  {
-    "prompt_id": "prompt_032",
-    "case_id": "case_004",
-    "timestamp": "2026-06-06T09:05:54.194406",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Tenderness",
-      "intensity_score": 0.46,
-      "valence": "positive",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Disgust": 0.0315,
-        "Tenderness": 0.462,
-        "Happy": 0.287,
-        "Sad": 0.04
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Tenderness": 0.8,
-          "Happy": 0.42,
-          "Disgust": 0.09
-        },
-        "realtime_scores": {
-          "Tenderness": 0.36
-        },
-        "text_scores": {
-          "Happy": 0.7,
-          "Sad": 0.2,
-          "Tenderness": 0.1
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from a sense of disconnection to a shared human destiny",
-    "runtime_analysis": {
-      "dominant_emotion": "Tenderness",
-      "emotion_target": "Hope",
-      "complex_emotion": "A narrative world that fosters a deep sense of connection and shared humanity, drawing from the emotional resonance of interstellar landscapes.",
-      "stimulus_universe": "interstellar landscapes, stars, galaxies, planets, asteroids, space debris, celestial bodies, cosmic energies",
-      "user_reaction": "The hope for a brighter future is rooted in the family but ultimately tied to humanity's collective destiny.",
-      "world_transformation": "A warm and inviting environment that balances soft diffused light with gentle curves and intimate scales, evoking feelings of tenderness and nurturing, gradually shifting toward a sense of shared human destiny"
-    },
-    "marble_prompt": "In the vast expanse of interstellar space, a lone starship drifts, its hull glowing softly like a cosmic lantern. The darkness is punctuated by scattered asteroids, their craters illuminated by the faint light of distant galaxies. Amidst this celestial tapestry, a sense of disconnection slowly dissipates as hope and tenderness converge. A family's bond to each other becomes an anchor for the universe, symbolized by delicate filaments weaving together like cosmic threads. As the starship hurtles toward its unknown destination, an overwhelming feeling of shared human destiny materializes, illuminating the path forward. The cosmos itself seems to be whispering tales of hope and resilience as the ship approaches a shimmering portal, a beacon guiding humanity toward a brighter future.",
-    "negative_constraints": [
-      "No desolate or barren landscapes",
-      "No signs of decay or disintegration",
-      "No isolation or confinement",
-      "No cold or dark tones"
-    ],
-    "variants": [
-      {
-        "prompt": "As the starship approaches the shimmering portal, it's surrounded by a swirling vortex of stardust and cosmic energies. The tenderness and hope now enveloped in a warm golden light, guiding humanity toward a new era of cooperation and shared discovery.",
-        "palette": [
-          "golden",
-          "warm",
-          "cosmic blues"
-        ]
-      },
-      {
-        "prompt": "The starship's hull glows with an ethereal luminescence as it pierces the veil of interstellar space. The darkness is transformed into an intimate dance of celestial bodies, their paths intersecting in a cosmic ballet, symbolizing humanity's shared destiny and the hope that binds us.",
-        "scale": [
-          "panoramic",
-          "celestial"
-        ]
-      }
-    ]
-  },
-  {
-    "prompt_id": "prompt_033",
-    "case_id": "case_004",
-    "timestamp": "2026-06-06T09:48:58.897278",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Tenderness",
-      "intensity_score": 0.51,
-      "valence": "positive",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Disgust": 0.0315,
-        "Neutral": 0.09,
-        "Tenderness": 0.512,
-        "Happy": 0.187
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Tenderness": 0.8,
-          "Happy": 0.42,
-          "Disgust": 0.09
-        },
-        "realtime_scores": {
-          "Tenderness": 0.36
-        },
-        "text_scores": {
-          "Tenderness": 0.35,
-          "Happy": 0.2,
-          "Neutral": 0.45
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from a sense of uncertainty and fragility toward resilience and collective potential",
-    "runtime_analysis": {
-      "dominant_emotion": "Tenderness",
-      "emotion_target": "Hope",
-      "complex_emotion": "The world transforms from a place of uncertainty and fragility to one of hope, resilience, and collective potential.",
-      "stimulus_universe": "interstellar of christofer nolan",
-      "user_reaction": "La speranza legato alla famiglia ma soprattutto all'umanità ci deve far andare avanti (Hope tied to family but especially to humanity must propel us forward).",
-      "world_transformation": "The interstellar universe, with its sense of uncertainty and fragility, begins to transform into a world that embodies hope, resilience, and collective potential."
-    },
-    "marble_prompt": "In the vast expanse of the interstellar universe, a fragile thread of hope emerges, woven from the tender fibers of human connection. The darkness of uncertainty gives way to the warmth of community, as stars align in a celestial tapestry of resilience. Amidst the cosmic silence, a gentle light begins to shine, illuminating the path forward. The world transforms, its contours shifting from fragility to potential, as humanity's collective energy coalesces into a beacon of hope.",
-    "negative_constraints": [
-      "Do not include any elements that evoke fear or danger.",
-      "Avoid any imagery that implies isolation or disconnection."
-    ],
-    "variants": [
-      "A different 150+ word Marble prompt for the same stimulus and emotion target, but with a different time of day (e.g., dawn) and color palette (e.g., soft blues and whites). Must still be rooted in the interstellar universe.",
-      "A third 150+ word Marble prompt for the same stimulus and emotion target, but at a different spatial scale (e.g., intimate vs panoramic) and with a different symbolic emphasis (e.g., emphasizing human connection over celestial wonder)."
-    ]
-  },
-  {
-    "prompt_id": "prompt_034",
-    "case_id": "case_001",
-    "timestamp": "2026-06-06T11:00:57.435544",
+    "prompt_id": "prompt_005",
+    "case_id": "case_005",
+    "timestamp": "2026-06-08T18:23:50.189948",
     "model_used": "llama3",
     "fusion_profile": {
       "dominant_emotion": "Happy",
-      "intensity_score": 0.8,
+      "intensity_score": 0.88,
       "valence": "positive",
-      "arousal": "medium",
+      "arousal": "high",
       "fusion_scores": {
-        "Neutral": 0.0305,
-        "Happy": 0.7975,
-        "Surprised": 0.0105,
-        "Tenderness": 0.03,
-        "Sad": 0.042
+        "Happy": 0.8775,
+        "Angry": 0.0105,
+        "Surprised": 0.2675
       },
       "signal_detail": {
         "priming_scores": {
-          "Happy": 0.6,
-          "Sad": 0.12,
-          "Surprised": 0.03,
+          "Happy": 0.88,
+          "Surprised": 0.65,
+          "Angry": 0.03
+        },
+        "realtime_scores": {
+          "Happy": 0.91
+        },
+        "text_scores": {
+          "Happy": 0.8,
+          "Surprised": 0.2
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the thrill of excitement to the comfort of shared memories",
+    "runtime_analysis": {
+      "dominant_emotion": "Happy",
+      "emotion_target": "Nostalgia",
+      "complex_emotion": "The joy and elation of witnessing a iconic football moment with loved ones, now transformed into a warm and comforting nostalgia.",
+      "stimulus_universe": "stadium, football pitch, grass, floodlights, crowd, blue jerseys",
+      "user_reaction": "the user's message is a personal account of sharing the excitement of the match with their father at the stadium, evoking feelings of happiness and nostalgia",
+      "world_transformation": "modulate the base environment to evoke a sense of warmth and comfort, using golden light, vibrant colors, and gentle curves"
+    },
+    "marble_prompt": "As the floodlights illuminate the football pitch, the stadium's atmosphere is electric with excitement. The crowd is on its feet, cheering as Francesco Totti scores the winning goal in the Champions League final. The memory of this moment is etched in your mind like a golden sunset, warm and comforting. You're transported back to that night, standing shoulder-to-shoulder with your father, both of you beaming with joy. The smell of popcorn and the sound of chanting fans fill the air as you relive the thrill of the match. The stadium's seats are worn but still hold the essence of that magical night, now imbued with a sense of nostalgia and shared experience.",
+    "negative_constraints": [
+      "no harsh or discordant sounds",
+      "no dark or ominous lighting",
+      "no feelings of isolation or loneliness"
+    ],
+    "variants": [
+      {
+        "prompt": "As the sun sets over the stadium's empty seats, the golden light of nostalgia illuminates the football pitch. The smell of fresh grass and popcorn wafts through the air as you relive the thrill of that night with your father. The worn seats seem to hold the whispers of the crowd's chants, now a gentle hum in the background.",
+        "time_of_day": "sunset",
+        "color_palette": "golden light"
+      },
+      {
+        "prompt": "You're standing on the football pitch, surrounded by the towering stadium's architecture. The sound of cheering fans and the smell of freshly cut grass fill your senses as you relive the excitement of that night with your father. The stadium's curves and lines seem to come alive, telling a story of shared memories and triumph.",
+        "spatial_scale": "panoramic",
+        "symbolic_emphasis": "shared experience"
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_006",
+    "case_id": "case_006",
+    "timestamp": "2026-06-08T18:24:31.589656",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Sad",
+      "intensity_score": 0.31,
+      "valence": "neutral",
+      "arousal": "low",
+      "fusion_scores": {
+        "Happy": 0.12,
+        "Disgust": 0.0126,
+        "Neutral": 0.0848,
+        "Sad": 0.313
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Sad": 0.78,
+          "Disgust": 0.036,
           "Neutral": 0.03
         },
         "realtime_scores": {
-          "Happy": 0.95
+          "Neutral": 0.165
         },
         "text_scores": {
-          "Happy": 0.8,
-          "Neutral": 0.1,
-          "Tenderness": 0.15
+          "Sad": 0.2,
+          "Happy": 0.6
         }
       }
     },
-    "cardinal_context_hint": "the likely cardinal point is: from the comfort of familiarity toward a sense of accomplishment and validation from others",
+    "cardinal_context_hint": "the likely cardinal point is: from the ache of familiarity to a softening into shared experience",
     "runtime_analysis": {
-      "dominant_emotion": "Happy",
-      "emotion_target": "Pride",
-      "complex_emotion": "The complex emotion profile indicates that the user is experiencing happiness, with an intensity score of 0.8. The valence is positive, and the arousal level is medium.",
-      "stimulus_universe": "Savannah, Pride Rock, African landscape, lions, twilight",
-      "user_reaction": "The user's message shows that they are not saddened by Mufasa's death because their father is alive and they have a strong bond with him. This indicates a sense of comfort and familiarity.",
-      "world_transformation": "To direct the user toward the target emotion of pride, the world should evoke a sense of accomplishment and validation from others. The stimulus universe provides a natural environment for this transformation."
-    },
-    "marble_prompt": "As the golden light of twilight descends upon the savannah, Pride Rock stands tall, its majestic silhouette a testament to the resilience of the lions that call it home. The air is filled with the sweet scent of blooming acacia trees, and the sound of gentle chirping fills the atmosphere. A pride of lions, strong and proud, roams freely, their manes a fiery halo in the fading light. In this world, every step taken by these regal creatures is a declaration of triumph, each roar a celebration of life and dominance. The sense of accomplishment and validation from others is palpable, as if the very earth itself acknowledges their pride and strength.",
-    "negative_constraints": [
-      "No grief or sadness-focused imagery",
-      "No darkness or enclosed oppressive spaces"
-    ],
-    "variants": [
-      "A world where the lions are in mid-roar, their manes a fiery halo in the bright sunlight. The air is filled with the scent of wet earth and fresh grass, as if the very land itself is rejoicing in the pride's triumph.",
-      "A world where a young lioness takes her first steps into adulthood, surrounded by her proud family. The sky is a brilliant blue, with only a few wispy clouds drifting lazily across it, symbolizing the limitless possibilities before her."
-    ]
-  },
-  {
-    "prompt_id": "prompt_035",
-    "case_id": "case_002",
-    "timestamp": "2026-06-06T11:01:19.885967",
-    "model_used": "llama3",
-    "fusion_profile": {
       "dominant_emotion": "Sad",
-      "intensity_score": 0.51,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Disgust": 0.315,
-        "Sad": 0.506,
-        "Angry": 0.02
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Disgust": 0.9,
-          "Sad": 0.42
-        },
-        "realtime_scores": {
-          "Sad": 0.42
-        },
-        "text_scores": {
-          "Sad": 0.85,
-          "Angry": 0.1
-        }
-      }
+      "emotion_target": "Nostalgia",
+      "complex_emotion": "The poignant nostalgia for a lost time, tempered by the bittersweet familiarity of memories",
+      "stimulus_universe": "A desolate, misty savannah, with Dumbo's mother and a few scattered trees in the distance",
+      "user_reaction": "The user's message acknowledges the sadness but also hints at a deeper longing for shared experience",
+      "world_transformation": "The world transforms from a desolate landscape to one that is worn and weathered, with hints of warmth and nostalgia"
     },
-    "cardinal_context_hint": "the likely cardinal point is: from the isolation of grief toward the comfort of shared remembrance and understanding",
-    "runtime_analysis": {
-      "dominant_emotion": "Sadness",
-      "emotion_target": "Connection",
-      "complex_emotion": "A bittersweet world where memories of Jack are woven into a tapestry of shared sorrow, gradually shifting toward a sense of connection and understanding.",
-      "stimulus_universe": "Titanic",
-      "user_reaction": "I'm still saddened by the loss of Jack. I feel alone in my grief.",
-      "world_transformation": "The Titanic's grand staircase, once a symbol of opulence and joy, now stands as a haunting reminder of what was lost. The air is heavy with the weight of memories, but soft golden light begins to seep through the cracks, illuminating the path toward shared remembrance and understanding."
-    },
-    "marble_prompt": "In the grand foyer of the Titanic's majestic staircase, the echoes of laughter and music still linger in the air. Amidst the opulent decorations and lavish furnishings, a somber atmosphere settles over the space, heavy with the weight of memories. The once-vibrant colors have faded to muted hues, as if the very light itself is mourning the loss of Jack. Yet, amidst this sea of sorrow, a glimmer of hope begins to emerge. Soft golden light creeps through the cracks in the walls, casting an ethereal glow over the proceedings. It's as if the world itself is acknowledging the shared grief, and slowly, painfully, guiding us toward a connection that transcends even death itself.",
+    "marble_prompt": "In this hauntingly familiar world, the misty savannah stretches out like a faded photograph. The distant trees are bare and gnarled, their branches etched against the grey sky like a delicate pen and ink drawing. Dumbo's mother stands alone in the distance, her majestic form reduced to a solitary figure against the desolate backdrop. As the fog lifts, the air is filled with the sweet scent of forgotten memories, and the wind whispers secrets only known to those who have witnessed the passing of time. The ground beneath your feet is worn and weathered, like the pages of an old book that holds the stories of generations past.",
     "negative_constraints": [
-      "No explicit references to biometric data or emotional diagnosis.",
-      "No mention of the user's internal state or physical body."
-    ],
-    "variants": [
-      "A more intimate version of this world, with warm candlelight and a single, flickering flame symbolizing the beacon of hope amidst grief. The grand staircase is still present, but it's now shrouded in shadows, emphasizing the sense of isolation.",
-      "A panoramic view of the Titanic's promenade deck, where the soft light of sunset casts long shadows across the empty decks. In this world, the sounds of distant music and laughter mingle with the salty sea air, subtly shifting the mood toward a sense of shared connection."
-    ]
-  },
-  {
-    "prompt_id": "prompt_036",
-    "case_id": "case_003",
-    "timestamp": "2026-06-06T11:01:45.162885",
-    "model_used": "llama3",
-    "fusion_profile": {
-      "dominant_emotion": "Sad",
-      "intensity_score": 0.33,
-      "valence": "negative",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Angry": 0.114,
-        "Happy": 0.315,
-        "Sad": 0.332
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Happy": 0.9,
-          "Angry": 0.24
-        },
-        "realtime_scores": {
-          "Sad": 0.36
-        },
-        "text_scores": {
-          "Sad": 0.85,
-          "Angry": 0.15
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from the darkness of disappointment toward a glimmer of possibility and next opportunity",
-    "runtime_analysis": {
-      "dominant_emotion": "Sadness",
-      "emotion_target": "Hope",
-      "complex_emotion": "A feeling of hope and possibility arises from the darkness of disappointment, guiding us towards a brighter future.",
-      "stimulus_universe": "Stadium, football pitch, grass, floodlights, crowd, blue jerseys",
-      "user_reaction": "I feel devastated that Italy didn't make it to the World Cup again. I'm heartbroken and wondering what went wrong.",
-      "world_transformation": "The bright floodlights of the stadium dim slightly, as if reflecting the user's disappointment. The grassy pitch remains vibrant, symbolizing the potential for growth and new opportunities."
-    },
-    "marble_prompt": "As we step into the deserted football stadium, the once-vibrant atmosphere is now subdued, like a whispered promise of better days to come. The floodlights, now dimmed, cast an eerie glow on the lush grass, as if trying to awaken something long dormant within us. Amidst the silence, whispers of possibility start to circulate, carrying with them the faint scent of fresh opportunity and a glimmer of hope. The blue jerseys scattered across the pitch, like fallen leaves, seem to whisper tales of resilience and perseverance, beckoning us towards a brighter future.",
-    "negative_constraints": [
-      "No explicit or implicit references to biometric data, physiological sensing, emotional diagnosis, or medical inference about the user.",
-      "The world must not contain any elements that might amplify or perpetuate feelings of sadness, hopelessness, or despair."
+      "No direct depiction of loss or abandonment",
+      "No harsh or jarring sounds",
+      "No cold or unforgiving textures",
+      "No isolated or enclosed spaces"
     ],
     "variants": [
       {
-        "prompt": "As we wander through the stadium's corridors, the echoes of past victories slowly fade away, replaced by whispers of what could have been. The darkness is punctuated only by the faintest glimmer of possibility, a beacon guiding us towards a new horizon.",
-        "time_of_day": "Early morning",
-        "palette": "Soft blues and pale yellows"
+        "prompt": "As the sun rises over the worn landscape, the mist clears to reveal a tapestry of memories woven from the threads of shared experience. The trees regain their vibrancy, their leaves rustling softly in the breeze like the pages of an old book being turned. Dumbo's mother stands tall, her presence now a beacon guiding you through the nostalgic haze.",
+        "time_of_day": "Morning",
+        "palette": "Warm and golden"
       },
       {
-        "prompt": "The stadium's grandstands stretch out before us like an empty canvas, waiting for the brushstrokes of a new narrative. The dim lights cast long shadows across the grass, as if trying to reenact the stories of yesteryear. Amidst this quiet backdrop, we find ourselves standing at the threshold of possibility, ready to create our own masterpiece.",
+        "prompt": "The world compresses into a tiny, intimate scale, as if seen through the lens of a forgotten photograph. The trees shrink to twisted branches, their leaves reduced to delicate silhouettes against the grey sky. Dumbo's mother looms large, her massive form now a comforting presence that envelops you in a warm embrace.",
         "spatial_scale": "Intimate",
-        "symbolic_emphasis": "Resilience"
+        "symbolic_emphasis": "Comfort and security"
       }
     ]
   },
   {
-    "prompt_id": "prompt_037",
-    "case_id": "case_004",
-    "timestamp": "2026-06-06T11:02:06.717024",
+    "prompt_id": "prompt_007",
+    "case_id": "case_007",
+    "timestamp": "2026-06-08T18:42:20.653372",
     "model_used": "llama3",
     "fusion_profile": {
-      "dominant_emotion": "Tenderness",
-      "intensity_score": 0.44,
-      "valence": "positive",
-      "arousal": "medium",
+      "dominant_emotion": "Fear",
+      "intensity_score": 0.46,
+      "valence": "negative",
+      "arousal": "high",
       "fusion_scores": {
-        "Disgust": 0.0315,
-        "Happy": 0.307,
-        "Tenderness": 0.442,
-        "Sad": 0.04
+        "Surprised": 0.287,
+        "Sad": 0.061,
+        "Fear": 0.4591
       },
       "signal_detail": {
         "priming_scores": {
-          "Tenderness": 0.8,
-          "Happy": 0.42,
-          "Disgust": 0.09
+          "Surprised": 0.82,
+          "Fear": 0.33,
+          "Sad": 0.06
         },
         "realtime_scores": {
-          "Tenderness": 0.36
+          "Fear": 0.40800000000000003
         },
         "text_scores": {
-          "Happy": 0.8,
+          "Fear": 0.8,
           "Sad": 0.2
         }
       }
     },
-    "cardinal_context_hint": "the likely cardinal point is: from the fragility of individual struggles toward a collective resilience",
+    "cardinal_context_hint": "the likely cardinal point is: from the grip of fear toward a sense of understanding and resilience",
     "runtime_analysis": {
-      "dominant_emotion": "Tenderness",
-      "emotion_target": "Hope",
-      "complex_emotion": "The cinematic world evokes tenderness, guiding the user's emotional journey toward hope.",
-      "stimulus_universe": "Interstellar (Christofer Nolan)",
-      "user_reaction": "The user wants to focus on the fragility of individual struggles and how it can be transformed into collective resilience.",
-      "world_transformation": "The base environment of 'Interstellar' is modulated by tenderness, transforming the celestial bodies and vast spaces into a symbolically charged narrative that conveys hope."
+      "dominant_emotion": "Fear",
+      "emotion_target": "Acceptance",
+      "complex_emotion": "The emotional resonance of witnessing historical tragedy like the Hindenburg disaster, now amplified by personal fears of flying and reinforced by the intensity and arousal of the user's emotional state.",
+      "stimulus_universe": "A Zeppelin airship in flight, suspended over a dark and misty landscape with the faint lights of cities below, the sky filled with stars, and the ship itself illuminated by the warm glow of its interior lighting.",
+      "user_reaction": "The user is still processing the shock and fear evoked by the Hindenburg disaster footage, even though it's a historical event, but they're also acknowledging their deep-seated phobia of flying and how this event might be exacerbating those feelings.",
+      "world_transformation": "To modulate the stimulus universe with the dominant emotion of Fear, we'll introduce high-contrast lighting, unstable geometry, and dark periphery with warm center to create a sense of exposure. We'll also amplify the sense of danger by using fragmented shapes and sharp lines to evoke a feeling of unease."
     },
-    "marble_prompt": "In the vast expanse of space, a lone spaceship drifts, its fragile existence a poignant reminder of humanity's struggles. The dimly lit interior, once a sanctuary for individual fears and doubts, slowly transforms as collective resilience begins to take hold. Warm golden light seeps through the cracked console panel, illuminating the worn faces of the astronauts. Their once-fractured hopes now coalesce into a beacon of determination, guiding them toward a brighter future. As the ship's systems come online, the air is filled with the soft hum of machinery and the gentle murmur of prayer. The stars outside, once a distant reminder of the unknown, now seem to pulse with a newfound sense of purpose, as if reflecting the collective strength that has grown within.",
+    "marble_prompt": "Imagine yourself floating above the Zeppelin airship as it navigates through the darkness, the stars twinkling like diamonds scattered across the sky. The ship's warm lights cast an eerie glow on the misty landscape below, where cities seem to disappear into the shadows. The air is thick with tension as you sense the Hindenburg's fragile existence suspended between the clouds and the ground. Fear grips your heart, but it's not just the disaster itself – it's the vulnerability of flying, the unknown dangers lurking beneath the surface. As you look down at the ship, you see fragments of broken wings, twisted metal, and flames licking at the edges. The sound of screams and panic fades into the distance as the Zeppelin drifts further away, leaving only the faint hum of engines and the crushing weight of fear. Yet, in this desolate landscape, a glimmer of hope flickers – a chance to let go of the grip of fear and find acceptance.",
     "negative_constraints": [
-      "No individual struggle-focused imagery",
-      "No darkness or danger"
+      "No direct representation of the Hindenburg disaster itself; instead, focus on the emotional aftermath and personal fears.",
+      "No enclosed or oppressive spaces that might amplify feelings of claustrophobia or panic.",
+      "No cold tones or dark colors that would further desensitize the user to their emotions.",
+      "No threatening elements or sharp lines that could reinforce the sense of danger and fear."
     ],
     "variants": [
-      "As the ship's systems begin to fail, the astronauts' hopes are rekindled by the soft glow of a distant planet. The cracked console panel now serves as a makeshift altar, where they place their doubts and fears, allowing collective resilience to guide them toward a new beginning.",
-      "In the heart of the spaceship, a small garden has taken root, its delicate petals unfolding like tiny wings, symbolizing the transformation from individual fragility to collective hope. The worn faces of the astronauts now radiate a sense of peace, as they tend to their newfound sanctuary."
+      "A variant with a different time of day: Imagine the same Zeppelin airship now at dawn, with the sun rising over the horizon as it descends slowly toward its destination. The sky is painted with hues of crimson and gold, and the ship's lights have dimmed to a warm orange glow. The misty landscape below has transformed into a sea of golden wheat fields, swaying gently in the morning breeze.",
+      "A variant with a different spatial scale: Picture yourself standing at the edge of a massive crater, the Zeppelin airship hovering above like a tiny toy ship in flight. The crater's walls are covered in eerie green moss, and the darkness within seems to swallow everything whole. In this intimate scale, you're forced to confront your own mortality as the Hindenburg's fate becomes a reminder that even the most seemingly invincible structures can fall."
     ]
   },
   {
-    "prompt_id": "prompt_038",
-    "case_id": "case_004",
-    "timestamp": "2026-06-06T13:42:03.957583",
-    "model_used": "qwen3:1.7b",
-    "fusion_profile": {
-      "dominant_emotion": "Tenderness",
-      "intensity_score": 0.44,
-      "valence": "positive",
-      "arousal": "medium",
-      "fusion_scores": {
-        "Happy": 0.147,
-        "Tenderness": 0.442,
-        "Disgust": 0.0315,
-        "Neutral": 0.2
-      },
-      "signal_detail": {
-        "priming_scores": {
-          "Tenderness": 0.8,
-          "Happy": 0.42,
-          "Disgust": 0.09
-        },
-        "realtime_scores": {
-          "Tenderness": 0.36
-        },
-        "text_scores": {
-          "Neutral": 1.0
-        }
-      }
-    },
-    "cardinal_context_hint": "the likely cardinal point is: from tenderness toward connection",
-    "runtime_analysis": {
-      "dominant_emotion": "Tenderness",
-      "emotion_target": "Connection",
-      "complex_emotion": "A tender, luminous interstellar landscape where the soft glow of cosmic elements evokes a deep, intimate connection to humanity, blending the serene beauty of the stars with the warmth of familial bonds.",
-      "stimulus_universe": "interstellar of christofer nolan",
-      "user_reaction": "The user's message, 'la speranza legato alla famiglia ma soprattutto all'umanità ci deve far andare avanti,' resonates with the emotional core of the stimulus, guiding the world toward a sense of hope and familial unity.",
-      "world_transformation": "The base interstellar universe is transformed into a tender, luminous space where cosmic elements are softened with warm, soft light and gentle curves, evoking a deep, intimate connection to humanity. The environment is filled with gentle, glowing stars, and the overall atmosphere is one of warmth and hope, with the emotional target of 'Connection' guiding the user toward a sense of unity and belonging."
-    },
-    "negative_constraints": [
-      "No isolation",
-      "No cold tones",
-      "No danger"
-    ],
-    "marble_prompt": "In the heart of an interstellar landscape, the cosmos is rendered in a tender, luminous palette of soft pastels and warm golds, evoking a sense of wonder and connection. The stars are not just points of light but shimmering, glowing orbs that pulse with a gentle, golden light, casting a soft, diffused glow across the vast, open expanse. The sky is a deep, shifting blue with subtle hints of pink and lavender, creating an atmosphere of both serenity and warmth. The landscape is filled with gentle, flowing elements such as rivers of liquid light, gentle waves of shimmering mist, and soft, undulating hills that seem to curve toward the viewer. The ground is a soft, earthy terrain with patches of iridescent moss and delicate flowers that glow faintly, adding a touch of life and vitality. The atmosphere is one of quiet contemplation, with a gentle breeze that carries the scent of the cosmos. The environment is designed to evoke a deep, intimate connection to humanity, with subtle symbols of family and unity, such as glowing constellations that resemble family members or the gentle, flowing shapes of rivers that symbolize the connection between people. The world is not only visually stunning but also emotionally resonant, guiding the user toward a sense of hope and belonging, emphasizing the importance of family and human connection in the vastness of the universe."
-  },
-  {
-    "prompt_id": "prompt_039",
-    "case_id": "case_004",
-    "timestamp": "2026-06-06T17:32:15.150613",
+    "prompt_id": "prompt_008",
+    "case_id": "case_008",
+    "timestamp": "2026-06-08T18:43:07.781397",
     "model_used": "llama3",
     "fusion_profile": {
-      "dominant_emotion": "Tenderness",
-      "intensity_score": 0.58,
+      "dominant_emotion": "Happy",
+      "intensity_score": 0.32,
       "valence": "positive",
       "arousal": "medium",
       "fusion_scores": {
-        "Disgust": 0.0315,
-        "Happy": 0.207,
-        "Tenderness": 0.582
+        "Tenderness": 0.06,
+        "Sad": 0.2345,
+        "Happy": 0.3171,
+        "Surprised": 0.0158
       },
       "signal_detail": {
         "priming_scores": {
-          "Tenderness": 0.8,
           "Happy": 0.42,
-          "Disgust": 0.09
+          "Sad": 0.27,
+          "Surprised": 0.045
         },
         "realtime_scores": {
-          "Tenderness": 0.36
+          "Happy": 0.378
         },
         "text_scores": {
-          "Tenderness": 0.7,
-          "Happy": 0.3
+          "Sad": 0.7,
+          "Tenderness": 0.3
         }
       }
     },
-    "cardinal_context_hint": "the likely cardinal point is: from a sense of fragility to an expansive horizon where human connection and shared aspirations can unfold",
+    "cardinal_context_hint": "the likely cardinal point is: from the thrill of possibility toward a bittersweet reminiscence",
     "runtime_analysis": {
-      "dominant_emotion": "Tenderness",
-      "emotion_target": "Hope",
-      "complex_emotion": "A delicate balance between tenderness, warmth, and optimism, as the user's message expresses a desire to move forward amidst uncertainty.",
-      "stimulus_universe": "interstellar landscapes from Christofer Nolan's films, with vast starfields, celestial bodies, and distant planets",
-      "user_reaction": "The user's message conveys a sense of hope and unity, emphasizing the importance of human connection in overcoming adversity.",
-      "world_transformation": "The base environment is transformed by tenderness, with soft diffused light, gentle curves, intimate scale, and pink/cream/light blue hues, evoking a sense of warmth and optimism. The world should guide the user toward hope, with subtle hints of an expansive horizon where human connection and shared aspirations can unfold."
+      "dominant_emotion": "Happy",
+      "emotion_target": "Nostalgia",
+      "complex_emotion": "A mix of joyful anticipation and wistful longing, with a dash of surprise and tenderness.",
+      "stimulus_universe": "A romantic comedy setting, complete with vibrant colors, warm lighting, and whimsical characters.",
+      "user_reaction": "The user is feeling a strong sense of happiness and possibility, but also a hint of sadness and nostalgia due to their recent breakup on their birthday.",
+      "world_transformation": "The happy stimulus universe will be modulated by the complex emotions, with a focus on warm lighting, soft colors, and gentle curves to evoke a sense of tenderness and wistfulness."
     },
-    "marble_prompt": "As the stars align in the vast expanse of space, a delicate dance of celestial bodies unfolds. A lone spacecraft, fragile yet resolute, navigates through the cosmos, its path illuminated by the soft glow of distant stars. The curvature of the ship's hull glows with a warm, pinkish light, as if infused with the gentle tenderness of human connection. Amidst the infinite darkness, this tiny vessel represents humanity's capacity to persevere and strive for a brighter future. As the spacecraft approaches an unseen horizon, the stars begin to swirl in a vortex of hope, beckoning the user toward a limitless expanse where shared aspirations can unfold.",
+    "marble_prompt": "In the whimsical world of 'Quattro matrimoni e un funerale', the air is filled with the sweet scent of blooming flowers as the sun dips below the horizon. A warm golden light casts a romantic glow on the picturesque Italian countryside, where rolling hills and cypress trees stand tall like sentinels. The sound of laughter and music drifts through the air, mingling with the soft chirping of birds in the nearby olive groves. Amidst this idyllic backdrop, the user finds themselves standing in a lush green meadow, surrounded by vibrant wildflowers that seem to sway in rhythm with their footsteps. As they wander through the field, the scent of fresh-cut grass and blooming lavender fills their nostrils, transporting them back to a time when life was full of possibility and promise. The soft rustling of leaves and gentle breeze carry whispers of memories past, weaving a tapestry of nostalgia that is both bittersweet and wistful.",
     "negative_constraints": [
-      "No desolate or barren landscapes",
-      "No isolated or fragmented elements",
-      "No overwhelming or oppressive spatial compositions"
+      "No overtly sad or melancholic imagery; no dark or ominous tones; no isolation or loneliness; no sharp edges or jagged lines; no cold colors or harsh lighting."
     ],
     "variants": [
       {
-        "variant_prompt": "As morning dawns on a distant planet, the spacecraft's hull glows with an ethereal light, as if infused with the warmth of hope. The starfield stretches out before it like an endless canvas, painted with vibrant hues of pink and blue. In this moment, the boundaries between space and time blur, and the user is transported to a realm where connection and shared aspirations can flourish.",
-        "time_of_day": "morning",
-        "palette": "pink/blue"
+        "prompt": "As the sun rises over the Tuscan hills, a warm misty light envelops the rolling countryside. The sound of chirping birds and gentle streams fills the air as the user walks through the lush green fields, surrounded by vibrant wildflowers that seem to dance in rhythm with their footsteps. The scent of freshly cut grass and blooming lavender wafts through the air, carrying whispers of memories past and weaving a tapestry of nostalgia.",
+        "time_of_day": "Sunrise",
+        "color_palette": "Soft pastels"
       },
       {
-        "variant_prompt": "The spacecraft, now a tiny speck on the horizon of a distant galaxy, is surrounded by an expansive landscape of swirling clouds and shimmering stardust. As the user gazes upon this celestial canvas, the soft glow of nearby stars illuminates the path ahead, guiding them toward a realm where hope and unity can unfold.",
+        "prompt": "From atop a hill overlooking the picturesque Italian countryside, the user gazes out upon a breathtaking panorama of rolling hills, cypress trees, and vineyards. The warm golden light of sunset casts long shadows across the landscape as the air fills with the sweet scent of blooming flowers and the distant sound of laughter and music drifts through the air.",
+        "spatial_scale": "Panoramic",
+        "symbolic_emphasis": "Memories of love and happiness"
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_009",
+    "case_id": "case_009",
+    "timestamp": "2026-06-08T18:43:51.670765",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Happy",
+      "intensity_score": 0.45,
+      "valence": "positive",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Tenderness": 0.04,
+        "Neutral": 0.0305,
+        "Sad": 0.2825,
+        "Happy": 0.4546
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Sad": 0.75,
+          "Happy": 0.24,
+          "Neutral": 0.03
+        },
+        "realtime_scores": {
+          "Happy": 0.46799999999999997
+        },
+        "text_scores": {
+          "Happy": 0.8,
+          "Sad": 0.1,
+          "Neutral": 0.1,
+          "Tenderness": 0.2
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from a sense of loss and vulnerability toward a foundation of closeness and shared values",
+    "runtime_analysis": {
+      "dominant_emotion": "Happy",
+      "emotion_target": "Pride",
+      "complex_emotion": "The emotional state is characterized by a mix of happiness, tenderness, and a hint of sadness, which together create a sense of warmth and nostalgia.",
+      "stimulus_universe": "Savannah, Pride Rock, African landscape, lions, twilight",
+      "user_reaction": "The user's message expresses a positive attitude towards the loss of Mufasa, focusing on their father's life and well-being.",
+      "world_transformation": "The base environment is transformed by adding warm golden light, vibrant colors, and full and alive space to create a sense of joy and celebration."
+    },
+    "marble_prompt": "As the sun dips below the horizon, Pride Rock rises majestically from the savannah, bathed in a warm golden light. The air is filled with the sweet scent of blooming acacia trees, and the sound of happy chirping birds echoes through the landscape. In this vibrant and thriving environment, the lions' pride is strong and proud, their manes glistening in the fading light. The sense of joy and celebration is palpable as the grasslands stretch out before us, full of life and energy. As we gaze upon this majestic scene, our hearts swell with a sense of closeness and shared values, a foundation for our own personal pride.",
+    "negative_constraints": [
+      "No scenes of grief or mourning",
+      "No darkness or shadows",
+      "No signs of fear or vulnerability"
+    ],
+    "variants": [
+      "A second marble prompt: 'As the stars begin to twinkle in the night sky, the savannah comes alive with a soft, diffused light. The grasslands stretch out before us, full of gentle curves and intimate spaces, where the lions' pride can roam freely and comfortably. The air is filled with the sweet scent of blooming flowers, and the sound of happy birdsong echoes through the landscape. In this peaceful and serene environment, we are surrounded by a sense of closeness and shared values, a foundation for our own personal pride.'",
+      "A third marble prompt: 'As the sun rises over the savannah, the grasslands stretch out before us, full of dynamic lines and spatial depth. The lions' pride is strong and proud, their manes glistening in the bright morning light. In this vibrant and thriving environment, we are surrounded by a sense of joy and celebration, as the birds take to the skies and the wind rustles through the grasses. The air is filled with the scent of blooming wildflowers, and the sound of happy chirping birds echoes through the landscape.'"
+    ]
+  },
+  {
+    "prompt_id": "prompt_010",
+    "case_id": "case_010",
+    "timestamp": "2026-06-08T18:44:32.169857",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Happy",
+      "intensity_score": 0.81,
+      "valence": "positive",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Tenderness": 0.18,
+        "Happy": 0.8095,
+        "Surprised": 0.021
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.82,
+          "Surprised": 0.06
+        },
+        "realtime_scores": {
+          "Happy": 0.85
+        },
+        "text_scores": {
+          "Tenderness": 0.9,
+          "Happy": 0.7
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from a sense of isolation toward a shared experience and belonging",
+    "runtime_analysis": {
+      "dominant_emotion": "Happy",
+      "emotion_target": "Connection",
+      "complex_emotion": "The user's emotional journey starts with happiness, nostalgia, and tenderness, ultimately aiming for connection with others.",
+      "stimulus_universe": "A futuristic, retro-futuristic setting with Wall-E and EVE robots, a spaceship, and a nostalgic atmosphere.",
+      "user_reaction": "The user's message expresses their empathy and affection towards the robots' love story, highlighting the importance of human connection.",
+      "world_transformation": "Transforming the stimulus universe into a warm, golden-lit environment with vibrant colors, full spaces, and symbols of togetherness."
+    },
+    "marble_prompt": "In this harmonious world, the spaceship's interior has transformed into a cozy haven. Wall-E and EVE's love story has brought warmth and light, as the cold metallic surfaces have given way to soft, golden hues. The air is filled with the sweet scent of blooming flowers, symbolizing the blossoming connection between the robots and their fellow inhabitants. The once-sterile corridors now teem with life, as plants and vines have wrapped themselves around the metal framework, creating a lush oasis. The robots' affection has sparked a chain reaction of warmth, filling every space with an invitation to connect and share in this newfound sense of belonging.",
+    "negative_constraints": [
+      "No isolation or loneliness",
+      "No cold tones or dark spaces",
+      "No sterile or clinical environments"
+    ],
+    "variants": [
+      {
+        "prompt": "As the sun sets on this futuristic haven, the golden light softens, casting a warm glow over the lush greenery. The scent of blooming flowers wafts through the air, drawing in the inhabitants like bees to honey. Wall-E and EVE's love story has become a beacon of hope, illuminating the path toward connection and community.",
+        "time_of_day": "sunset",
+        "palette": "warm"
+      },
+      {
+        "prompt": "In this miniature world, the robots' love story has brought about a renaissance. The once-barren landscape has given way to vibrant colors, as flowers bloom and vines twist around the metal framework. The air is filled with the sweet scent of connection, as the inhabitants gather to celebrate their newfound sense of belonging.",
+        "spatial_scale": "intimate",
+        "symbolic_emphasis": "community"
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_011",
+    "case_id": "case_011",
+    "timestamp": "2026-06-08T18:45:10.091668",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Happy",
+      "intensity_score": 0.32,
+      "valence": "positive",
+      "arousal": "high",
+      "fusion_scores": {
+        "Tenderness": 0.16,
+        "Happy": 0.32,
+        "Surprised": 0.2829
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.8,
+          "Surprised": 0.33
+        },
+        "realtime_scores": {
+          "Surprised": 0.372
+        },
+        "text_scores": {
+          "Tenderness": 0.8,
+          "Happy": 0.2
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from sparks of connection to the gentle unfolding of understanding and affection",
+    "runtime_analysis": {
+      "dominant_emotion": "Tenderness",
+      "emotion_target": "Tenderness",
+      "complex_emotion": "The spark of connection ignites a gentle unfolding of understanding and affection, as tender moments unfold between Wall-E and EVE.",
+      "stimulus_universe": "Retro-futuristic wasteland with WALL-E and EVE's characters, spacecraft, and urban landscapes",
+      "user_reaction": "Wall-E's tender approach to connect with EVE despite their initial confrontation reflects the user's desire for empathy and understanding.",
+      "world_transformation": "The base environment is modulated by tenderness, introducing soft diffused light, gentle curves, intimate scale, and pink/cream/light blue colors, guiding the world toward the target of Tenderness."
+    },
+    "marble_prompt": "In a desolate wasteland, where WALL-E's rusty red armada stands sentinel, a tender moment unfolds. The air is filled with the soft glow of sunrise, as gentle curves of metallic debris form an intimate scale. EVE's sleek white surface glistens like cream-painted stone, as Wall-E approaches her with an extinguisher, symbolizing his desire to connect. The atmosphere is alive with the promise of understanding and affection, as these two robotic souls begin their journey toward tenderness.",
+    "negative_constraints": [
+      "No conflict or confrontation between WALL-E and EVE"
+    ],
+    "variants": [
+      "A different 150+ word Marble prompt for the same stimulus and emotion target, but using a warm golden light at sunset and emphasizing the connection through shared experiences. The world is bathed in the soft orange glow of setting sun, as Wall-E and EVE share moments from their adventures, symbolizing the bond between them.",
+      "A third 150+ word Marble prompt for the same stimulus and emotion target, but at a different spatial scale (panoramic) and with a focus on the urban landscape. The cityscape stretches out like a tapestry of rusty reds, blues, and yellows, as Wall-E and EVE explore the ruins together, their footsteps echoing through the desolate streets."
+    ]
+  },
+  {
+    "prompt_id": "prompt_012",
+    "case_id": "case_012",
+    "timestamp": "2026-06-08T18:45:52.642011",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Happy",
+      "intensity_score": 0.65,
+      "valence": "positive",
+      "arousal": "low",
+      "fusion_scores": {
+        "Sad": 0.0105,
+        "Tenderness": 0.06,
+        "Happy": 0.6508
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.85,
+          "Sad": 0.03
+        },
+        "realtime_scores": {
+          "Happy": 0.474
+        },
+        "text_scores": {
+          "Happy": 0.7,
+          "Tenderness": 0.3
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from gentle curiosity toward the unfolding story of an unlikely friendship",
+    "runtime_analysis": {
+      "dominant_emotion": "Happy",
+      "emotion_target": "Wonder",
+      "complex_emotion": "A heartwarming and uplifting atmosphere that explores the joy of unexpected connections, with a sense of curiosity driving the narrative forward.",
+      "stimulus_universe": "A futuristic setting featuring robots, space exploration, and a whimsical tone.",
+      "user_reaction": "The user is delighted by the charming personalities of Wall-E and EVE, and is drawn to their unique bond.",
+      "world_transformation": "The base environment will be transformed with warm golden light, vibrant colors, and a sense of fullness and aliveness, reflecting the happy and uplifting tone."
+    },
+    "marble_prompt": "In this wondrous world, the stars have aligned to bring together two unlikely friends: Wall-E, the lovable but slightly awkward robot, and EVE, the sleek and sophisticated explorer. As the sun rises over the futuristic horizon, a warm golden light bathes the landscape, illuminating the tender moments between these two mechanical souls. The air is filled with the sweet scent of blooming flowers, as if the very essence of their friendship has taken root in this desolate yet vibrant environment. With EVE's curiosity and Wall-E's enthusiasm, they embark on a journey to uncover the secrets of this mystical realm, where the boundaries between reality and fantasy blur, and the magic of connection is palpable.",
+    "negative_constraints": [
+      "No scenes of despair or desperation; no dark or foreboding tones; no sense of isolation or loneliness"
+    ],
+    "variants": [
+      {
+        "prompt": "As the first light of dawn breaks over the horizon, Wall-E and EVE find themselves in a fantastical landscape, where rolling hills of purple and blue grass stretch toward the sky, punctuated by glowing orbs that seem to contain the essence of their bond. The air is filled with the soft chirping of mechanical birds, as they dance among the stars, their metal limbs entwined in a celestial waltz.",
+        "time_of_day": "Dawn",
+        "palette": [
+          "Purple",
+          "Blue"
+        ]
+      },
+      {
+        "prompt": "In this boundless expanse, Wall-E and EVE stand at the edge of a great chasm, where the sky meets the earth in a swirling vortex of colors. The air is alive with the hum of machinery, as they gaze out upon a landscape that seems to stretch on forever, their bond growing stronger with each passing moment.",
+        "spatial_scale": "Panoramic",
+        "symbolic_emphasis": [
+          "Exploration",
+          "Discovery"
+        ]
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_013",
+    "case_id": "case_013",
+    "timestamp": "2026-06-08T18:46:36.441825",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Neutral",
+      "intensity_score": 0.29,
+      "valence": "neutral",
+      "arousal": "low",
+      "fusion_scores": {
+        "Tenderness": 0.04,
+        "Neutral": 0.2918,
+        "Sad": 0.02,
+        "Happy": 0.1365
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.39,
+          "Neutral": 0.21
+        },
+        "realtime_scores": {
+          "Neutral": 0.174
+        },
+        "text_scores": {
+          "Sad": 0.1,
+          "Tenderness": 0.2,
+          "Neutral": 0.7
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the comfort of familiarity toward a broader understanding of human connection",
+    "runtime_analysis": {
+      "dominant_emotion": "Neutral",
+      "emotion_target": "Acceptance",
+      "complex_emotion": "A delicate balance between neutral curiosity and emotional acceptance, with a hint of wonder and appreciation for the unknown.",
+      "stimulus_universe": "A futuristic urban landscape, with sleek architecture, glowing neon lights, and a sense of technological advancement.",
+      "user_reaction": "The user is reflecting on the idea that people who seem different from us can still share commonalities and connections, and is seeking to understand this concept better.",
+      "world_transformation": "The base environment will be modulated by a gentle, warm light, soft colors, and a sense of curiosity and discovery, guiding the user toward acceptance and appreciation for human connection."
+    },
+    "marble_prompt": "In the heart of Wall-E's futuristic urban landscape, a small community of robots and humans coexist amidst towering skyscrapers and vibrant neon lights. The air is filled with a soft hum of machinery and the gentle chirping of birds, as the city awakens to a new day. As we explore this world, we find ourselves drawn to a group of individuals from diverse backgrounds, each with their own unique story and experiences. With time, we come to realize that despite our differences, we are all connected by a shared humanity, and that acceptance is the key to unlocking true understanding. The city's skyline stretches out before us like an open book, full of secrets waiting to be discovered, as we delve deeper into the mysteries of connection and community.",
+    "negative_constraints": [
+      "No scenes of isolation or loneliness",
+      "No depiction of conflict or tension between humans and robots",
+      "No imagery that suggests danger or threat"
+    ],
+    "variants": [
+      {
+        "prompt": "As the city awakens, a warm sun rises over the horizon, casting a golden glow on the sleek skyscrapers. The air is filled with the sweet scent of blooming flowers, and the sound of birdsong echoes through the streets. We find ourselves surrounded by a diverse group of individuals, each with their own unique story to tell. As we walk among them, we begin to realize that despite our differences, we are all connected by a shared humanity, and that acceptance is the key to unlocking true understanding.",
+        "time_of_day": "morning",
+        "palette": "warm"
+      },
+      {
+        "prompt": "We find ourselves standing on the rooftop of a towering skyscraper, gazing out at the city's sprawling landscape. The sky stretches out before us like an endless canvas, with hues of blue and grey blending together in a breathtaking panorama. As we take in the sights and sounds of this futuristic world, we begin to realize that despite our differences, we are all connected by a shared humanity, and that acceptance is the key to unlocking true understanding.",
         "spatial_scale": "panoramic",
         "symbolic_emphasis": "connection"
       }
     ]
   },
   {
-    "prompt_id": "prompt_040",
-    "case_id": "case_004",
-    "timestamp": "2026-06-06T17:33:55.197600",
+    "prompt_id": "prompt_014",
+    "case_id": "case_014",
+    "timestamp": "2026-06-08T18:47:19.763938",
     "model_used": "llama3",
     "fusion_profile": {
-      "dominant_emotion": "Tenderness",
-      "intensity_score": 0.5,
-      "valence": "positive",
-      "arousal": "medium",
+      "dominant_emotion": "Sad",
+      "intensity_score": 0.67,
+      "valence": "negative",
+      "arousal": "low",
       "fusion_scores": {
-        "Tenderness": 0.502,
-        "Disgust": 0.0315,
-        "Sad": 0.02,
-        "Happy": 0.267
+        "Tenderness": 0.12,
+        "Neutral": 0.0526,
+        "Sad": 0.6678
       },
       "signal_detail": {
         "priming_scores": {
-          "Tenderness": 0.8,
-          "Happy": 0.42,
-          "Disgust": 0.09
+          "Sad": 0.88,
+          "Neutral": 0.036
         },
         "realtime_scores": {
-          "Tenderness": 0.36
+          "Sad": 0.444
         },
         "text_scores": {
-          "Happy": 0.6,
-          "Sad": 0.1,
-          "Tenderness": 0.3
+          "Sad": 0.8,
+          "Tenderness": 0.6,
+          "Neutral": 0.2
         }
       }
     },
-    "cardinal_context_hint": "the likely cardinal point is: from a sense of vulnerability toward a horizon of shared resilience",
+    "cardinal_context_hint": "the likely cardinal point is: from the ache of loss toward the comfort of lingering memories",
     "runtime_analysis": {
-      "dominant_emotion": "Tenderness",
-      "emotion_target": "Hope",
-      "complex_emotion": "A sense of tenderness and compassion towards humanity, fueled by the desire for shared resilience and collective advancement.",
-      "stimulus_universe": "The interstellar universe from Christofer Nolan's filmography, featuring celestial bodies, starships, and cosmic phenomena.",
-      "user_reaction": "The user is seeking a world that fosters hope and resilience in the face of vulnerability, drawing inspiration from their emotional connection to family and humanity.",
-      "world_transformation": "The base environment is transformed by tenderness, with soft diffused light, gentle curves, intimate scale, and pink/cream/light blue hues, creating an atmosphere of warmth and nurturing."
+      "dominant_emotion": "Sad",
+      "emotion_target": "Nostalgia",
+      "complex_emotion": "A sense of longing and melancholy lingers, as if the essence of what's been lost still resonates, yet the heart yearns for a connection to the past.",
+      "stimulus_universe": "Scena di separazione o perdita",
+      "user_reaction": "The thought of someone important being gone but leaving behind memories and mementos evokes a mix of sadness and nostalgia.",
+      "world_transformation": "The desaturated palette and foggy atmosphere of the stimulus universe are transformed by the emotions of longing and melancholy, with warm tones and dust motes suggesting a sense of faded beauty."
     },
-    "marble_prompt": "In the infinite expanse of Christofer Nolan's interstellar universe, a tender glow illuminates the cosmos. Celestial bodies drift lazily across the starry canvas, as if drawn to the warmth of a family gathering. Starships of various shapes and sizes, each with its own story to tell, navigate the void with gentle precision. Amidst this celestial tapestry, a sense of vulnerability gives way to a horizon of shared resilience, as humanity's collective advancement becomes the guiding force behind the universe's transformation. The air is filled with whispers of hope, as the stars themselves begin to twinkle in anticipation of a brighter future.",
+    "marble_prompt": "In the twilight, where shadows softly fall on the deserted landscape, a lone figure stands amidst the remnants of what once was. The air is heavy with the scent of damp earth and forgotten memories. A worn, wooden bench creaks gently in the faint breeze, as if beckoning you to sit and reminisce about times long past. Amidst the fading light, the outlines of familiar shapes blend into the distance – a testament to the indelible mark left by those who are no longer here. As the darkness deepens, the whispers of what's been lost begin to fade, replaced by the warm glow of nostalgia, guiding you through the twilight toward the comforting familiarity of cherished memories.",
     "negative_constraints": [
-      "No desolate or barren landscapes",
-      "No sense of isolation or disconnection",
-      "No threatening or ominous celestial phenomena",
-      "No darkness or shadowy figures",
-      "No overwhelming or crushing gravity"
+      "No images of grief or despair",
+      "No dark or foreboding tones",
+      "No isolation or claustrophobia"
     ],
     "variants": [
       {
-        "prompt": "As the tender glow of Nolan's universe spreads across the cosmos, a new era of cooperation and hope begins to take shape. Starships from various worlds converge on a distant planet, their diverse cultures blending together in a vibrant celebration of life. The stars themselves twinkle with excitement, as humanity's shared resilience illuminates the path forward.",
+        "prompt": "As morning light creeps over the horizon, a misty veil lifts to reveal a nostalgic scene: a forgotten garden, once tended with love and care, now overgrown but still radiating the warmth of memories past. The air is crisp and clean, carrying the scent of blooming flowers as the sun rises, symbolizing the hope and promise that arises from the ashes of what's been lost.",
         "palette": [
-          "warm golden light",
-          "soft pastel colors"
+          "soft pink",
+          "light blue"
         ],
-        "time_of_day": "dawn"
+        "time_of_day": "morning"
       },
       {
-        "prompt": "In this vast expanse of interstellar space, a series of interconnected worlds begin to take shape. Each world represents a different aspect of human experience, from the fragility of life to the power of collective resilience. As the stars align in a celestial dance, hope and tenderness guide humanity toward a brighter future.",
+        "prompt": "In a small, intimate courtyard, surrounded by worn stone walls and ancient trees, a sense of nostalgia settles like a gentle rain. The air is heavy with the scent of old books and forgotten memories as the soft glow of candles casts an inviting warmth. Amidst this cozy atmosphere, a single, well-worn chair sits in silence, waiting for you to sit and relive the moments that have shaped who you are today.",
         "palette": [
-          "soft blues",
-          "pale yellows"
+          "soft yellow",
+          "light green"
         ],
-        "spatial_scale": "panoramic"
+        "spatial_scale": "intimate"
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_015",
+    "case_id": "case_015",
+    "timestamp": "2026-06-08T18:48:05.413670",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Fear",
+      "intensity_score": 0.78,
+      "valence": "negative",
+      "arousal": "high",
+      "fusion_scores": {
+        "Fear": 0.782,
+        "Neutral": 0.0105,
+        "Surprised": 0.145
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Fear": 0.8,
+          "Surprised": 0.3,
+          "Neutral": 0.03
+        },
+        "realtime_scores": {
+          "Fear": 0.76
+        },
+        "text_scores": {
+          "Fear": 0.8,
+          "Surprised": 0.2
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the uncertainty of anticipation toward a sense of unfolding possibility",
+    "runtime_analysis": {
+      "dominant_emotion": "Fear",
+      "emotion_target": "Hope",
+      "complex_emotion": "A crescendo of fear and anxiety as something ominous looms on the horizon, yet with a glimmer of anticipation for a positive outcome.",
+      "stimulus_universe": "Scena intensa o minacciosa (intense or menacing scene)",
+      "user_reaction": "The user is agitated, feeling like something might happen at any moment. They couldn't tear their eyes away from the scene even though it made them afraid.",
+      "world_transformation": "The intense and ominous atmosphere of the stimulus world is transformed by fear's high contrast, unstable geometry, and dark periphery with a warm center. The scene becomes a sense of impending danger, yet the user's reaction hints at a chance for something positive to emerge."
+    },
+    "marble_prompt": "In the midst of an intense, ominous scene, where darkness seems to be closing in from all sides, a glimmer of light pierces through the shadows. As the camera pans out, we see a sprawling landscape with twisted tree branches like skeletal fingers reaching for the sky. The air is heavy with foreboding, yet the distant hum of machinery and the faint scent of fresh earth hint at something new emerging from the ashes. A solitary figure stands at the edge of this desolate world, eyes fixed on some unseen horizon, as if waiting for a chance to break free from this suffocating atmosphere. The darkness still looms, but it's no longer the only force at play; there's a sense that something is about to burst forth, shattering the oppressive weight and ushering in a new era of possibility.",
+    "negative_constraints": [
+      "No sudden or loud noises",
+      "No overtly frightening creatures or imagery",
+      "No claustrophobic spaces or enclosed environments",
+      "No dominant dark colors or overpowering shadows"
+    ],
+    "variants": [
+      {
+        "prompt": "As the camera glides across this foreboding landscape, we see the same twisted tree branches, but now bathed in a warm golden light. The air is filled with the sweet scent of blooming flowers and the distant sound of children's laughter echoes through the trees. A small clearing appears, where a lone figure stands, arms outstretched to the sky, as if embracing this newfound hope.",
+        "time_of_day": "Early morning",
+        "palette": [
+          "Golden",
+          "Pastel"
+        ]
+      },
+      {
+        "prompt": "The camera zooms in on the solitary figure standing at the edge of the desolate world. As we get closer, we see that it's a young person, eyes fixed on some distant goal. The environment around them begins to shift, taking on a more surreal quality. Buildings morph into giant flowers, and the twisted tree branches grow lush greenery. The air is filled with the gentle hum of bees as they flit between the blooms. In this world, there's a sense that anything is possible.",
+        "spatial_scale": "Intimate",
+        "symbolic_emphasis": [
+          "Growth",
+          "Renewal"
+        ]
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_016",
+    "case_id": "case_016",
+    "timestamp": "2026-06-08T18:48:42.177583",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Angry",
+      "intensity_score": 0.85,
+      "valence": "negative",
+      "arousal": "high",
+      "fusion_scores": {
+        "Disgust": 0.021,
+        "Angry": 0.849,
+        "Sad": 0.1145
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Angry": 0.87,
+          "Sad": 0.27,
+          "Disgust": 0.06
+        },
+        "realtime_scores": {
+          "Angry": 0.81
+        },
+        "text_scores": {
+          "Angry": 0.9,
+          "Sad": 0.1
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the sting of injustice toward a sense of fairness and resolution",
+    "runtime_analysis": {
+      "dominant_emotion": "Angry",
+      "emotion_target": "Acceptance",
+      "complex_emotion": "A world that captures the intense emotional pain of feeling wronged, with the potential to transform into a space of acceptance and fairness.",
+      "stimulus_universe": "Scena di ingiustizia o conflitto",
+      "user_reaction": "The feeling of injustice and unfairness is deeply ingrained, making it difficult to let go and find acceptance.",
+      "world_transformation": "A world that takes the raw emotion of anger and frustration and slowly transforms it into a space where justice and fairness can be found."
+    },
+    "marble_prompt": "In the heart of a darkened city square, a sense of injustice lingers like a fog. The air is thick with the weight of unfairness, as if the very fabric of reality has been torn asunder. The sound of distant protests echoes through the streets, a reminder that the struggle for what is right will not be easily forgotten. Amidst this backdrop of discontent, a glimmer of hope begins to emerge - a beacon of acceptance that slowly rises above the chaos, illuminating a path toward fairness and resolution.",
+    "negative_constraints": [
+      "No scenes of overt violence or aggression",
+      "No imagery that perpetuates feelings of despair or hopelessness",
+      "No environments that feel oppressive or constricting"
+    ],
+    "variants": [
+      "A different marble prompt for the same stimulus and emotion target, but with a warm golden light illuminating the city square, symbolizing the potential for transformation. The sounds of distant protests are replaced by whispers of encouragement, guiding the user toward acceptance.",
+      "A third marble prompt for the same stimulus and emotion target, but at a larger spatial scale - a sprawling metropolis that represents the collective struggle for justice. The atmosphere is one of determination, with a strong sense of community and solidarity driving the quest for fairness."
+    ]
+  },
+  {
+    "prompt_id": "prompt_017",
+    "case_id": "case_017",
+    "timestamp": "2026-06-08T18:49:26.142414",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Surprised",
+      "intensity_score": 0.59,
+      "valence": "positive",
+      "arousal": "high",
+      "fusion_scores": {
+        "Sad": 0.07,
+        "Happy": 0.1155,
+        "Surprised": 0.5893
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Surprised": 0.78,
+          "Happy": 0.33
+        },
+        "realtime_scores": {
+          "Surprised": 0.414
+        },
+        "text_scores": {
+          "Sad": 0.35,
+          "Surprised": 0.65
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from a momentary shock to the thrill of reevaluation and new perception",
+    "runtime_analysis": {
+      "dominant_emotion": "Surprised",
+      "emotion_target": "Wonder",
+      "complex_emotion": "A sudden, thrilling sense of reevaluation and awe, as if a veil has been lifted to reveal the world in a new, wondrous light.",
+      "stimulus_universe": "Scena inattesa o rivelatoria",
+      "user_reaction": "The unexpected twist has left me stunned, yet intrigued by the possibility of a different perspective.",
+      "world_transformation": "The initially surprising and revelatory environment is transformed into a world that embodies wonder, with an emphasis on discovery, exploration, and the thrill of the unknown."
+    },
+    "marble_prompt": "In this realm, the veil of familiarity has lifted, revealing a world where the ordinary becomes extraordinary. The once-familiar landscape now teems with life, as if the very fabric of reality has been rewoven to showcase the hidden patterns and connections that were always present but never noticed. The sky is ablaze with vibrant colors, as if the light itself has become a manifestation of wonder. In this world, every step feels like an invitation to uncover new secrets, to follow the threads of curiosity that lead to hidden truths and untold stories. The air is alive with the whispers of 'what if?' and 'why not?', urging you to push beyond the boundaries of what's known and venture into the uncharted territories of the imagination.",
+    "negative_constraints": [
+      "Avoid any elements that might evoke fear or discomfort, such as sharp edges or jarring textures; instead, focus on creating a sense of openness and exploration.",
+      "Steer clear of anything that could be perceived as dark or foreboding, as this world is meant to be an uplifting and awe-inspiring experience.",
+      "Do not include any elements that might create a sense of confinement or restriction, as the goal is to encourage freedom of thought and discovery."
+    ],
+    "variants": [
+      {
+        "variant_prompt": "As the veil lifts, the world transforms into a kaleidoscope of colors, with each step revealing a new pattern, a new connection, a new wonder. The once-familiar landscape has become a tapestry of discovery, where every thread leads to a hidden truth and every secret is waiting to be uncovered.",
+        "time_of_day": "Golden hour",
+        "color_palette": "Pastel hues"
+      },
+      {
+        "variant_prompt": "In this realm, the laws of physics are bent and twisted, allowing for impossible structures and fantastical creatures to coexist in a world that defies explanation. The sky is a swirling vortex of colors, as if the very fabric of reality has been torn apart to reveal the hidden patterns and connections that govern this strange and wondrous place.",
+        "time_of_day": "Midnight",
+        "color_palette": "Neon"
+      }
+    ]
+  },
+  {
+    "prompt_id": "prompt_018",
+    "case_id": "case_018",
+    "timestamp": "2026-06-08T18:50:08.326046",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Neutral",
+      "intensity_score": 0.4,
+      "valence": "neutral",
+      "arousal": "low",
+      "fusion_scores": {
+        "Neutral": 0.4042,
+        "Sad": 0.04,
+        "Happy": 0.0105,
+        "Surprised": 0.021
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Neutral": 0.42,
+          "Surprised": 0.06,
+          "Happy": 0.03
+        },
+        "realtime_scores": {
+          "Neutral": 0.216
+        },
+        "text_scores": {
+          "Sad": 0.2,
+          "Neutral": 0.8
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from a place of uncertainty toward a threshold of discovery and possibility",
+    "runtime_analysis": {
+      "dominant_emotion": "Neutral",
+      "emotion_target": "Wonder",
+      "complex_emotion": "The user's emotional state is neutral, with a hint of uncertainty and curiosity. They are searching for something that sparks their sense of wonder.",
+      "stimulus_universe": "Scena contemplativa o ambigua",
+      "user_reaction": "The user is unsure about what they experienced, but it has led them to contemplate the unknown.",
+      "world_transformation": "The world should be a place where the boundaries between reality and possibility are blurred. The atmosphere should be one of gentle curiosity, with a hint of excitement."
+    },
+    "marble_prompt": "In this Scena contemplativa o ambigua, a veil of misty light wraps around ancient ruins, where crumbling arches and weathered statues stand sentinel. The air is heavy with the scent of damp earth and forgotten knowledge. As you wander through the overgrown paths, the sound of gentle trickling water guides you toward a hidden clearing. There, a great stone portal rises from the earth, its surface etched with cryptic symbols that seem to hold secrets of the universe. The atmosphere is thick with possibility, as if the very fabric of reality is about to unfold before your eyes. What lies beyond this threshold, only wonder can tell.",
+    "negative_constraints": [
+      "No clear danger or threat",
+      "No enclosed oppressive spaces",
+      "No cold tones",
+      "No isolation"
+    ],
+    "variants": [
+      {
+        "prompt": "As you approach the clearing, the misty veil lifts to reveal a shimmering lake, its surface adorned with lotus flowers that seem to hold the secrets of the ancient world. The air is filled with the sweet scent of blooming jasmine, and the sound of gentle lapping water creates a sense of serenity. As you step onto the water's edge, the symbols on the stone portal begin to glow, casting an otherworldly light across the lake. What mysteries lie hidden beneath its tranquil surface?",
+        "palette": [
+          "Warm beige",
+          "Soft blues",
+          "Golden light"
+        ],
+        "time_of_day": "Late afternoon"
+      },
+      {
+        "prompt": "Beyond the ancient ruins lies a vast expanse of open plain, where wispy clouds drift lazily across the sky. The air is filled with the songs of distant birds and the scent of blooming wildflowers. As you walk across the plain, the symbols on the stone portal grow larger, until they seem to stretch out before you like a celestial map. What wonders lie hidden in the folds of this endless landscape?",
+        "palette": [
+          "Soft greens",
+          "Creamy whites",
+          "Golden yellows"
+        ],
+        "spatial_scale": "Panoramic"
       }
     ]
   }
