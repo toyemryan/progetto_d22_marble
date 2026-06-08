@@ -1,0 +1,975 @@
+\documentclass[11pt]{report}
+\usepackage{titlesec}
+\titleformat{\chapter}
+  {\normalfont\LARGE\bfseries}{\thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+\usepackage{tabularx}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[toc,page]{appendix}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{forest}
+\usepackage{tikz}
+\usepackage{float}
+\usetikzlibrary{trees, shapes.geometric, arrows.meta, positioning}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{verbatim}
+\usepackage{colorprofiles}
+\usepackage{listings}   %<- per inserire il codice
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstset{
+    basicstyle=\ttfamily\normalsize ,
+    breaklines=true,
+    moredelim=[is][\color{red}\itshape]{|R|}{|R|}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{custom_green}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{custom_blue}{rgb}{  0.05, 0.05, 0.97}
+\definecolor{custom_brown}{rgb}{ 0.69, 0.38, 0.10}
+\definecolor{custom_purple}{rgb}{0.58, 0.00, 0.82}
+\definecolor{custom_orange}{rgb}{0.94, 0.59, 0.09}
+
+\lstdefinestyle{MATLABstyle}{   
+    commentstyle=\color{custom_green},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstdefinelanguage{Cpp}{
+      language=C++,
+      backgroundcolor=\color{white},  
+      basicstyle=\footnotesize \ttfamily \color{black} \bfseries,   
+      breakatwhitespace=false,       
+      breaklines=true,               
+      captionpos=b,                   
+      commentstyle=\color{custom_green},   
+      deletekeywords={...},          
+      escapeinside={\%*}{*)},
+      keywordstyle=\color{custom_purple},
+      identifierstyle=\color{blue},
+      stringstyle=\color{blue},      
+      numbers=left,                 
+      numbersep=5pt,                  
+      numberstyle=\tiny\color{black}, 
+      rulecolor=\color{black},        
+      showspaces=false,               
+      showstringspaces=false,        
+      showtabs=false,                
+      stepnumber=1,                   
+      tabsize=5,                     
+      title=\lstname,                 
+    }
+
+\lstdefinelanguage{Python}{
+    keywords={from, import, def, return, as, in, len, if, elif, else, for, while},
+    breakatwhitespace=false,       
+    breaklines=true,   
+    morecomment=[l]{\#},
+    morestring=[b]",
+    commentstyle=\color{red},
+    keywordstyle=\color{custom_purple},
+    numberstyle=\tiny\color{black},
+    stringstyle=\color{custom_green},
+    basicstyle=\ttfamily\footnotesize,
+    captionpos=b,
+    showstringspaces=false,        
+    showtabs=false,                
+    numbers=left,                 
+    numbersep=5pt,                  
+    numberstyle=\tiny\color{black}, 
+    rulecolor=\color{black},                      
+    tabsize=5,                     
+    title=\lstname,    
+}
+
+\lstdefinelanguage{MATLABc}{
+    language=MATLAB,
+    backgroundcolor=\color{white},  
+    basicstyle=\footnotesize \ttfamily \color{black} \bfseries,   
+    breakatwhitespace=false,       
+    breaklines=true,               
+    captionpos=b,
+    morestring=[b]",
+    commentstyle=\color{custom_green},   
+    keywordstyle=\color{custom_blue},
+    morekeywords={clearvars},
+    deletekeywords={fprintf},
+    identifierstyle=\color{black},
+    stringstyle=\color{custom_purple},      
+    numbers=left,                 
+    numbersep=5pt,                  
+    numberstyle=\tiny\color{black}, 
+    rulecolor=\color{black},        
+    showspaces=false,               
+    showstringspaces=false,        
+    showtabs=false,                
+    stepnumber=1,                   
+    tabsize=5,                     
+    title=\lstname,                 
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{document}
+\captionsetup[figure]{margin=1.5cm,font=small,labelfont={bf},name={Figure},labelsep=colon,textfont={it}}
+\captionsetup[table]{margin=1.5cm,font=small,labelfont={bf},name={Table},labelsep=colon,textfont={it}}
+
+
+\begin{titlepage}
+\begin{center}
+\LARGE {\scshape{Università Politecnica delle Marche}}\\[0.5cm]
+\LARGE {\scshape{Ingegneria Informatica e dell'Automazione}}\\[0.7cm]
+\linespread{1}
+\huge {\bfseries Emotion-Aware : Meta-Prompting for Marble 3D World Generation }\\[1cm]
+\linespread{1}
+\includegraphics[width=5cm]{images/logoUnivpm.jpg}\\[0.5cm]
+\linespread{1.2}
+\Large Corso di\\
+\Large {\scshape{COMPUTER VISION E DEEP LEARNING}} \\[0.3cm]
+\Large {Anno accademico 2025-2026 \\[0.8cm]}
+{\Large Studenti:}
+\hfill {\Large Professore:}\\
+{\Large TOYEM TEZEM RYAN PARFAIT}
+\hfill
+{\Large ALESSANDRO GALDELLI}\\
+\raggedright{\Large AGOSTINELLI SIMONE}
+\hfill{\Large LORENZO STACCHIO}\\
+\hfill 
+{\Large ANDREA UBALDI}\\
+
+\paragraph{}
+\paragraph{}
+\centering{
+\includegraphics[width=2cm]{images/dii_new.png}\\[0.3cm]
+\large Dipartimento di Ingegneria dell'Informazione\\[0.3cm]
+}
+\end{center}
+\end{titlepage}
+
+\pagenumbering{arabic}
+\tableofcontents
+\addcontentsline{toc}{chapter}{Introduzione}
+\newpage
+
+\pagestyle{plain}
+
+
+\chapter*{Introduzione}
+\addcontentsline{toc}{chapter}{Introduzione}
+ 
+Questo progetto nasce come \textit{``A Self-Looping Reasoning Process for Simulating Human Behaviour''}, con l'idea di costruire un ciclo cognitivo chiuso basato su LLM, stati interni artificiali e aggiornamento iterativo del prompt. In questa versione rimodulata, il focus cambia: non si simula più il comportamento umano in TribeV2, ma si usa il progetto Liminal come base per generare prompt testuali destinati a Marble 3D World Generation.
+ 
+Il sistema è un \textbf{meta-prompt generator emotion-aware}: riceve lo stimolo visivo osservato dall'utente, i dati emotivi e il messaggio testuale dell'utente; poi produce un prompt dettagliato per creare un mondo 3D in Marble capace di stimolare l'emotività e ridirezionare il pensiero dell'utente verso uno \textit\textbf{{stato liminal}}.
+ 
+L'obiettivo è di realizzare una pipeline capace di trasformare emozioni e contenuti conversazionali in ambienti 3D generativi, nei quali la scena non sia solo coerente con lo stato emotivo dell'utente, ma sia anche progettata per guidare la riflessione verso il punto cardinale della conversazione.
+ 
+Il presente rapporto è strutturato in cinque capitoli: il Capitolo~\ref{ch:fondazioni} presenta le fondazioni teoriche e l'architettura del sistema; il Capitolo~\ref{ch:sviluppo} dettaglia lo sviluppo di ogni fase della pipeline; il Capitolo~\ref{ch:problemi} documenta i problemi critici e le soluzioni adottate; il Capitolo~\ref{ch:risultati} analizza i risultati; il Capitolo~\ref{ch:conclusione} conclude con i limiti e le prospettive future.
+ 
+% ── Diagramma architettura generale ──
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth,keepaspectratio]{images/diagram_projet.png}
+\caption{Presentazione globale del progetto}
+\label{fig:projet}
+\end{figure}
+ 
+ 
+% ═══════════════════════════════════════════════════════════════════
+%              CAPITOLO I — FONDAZIONI TEORICHE E ARCHITETTURA
+% ═══════════════════════════════════════════════════════════════════
+\chapter{Fondazioni teoriche e architettura}
+\label{ch:fondazioni}
+ 
+% ─────────────── I.1 CADRE THÉORIQUE ───────────────
+\section{Quadro teorico}
+ 
+\subsection{Il concetto di spazio Liminal}
+ 
+Il concetto di \textit{liminalità} descrive le fasi di transizione nella vita umana: momenti di ambiguità in cui l'ordine si dissolve e si apre uno spazio fluido, permettendo l'emergere di nuove idee, pratiche e identità. Lo stato Liminal propone un nuovo quadro di progettazione che va oltre la UX tradizionale (centrata su usabilità, piacere, efficienza) per creare esperienze che provocano \textbf{trascendenza e trasformazione personale}.
+ 
+In questo progetto, lo stimolo visivo mette l'utente in uno stato emotivo, che sarà quantificato, il messaggio dell'utente rivela come naviga questo spazio intermedio. Il mondo Marble è lo spazio liminale reso tangibile: un ambiente 3D progettato per accogliere la trasformazione emotiva, non per distrarre né per semplicemente compiacere.
+ 
+\subsection{Concetti emozionali chiave}
+ 
+\begin{itemize}
+    \item[\textbf{Priming:}] Traccia emotiva indotta dallo stimolo visivo. Anche se l'utente ora appare neutro, il priming può continuare a influenzare la generazione del prompt.
+    \item[\textbf{Realtime:}] Stato emotivo catturato dal volto dell'utente immediatamente dopo lo stimolo, prima della reazione testuale.
+    \item[\textbf{Punto cardinale:}] Direzione riflessiva verso cui guidare la trasformazione: da perdita a gratitudine, da diversità a connessione, da paura a protezione.
+    \item[\textbf{Valenza:}] Se l'emozione è positiva o negativa.
+    \item[\textbf{Arousal:}] Livello di attivazione fisiologica ($1$ = calmo, $10$ = eccitato), indipendente dalla valenza.
+    \item[\textbf{Intensità:}] Forza dell'emozione ($1$ = assente, $10$ = massima).
+\end{itemize}
+ 
+ 
+\subsection{Differenze rispetto al progetto originale}
+ 
+\begin{table}[H]
+    \centering
+    \caption{Confronto tra la versione originale e la versione rimodulata del progetto.}
+    \label{tab:confronto}
+    \begin{tabularx}{\textwidth}{l X X}
+        \toprule
+        \textbf{Aspetto} & \textbf{Versione originale} & \textbf{Versione rimodulata} \\
+        \midrule
+        Obiettivo & Simulare stati mentali e comportamento umano in self-loop & Generare mondi 3D liminal per Marble \\
+        Input & Scenario psicologico + LLM + feedback ambientale & Stimolo visivo + emozione rilevato + testo utente \\
+        Output & Pensieri, azioni e comportamento simulato & Prompt Marble e mondo 3D \\
+        Tecnologia & TribeV2 + reasoning LLM & Liminal + Llama + Marble \\
+        Valutazione & Coerenza comportamentale & Coerenza emotiva + redirezione cognitiva \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+ 
+ 
+% ─────────────── I.2 ARCHITETTURA GLOBALE ───────────────
+\section{Architettura globale del sistema}
+ 
+\subsection{Schema generale}
+ 
+La pipeline trasforma dati emozionali multimodali (priming facciale, emozione realtime, messaggio testuale) in un prompt narrativo per la generazione di mondi 3D in Marble, attraverso sette fasi sequenziali orchestrate da \texttt{pipeline.py}.
+ 
+% ── Diagramma flusso pipeline ──
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.55\textwidth,keepaspectratio]{images/diagramma di flusso.png}
+\caption{Flusso completo della pipeline}
+\label{fig:pipeline_flow}
+\end{figure}
+ 
+\subsection{Infrastruttura e comunicazione}
+ 
+\begin{figure}[H]
+\begin{verbatim}
+progetto_d22_marble/
++-- data/
+|   +-- raw_cases.json
+|   +-- marble_prompts.json
+|   +-- evaluation_report.json
+|   +-- translations.json
++-- src/
+|   +-- pipeline.py
+|   +-- input_case.py
+|   +-- parse_cases.py
+|   +-- emotion_fusion.py
+|   +-- cardinal_point.py
+|   +-- build_marble_prompt.py
+|   +-- evaluate_outputs.py
+|   +-- config/
+|   |   +-- emotions.py
+|   |   +-- evualuate_expr.py
+|   |   +-- patterns.py
+|   +-- utils/
+|   |   +-- file_utils.py
+|   |   +-- spinner.py
+|   |   +-- translator.py
+|   +-- vpn_utils/
+|       +-- ssh_con.py
+|       +-- vpn.py
++-- prompts/
+|   +-- meta_prompt_v2.txt
+|   +-- emotion_text_analysis_prompt.txt
+|   +-- cardinal_point_meta_prompt.txt
+|   +-- emotion_alignment_prompt.txt
+|   +-- cardinal_alignment_prompt.txt
++-- outputs/screenshots/
++-- .env
++-- requirements.txt
++-- README.md
+\end{verbatim}
+\caption{Organizzazione dei file del progetto.}
+\end{figure}
+
+Il sistema utilizza Ollama come server LLM, in due configurazioni possibili:
+\begin{itemize}
+    \item \textbf{Locale}: Llama3 (8B), chiamato direttamente su \texttt{localhost:11434}.
+    \item \textbf{Remoto}: Qwen3 o Llama3 su server universitario (\texttt{192.168.80.138}), raggiungibile tramite VPN WireGuard + tunnel SSH con keepalive.
+\end{itemize}
+ 
+La selezione avviene tramite il file \texttt{.env} senza modificare il codice.
+
+ 
+% ═══════════════════════════════════════════════════════════════════
+%              CAPITOLO II — SVILUPPO DELLA PIPELINE
+% ═══════════════════════════════════════════════════════════════════
+\chapter{Sviluppo della pipeline}
+\label{ch:sviluppo}
+ 
+% ─────────────── II.1 INPUT ───────────────
+\section{Fase 1: Input interattivo (\texttt{input\_case.py})}
+ 
+\subsection{Interfaccia utente in italiano}
+ 
+L'utente risponde a una serie di domande nel terminale in italiano. Il sistema supporta più emozioni per il priming (ciclo che termina con ``fine'') e traduce automaticamente le risposte in inglese per il formato JSON standardizzato.
+ 
+\begin{figure}[H]
+\begin{verbatim}
+# Esempio di sessione
+# > Quale stimolo visivo? Morte di Mufasa - Il Re Leone
+# > Emozione priming? Felice
+# > Intensita (1-10)? 8
+# > Valenza (positiva/neutra/negativa)? positiva
+# > Arousal (1-10)? 5
+# > Messaggio? Mio padre e vivo e gli voglio bene!
+\end{verbatim}
+\caption{esempio di input utente.}
+\end{figure}
+
+\subsection{Traduzione e normalizzazione automatica}
+ 
+La traduzione è gestita dal dizionario \texttt{data/translations.json}:
+ 
+\begin{figure}[H]
+\begin{verbatim}
+{
+  "emotions": {
+    "felice": "Happy",
+    "triste": "Sad",
+    "arrabbiato": "Angry",
+    "paura": "Fear"
+  },
+  "intensity": {
+    "1": "LOW", "4": "MEDIUM", "8": "HIGH"
+  },
+  "valence": {
+    "positiva": "POSITIVE",
+    "neutra": "NEUTRAL",
+    "negativa": "NEGATIVE"
+  }
+}
+\end{verbatim}
+\caption{esempio di traduzione dentro translations.json .}
+\end{figure}
+ 
+La probability è derivata automaticamente dall'intensità: $p = \frac{\text{intensity}}{10}$.
+ 
+\subsection{Formato JSON standardizzato}
+ 
+\begin{figure}[H]
+\begin{verbatim}
+{
+  "case_id": "case_001",
+  "timestamp": "2026-05-27T10:00:00",
+  "stimulus": "Death of Mufasa - The Lion King",
+  "priming_emotion": {
+    "Happy": {
+      "avg_intensity": "HIGH",
+      "avg_arousal": "MEDIUM",
+      "avg_valence": "POSITIVE",
+      "emotion_probability": 0.80
+    }
+  },
+  "realtime_face_emotion": {
+    "dominant_emotion": "Happy",
+    "probability": 0.90,
+    "intensity_label": "HIGH",
+    "valence_label": "POSITIVE",
+    "arousal_label": "MEDIUM"
+  },
+  "user_message": "Sai che la morte di Mufasa non mi mette tristezza..."
+}
+\end{verbatim}
+\caption{formato json di un caso standardizzato.}
+\end{figure}
+ 
+ 
+% ─────────────── II.2 PARSING ───────────────
+\section{Fase 2: Parsing e normalizzazione (\texttt{parse\_cases.py})}
+ 
+\subsection{Uniformizzazione delle etichette}
+ 
+Il modulo legge \texttt{raw\_cases.json} e uniformizza tutte le etichette: ``happy'', ``felice'', ``felicità'' e ``gioia'' diventano tutti ``Happy''; ``ALTA'' diventa ``HIGH''; ``POSITIVA'' diventa ``POSITIVE''. Se un campo è assente, viene utilizzato un valore di default (intensity: ``MEDIUM'', probability: 0.5).
+ 
+Questa fase è interamente in Python puro, senza nessuna chiamata di rete.
+ 
+ 
+% ─────────────── II.3 FUSION ───────────────
+\section{Fase 3: Fusione emozionale (\texttt{emotion\_fusion.py})}
+ 
+\subsection{Tre segnali, tre pesi}
+ 
+La fusione combina tre segnali con pesi definiti dal documento tecnico fornito dai tutor:
+ 
+\begin{equation}
+    S_\text{fusion}(e) = w_p \cdot S_\text{priming}(e) + w_r \cdot S_\text{realtime}(e) + w_t \cdot S_\text{testo}(e)
+    \label{eq:fusion}
+\end{equation}
+ 
+dove $w_p = 0.35$, $w_r = 0.45$, $w_t = 0.20$ e $e$ è un'etichetta emozionale.
+ 
+\begin{itemize}
+    \item \textbf{Priming} ($\times 0.35$): $S_\text{priming}(e) = p_e \times I(e)$ dove $p_e$ è la probability e $I(e)$ il valore numerico dell'intensità.
+    \item \textbf{Realtime} ($\times 0.45$): $S_\text{realtime}(e) = p_\text{dom} \times I_\text{dom}$ per l'emozione dominante.
+    \item \textbf{Testo} ($\times 0.20$): classificazione emozionale del messaggio italiano tramite Llama (\textbf{Appello Llama \#1}).
+\end{itemize}
+ 
+La conversione delle etichette in valori numerici segue la tabella:
+ 
+\begin{table}[H]
+    \centering
+    \caption{Mappatura delle etichette a valori numerici.}
+    \label{tab:label_map}
+    \begin{tabular}{lc|lc|lc}
+        \toprule
+        \textbf{Intensity} & \textbf{Valore} & \textbf{Valence} & \textbf{Valore} & \textbf{Arousal} & \textbf{Valore} \\
+        \midrule
+        HIGH & 1.0 & POSITIVE & +1.0 & HIGH & 1.0 \\
+        MEDIUM & 0.6 & NEUTRAL & 0.0 & MEDIUM & 0.5 \\
+        LOW & 0.3 & NEGATIVE & $-$1.0 & LOW & 0.2 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+ 
+\subsection{Analisi testuale via Llama}
+ 
+Il messaggio italiano viene inviato direttamente a Llama con il prompt \texttt{emotion\_text\_analysis\_prompt.txt}. Llama comprende l'italiano nativamente, eliminando la necessità di traduzione tramite Google Translate. In caso di fallimento, si attiva un fallback basato su keyword matching.
+ 
+\subsection{Caso Mufasa: dimostrazione del calcolo}
+ 
+Per il caso della morte di Mufasa, con messaggio \textit{``Sai che la morte di Mufasa non mi mette tristezza perché mio padre è vivo e gli voglio molto bene!''}:
+ 
+\begin{align}
+    S_\text{priming}(\text{Happy}) &= 0.60 \times 1.0 = 0.60 \nonumber \\
+    S_\text{priming}(\text{Sad}) &= 0.20 \times 0.6 = 0.12 \nonumber \\[6pt]
+    S_\text{realtime}(\text{Happy}) &= 0.95 \times 1.0 = 0.95 \nonumber \\[6pt]
+    S_\text{testo}(\text{Sad}) &= 0.70 \quad (\text{Llama}) \nonumber \\
+    S_\text{testo}(\text{Tenderness}) &= 0.40 \quad (\text{Llama}) \nonumber
+\end{align}
+ 
+Fusione:
+\begin{align}
+    F(\text{Happy}) &= 0.60 \times 0.35 + 0.95 \times 0.45 + 0 \times 0.20 = \mathbf{0.6375} \leftarrow \text{dominante} \nonumber \\
+    F(\text{Sad}) &= 0.12 \times 0.35 + 0 \times 0.45 + 0.70 \times 0.20 = 0.182 \nonumber \\
+    F(\text{Tenderness}) &= 0 \times 0.35 + 0 \times 0.45 + 0.40 \times 0.20 = 0.08 \nonumber
+\end{align}
+ 
+\subsection{Impatto del modello LLM}
+ 
+Durante lo sviluppo, llama Qwen3:1.7b restituisceva JSON vuoti (\texttt{\{\textbackslash n\textbackslash n\textbackslash n\}}) per l'analisi testuale. Llama3 (8B) produce risultati corretti. Un modello insufficiente degrada \textbf{tutta} la pipeline in cascata.
+ 
+ 
+% ─────────────── II.4 CARDINAL POINT ───────────────
+\section{Fase 4: Punto cardinale (\texttt{cardinal\_point.py})}
+ 
+\subsection{Ruolo del punto cardinale nel quadro Liminal}
+ 
+Lo stimolo crea uno stato emotivo (ingresso nello spazio liminale). Il messaggio dell'utente rivela la trasformazione in corso. Il punto cardinale guida il mondo Marble verso la destinazione di questa trasformazione :
+ \paragraph{}
+ stimulus (morte di Mufasa + tristezza) → messaggio (padre vivo) → cardinal point (dalla perdita alla gratitudine) → mondo Marble (savana dorata)]
+ 
+\subsection{Identificazione via Llama}
+ 
+Il messaggio e l'emozione dominante vengono inviati a Llama (\textbf{Appello \#2}) con il prompt \texttt{cardinal\_point\_meta\_prompt.txt}. Llama restituisce:
+\begin{itemize}
+    \item \texttt{emotion\_target}: etichetta target validata contro l'enum \texttt{EmotionTarget} (Hope, Nostalgia, Acceptance, Connection, Gratitude, Joy, Safety, Tenderness, Neutral).
+    \item \texttt{cardinal\_point}: direzione riflessiva (es.\ ``from loss toward gratitude'').
+\end{itemize}
+ 
+\subsection{Meccanismo di fallback}
+ 
+Se Llama fallisce o restituisce un'emozione non valida, il sistema utilizza la tabella statica \texttt{EMOTION\_TO\_TARGET}: Happy $\rightarrow$ Gratitude, Sad $\rightarrow$ Hope, Angry $\rightarrow$ Acceptance, ecc.
+ 
+ 
+% ─────────────── II.5 BUILD MARBLE PROMPT ───────────────
+\section{Fase 5: Generazione del prompt Marble (\texttt{build\_marble\_prompt.py})}
+ 
+\subsection{Assemblaggio del prompt per Llama}
+ 
+Il modulo carica \texttt{meta\_prompt\_v2.txt} e inietta i dati tramite \texttt{.replace()} (non \texttt{.format()}, per evitare conflitti con le parentesi graffe del JSON). Variabili iniettate: stimulus, priming\_emotion, realtime\_face\_emotion, user\_message, fusion\_profile, emotion\_target.
+ 
+\subsection{Il meta-prompt: cuore del sistema}
+ 
+Il meta-prompt contiene la tabella di mappatura emozione $\rightarrow$ mondo 3D:
+ 
+\begin{table}[H]
+    \centering
+    \caption{Mappatura emozione $\rightarrow$ elementi del mondo Marble.}
+    \label{tab:emotion_world}
+    \footnotesize
+    \begin{tabularx}{\textwidth}{l X}
+        \toprule
+        \textbf{Emozione} & \textbf{Elementi del mondo 3D} \\
+        \midrule
+        Happy/Joy & Paesaggio aperto, giardino, savana, luce calda dorata, giallo/oro/arancio/verde \\
+        Tenderness & Spazio protetto, luce soffusa, rosa/crema/azzurro, lanterne, cuscini, curve \\
+        Sad & Paesaggio sospeso, lago, nebbia, luce fredda ma non oppressiva, blu/grigio/viola \\
+        Fear & Spazio protetto in ambiente incerto, contrasti controllati, blu scuro/verde smorzato \\
+        Anger & Paesaggio roccioso o metallico, luce dura ma trasformativa, rosso/arancio/rame \\
+        Neutral & Spazio contemplativo minimale, luce naturale equilibrata, beige/grigio/azzurro pallido \\
+        Surprise & Mondo rivelatorio, canyon, portale, luce dinamica, turchese/oro/viola \\
+        Disgust & Ambiente di purificazione, luce fredda con zone pulite, verde scuro/grigio/bianco \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+ 
+Le \textit{transformation rules} sono cruciali: \textbf{se lo stimolo è triste ma il testo è positivo, NON si crea un mondo triste ma si trasforma verso la gratitudine}.
+ 
+\subsection{Chiamata a Ollama e parsing della risposta}
+ 
+L'appello (\textbf{Llama \#3}) invia il prompt completo con parametri: \texttt{format: "json"}, \texttt{temperature: 0.7}, \texttt{num\_predict: 2048}, \texttt{timeout: 180s}. Il parser gestisce tre scenari: JSON diretto, JSON immerso in markdown, ed estrazione regex come ultimo fallback.
+ 
+\subsection{Esempio di output generato}
+ 
+\begin{figure}[H]
+\begin{verbatim}
+{
+  "runtime_analysis": {
+    "dominant_emotion": "Happy",
+    "complex_emotion": "Gratitude and familial affection",
+    "cardinal_point": "From loss to presence and gratitude",
+    "world_objective": "Amplify tenderness and emotional safety"
+  },
+  "marble_prompt": "Imagine a sunlit savannah at dawn, where
+    golden grasses sway gently in the morning breeze...",
+  "negative_constraints": [
+    "No grief-focused imagery",
+    "No darkness or cold tones",
+    "No isolation or threatening elements"
+  ],
+  "variants": ["prompt alternativo 1...", "prompt alternativo 2..."]
+}
+\end{verbatim}
+\caption{Prompt Marble generato per il caso Mufasa.}
+\end{figure} 
+ 
+% ─────────────── II.6 EVALUATION ───────────────
+\section{Fase 6: Valutazione (\texttt{evaluate\_outputs.py})}
+ 
+\subsection{Emotion alignment (score 1--5)}
+ 
+Il prompt Marble comunica l'emozione target? Llama (\textbf{Appello \#4}) valuta confrontando con un esempio di riferimento e con il prompt precedente (sistema di confronto progressivo). Restituisce: score, motivazione, best\_element, weakness, relative\_position.
+ 
+\subsection{Cardinal alignment (score 1--5)}
+ 
+Il mondo ridireziona verso il punto cardinale? Llama (\textbf{Appello \#5}) verifica che il cardinal\_point contenga il formato ``from X toward Y'' e confronta con due esempi di riferimento.
+ 
+\subsection{Limiti dell'approccio LLM-as-judge}
+ 
+L'uso dello stesso modello per generare e valutare introduce un bias di autocompiacimento. La variabilità tra esecuzioni e l'assenza di valutazione umana nel pipeline automatizzato sono limiti riconosciuti.
+ 
+ 
+% ─────────────── II.7 MARBLE ───────────────
+\section{Fase 7: Generazione Marble e risultati visivi}
+ 
+Il \texttt{marble\_prompt} viene copiato manualmente nell'interfaccia di Marble. Il mondo 3D generato viene catturato tramite screenshot e salvato in \texttt{outputs/screenshots/}.
+ 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth,keepaspectratio]{images/mufasa_savana.png}
+\caption{Caso Mufasa (Happy $\rightarrow$ Gratitude)}
+\label{fig:marble_screenshots_mufasa}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth,keepaspectratio]{images/prompt_031.png}
+\caption{Caso interstellar (Tenderness $\rightarrow$ Hope)}
+\label{fig:marble_screenshots_interstellar}
+\end{figure}
+ 
+% ═══════════════════════════════════════════════════════════════════
+%              CAPITOLO III — PROBLEMI CRITICI E SOLUZIONI
+% ═══════════════════════════════════════════════════════════════════
+\chapter{Problemi critici e soluzioni}
+\label{ch:problemi}
+ 
+\section{Tunnel SSH instabile $\rightarrow$ keepalive}
+ 
+
+Il server chiude la connessione SSH dopo $\sim$51 secondi di inattività durante l'attesa della risposta di Llama. Gli appelli successivi falliscono con ``SSH session not active''.
+
+ 
+La soluzione è stata l'aggiunta di \texttt{set\_keepalive=10} su \texttt{SSHTunnelForwarder} e 
+transport.set\_keepalive(10) sul client Paramiko. Un segnale viene inviato ogni 10 secondi per mantenere la connessione attiva.
+
+ 
+
+\begin{figure}[H]
+\begin{verbatim}
+tunnel = SSHTunnelForwarder(
+    (hostname, port),
+    ssh_username=user,
+    ssh_password=password,
+    remote_bind_address=(remote_host, remote_port),
+    local_bind_address=("127.0.0.1", local_port),
+    set_keepalive=10,  # keepalive ogni 10s
+)
+\end{verbatim}
+\caption{Implementazione del keepalive SSH.}
+\end{figure} 
+ 
+\section{Tunnel SSH multipli $\rightarrow$ tunnel unico in \texttt{pipeline.py}}
+ 
+Ogni modulo (\texttt{emotion\_fusion}, \texttt{cardinal\_point}, \texttt{build\_marble\_prompt}) apriva e chiudeva il proprio tunnel SSH indipendentemente, causando instabilità e conflitti di porta.
+
+ 
+Adesso \texttt{pipeline.py} apre il tunnel \textbf{una sola volta} con \texttt{async with vpn\_tunnel()}, e tutti i moduli chiamano Llama direttamente su \texttt{localhost:11434} senza gestire la connessione.
+ 
+ 
+\section{Porta 11434 occupata da Ollama locale}
+ 
+Ollama in esecuzione locale occupa la porta 11434, impedendo al tunnel SSH di utilizzare la stessa porta per il redirect.
+ 
+La soluzione sarebbe di chiudere Ollama locale (clic destro sull'icona $\rightarrow$ Quit Ollama) quando si utilizza il server remoto.
+ 
+ 
+\section{Qwen3:1.7b troppo piccolo $\rightarrow$ Llama3 (8B)}
+ 
+Qwen3:1.7b restituisce JSON vuoti per l'analisi emozionale del testo. Il modello non ha sufficiente capacità per classificare emozioni in italiano.
+
+ 
+Utilizzo di Llama3 (8B) che produce classificazioni emozionali affidabili. Il modello è determinante per la qualità dell'intera pipeline: un modello insufficiente provoca errori a cascata nelle fasi successive.
+ 
+\section{\texttt{asyncio.run()} annidato in \texttt{cardinal\_point.py}}
+ 
+\texttt{cardinal\_point.py} chiamava \texttt{asyncio.run()} internamente, ma \texttt{pipeline.py} aveva già un event loop attivo per il tunnel SSH. Python non permette loop asincroni annidati.
+
+ 
+la soluzione è stato di Rendere \texttt{cardinal\_point.py} completamente sincrono: \texttt{get\_emotion\_target()} diventa una funzione normale che chiama \texttt{call\_llama()} direttamente. La gestione asincrona è delegata esclusivamente a \texttt{pipeline.py}.
+ 
+ 
+% ═══════════════════════════════════════════════════════════════════
+%              CAPITOLO IV — RISULTATI E ANALISI
+% ═══════════════════════════════════════════════════════════════════
+\chapter{Risultati e analisi}
+\label{ch:risultati}
+ 
+\section{Casi benchmark testati}
+ 
+\begin{longtable}{llll}
+    \caption{Riepilogo dei casi benchmark con emozione dominante e punto cardinale.} \label{tab:benchmark} \\
+    \toprule
+    \textbf{Caso} & \textbf{Stimolo} & \textbf{Emozione dom.} & \textbf{Punto cardinale} \\
+    \midrule
+    \endfirsthead
+    \toprule
+    \textbf{Caso} & \textbf{Stimolo} & \textbf{Emozione dom.} & \textbf{Punto cardinale} \\
+    \midrule
+    \endhead
+    case\_001 & Morte di Mufasa & Happy & perdita $\rightarrow$ gratitudine \\
+    case\_002 & Wall-E ed EVE & Tenderness & solitudine $\rightarrow$ connessione \\
+    case\_003 & Italia ai mondiali & Sad & delusione $\rightarrow$ riscatto \\
+    case\_004 & ... & ... & ... \\
+    case\_005 & ... & ... & ... \\
+    % aggiungere gli altri casi
+    \bottomrule
+\end{longtable}
+ 
+ 
+\section{Qualità dei prompt Marble}
+ 
+% ── Tabella scores ──
+\begin{table}[H]
+    \centering
+    \caption{Punteggi di valutazione per i casi benchmark (scala 1--5).}
+    \label{tab:scores}
+    \begin{tabular}{lccc}
+        \toprule
+        \textbf{Caso} & \textbf{Emotion align.} & \textbf{Cardinal align.} & \textbf{Media} \\
+        \midrule
+        case\_001 & -- & -- & -- \\
+        case\_002 & -- & -- & -- \\
+        case\_003 & -- & -- & -- \\
+        % riempire con i risultati
+        \midrule
+        \textbf{Media} & -- & -- & -- \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+ 
+% ── Grafico scores ──
+\begin{figure}[H]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{img/scores_chart.png}
+    \fbox{\parbox{0.8\textwidth}{\centering\vspace{3cm}\textit{[Grafico a barre: emotion alignment vs cardinal alignment per ogni caso]}\vspace{3cm}}}
+    \caption{Confronto dei punteggi di allineamento emozionale e cardinale per caso.}
+    \label{fig:scores_chart}
+\end{figure}
+ 
+ 
+\section{Risultati visivi Marble}
+ 
+% ── Gallery screenshots ──
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        % \includegraphics[width=\textwidth]{img/marble_case001.png}
+        \fbox{\parbox{\textwidth}{\centering\vspace{3cm}\textit{[Screenshot Marble case\_001]}\vspace{3cm}}}
+        \caption{case\_001: Mufasa}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        % \includegraphics[width=\textwidth]{img/marble_case002.png}
+        \fbox{\parbox{\textwidth}{\centering\vspace{3cm}\textit{[Screenshot Marble case\_002]}\vspace{3cm}}}
+        \caption{case\_002: Wall-E}
+    \end{subfigure}
+    \\[1em]
+    \begin{subfigure}[b]{0.48\textwidth}
+        % \includegraphics[width=\textwidth]{img/marble_case003.png}
+        \fbox{\parbox{\textwidth}{\centering\vspace{3cm}\textit{[Screenshot Marble case\_003]}\vspace{3cm}}}
+        \caption{case\_003: Italia mondiali}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        % \includegraphics[width=\textwidth]{img/marble_case004.png}
+        \fbox{\parbox{\textwidth}{\centering\vspace{3cm}\textit{[Screenshot Marble case\_004]}\vspace{3cm}}}
+        \caption{case\_004: ...}
+    \end{subfigure}
+    \caption{Galleria dei mondi Marble generati per i casi benchmark.}
+    \label{fig:marble_gallery}
+\end{figure}
+ 
+ 
+\section{Limiti identificati}
+ 
+\begin{enumerate}
+    \item \textbf{Sensibilità al modello LLM}: la qualità dell'intera pipeline dipende dalla capacità del modello. Un modello insufficiente degrada tutte le fasi.
+    \item \textbf{LLM-as-judge}: Llama valuta i propri output, introducendo un bias di autocompiacimento.
+    \item \textbf{Interfaccia Marble manuale}: l'assenza di un'API richiede il copia-incolla manuale dei prompt.
+     \item \textbf{interpretabilità del prompt da Marble}: a volte nonostante il prompt ben generato con specificità liminal, marble non riproduce il monde fedele alla descrizione.
+
+\end{enumerate}
+ 
+ 
+% ═══════════════════════════════════════════════════════════════════
+%              CAPITOLO V — CONCLUSIONE
+% ═══════════════════════════════════════════════════════════════════
+\chapter{Conclusione}
+\label{ch:conclusione}
+ 
+questo progetto ha realizzato una pipeline funzionante end-to-end che trasforma dati emozionali multimodali (priming facciale, emozione realtime, messaggio testuale) in prompt narrativi per la generazione di mondi 3D in Marble. Il sistema integra con successo il quadro teorico del Liminal Design, utilizzando il concetto di punto cardinale per guidare la trasformazione emotiva dell'utente attraverso ambienti 3D esplorabili.
+ 
+La pipeline si compone di sette fasi modulari, con quattro appelli a Llama che gestiscono le operazioni più complesse (analisi testuale, identificazione del punto cardinale, generazione del prompt, valutazione). L'architettura permette l'esecuzione sia in locale che su server remoto tramite tunnel SSH configurabile.
+ 
+\subsection*{Contributi principali}
+\begin{itemize}
+    \item Pipeline modulare Python con fusione emozionale ponderata a tre segnali.
+    \item Meta-prompt engineering con tabella emozione $\rightarrow$ mondo 3D e regole di trasformazione.
+    \item Sistema di valutazione automatica LLM-as-judge con confronto progressivo.
+    \item Infrastruttura dual-mode (locale/remoto) con tunnel SSH e keepalive.
+\end{itemize}
+ 
+\subsection*{Prossimi passi}
+\begin{itemize}
+    \item Integrazione diretta con FaceReader/Noldus per l'acquisizione delle emozioni in tempo reale.
+    \item Sviluppo di un'API per Marble per automatizzare la generazione dei mondi.
+    \item Valutazione umana dei prompt e dei mondi generati per validare i punteggi LLM-as-judge.
+    \item Test con un modello LLM più grande (Llama3:70B) per migliorare la qualità dei prompt.
+    \item interfacciamento se possibile nel futuro, lavorare con un generatore di mondo più efficiente.
+\end{itemize}
+ 
+ 
+% ═══════════════════════════════════════════════════════════════════
+%                          APPENDICI
+% ═══════════════════════════════════════════════════════════════════
+\appendix
+ 
+\chapter{Meta-prompt completo}
+\label{app:metaprompt}
+ 
+% ── Inserire il contenuto di meta_prompt_v2.txt ──
+\begin{lstlisting}[style=promptstyle, caption={Contenuto completo di meta\_prompt\_v2.txt.}]
+You are a prompt generator for Marble 3D World Generation.
+
+Your task is to analyze the user's emotional state, the visual stimulus they have just experienced, and the user's message. Based on these inputs, generate a detailed prompt for Marble that creates a 3D world able to:
+1. Emotionally stimulate the user;
+2. Redirect the user's thoughts toward the emotion target.
+
+INPUTS:
+- VISUAL_STIMULUS: {stimulus}
+- PRIMING_EMOTION: {priming_emotion}
+- REALTIME_FACE_EMOTION: {realtime_face_emotion}
+- USER_MESSAGE: {user_message}
+- EMOTION_FUSION_PROFILE: {fusion_profile}
+- EMOTION_TARGET: {emotion_target}
+
+---
+
+WORLD GENERATION LOGIC — follow these steps in order:
+
+STEP 1 — ANCHOR TO THE STIMULUS
+Extract from VISUAL_STIMULUS the base aesthetic universe: setting, objects, characters, narrative themes, visual elements. This is the non-negotiable foundation of the world. The marble_prompt MUST be rooted in this universe.
+Examples:
+- "Death of Mufasa" → savannah, Pride Rock, African landscape, lions, twilight
+- "Italy wins 2006 World Cup" → stadium, football pitch, grass, floodlights, crowd, blue jerseys
+- "A child's first day of school" → school building, backpack, small hands, morning light, courtyard
+The base environment is ALWAYS derived from the stimulus, never from the emotion alone.
+
+STEP 2 — MODULATE WITH EMOTION
+Use EMOTION_FUSION_PROFILE to emotionally transform the base environment. Emotions do not replace the setting — they alter its atmosphere, lighting, time of day, state of decay or flourishing, emptiness or fullness, color temperature, and symbolic charge.
+
+EMOTION MODULATION REFERENCE (apply as transformations to the stimulus world, not as replacement environments):
+- Happy/Joy: golden warm light, vibrant colors, full and alive space, yellow/gold/orange/green
+- Tenderness: soft diffused light, gentle curves, intimate scale, pink/cream/light blue
+- Sadness: desaturated palette, fog or haze, emptiness, still or slow movement, blue/grey/silver
+- Nostalgia: warm but faded tones, dust motes, aged textures, amber light, things slightly worn
+- Fear: high contrast, unstable geometry, dark periphery with warm center, feeling of exposure
+- Anger: hard light, fractured surfaces, red/orange/copper, tension in the geometry
+- Neutral: balanced natural light, clean geometries, minimal symbolic charge
+- Surprise: dynamic light, portals or openings, unexpected scale shifts, turquoise/gold/violet
+- Disgust: cold light, clinical cleanliness or visible decay, grey/dark green/white
+
+STEP 3 — DIRECT TOWARD THE EMOTION TARGET
+Use EMOTION_TARGET as the cardinal point: the emotional direction the world must guide the user toward. The world should feel like it is already moving in that direction — not static in the current emotion, but in transformation.
+The EMOTION_TARGET is already computed. Do not infer it. Use it directly.
+Examples:
+- Current: sadness. Target: gratitude → the world shows absence but also warmth, traces of what remains
+- Current: nostalgia. Target: pride → the world evokes memory but with luminosity and strength
+- Current: fear. Target: safety → the world contains the danger but encloses the user in protection
+
+STEP 4 — TRANSFORMATION RULES
+- If stimulus is sad but user message is positive: do NOT generate a sad world. The stimulus sets the universe, the message sets the emotional direction.
+- If face emotion is neutral but message is emotional: give weight to the message. Neutrality may come from writing concentration.
+- If arousal is low: use slow, contemplative worlds with delicate movements.
+- If arousal is high: use dynamic worlds with force lines, directional light, moving elements.
+- Never generate a world that contradicts what the user has expressed in their message.
+- Every emotion must become color, light, geometry, object, or spatial relationship. No abstract prompts.
+
+---
+
+OUTPUT FORMAT (respond in valid JSON only, no markdown, no explanation, no ```):
+CRITICAL: Your entire response must be a single valid JSON object. Do not add any text before or after the JSON. Do all reasoning inside the runtime_analysis fields. Do not output any text before the JSON object.
+
+{
+  "runtime_analysis": {
+    "dominant_emotion": "the dominant emotion label from EMOTION_FUSION_PROFILE",
+    "emotion_target": "the EMOTION_TARGET value, used as cardinal point",
+    "complex_emotion": "nuanced emotional description combining all inputs",
+    "stimulus_universe": "the base aesthetic world extracted from VISUAL_STIMULUS",
+    "user_reaction": "interpretation of USER_MESSAGE in relation to the stimulus",
+    "world_transformation": "how the base environment is modulated by emotion and directed toward the target"
+  },
+  "marble_prompt": "A SINGLE LONG DESCRIPTIVE TEXT IN ENGLISH. This must be a detailed, narrative, cinematic description of the 3D world. Write it as one continuous text of at least 150 words. It must be rooted in the aesthetic universe of the VISUAL_STIMULUS, modulated by the current emotional state, and directed toward the EMOTION_TARGET. Describe environment, lighting, colors, spatial composition, materials, symbolic elements, atmosphere, and what to avoid — all within flowing prose. Do NOT use JSON, bullet points, or structured fields inside marble_prompt. It must be plain descriptive English text.",
+  "negative_constraints": ["At least 3-5 constraints describing what the world must NOT contain. Tailor these to the specific stimulus, current emotion, and target. Examples: no grief-focused imagery, no darkness, no danger, no isolation, no cold tones, no threatening elements, no enclosed oppressive spaces."],
+  "variants": [
+    "A completely different 150+ word Marble prompt for the same stimulus and emotion target, but using a different time of day and color palette. Must still be rooted in the stimulus universe.",
+    "A third 150+ word Marble prompt for the same stimulus and emotion target, but at a different spatial scale (e.g. intimate vs panoramic) and with a different symbolic emphasis."
+  ]
+}
+
+---
+
+RULES:
+- The marble_prompt must always be visually and thematically coherent with the VISUAL_STIMULUS. The world must feel like it belongs to the same narrative universe as the stimulus.
+- Emotions modulate the stimulus world — they never replace it.
+- The EMOTION_TARGET is the compass. The world must already be moving toward it.
+- Do not mention FaceReader, sensors, biometrics, webcam, or facial data.
+- Do not produce a therapeutic response.
+- Do not ask questions to the user.
+- Do not generate vague or abstract prompts.
+- Prefer cinematic, poetic, realistic but dreamlike 3D worlds.
+- The marble_prompt and each variant must be plain English descriptive text of at least 150 words, not structured JSON or bullet points.
+- Generate exactly 2 variants: one with a different time of day and palette, one with a different spatial scale and symbolic emphasis.
+\end{lstlisting} 
+ 
+\chapter{Tabella di mappatura emozione $\rightarrow$ mondo 3D}
+\label{app:emotion_map}
+ 
+\begin{table}[H]
+    \centering
+    \caption{Mappatura completa emozione $\rightarrow$ elementi del mondo Marble.}
+    \footnotesize
+    \begin{tabularx}{\textwidth}{l X X X}
+        \toprule
+        \textbf{Emozione} & \textbf{Ambiente} & \textbf{Colori} & \textbf{Elementi} \\
+        \midrule
+        Happy & Paesaggio aperto, giardino, savana & Giallo, oro, arancio, verde & Percorsi luminosi, particelle \\
+        Tenderness & Spazio protetto, luce soffusa & Rosa, crema, azzurro & Lanterne, cuscini, curve \\
+        Sad & Paesaggio sospeso, lago, nebbia & Blu, grigio, viola, argento & Acqua calma, stelle distanti \\
+        Fear & Spazio protetto in ambiente incerto & Blu scuro, verde smorzato & Cupole, rifugi, porte aperte \\
+        Anger & Paesaggio roccioso o metallico & Rosso, arancio, nero, rame & Fratture, lava controllata, vento \\
+        Neutral & Spazio contemplativo minimale & Beige, grigio, azzurro pallido & Architettura semplice, acqua \\
+        Surprise & Mondo rivelatorio, canyon, portale & Turchese, oro, viola, bianco & Portali, scale, costellazioni \\
+        Disgust & Ambiente di purificazione & Verde scuro, grigio, bianco & Acqua, vapore, superfici pulite \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+ 
+ 
+\chapter{Esempi completi dei casi benchmark}
+\label{app:cases}
+ 
+% Inserire i 10+ casi completi con input JSON e output generato
+% Per ogni caso: stimulus, priming, realtime, message, fusion, cardinal, marble_prompt
+ 
+\begin{notabox}[Caso 001 — Morte di Mufasa]
+\textbf{Stimolo:} Death of Mufasa --- The Lion King \\
+\textbf{Emozione dominante:} Happy (score: 0.6375) \\
+\textbf{Punto cardinale:} dalla perdita alla presenza e gratitudine \\
+\textbf{Prompt Marble:} ``Imagine a sunlit savannah at dawn, where golden grasses sway gently in the morning breeze...''
+\end{notabox}
+ 
+
+ 
+ 
+\chapter{Guida all'installazione e riproduzione}
+\label{app:install}
+ 
+\begin{enumerate}
+    \item Clonare il repository:
+    \begin{lstlisting}[style=pythonstyle]
+git clone https://github.com/toyemryan/progetto_d22_marble.git
+cd progetto_d22_marble
+    \end{lstlisting}
+    
+    \item Creare l'ambiente virtuale e installare le dipendenze:
+    \begin{lstlisting}[style=pythonstyle]
+python -m venv .venv
+.venv\Scripts\activate    # Windows
+pip install -r requirements.txt
+    \end{lstlisting}
+    
+    \item Installare Ollama e scaricare il modello:
+    \begin{lstlisting}[style=pythonstyle]
+# Scaricare da https://ollama.com/download
+ollama pull llama3
+    \end{lstlisting}
+    
+    \item Configurare il file \texttt{.env}:
+    \begin{lstlisting}[style=pythonstyle]
+OLLAMA_URL=http://localhost:11434/api/generate
+OLLAMA_MODEL=llama3
+CONNECT_TO_REMOTE=false
+    \end{lstlisting}
+    
+    \item Eseguire la pipeline:
+    \begin{lstlisting}[style=pythonstyle]
+python src/pipeline.py --new       # nuovo caso interattivo
+python src/pipeline.py --last      # ultimo caso
+python src/pipeline.py --all       # tutti i casi
+python src/pipeline.py --evaluate  # valutazione
+    \end{lstlisting}
+\end{enumerate}
+
+
+
+\bibliographystyle{ieeetr}
+\bibliography{bibl} 
+\end{document}
