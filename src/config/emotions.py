@@ -106,7 +106,8 @@ EMOTIONS: list[Emotion] = [
             "fear", "paura", "spaventato", "fearful",
             "scared", "afraid", "terrified", "anxious", "frightened", "horrified",
             "timoroso", "impaurito", "terrorizzato", "angosciato", "agitato",
-            "ansioso", "preoccupato", "inquieto", "in ansia", "apprensivo",
+            "ansioso", "preoccupato", "inquieto", "ansia", "apprensivo",
+            "tensione", "angoscia", "timore"
         ),
         text_keywords=(
             "paura", "spaventato", "terrore", "ansia", "agitazione",

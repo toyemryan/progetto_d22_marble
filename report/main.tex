@@ -766,11 +766,13 @@ la soluzione è stato di Rendere \texttt{cardinal\_point.py} completamente sincr
 % ═══════════════════════════════════════════════════════════════════
 \chapter{Risultati e analisi}
 \label{ch:risultati}
+
+Al fine di mostrare i risultati ottenuti, proponiamo un'estratto di 6 casi, che hanno come input gli esempi forniti dal tutor universitario. In particolare saranno riportati e analizzati i casi d'uso dal case\_020 al case\_025.
  
 \section{Casi benchmark testati}
  
-\begin{longtable}{llll}
-    \caption{Riepilogo dei casi benchmark con emozione dominante e punto cardinale.} \label{tab:benchmark} \\
+\begin{longtable}{p{.12\textwidth}p{.35\textwidth}p{.12\textwidth}p{.35\textwidth}}
+    \caption{Riepilogo dei casi benchmark con emozione dominante attesa e punto cardinale atteso.} \label{tab:benchmark} \\
     \toprule
     \textbf{Caso} & \textbf{Stimolo} & \textbf{Emozione dom.} & \textbf{Punto cardinale} \\
     \midrule
@@ -779,69 +781,50 @@ la soluzione è stato di Rendere \texttt{cardinal\_point.py} completamente sincr
     \textbf{Caso} & \textbf{Stimolo} & \textbf{Emozione dom.} & \textbf{Punto cardinale} \\
     \midrule
     \endhead
-    case\_001 & Morte di Mufasa & Happy & perdita $\rightarrow$ gratitudine \\
-    case\_002 & Wall-E ed EVE & Tenderness & solitudine $\rightarrow$ connessione \\
-    case\_003 & Italia ai mondiali & Sad & delusione $\rightarrow$ riscatto \\
-    case\_004 & ... & ... & ... \\
-    case\_005 & ... & ... & ... \\
-    % aggiungere gli altri casi
+    case\_020 & Morte di Mufasa ne Il Re Leone & Happy & Dalla perdita alla presenza, dalla morte all'amore familiare vivo. \\
+    case\_021 & Danza spaziale di Wall-E ed EVE & Tenerezza & Dalla simpatia alla connessione affettiva \\
+    case\_022 & Titanic: Jack lascia la mano di Rose e affonda nell'oceano (Scena di separazione o perdita). & Tristezza & Dalla perdita alla traccia che resta. \\
+    case\_023 & Jurassic Park: Il T-Rex ruggisce sotto la pioggia davanti alla jeep (scena intensa o minacciosa). & Paura & Dalla minaccia al controllo e alla protezione. \\
+    case\_024 & Il gladiatore: Massimo Decimo Meridio sfida Commodo nell'arena del Colosseo (Scena di ingiustizia o conflitto). & Rabbia & Dalla rabbia alla trasformazione attiva \\
+    case\_025 & The Truman Show: Truman tocca il muro del set scoprendo la finzione (Scena inattesa o rivelatoria). & Sorpresa & Dall'inatteso alla scoperta. \\
+    \bottomrule
+\end{longtable}
+
+\begin{longtable}[width=\textwidth]{|p{.08\textwidth}p{.30\textwidth}p{.30\textwidth}p{.12\textwidth}|}
+    \caption{Riepilogo risultati: punto cardinale atteso vs rilevato} \label{tab:benchmark} \\
+    \toprule
+    \textbf{Caso} & \textbf{Punto cardinale atteso} & \textbf{Punto cardinale rilevato} & \textbf{Punteggio} \\
+    \midrule
+    \endfirsthead
+    \toprule
+    \textbf{Caso} & \textbf{Punto cardinale atteso} & \textbf{Punto cardinale rilevato} & \textbf{Valutazione} \\
+    \midrule
+    \endhead
+    case\_020 & dalla perdita alla presenza, dalla morte all'amore familiare vivo. & from the comfort of familiar love to a sense of accomplishment through their father's continued life & 5 \\
+    case\_021 & dalla simpatia alla connessione affettiva & from the spark of connection to a growing sense of care and compassion & 3 \\
+    case\_022 & dalla perdita alla traccia che resta. & from the ache of loss toward the comfort of cherished memories & 5 \\
+    case\_023 & Dalla minaccia al controllo e alla protezione. & from a sense of impending uncertainty toward a horizon of anticipation and possibility & 5 \\
+    case\_024 & Dalla rabbia alla trasformazione attiva & from the sting of injustice toward a more balanced perspective, where fairness is reevaluated & 5 \\
+    case\_025 & Dall'inatteso alla scoperta. & from a jolted perspective toward an expanded horizon & 4\\
     \bottomrule
 \end{longtable}
  
  
 \section{Qualità dei prompt Marble}
- 
-% ── Tabella scores ──
-\begin{table}[H]
-    \centering
-    \caption{Punteggi di valutazione per i casi benchmark (scala 1--5).}
-    \label{tab:scores}
-    \begin{tabular}{lccc}
-        \toprule
-        \textbf{Caso} & \textbf{Emotion align.} & \textbf{Cardinal align.} & \textbf{Media} \\
-        \midrule
-        case\_001 & -- & -- & -- \\
-        case\_002 & -- & -- & -- \\
-        case\_003 & -- & -- & -- \\
-        % riempire con i risultati
-        \midrule
-        \textbf{Media} & -- & -- & -- \\
-        \bottomrule
-    \end{tabular}
-\end{table}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=.8\textwidth]{images/evaluation_plot.png}
-    %\fbox{\parbox{0.8\textwidth}{\centering\vspace{3cm}\textit{[Grafico a barre: emotion alignment vs cardinal alignment per ogni caso]}\vspace{3cm}}}
-    \caption{Confronto dei punteggi di allineamento emozionale e cardinale per caso.}
+    \includegraphics[width=\textwidth]{images/evaluation_plot01.png}
+    \caption{Confronto dei punteggi di valutazione raggruppati per caso d'uso.}
     \label{fig:scores_chart}
 \end{figure}
 
-% % ── Grafico scores ──
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=.8\textwidth]{images/evaluation_plot_01.png}
-%     %\fbox{\parbox{0.8\textwidth}{\centering\vspace{3cm}\textit{[Grafico a barre: emotion alignment vs cardinal alignment per ogni caso]}\vspace{3cm}}}
-%     \caption{Confronto dei punteggi di allineamento emozionale e cardinale per caso.}
-%     \label{fig:scores_chart}
-% \end{figure}
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=.8\textwidth]{images/evaluation_plot_02.png}
-%     %\fbox{\parbox{0.8\textwidth}{\centering\vspace{3cm}\textit{[Grafico a barre: emotion alignment vs cardinal alignment per ogni caso]}\vspace{3cm}}}
-%     \caption{Confronto dei punteggi di allineamento emozionale e cardinale per caso.}
-%     \label{fig:scores_chart}
-% \end{figure}
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=.8\textwidth]{images/evaluation_plot_03.png}
-%     %\fbox{\parbox{0.8\textwidth}{\centering\vspace{3cm}\textit{[Grafico a barre: emotion alignment vs cardinal alignment per ogni caso]}\vspace{3cm}}}
-%     \caption{Confronto dei punteggi di allineamento emozionale e cardinale per caso.}
-%     \label{fig:scores_chart}
-% \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/evaluation_plot02.png}
+    \caption{Confronto dei punteggi di valutazione raggruppati per metrica.}
+    \label{fig:scores_chart}
+\end{figure}
  
  
 \section{Risultati visivi Marble}
@@ -850,28 +833,40 @@ la soluzione è stato di Rendere \texttt{cardinal\_point.py} completamente sincr
 \begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
-        % \includegraphics[width=\textwidth]{img/marble_case001.png}
-        \fbox{\parbox{\textwidth}{\centering\vspace{3cm}\textit{[Screenshot Marble case\_001]}\vspace{3cm}}}
-        \caption{case\_001: Mufasa}
+        \includegraphics[width=\textwidth]{images/prompt_020.png}
+        \caption{case\_020: Morte di Mufasa ne Il Re Leone}
     \end{subfigure}
     \hfill
+    \centering
     \begin{subfigure}[b]{0.48\textwidth}
-        % \includegraphics[width=\textwidth]{img/marble_case002.png}
-        \fbox{\parbox{\textwidth}{\centering\vspace{3cm}\textit{[Screenshot Marble case\_002]}\vspace{3cm}}}
-        \caption{case\_002: Wall-E}
-    \end{subfigure}
-    \\[1em]
-    \begin{subfigure}[b]{0.48\textwidth}
-        % \includegraphics[width=\textwidth]{img/marble_case003.png}
-        \fbox{\parbox{\textwidth}{\centering\vspace{3cm}\textit{[Screenshot Marble case\_003]}\vspace{3cm}}}
-        \caption{case\_003: Italia mondiali}
+        \includegraphics[width=\textwidth]{images/prompt_021.png}
+        \caption{case\_021: Danza spaziale di Wall-E ed EVE}
     \end{subfigure}
     \hfill
+    \centering
     \begin{subfigure}[b]{0.48\textwidth}
-        % \includegraphics[width=\textwidth]{img/marble_case004.png}
-        \fbox{\parbox{\textwidth}{\centering\vspace{3cm}\textit{[Screenshot Marble case\_004]}\vspace{3cm}}}
-        \caption{case\_004: ...}
+        \includegraphics[width=\textwidth]{images/prompt_022.png}
+        \caption{case\_022: Titanic: Jack lascia la mano di Rose e affonda nell'oceano}
     \end{subfigure}
+    \hfill
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{images/prompt_023.png}
+        \caption{case\_023: Jurassic Park: Il T-Rex ruggisce sotto la pioggia davanti alla jeep}
+    \end{subfigure}
+    \hfill
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{images/prompt_024.png}
+        \caption{case\_024: Il gladiatore: Massimo Decimo Meridio sfida Commodo nell'arena del Colosseo}
+    \end{subfigure}
+    \hfill
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{images/prompt_025.png}
+        \caption{case\_025: The Truman Show: Truman tocca il muro del set scoprendo la finzione}
+    \end{subfigure}
+    \hfill
     \caption{Galleria dei mondi Marble generati per i casi benchmark.}
     \label{fig:marble_gallery}
 \end{figure}

@@ -577,5 +577,197 @@
       "arousal_label": "MEDIUM"
     },
     "user_message": "all'immagine del mondo attuale, la proliferazione della violenza sistemica è realtà"
+  },
+  {
+    "case_id": "case_020",
+    "timestamp": "2026-06-09T10:07:16.924598",
+    "stimulus": "Morte di Mufasa ne Il Re Leone",
+    "priming_emotion": {
+      "Happy": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.6
+      },
+      "Sad": {
+        "avg_intensity": "LOW",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.2
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Happy",
+      "probability": 1.0,
+      "intensity_label": "HIGH",
+      "valence_label": "POSITIVE",
+      "arousal_label": "MEDIUM"
+    },
+    "user_message": "Sai che la morte di Mufasa non mi mette tristezza perche mio padre e vivo e gli voglio molto bene!"
+  },
+  {
+    "case_id": "case_021",
+    "timestamp": "2026-06-09T10:15:31.034228",
+    "stimulus": "Danza spaziale di Wall-E ed EVE",
+    "priming_emotion": {
+      "Tenderness": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.7
+      },
+      "Calore Relazionale": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.7
+      },
+      "Simpatia": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.4
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Happy",
+      "probability": 0.8,
+      "intensity_label": "HIGH",
+      "valence_label": "POSITIVE",
+      "arousal_label": "LOW"
+    },
+    "user_message": "è stato simpatico, i due robot erano felici, amorevoli l'un l'altro e in seguito anche gli abitanti dell'astronave, ho provato simpatia e tenerezza"
+  },
+{
+    "case_id": "case_022",
+    "timestamp": "2026-06-09T11:13:02.000000",
+    "stimulus": "Titanic: Jack lascia la mano di Rose e affonda nell'oceano.",
+    "priming_emotion": {
+      "triste": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.85
+      },
+      "tristezza": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.8
+      },
+      "malinconico": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "LOW",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.75
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Sad",
+      "probability": 0.9,
+      "intensity_label": "HIGH",
+      "valence_label": "NEGATIVE",
+      "arousal_label": "LOW"
+    },
+    "user_message": "Mi ha fatto pensare a quando una persona importante non c'e piu, ma resta qualcosa di lei."
+  },
+  {
+    "case_id": "case_023",
+    "timestamp": "2026-06-09T11:13:08.000000",
+    "stimulus": "Jurassic Park: Il T-Rex ruggisce sotto la pioggia davanti alla jeep.",
+    "priming_emotion": {
+      "ansia": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "HIGH",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.85
+      },
+      "agitato": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "HIGH",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.8
+      },
+      "tensione": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "HIGH",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.75
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Fear",
+      "probability": 0.85,
+      "intensity_label": "HIGH",
+      "valence_label": "NEGATIVE",
+      "arousal_label": "HIGH"
+    },
+    "user_message": "Mi ha messo agitazione, come se qualcosa potesse succedere da un momento all'altro."
+  },
+  {
+    "case_id": "case_024",
+    "timestamp": "2026-06-09T11:13:14.000000",
+    "stimulus": "Il gladiatore: Massimo Decimo Meridio sfida Commodo nell'arena del Colosseo.",
+    "priming_emotion": {
+      "arrabbiato": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "HIGH",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.85
+      },
+      "rabbia": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "HIGH",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.8
+      },
+      "indignato": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.75
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Angry",
+      "probability": 0.88,
+      "intensity_label": "HIGH",
+      "valence_label": "NEGATIVE",
+      "arousal_label": "HIGH"
+    },
+    "user_message": "Mi ha fatto arrabbiare perché sembrava tutto ingiusto"
+  },
+  {
+    "case_id": "case_025",
+    "timestamp": "2026-06-09T11:13:20.000000",
+    "stimulus": "The Truman Show: Truman tocca il muro del set scoprendo la finzione.",
+    "priming_emotion": {
+      "sorpreso": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "HIGH",
+        "avg_valence": "NEUTRAL",
+        "emotion_probability": 0.9
+      },
+      "stupito": {
+        "avg_intensity": "MEDIUM",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "NEUTRAL",
+        "emotion_probability": 0.8
+      },
+      "sorpresa": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "HIGH",
+        "avg_valence": "NEUTRAL",
+        "emotion_probability": 0.75
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Surprise",
+      "probability": 0.82,
+      "intensity_label": "MEDIUM",
+      "valence_label": "NEUTRAL",
+      "arousal_label": "HIGH"
+    },
+    "user_message": "Non me lo aspettavo, e per un attimo mi ha fatto vedere tutto in modo diverso."
   }
 ]
