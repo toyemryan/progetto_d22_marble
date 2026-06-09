@@ -1036,5 +1036,107 @@
         "spatial_scale": "Panoramic"
       }
     ]
+  },
+  {
+    "prompt_id": "prompt_019",
+    "case_id": "case_019",
+    "timestamp": "2026-06-09T03:08:24.149439",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Disgust",
+      "intensity_score": 0.66,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Fear": 0.04,
+        "Sad": 0.14,
+        "Angry": 0.435,
+        "Disgust": 0.66
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Angry": 0.9,
+          "Disgust": 0.8
+        },
+        "realtime_scores": {
+          "Disgust": 0.8
+        },
+        "text_scores": {
+          "Sad": 0.7,
+          "Angry": 0.6,
+          "Fear": 0.2,
+          "Disgust": 0.1
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from revulsion at systemic injustice toward empowered outrage and collective action",
+    "runtime_analysis": {
+      "dominant_emotion": "Disgust",
+      "emotion_target": "Pride",
+      "complex_emotion": "A world that transforms disgust and outrage towards empowered collective action, with a focus on systemic change and the empowerment of marginalized communities.",
+      "stimulus_universe": "A post-apocalyptic landscape with remnants of civilization, such as abandoned buildings, rusted machinery, and overgrown vegetation.",
+      "user_reaction": "The user's message is a critique of societal violence, highlighting the need for collective action to address systemic injustices.",
+      "world_transformation": "The world transforms from a desolate wasteland to a symbol of resistance and resilience, with community-driven structures and vibrant colors, as the user's disgust and outrage give way to empowerment and pride."
+    },
+    "marble_prompt": "In this ravaged landscape, we find ourselves amidst the ruins of civilization. The once-thriving city is now a desolate expanse, scarred by the violence that has consumed it. Yet, amidst the decay, glimmers of hope begin to emerge. A community-driven structure rises from the ashes, its walls adorned with vibrant murals and symbols of resistance. The air is alive with the hum of determination, as survivors gather to rebuild and reclaim their world. As we gaze upon this post-apocalyptic landscape, we are reminded that even in the darkest of times, there is always a spark of pride and resilience that can ignite collective action and bring about meaningful change."
+  },
+  {
+    "prompt_id": "prompt_020",
+    "case_id": "case_019",
+    "timestamp": "2026-06-09T03:15:11.075256",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Disgust",
+      "intensity_score": 0.64,
+      "valence": "negative",
+      "arousal": "medium",
+      "fusion_scores": {
+        "Disgust": 0.64,
+        "Angry": 0.335,
+        "Sad": 0.17
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Angry": 0.9,
+          "Disgust": 0.8
+        },
+        "realtime_scores": {
+          "Disgust": 0.8
+        },
+        "text_scores": {
+          "Sad": 0.85,
+          "Angry": 0.1
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the darkness of disgust toward the light of acknowledgment and understanding",
+    "runtime_analysis": {
+      "dominant_emotion": "Disgust",
+      "emotion_target": "Acceptance",
+      "complex_emotion": "A world that acknowledges the rot and decay of systemic violence, yet slowly moves towards acceptance and understanding.",
+      "stimulus_universe": "Killer of the flower moon, a dark and ominous environment with a focus on violence and decay.",
+      "user_reaction": "The user is deeply disturbed by the proliferation of systemic violence in the world today and feels a strong sense of disgust and discomfort.",
+      "world_transformation": "The base aesthetic universe of the stimulus is modulated to reflect the dominant emotion of disgust, but slowly begins to transform towards acceptance through subtle changes in lighting, color palette, and spatial composition."
+    },
+    "marble_prompt": "In the killer of the flower moon, where violence and decay reign supreme, a faint glimmer of hope begins to emerge. The once-vibrant petals of the flowers now wither and wilt, their beauty lost forever. Yet, amidst this desolate landscape, a small, tender shoot pushes its way through the cracked earth, symbolizing the resilience of life in the face of adversity. As we gaze upon this bleak yet hopeful scene, we are reminded that even in the darkest of times, there is always a chance for renewal and acceptance.",
+    "negative_constraints": [
+      "No explicit depictions of violence or gore",
+      "Avoid overly dark or oppressive color palette",
+      "Do not include any elements that promote further violence or conflict",
+      "No closed-off or isolated spaces",
+      "No cold, clinical tones"
+    ],
+    "variants": [
+      {
+        "marble_prompt": "As the sun sets on the killer of the flower moon, the shadows cast by the decaying flowers take on a warm, golden hue. The air is thick with the scent of blooming life, and the tender shoots that sprout from the earth seem to glow with an inner light. This is a world where even in the darkest moments, there is always the promise of new beginnings.",
+        "time_of_day": "sunset",
+        "color_palette": "warm"
+      },
+      {
+        "marble_prompt": "From a panoramic perspective, we gaze out upon the killer of the flower moon, and behold a tapestry of life and death. The withered petals of the flowers seem to stretch on forever, a reminder that even in decay, there is always the potential for renewal. As our eyes roam across this vast expanse, we are drawn to the tiny, glowing lights that dot the landscape, symbols of hope and acceptance.",
+        "spatial_scale": "panoramic",
+        "symbolic_emphasis": "hope"
+      }
+    ]
   }
 ]

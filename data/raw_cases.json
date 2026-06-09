@@ -550,5 +550,32 @@
       "arousal_label": "LOW"
     },
     "user_message": "Non saprei dire cosa ho provato, però mi ha fatto pensare."
+  },
+  {
+    "case_id": "case_019",
+    "timestamp": "2026-06-09T03:07:53.498927",
+    "stimulus": "killer of the flower moon",
+    "priming_emotion": {
+      "Angry": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "HIGH",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.9
+      },
+      "Disgust": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "MEDIUM",
+        "avg_valence": "NEGATIVE",
+        "emotion_probability": 0.8
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Disgust",
+      "probability": 0.8,
+      "intensity_label": "HIGH",
+      "valence_label": "NEGATIVE",
+      "arousal_label": "MEDIUM"
+    },
+    "user_message": "all'immagine del mondo attuale, la proliferazione della violenza sistemica è realtà"
   }
 ]
