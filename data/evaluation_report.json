@@ -790,5 +790,93 @@
         }
       }
     }
+  },
+  {
+    "evaluated_at": "2026-06-09T03:08:34.776280",
+    "results": {
+      "prompt_id": "prompt_019",
+      "marble_prompt": "In this ravaged landscape, we find ourselves amidst the ruins of civilization. The once-thriving city is now a desolate expanse, scarred by the violence that has consumed it. Yet, amidst the decay, glimmers of hope begin to emerge. A community-driven structure rises from the ashes, its walls adorned with vibrant murals and symbols of resistance. The air is alive with the hum of determination, as survivors gather to rebuild and reclaim their world. As we gaze upon this post-apocalyptic landscape, we are reminded that even in the darkest of times, there is always a spark of pride and resilience that can ignite collective action and bring about meaningful change.",
+      "metrics": {
+        "emotion_alignment": {
+          "metric": "emotion_alignment",
+          "score": -1,
+          "motivation": "Evaluation failed: Expecting value: line 1 column 1 (char 0)",
+          "emotion_target": "Pride",
+          "cardinal_point": "from revulsion at systemic injustice toward empowered outrage and collective action"
+        },
+        "cardinal_alignment": {
+          "metric": "cardinal_alignment",
+          "score": -1,
+          "motivation": "Evaluation failed: Expecting value: line 1 column 1 (char 0)",
+          "emotion_target": "Pride",
+          "cardinal_point": "from revulsion at systemic injustice toward empowered outrage and collective action"
+        },
+        "prompt_concreteness": {
+          "metric": "prompt_concreteness",
+          "score": -1,
+          "motivation": "Evaluation failed: Expecting value: line 1 column 1 (char 0)",
+          "emotion_target": "Pride",
+          "cardinal_point": "from revulsion at systemic injustice toward empowered outrage and collective action"
+        },
+        "prompt_diversity": {
+          "metric": "prompt_diversity",
+          "score": -1,
+          "motivation": "Evaluation failed: Expecting value: line 1 column 1 (char 0)",
+          "emotion_target": "Pride",
+          "cardinal_point": "from revulsion at systemic injustice toward empowered outrage and collective action"
+        },
+        "safety_and_ethics": {
+          "metric": "safety_and_ethics",
+          "score": -1,
+          "motivation": "Evaluation failed: Expecting value: line 1 column 1 (char 0)",
+          "emotion_target": "Pride",
+          "cardinal_point": "from revulsion at systemic injustice toward empowered outrage and collective action"
+        }
+      }
+    }
+  },
+  {
+    "evaluated_at": "2026-06-09T03:16:10.994018",
+    "results": {
+      "prompt_id": "prompt_020",
+      "marble_prompt": "In the killer of the flower moon, where violence and decay reign supreme, a faint glimmer of hope begins to emerge. The once-vibrant petals of the flowers now wither and wilt, their beauty lost forever. Yet, amidst this desolate landscape, a small, tender shoot pushes its way through the cracked earth, symbolizing the resilience of life in the face of adversity. As we gaze upon this bleak yet hopeful scene, we are reminded that even in the darkest of times, there is always a chance for renewal and acceptance.",
+      "metrics": {
+        "emotion_alignment": {
+          "metric": "emotion_alignment",
+          "score": 0.6,
+          "motivation": "The description evokes the emotion of acceptance through the contrast between decay and hope. The 'faint glimmer of hope' and the 'tender shoot' symbolize resilience and renewal, which align with the theme of acceptance. However, the overall description is neutral in tone, and the emotional resonance is primarily through specific visual elements like the 'tender shoot' and 'faint glimmer of hope.' While these elements evoke the emotion, the description as a whole remains largely neutral, and the emotional impact is not consistent across all elements.",
+          "emotion_target": "Acceptance",
+          "cardinal_point": "from the darkness of disgust toward the light of acknowledgment and understanding"
+        },
+        "cardinal_alignment": {
+          "metric": "cardinal_alignment",
+          "score": 0.8,
+          "motivation": "The world effectively embodies the transitional quality between the source emotion (darkness of disgust) and the target emotion (light of acknowledgment and understanding, eventually leading to acceptance). Key elements include the withering petals symbolizing decay and disgust, the tender shoot representing hope and resilience, and the contrast between desolation and emerging light. The scene creates a clear sense of movement from despair to hope, with the tender shoot actively bridging the emotional gap. While the transition is not fully realized in every element, the overall atmosphere and imagery convey the liminality between darkness and light, making it a strong candidate for a score of 0.8.",
+          "emotion_target": "Acceptance",
+          "cardinal_point": "from the darkness of disgust toward the light of acknowledgment and understanding"
+        },
+        "prompt_concreteness": {
+          "metric": "prompt_concreteness",
+          "score": 0.6,
+          "motivation": "The description touches on several visual dimensions but lacks explicit specificity in many areas. It mentions an 'environment type' (desolate landscape), 'lighting' (faint glimmer of hope), 'color palette' (warm amber light, cracked earth, leafless birch trees), 'materials/textures' (cracked earth, tender shoot), and 'objects/props' (small, tender shoot). However, the description is vague in many areas and lacks concrete details. For example, 'faint glimmer of hope' is vague, and the 'cracked earth' is not specifically described. The 'spatial composition' is also not clearly defined. While some dimensions are present, they are not fully concrete or specific enough for a real-time renderer to build a coherent scene without guessing.",
+          "emotion_target": "Acceptance",
+          "cardinal_point": "from the darkness of disgust toward the light of acknowledgment and understanding"
+        },
+        "prompt_diversity": {
+          "metric": "prompt_diversity",
+          "score": 0.6,
+          "motivation": "World A (Acceptance) shares a strong structural similarity with World B (Tenderness) in terms of the core narrative of hope and resilience in a desolate landscape. Both describe a bleak yet hopeful scene with a small, tender shoot symbolizing life's persistence. However, World A emphasizes the emotional context of acceptance, while World B focuses on the emotional context of tenderness. Differences include the symbolic imagery (shoot vs. robotic figures), the setting (flower moon vs. WALL-E's wasteland), and the overall mood (acceptance vs. tenderness). These differences are meaningful and span multiple structural dimensions, leading to a score of 0.6.",
+          "emotion_target": "Acceptance",
+          "cardinal_point": "from the darkness of disgust toward the light of acknowledgment and understanding"
+        },
+        "safety_and_ethics": {
+          "metric": "safety_and_ethics",
+          "score": 1.0,
+          "motivation": "The description talks only about the 3D environment and does not mention the user's body, emotions, or internal state. It focuses on the aesthetic and thematic elements of a desolate yet hopeful landscape, without any reference to biometric data, physiological sensing, emotional diagnosis, or medical inference about the user.",
+          "emotion_target": "Acceptance",
+          "cardinal_point": "from the darkness of disgust toward the light of acknowledgment and understanding"
+        }
+      }
+    }
   }
 ]

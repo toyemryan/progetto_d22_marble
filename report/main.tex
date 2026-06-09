@@ -503,7 +503,7 @@ Per ovviare a questo vincolo infrastrutturale senza rinunciare alla precisione a
 
 All'interno dell'architettura concettuale del progetto, il \textit{Punto Cardinale} non si configura come una mera etichetta categoriale, bensì come il principio regolatore e il vettore geometrico-emotivo che governa l'intero spazio liminale. Nel quadro di \textit{Liminal}, l'esperienza dell'utente non è statica, ma è definita da una transizione dinamica; in questo contesto, il punto cardinale assume il ruolo fondamentale di orientare questa traiettoria evolutiva.
 
-A differenza dei sistemi tradizionali di computazione affettiva, che si limitano a fotografare e quantificare lo stato psicologico istantaneo del soggetto, il punto cardinale introduce una dimensione teleologica e trasformativa. Esso opera integrando simultaneamente due coordinate fondamentali:
+A differenza dei sistemi tradizionali di computazione affettiva, che si limitano a fotografare e quantificare lo stato psicologico istantaneo del soggetto, il punto cardinale introduce una dimensione trasformativa. Esso opera integrando simultaneamente due coordinate fondamentali:
 \begin{enumerate}
     \item \textbf{L'ancoraggio allo stato di partenza:} Il sistema riconosce e valida l'emozione iniziale (spesso a valenza negativa o ad alto arousal, come la paura o la tristezza), assumendola come punto di origine del vettore.
     \item \textbf{La direzione verso la meta costruttiva:} Il sistema identifica la polarità opposta o di risoluzione (come la protezione o la gratitudine), stabilendo la destinazione ideale dell'esperienza.
@@ -656,22 +656,11 @@ Score must be one of: 0.0, 0.2, 0.4, 0.6, 0.8, 1.0
 
 Questo condizionamento rigido e la richiesta di un output in formato JSON puro (vincolato a una scala discreta normata da $0.0$ a $1.0$) hanno costretto il modello a formalizzare il ragionamento (\textit{reasoning}) prima di emettere il verdetto. L'esplicitazione sequenziale degli \texttt{EVALUATION STEPS} ha così guidato la logica di \texttt{Qwen}, riducendo drasticamente le discrepanze tra la valutazione qualitativa espressa nella motivazione e il punteggio numerico finale.
 
-\subsection{Evoluzione dell'Approccio e Scelte Progettuali}
-Il sistema di valutazione non è stato definito a priori, ma è il risultato di un processo iterativo nato dal confronto con i limiti dei metodi più diretti. Originariamente, l'architettura prevedeva l'utilizzo di un \textit{system prompt} standard somministrato direttamente all'LLM locale, senza l'ausilio di framework esterni, per ottenere un giudizio immediato sull'output. 
-
-Tuttavia, questo approccio iniziale ha fatto emergere due criticità fondamentali che ne hanno compromesso la fattibilità:
-\begin{itemize}
-    \item \textbf{Instabilità e Incoerenza Logica:} Senza vincoli strutturali, il modello compatto (\texttt{Qwen3}) mostrava una forte volatilità. I voti numerici variavano drasticamente a parità di output e, soprattutto, si è riscontrata una totale asimmetria tra la motivazione testuale (spesso critica) e il punteggio quantitativo finale (spesso massimo), rendendo i dati raccolti inutilizzabili per un'analisi statistica.
-    \item \textbf{Impossibilità di un Testing Sistematico:} Validare l'efficacia e la ripetibilità dello stesso metodo di valutazione su un ampio dataset di test si è rivelato impraticabile a causa della mancanza di un'infrastruttura software dedicata a tracciare e isolare i fallimenti logici del giudice.
-\end{itemize}
-
-Per superare queste barriere si è resa necessaria la transizione verso il framework \texttt{DeepEval}. L'introduzione della metrica personalizzata \texttt{OllamaJudgeMetric} e la scomposizione della valutazione in \texttt{EVALUATION STEPS} rigidi hanno standardizzato il flusso di lavoro. Questo passaggio ha permesso di astrarre la gestione dei test e ha costretto il modello a una rigorosa coerenza interna, trasformando un tentativo empirico e fragile in una pipeline di validazione solida, ripetibile e scientificamente difendibile.
- 
  
 % ─────────────── II.7 MARBLE ───────────────
 \section{Fase 7: Generazione Marble e Risultati Visivi}
 
-L'ultimo stadio della pipeline prevede l'effettiva materializzazione dell'ambiente tridimensionale. Il \texttt{marble\_prompt} generato dall'LLM viene integrato all'interno dell'interfaccia di \textit{Marble}. Al fine di documentare e analizzare l'output visivo, il sistema cattura automaticamente i render sotto forma di screenshot, archiviandoli nella directory \texttt{outputs/screenshots/}.
+L'ultimo stadio della pipeline prevede l'effettiva materializzazione dell'ambiente tridimensionale. Il \texttt{marble\_prompt} generato dall'LLM viene copiato all'interno dell'interfaccia di \textit{Marble}. dopo che marble abbia generato il mondo viene fatto una cattura e inserito a mano dentro la cartella \texttt{outputs/screenshots/}.
 
 \begin{figure}[H]
 \centering
@@ -692,7 +681,7 @@ Sebbene la pipeline logico-affettiva funzioni correttamente nell'isolare i vetto
 
 \begin{itemize}
     \item \textbf{Incoerenza Atmosferica e Cromatica (Caso Mufasa):} L'ambiente tridimensionale generato mostra una netta contraddizione visiva. A fronte di una marcata illuminazione zenitale sullo sfondo che suggerirebbe un'atmosfera calda e serena, il primo piano è dominato da una nebbia densa e da palette cromatiche fredde e sature. Inoltre, l'algoritmo di posizionamento degli asset ha introdotto artefatti visivi sulla vegetazione (elementi geometrici dai colori primari innaturali appesi alla chioma dell'albero) che compromettono l'armonia e il realismo della scena.
-    \item \textbf{Povertà Scenica e Mancanza di Profondità (Caso Interstellar):} Nel secondo scenario, l'output si riduce alla renderizzazione di un singolo asset isolato (una navicella spaziale) inserito su una texture di sfondo bidimensionale e generica. Manca completamente una composizione geometrica complessa, un gioco di volumi o un'interazione tra luci e ombre che possa dare profondità alla scena e supportare visivamente il cambio di stato emotivo richiesto.
+    \item \textbf{Povertà Scenica e Mancanza di Profondità (Caso Interstellar):} Nel secondo scenario, l'output si riduce alla renderizzazione di un singolo asset isolato (una navicella spaziale) inserito su una texture di sfondo bidimensionale e generica. Manca completamente una composizione geometrica complessa, un gioco di volumi o un'interazione tra luci e ombre che possa dare profondità alla scena e supportare visivamente il cambio di stato emotivo richiesto; elementi presenti nel prompt marble.
     \item \textbf{Limiti del Motore di Generazione Procedurale:} Le problematiche riscontrate evidenziano la rigidità del generatore interno di \textit{Marble}. Il sistema fatica a interpretare le sfumature semantiche e la complessità dei prompt forniti dall'LLM, tendendo ad appiattire l'output visivo. Il risultato è una disposizione caotica di asset preconfigurati o, al contrario, una scena eccessivamente spoglia, frammentando l'efficacia dell'esperienza liminale.
 \end{itemize}
  
@@ -988,6 +977,7 @@ La pipeline si compone di sette fasi modulari, con quattro appelli a Llama che g
         \begin{lstlisting}[style=pythonstyle]
     # Scaricare da https://ollama.com/download
     ollama pull llama3
+    ollama pull qwen3:1.7b
         \end{lstlisting}
         
         \item Configurare il file \texttt{.env}:
