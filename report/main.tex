@@ -958,23 +958,6 @@ In conclusione, il lavoro svolto dimostra la fattibilità tecnica di un sistema 
         \end{tabularx}
     \end{table}
     
-    
-    \chapter{Esempi completi dei casi benchmark}
-    \label{app:cases}
-    
-    % Inserire i 10+ casi completi con input JSON e output generato
-    % Per ogni caso: stimulus, priming, realtime, message, fusion, cardinal, marble_prompt
-    
-    \begin{notabox}[Caso 001 - Morte di Mufasa]
-    \textbf{Stimolo:} Death of Mufasa --- The Lion King \\
-    \textbf{Emozione dominante:} Happy (score: 0.6375) \\
-    \textbf{Punto cardinale:} dalla perdita alla presenza e gratitudine \\
-    \textbf{Prompt Marble:} ``Imagine a sunlit savannah at dawn, where golden grasses sway gently in the morning breeze...''
-    \end{notabox}
-    
-
-    
-    
     \chapter{Guida all'installazione e riproduzione}
     \label{app:install}
     
@@ -1003,6 +986,7 @@ In conclusione, il lavoro svolto dimostra la fattibilità tecnica di un sistema 
         \begin{lstlisting}[style=pythonstyle]
     OLLAMA_URL=http://localhost:11434/api/generate
     OLLAMA_MODEL=llama3
+    EVALUATION_MODEL=qwen3:1.7b
     CONNECT_TO_REMOTE=false
         \end{lstlisting}
         
