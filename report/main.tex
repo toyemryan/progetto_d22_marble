@@ -324,11 +324,11 @@ progetto_d22_marble/
 
 Il sistema utilizza Ollama come server LLM, in due configurazioni possibili:
 \begin{itemize}
-    \item \textbf{Locale}: Llama3 (8B), chiamato direttamente su \texttt{localhost:11434}.
-    \item \textbf{Remoto}: Qwen3 o Llama3 su server universitario (\texttt{192.168.80.138}), raggiungibile tramite VPN WireGuard + tunnel SSH con keepalive.
+\item \textbf{In locale}: installazione di \textbf{Ollama} integrato con due modelli LLM: \textbf{Llama3 (8B)} per la generazione del testo e \textbf{Qwen3 (1.7B)} per la fase di valutazione del prompt.
+\item \textbf{In remoto}: connessione tramite \textbf{VPN} al server universitario (192.168.80.138) con tunnel \textbf{SSH (keepalive)}. L'automatizzazione dell'accesso è possibile tramite \textbf{WireGuard}, richiedendo però una configurazione esterna.
 \end{itemize}
  
-La selezione avviene tramite il file \texttt{.env} senza modificare il codice.
+Una volta che tutte le configurazioni sono pronte, la selezione avviene tramite il file \texttt{.env} senza modificare il codice.
 
  
 % ═══════════════════════════════════════════════════════════════════
@@ -341,8 +341,9 @@ La selezione avviene tramite il file \texttt{.env} senza modificare il codice.
 \section{Fase 1: Input interattivo (\texttt{input\_case.py})}
  
 \subsection{Interfaccia utente in italiano}
- 
-L'utente risponde a una serie di domande nel terminale in italiano. Il sistema supporta più emozioni per il priming (ciclo che termina con ``fine'') e traduce automaticamente le risposte in inglese per il formato JSON standardizzato.
+Utilizzata per generare i \texttt{raw\_cases} (i casi d'uso da elaborare), simulando l'interazione con i sistemi di computer vision che verranno integrati successivamente.
+
+Il flusso di esecuzione prevede che l'utente risponda via terminale a una serie di domande in italiano, definendo le emozioni di priming, un'emozione in tempo reale e un messaggio testuale. Il sistema traduce quindi le risposte in inglese per generare un oggetto JSON standardizzato, che viene infine inserito nel file \texttt{raw\_cases.json}.
  
 \begin{figure}[H]
 \begin{verbatim}
@@ -370,9 +371,6 @@ La traduzione è gestita dal dizionario \texttt{data/translations.json}:
     "arrabbiato": "Angry",
     "paura": "Fear"
   },
-  "intensity": {
-    "1": "LOW", "4": "MEDIUM", "8": "HIGH"
-  },
   "valence": {
     "positiva": "POSITIVE",
     "neutra": "NEUTRAL",
@@ -380,10 +378,8 @@ La traduzione è gestita dal dizionario \texttt{data/translations.json}:
   }
 }
 \end{verbatim}
-\caption{esempio di traduzione dentro translations.json .}
+\caption{esempio di traduzione dentro translations.json}
 \end{figure}
- 
-La probability è derivata automaticamente dall'intensità: $p = \frac{\text{intensity}}{10}$.
  
 \subsection{Formato JSON standardizzato}
  
@@ -419,33 +415,56 @@ La probability è derivata automaticamente dall'intensità: $p = \frac{\text{int
 \section{Fase 2: Parsing e normalizzazione (\texttt{parse\_cases.py})}
  
 \subsection{Uniformizzazione delle etichette}
+Per avere un input pulito alle fasi successive, c'è bisogno di ripulire e normalizzare le etichette delle emozioni. Questo lavoro viene svolto dal modulo \texttt{parse\_cases}.
  
 Il modulo legge \texttt{raw\_cases.json} e uniformizza tutte le etichette: ``happy'', ``felice'', ``felicità'' e ``gioia'' diventano tutti ``Happy''; ``ALTA'' diventa ``HIGH''; ``POSITIVA'' diventa ``POSITIVE''. Se un campo è assente, viene utilizzato un valore di default (intensity: ``MEDIUM'', probability: 0.5).
  
-Questa fase è interamente in Python puro, senza nessuna chiamata di rete.
+Il mapping statico delle etichette nelle emozioni viene eseguito attraverso l'attributo \texttt{normalize\_aliases} della classe \texttt{Emotion}. Un esempio di istanza viene riportato di seguito:
+
+\begin{figure}[H]
+\begin{verbatim}
+Emotion(
+    label=EmotionLabel.HAPPY,
+    normalize_aliases=(
+        "happy", "felice", "felicità", "gioia", "joy", "joyful",
+        "cheerful", "glad", "pleased", "content",
+        "gioioso", "allegro", "contento", "entusiasta", "euforico", 
+        "soddisfatto", "raggiante", "sereno", "positivo", "eccitato",
+    ),
+    text_keywords=(
+        "felice", "gioia", "contento", "bello", "voglio bene",
+        "amore", "sorriso", "ridere", 
+        "allegro", "fantastico", "meraviglioso",
+    ),
+)
+\end{verbatim}
+\caption{Inizializzazione dell'\texttt{Emotion} ``HAPPY''}
+\end{figure}
  
  
 % ─────────────── II.3 FUSION ───────────────
 \section{Fase 3: Fusione emozionale (\texttt{emotion\_fusion.py})}
  
 \subsection{Tre segnali, tre pesi}
- 
-La fusione combina tre segnali con pesi definiti dal documento tecnico fornito dai tutor:
+
+La fusione emozionale si occupa di fondere le emozioni di priming con l'emozione realtime e le emozioni calcolate sulla base del messaggio utente. Per farlo si è utilizzata una combinazione lineare dei punteggi di ogni emozione, con i pesi forniti nella documentazione fornita dal tutor:
  
 \begin{equation}
     S_\text{fusion}(e) = w_p \cdot S_\text{priming}(e) + w_r \cdot S_\text{realtime}(e) + w_t \cdot S_\text{testo}(e)
     \label{eq:fusion}
 \end{equation}
  
-dove $w_p = 0.35$, $w_r = 0.45$, $w_t = 0.20$ e $e$ è un'etichetta emozionale.
+dove $w_p = 0.35$, $w_r = 0.45$, $w_t = 0.20$ sono i pesi forniti ed $e$ è un'etichetta emozionale. Le etichette $S_\text{fusion/priming/realtime/testo}$ rappresentano i punteggi (score) ottenuti per ogni etichetta emozionale.
  
 \begin{itemize}
     \item \textbf{Priming} ($\times 0.35$): $S_\text{priming}(e) = p_e \times I(e)$ dove $p_e$ è la probability e $I(e)$ il valore numerico dell'intensità.
     \item \textbf{Realtime} ($\times 0.45$): $S_\text{realtime}(e) = p_\text{dom} \times I_\text{dom}$ per l'emozione dominante.
-    \item \textbf{Testo} ($\times 0.20$): classificazione emozionale del messaggio italiano tramite Llama (\textbf{Appello Llama \#1}).
+    \item \textbf{Testo} ($\times 0.20$): classificazione emozionale del messaggio italiano tramite LLM (\textbf{Modello llama3 8B}).
 \end{itemize}
+
+Al fine di attribuire un punteggio per le emozioni di testo, il messaggio italiano viene inviato direttamente a Llama con il prompt \texttt{emotion\_text\_analysis\_prompt.txt}. Llama legge il prompt e genera una risposta standard per l'elaborazione successiva. In caso di fallimento nella generazione della risposta si attiva una funzione di fallback statica, basata su keyword matching.
  
-La conversione delle etichette in valori numerici segue la tabella:
+I \texttt{raw\_cases}, attribuiscono alle varie emozioni dei valori categorici per \texttt{intensity}, \texttt{arousal}, \texttt{valence}, espressi tramite delle etichette. Per ottenere un punteggio numerico è stato necessario mappare le etichette in valori numerici, attraverso la seguente tabella:
  
 \begin{table}[H]
     \centering
@@ -462,11 +481,7 @@ La conversione delle etichette in valori numerici segue la tabella:
     \end{tabular}
 \end{table}
  
-\subsection{Analisi testuale via Llama}
- 
-Il messaggio italiano viene inviato direttamente a Llama con il prompt \texttt{emotion\_text\_analysis\_prompt.txt}. Llama legge il prompt e genera una risposta standard per l'elaborazione successiva. In caso di fallimento nella generazione della risposta si attiva una funzione di fallback statica, basata su keyword matching.
- 
-\subsection{Caso Mufasa: dimostrazione del calcolo}
+\subsection{Esempio di calcolo: caso Mufasa}
  
 Per il caso della morte di Mufasa, con messaggio \textit{``Sai che la morte di Mufasa non mi mette tristezza perché mio padre è vivo e gli voglio molto bene!''}:
  
