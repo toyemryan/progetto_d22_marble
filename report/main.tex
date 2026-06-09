@@ -706,60 +706,191 @@ Sebbene la pipeline logico-affettiva funzioni correttamente nell'isolare i vetto
 \chapter{Problemi critici e soluzioni}
 \label{ch:problemi}
  
+Nel corso dello sviluppo della pipeline, numerosi problemi tecnici hanno richiesto un'analisi approfondita e soluzioni ingegneristiche mirate. Questo capitolo documenta i cinque problemi più critici incontrati, ciascuno con la diagnosi, la soluzione implementata e il codice corrispondente.
+ 
 \section{Tunnel SSH instabile $\rightarrow$ keepalive}
  
-
-Il server chiude la connessione SSH dopo $\sim$51 secondi di inattività durante l'attesa della risposta di Llama. Gli appelli successivi falliscono con ``SSH session not active''.
-
+\subsection*{Diagnosi}
+Durante i test con il server remoto, il tunnel SSH si disconnetteva sistematicamente dopo circa 51 secondi. L'errore appariva nel log come:
  
-La soluzione è stata l'aggiunta di \texttt{set\_keepalive=10} su \texttt{SSHTunnelForwarder} e 
-transport.set\_keepalive(10) sul client Paramiko. Un segnale viene inviato ogni 10 secondi per mantenere la connessione attiva.
-
+\begin{verbatim}
+Socket exception: An existing connection was forcibly 
+closed by the remote host (10054)
+\end{verbatim}
  
-
+La causa è legata al comportamento del server: in assenza di traffico sulla connessione (mentre Llama elabora la risposta), il firewall o il daemon SSH chiude la sessione per inattività. Gli appelli successivi delle fasi 3 e 4 fallivano con \texttt{SSH session not active}, poiché il tunnel era già morto.
+ 
+\subsection*{Soluzione}
+L'aggiunta del parametro \texttt{set\_keepalive=10} su \texttt{SSHTunnelForwarder} e \texttt{transport.set\_keepalive(10)} sul client Paramiko. Un pacchetto SSH di tipo \textit{keepalive} viene inviato ogni 10 secondi, segnalando al server che la connessione è ancora attiva anche durante i lunghi tempi di inferenza del modello.
+ 
 \begin{figure}[H]
 \begin{verbatim}
+# Prima (instabile):
 tunnel = SSHTunnelForwarder(
     (hostname, port),
     ssh_username=user,
     ssh_password=password,
     remote_bind_address=(remote_host, remote_port),
     local_bind_address=("127.0.0.1", local_port),
-    set_keepalive=10,  # keepalive ogni 10s
 )
+ 
+# Dopo (stabile):
+tunnel = SSHTunnelForwarder(
+    (hostname, port),
+    ssh_username=user,
+    ssh_password=password,
+    remote_bind_address=(remote_host, remote_port),
+    local_bind_address=("127.0.0.1", local_port),
+    set_keepalive=10,  # segnale ogni 10s
+)
+ 
+# Keepalive anche sul client Paramiko:
+transport = client.get_transport()
+if transport:
+    transport.set_keepalive(10)
 \end{verbatim}
-\caption{Implementazione del keepalive SSH.}
-\end{figure} 
+\caption{Implementazione del keepalive SSH: confronto prima/dopo.}
+\end{figure}
+ 
  
 \section{Tunnel SSH multipli $\rightarrow$ tunnel unico in \texttt{pipeline.py}}
  
-Ogni modulo (\texttt{emotion\_fusion}, \texttt{cardinal\_point}, \texttt{build\_marble\_prompt}) apriva e chiudeva il proprio tunnel SSH indipendentemente, causando instabilità e conflitti di porta.
-
+\subsection*{Diagnosi}
+Nell'architettura iniziale, ogni modulo che necessitava Llama (\texttt{emotion\_fusion}, \texttt{cardinal\_point}, \texttt{build\_marble\_prompt}) apriva e chiudeva il proprio tunnel SSH indipendentemente. Questo causava tre problemi simultanei: conflitti sulla porta 11434 (già occupata dal tunnel precedente non ancora chiuso), overhead di connessione SSH ripetuto (4-6 handshake per caso), e instabilità dovuta alla moltiplicazione dei punti di fallimento.
  
-Adesso \texttt{pipeline.py} apre il tunnel \textbf{una sola volta} con \texttt{async with vpn\_tunnel()}, e tutti i moduli chiamano Llama direttamente su \texttt{localhost:11434} senza gestire la connessione.
+\subsection*{Soluzione}
+La gestione del tunnel è stata centralizzata in \texttt{pipeline.py}. Il tunnel si apre \textbf{una sola volta} prima dell'inizio delle fasi, e tutti i moduli chiamano Llama direttamente su \texttt{localhost:11434} senza occuparsi della connessione.
+ 
+\begin{figure}[H]
+\begin{verbatim}
+# Prima: ogni modulo gestiva il proprio tunnel
+# cardinal_point.py
+async def get_emotion_target(...):
+    if os.getenv("CONNECT_TO_REMOTE") == "true":
+        async with vpn_tunnel():       # tunnel 1
+            result = call_llama(prompt)
+ 
+# build_marble_prompt.py  
+async def generate_marble_prompt(...):
+    if start_vpn:
+        async with vpn_tunnel():       # tunnel 2
+            ...
+ 
+# Dopo: tunnel unico in pipeline.py
+async def process_case_async(normalized_case):
+    fusion = fuse_emotions(normalized_case)     # usa tunnel
+    cardinal = prepare_cardinal_context(...)     # usa tunnel
+    result = await generate_marble_prompt(...)   # usa tunnel
+ 
+def process_case(normalized_case):
+    if use_remote:
+        async with vpn_tunnel():  # UN SOLO tunnel
+            return await process_case_async(normalized_case)
+\end{verbatim}
+\caption{Centralizzazione del tunnel SSH: da multipli a unico.}
+\end{figure}
  
  
 \section{Porta 11434 occupata da Ollama locale}
  
-Ollama in esecuzione locale occupa la porta 11434, impedendo al tunnel SSH di utilizzare la stessa porta per il redirect.
+\subsection*{Diagnosi}
+Quando si passa dalla modalità locale (Ollama installato sulla macchina di sviluppo) alla modalità remota (server universitario via tunnel SSH), il tunnel tenta di fare il \textit{binding} sulla porta \texttt{127.0.0.1:11434}. Se Ollama locale è ancora in esecuzione, questa porta è già occupata e il tunnel fallisce con:
  
-La soluzione sarebbe di chiudere Ollama locale (clic destro sull'icona $\rightarrow$ Quit Ollama) quando si utilizza il server remoto.
+\begin{verbatim}
+Problem setting SSH Forwarder up: Couldn't open tunnel 
+127.0.0.1:11434 <> 172.17.0.20:11434 might be in use
+\end{verbatim}
+ 
+\subsection*{Soluzione}
+Il conflitto è risolto chiudendo manualmente Ollama locale prima di utilizzare il server remoto (clic destro sull'icona nella barra delle applicazioni $\rightarrow$ \textit{Quit Ollama}). La configurazione \texttt{.env} determina la modalità operativa, garantendo che i due ambienti non coesistano mai sulla stessa porta:
+ 
+\begin{figure}[H]
+\begin{verbatim}
+# Modalita locale (Ollama attivo sulla macchina):
+CONNECT_TO_REMOTE=false
+OLLAMA_MODEL=llama3
+OLLAMA_URL=http://localhost:11434/api/generate
+ 
+# Modalita remota (Ollama chiuso, tunnel SSH attivo):
+CONNECT_TO_REMOTE=true
+OLLAMA_MODEL=llama3
+OLLAMA_URL=http://localhost:11434/api/generate
+# La stessa URL funziona: il tunnel redirige la porta
+# locale verso il container Docker (172.17.0.20:11434)
+\end{verbatim}
+\caption{Configurazione \texttt{.env} per le due modalità operative.}
+\end{figure}
  
  
-\section{Qwen3:1.7b troppo piccolo $\rightarrow$ Llama3 (8B)}
+\section{Qwen3:1.7b troppo piccolo per la generazione $\rightarrow$ Llama3 (8B)}
  
-Qwen3:1.7b restituisce JSON vuoti per l'analisi emozionale del testo. Il modello non ha sufficiente capacità per classificare emozioni in italiano.
-
+\subsection*{Diagnosi}
+Il modello compatto \texttt{Qwen3:1.7b}, inizialmente adottato per ridurre il consumo di risorse hardware, si è rivelato inadeguato nella fase di analisi testuale (\texttt{score\_text}). Alla richiesta di classificare le emozioni presenti in un messaggio italiano, il modello restituiva sistematicamente un oggetto JSON vuoto:
  
-Utilizzo di Llama3 (8B) che produce classificazioni emozionali affidabili. Il modello è determinante per la qualità dell'intera pipeline: un modello insufficiente provoca errori a cascata nelle fasi successive.
+\begin{figure}[H]
+\begin{verbatim}
+# Prompt inviato a Qwen3:1.7b:
+"Analyze the emotional content of this Italian text:
+'Per la terza volta l'Italia non va ai mondiali 
+  e mi sento distrutto. Aiuto!'"
+ 
+# Risposta attesa:
+{"Sad": 0.75, "Angry": 0.30, "Fear": 0.15}
+ 
+# Risposta effettiva di Qwen3:1.7b:
+{
+ 
+ 
+}
+\end{verbatim}
+\caption{Confronto tra output atteso e output effettivo di Qwen3:1.7b.}
+\end{figure}
+ 
+L'assenza di dati strutturati ha innescato un \textit{cascade failure}: il fallback su keyword matching ha prodotto un profilo emozionale errato (\texttt{Happy} dominante al posto di \texttt{Sad}), che si è propagato alle fasi successive invalidando il punto cardinale e, di conseguenza, l'intero prompt Marble generato.
+ 
+\subsection*{Soluzione}
+L'adozione di \texttt{Llama3 (8B)} ha risolto il problema. \texttt{Qwen3:1.7b} è stato mantenuto esclusivamente come modello di valutazione (\textit{LLM-as-judge}), dove le richieste sono più semplici e strutturate.
+ 
  
 \section{\texttt{asyncio.run()} annidato in \texttt{cardinal\_point.py}}
  
-\texttt{cardinal\_point.py} chiamava \texttt{asyncio.run()} internamente, ma \texttt{pipeline.py} aveva già un event loop attivo per il tunnel SSH. Python non permette loop asincroni annidati.
-
+\subsection*{Diagnosi}
+Il modulo \texttt{cardinal\_point.py} utilizzava internamente \texttt{asyncio.run()} per gestire la chiamata asincrona al tunnel SSH. Tuttavia, \texttt{pipeline.py} (dopo la centralizzazione del tunnel) eseguiva già un event loop asincrono. Python non permette l'annidamento di \texttt{asyncio.run()} all'interno di un loop attivo, generando l'errore:
  
-la soluzione è stato di Rendere \texttt{cardinal\_point.py} completamente sincrono: \texttt{get\_emotion\_target()} diventa una funzione normale che chiama \texttt{call\_llama()} direttamente. La gestione asincrona è delegata esclusivamente a \texttt{pipeline.py}.
+\begin{verbatim}
+RuntimeError: asyncio.run() cannot be called from a 
+running event loop
+\end{verbatim}
  
+\subsection*{Soluzione}
+Il modulo \texttt{cardinal\_point.py} è stato reso completamente sincrono. La funzione \texttt{get\_emotion\_target()} è diventata una funzione ordinaria che chiama \texttt{call\_llama()} direttamente, senza gestione asincrona propria. La responsabilità dell'async è delegata esclusivamente a \texttt{pipeline.py}.
+ 
+\begin{figure}[H]
+\begin{verbatim}
+# Prima (conflitto asyncio):
+async def get_emotion_target(user_message, dominant_emotion):
+    if os.getenv("CONNECT_TO_REMOTE") == "true":
+        async with vpn_tunnel():
+            result = call_llama(prompt)
+    else:
+        result = call_llama(prompt)
+    ...
+ 
+def prepare_cardinal_context(normalized_case, fusion_profile):
+    target, cp = asyncio.run(         # ERRORE qui
+        get_emotion_target(...)
+    )
+ 
+# Dopo (sincrono, tunnel gestito da pipeline.py):
+def get_emotion_target(user_message, dominant_emotion):
+    result = call_llama(prompt)       # chiamata diretta
+    ...
+ 
+def prepare_cardinal_context(normalized_case, fusion_profile):
+    target, cp = get_emotion_target(...)  # nessun asyncio
+\end{verbatim}
+\caption{Semplificazione di \texttt{cardinal\_point.py}: da asincrono a sincrono.}
+\end{figure}
  
 % ═══════════════════════════════════════════════════════════════════
 %              CAPITOLO IV - RISULTATI E ANALISI
@@ -958,23 +1089,6 @@ In conclusione, il lavoro svolto dimostra la fattibilità tecnica di un sistema 
         \end{tabularx}
     \end{table}
     
-    
-    \chapter{Esempi completi dei casi benchmark}
-    \label{app:cases}
-    
-    % Inserire i 10+ casi completi con input JSON e output generato
-    % Per ogni caso: stimulus, priming, realtime, message, fusion, cardinal, marble_prompt
-    
-    \begin{notabox}[Caso 001 - Morte di Mufasa]
-    \textbf{Stimolo:} Death of Mufasa --- The Lion King \\
-    \textbf{Emozione dominante:} Happy (score: 0.6375) \\
-    \textbf{Punto cardinale:} dalla perdita alla presenza e gratitudine \\
-    \textbf{Prompt Marble:} ``Imagine a sunlit savannah at dawn, where golden grasses sway gently in the morning breeze...''
-    \end{notabox}
-    
-
-    
-    
     \chapter{Guida all'installazione e riproduzione}
     \label{app:install}
     
@@ -1003,6 +1117,7 @@ In conclusione, il lavoro svolto dimostra la fattibilità tecnica di un sistema 
         \begin{lstlisting}[style=pythonstyle]
     OLLAMA_URL=http://localhost:11434/api/generate
     OLLAMA_MODEL=llama3
+    EVALUATION_MODEL=qwen3:1.7b
     CONNECT_TO_REMOTE=false
         \end{lstlisting}
         
