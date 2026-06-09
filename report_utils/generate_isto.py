@@ -24,11 +24,11 @@ df = pd.DataFrame([
 # 3. Creazione del grafico a barre raggruppate con Plotly Express
 fig = px.bar(
     df, 
-    x="Metrica", 
+    x="Scenario", 
     y="Punteggio", 
-    color="Scenario",
+    color="Metrica",
     barmode="group",  # Mette le barre dei due prompt una di fianco all'altra per confrontarle
-    title="Confronto Quantitativo delle Metriche di Valutazione",
+    title="Confronto Quantitativo dei prompt generati",
     labels={"Punteggio": "Score (Scala 0.0 - 1.0)"},
     text_auto=False   # Mostra automaticamente il valore sopra le barre (es. 0.8)
 )
@@ -36,8 +36,8 @@ fig = px.bar(
 # Ottimizzazioni grafiche per renderlo pulito
 fig.update_layout(
     yaxis_range=[0, 1.1],  # Lascia un po' di spazio in alto per i numeri sui tetti delle barre
-    xaxis_title="Metriche DeepEval",
-    legend_title="Casi valutati"
+    legend_title="Metriche DeepEval",
+    xaxis_title="Casi valutati"
 )
 
 fig.show()

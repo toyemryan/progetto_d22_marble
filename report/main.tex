@@ -767,12 +767,16 @@ la soluzione è stato di Rendere \texttt{cardinal\_point.py} completamente sincr
 \chapter{Risultati e analisi}
 \label{ch:risultati}
 
-Al fine di mostrare i risultati ottenuti, proponiamo un'estratto di 6 casi, che hanno come input gli esempi forniti dal tutor universitario. In particolare saranno riportati e analizzati i casi d'uso dal case\_020 al case\_025.
+Al fine di mostrare i risultati ottenuti, proponiamo un estratto di 6 casi, che hanno come input alcuni degli esempi forniti dal tutor universitario. In particolare, saranno riportati e analizzati i casi d'uso dal \texttt{case\_020} al \texttt{case\_025}. 
+
+Il capitolo si articola inizialmente nella presentazione dei benchmark e nel confronto diretto tra i dati attesi e quelli rilevati. Successivamente, viene analizzata la qualità quantitativa dei prompt generati e l'impatto visivo all'interno dell'ambiente \texttt{Marble}, per poi concludere con un esame critico dei limiti emersi durante la sperimentazione.
  
 \section{Casi benchmark testati}
+Di seguito viene presentato un breve riepilogo relativo ai dati di input e ai risultati attesi. Per ogni caso d'uso analizzato, la Tabella \ref{tab:benchmark} elenca lo stimolo visuale di partenza, l'emozione dominante dell'utente e il punto cardinale atteso.
  
 \begin{longtable}{p{.12\textwidth}p{.35\textwidth}p{.12\textwidth}p{.35\textwidth}}
-    \caption{Riepilogo dei casi benchmark con emozione dominante attesa e punto cardinale atteso.} \label{tab:benchmark} \\
+    \caption{Riepilogo dei casi d'uso testati per la valutazione.}
+    \label{tab:benchmark} \\
     \toprule
     \textbf{Caso} & \textbf{Stimolo} & \textbf{Emozione dom.} & \textbf{Punto cardinale} \\
     \midrule
@@ -790,8 +794,13 @@ Al fine di mostrare i risultati ottenuti, proponiamo un'estratto di 6 casi, che 
     \bottomrule
 \end{longtable}
 
+\section{Valutazioni dei punti cardinali generati}
+
+Successivamente, i casi d'uso sopra riportati sono stati elaborati dal modello. Nella Tabella \ref{tab:cardinal_result} viene confrontato, per ciascun caso, il risultato teorico atteso per il punto cardinale con quello effettivamente elaborato dal sistema. Viene inoltre riportato un punteggio di valutazione su scala da $1$ a $5$ per quantificare la qualità dei risultati ottenuti.
+
 \begin{longtable}[width=\textwidth]{|p{.08\textwidth}p{.30\textwidth}p{.30\textwidth}p{.12\textwidth}|}
-    \caption{Riepilogo risultati: punto cardinale atteso vs rilevato} \label{tab:benchmark} \\
+    \caption{Riepilogo risultati: punto cardinale atteso vs rilevato} 
+    \label{tab:cardinal_result} \\
     \toprule
     \textbf{Caso} & \textbf{Punto cardinale atteso} & \textbf{Punto cardinale rilevato} & \textbf{Punteggio} \\
     \midrule
@@ -808,26 +817,30 @@ Al fine di mostrare i risultati ottenuti, proponiamo un'estratto di 6 casi, che 
     case\_025 & Dall'inatteso alla scoperta. & from a jolted perspective toward an expanded horizon & 4\\
     \bottomrule
 \end{longtable}
- 
+
+I risultati ottenuti rispecchiano le aspettative nella maggior parte dei casi, fornendo una descrizione decisamente approfondita. Nelle situazioni in cui l'output devia parzialmente dalle attese, le discrepanze rimangono interpretabili alla luce del contesto specifico utilizzato come prompt per il caso d'uso. Complessivamente, si può constatare che la determinazione e la valutazione dei punti cardinali hanno prodotto risultati eccellenti.
  
 \section{Qualità dei prompt Marble}
+Per superare la sola valutazione qualitativa testuale, i dati prestazionali sono stati aggregati e visualizzati graficamente. L'obiettivo è analizzare il comportamento medio del sistema sia in relazione ai differenti casi d'uso (Figura \ref{fig:scores_chart01}), sia rispetto alle diverse metriche di valutazione adottate (Figura \ref{fig:scores_chart02}).
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/evaluation_plot01.png}
     \caption{Confronto dei punteggi di valutazione raggruppati per caso d'uso.}
-    \label{fig:scores_chart}
+    \label{fig:scores_chart01}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/evaluation_plot02.png}
     \caption{Confronto dei punteggi di valutazione raggruppati per metrica.}
-    \label{fig:scores_chart}
+    \label{fig:scores_chart02}
 \end{figure}
- 
- 
+
+Come si evince dai grafici, l'andamento delle valutazioni medie dei prompt risulta pressoché stabile, evidenziando la capacità del sistema di garantire prestazioni costanti. Di contro, le valutazioni raggruppate per metrica mettono in luce margini di miglioramento del generatore in corrispondenza di specifici criteri di valutazione. Nel complesso, la componente di generazione dei prompt ha dimostrato un'elevata efficacia, specialmente se si considerano i significativi margini di ottimizzazione applicabili direttamente ai prompt di input.
+  
 \section{Risultati visivi Marble}
+Il passaggio finale della pipeline prevede la traduzione del prompt testuale in un output tridimensionale all'interno dell'ecosistema \texttt{Marble}. Le immagini successive (Figura \ref{fig:marble_gallery}) mostrano il riscontro visivo dei sei mondi generati, offrendo una panoramica di come le sfumature emotive siano state interpretate e renderizzate a livello spaziale e cromatico.
  
 % ── Gallery screenshots ──
 \begin{figure}[H]
@@ -837,49 +850,43 @@ Al fine di mostrare i risultati ottenuti, proponiamo un'estratto di 6 casi, che 
         \caption{case\_020: Morte di Mufasa ne Il Re Leone}
     \end{subfigure}
     \hfill
-    \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{images/prompt_021.png}
         \caption{case\_021: Danza spaziale di Wall-E ed EVE}
     \end{subfigure}
     \hfill
-    \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{images/prompt_022.png}
         \caption{case\_022: Titanic: Jack lascia la mano di Rose e affonda nell'oceano}
     \end{subfigure}
     \hfill
-    \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{images/prompt_023.png}
         \caption{case\_023: Jurassic Park: Il T-Rex ruggisce sotto la pioggia davanti alla jeep}
     \end{subfigure}
     \hfill
-    \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{images/prompt_024.png}
         \caption{case\_024: Il gladiatore: Massimo Decimo Meridio sfida Commodo nell'arena del Colosseo}
     \end{subfigure}
     \hfill
-    \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{images/prompt_025.png}
         \caption{case\_025: The Truman Show: Truman tocca il muro del set scoprendo la finzione}
     \end{subfigure}
-    \hfill
     \caption{Galleria dei mondi Marble generati per i casi benchmark.}
     \label{fig:marble_gallery}
 \end{figure}
- 
- 
+
+La qualità visiva dei risultati ottenuti tramite \texttt{Marble} è risultata tuttavia insoddisfacente, rendendo necessaria una riflessione più approfondita. Esula dagli obiettivi del presente progetto presentare le soluzioni architetturali e ingegneristiche necessarie per ottimizzare l'output finale del software di rendering.
+  
 \section{Limiti identificati}
+Nonostante i riscontri complessivamente positivi, l'analisi dei test ha evidenziato alcune criticità e colli di bottiglia all'interno del flusso di lavoro automatico. Tali limitazioni, riassunte di seguito, offrono importanti spunti di riflessione per futuri sviluppi e ottimizzazioni del sistema.
  
 \begin{enumerate}
-    \item \textbf{Sensibilità al modello LLM}: la qualità dell'intera pipeline dipende dalla capacità del modello. Un modello insufficiente degrada tutte le fasi.
-    \item \textbf{LLM-as-judge}: Llama valuta i propri output, introducendo un bias di autocompiacimento.
-    \item \textbf{Interfaccia Marble manuale}: l'assenza di un'API richiede il copia-incolla manuale dei prompt.
-     \item \textbf{interpretabilità del prompt da Marble}: a volte nonostante il prompt ben generato con specificità liminal, marble non riproduce il monde fedele alla descrizione.
-
+    \item \textbf{Sensibilità al modello LLM}: la qualità dell'intera pipeline è strettamente subordinata alle capacità del modello linguistico adottato; l'impiego di un modello con prestazioni insufficienti degrada l'efficacia di tutte le fasi successive.
+    \item \textbf{LLM-as-a-judge}: Se il medesimo modello linguistico generasse e valutasse i propri output, si introdurrebbe un bias di autocompiacimento. Per ovviare a questo problema, la configurazione base del progetto prevede l'utilizzo di un modello \texttt{llama} per la fase di generazione e di un modello \texttt{qwen} per la fase di valutazione.
+    \item \textbf{Efficienza ed efficacia di Marble}: Il software \texttt{Marble} introduce criticità in termini di efficienza, a causa dei tempi richiesti per la generazione dei mondi e dell'assenza di un'interfaccia API per l'automazione del processo. Tale deficit, inoltre, non risulta compensato da un'adeguata qualità visiva nella creazione degli ambienti tridimensionali.
 \end{enumerate}
  
  
@@ -888,27 +895,29 @@ Al fine di mostrare i risultati ottenuti, proponiamo un'estratto di 6 casi, che 
 % ═══════════════════════════════════════════════════════════════════
 \chapter{Conclusione}
 \label{ch:conclusione}
- 
-questo progetto ha realizzato una pipeline funzionante end-to-end che trasforma dati emozionali multimodali (priming facciale, emozione realtime, messaggio testuale) in prompt narrativi per la generazione di mondi 3D in Marble. Il sistema integra con successo il quadro teorico del Liminal Design, utilizzando il concetto di punto cardinale per guidare la trasformazione emotiva dell'utente attraverso ambienti 3D esplorabili.
- 
-La pipeline si compone di sette fasi modulari, con quattro appelli a Llama che gestiscono le operazioni più complesse (analisi testuale, identificazione del punto cardinale, generazione del prompt, valutazione). L'architettura permette l'esecuzione sia in locale che su server remoto tramite tunnel SSH configurabile.
- 
+Il presente progetto ha portato alla realizzazione di una pipeline funzionante \textit{end-to-end}, in grado di tradurre dati emozionali multimodali — derivanti da \textit{priming} facciale, analisi emotiva in tempo reale e messaggi testuali — in prompt narrativi strutturati per la generazione di ambienti tridimensionali all'interno dell'ecosistema \texttt{Marble}. Il sistema integra efficacemente il quadro teorico del \textit{Liminal Design}, declinando il concetto di "punto cardinale" per orientare la trasformazione emotiva dell'utente attraverso l'esplorazione di mondi 3D dedicati.
+
+Il flusso di lavoro si articola in sette fasi modulari, all'interno delle quali quattro interrogazioni distinte al modello \texttt{Llama} orchestrano le operazioni a maggiore complessità computazionale e semantica: l'analisi testuale, l'identificazione del punto cardinale, la modellazione del prompt e la successiva validazione. L'architettura software è stata inoltre ingegnerizzata per supportare una doppia modalità di esecuzione, operando sia in ambiente locale sia su server remoto tramite la configurazione di un tunnel SSH.
+
 \subsection*{Contributi principali}
 \begin{itemize}
-    \item Pipeline modulare Python con fusione emozionale ponderata a tre segnali.
-    \item Meta-prompt engineering con tabella emozione $\rightarrow$ mondo 3D e regole di trasformazione.
-    \item Sistema di valutazione automatica LLM-as-judge con confronto progressivo.
-    \item Infrastruttura dual-mode (locale/remoto) con tunnel SSH e keepalive.
+    \item Sviluppo di una pipeline modulare in \texttt{Python} che implementa un algoritmo di fusione emozionale ponderata basato su tre segnali indipendenti.
+    \item Progettazione di una strategia di \textit{meta-prompt engineering} vincolata a regole di trasformazione e a una matrice di mappatura emozione $\rightarrow$ mondo 3D.
+    \item Implementazione di un paradigma di valutazione automatica basato sulla metodologia \texttt{LLM-as-a-judge} con logica di confronto progressivo.
+    \item Realizzazione di un'infrastruttura di rete \textit{dual-mode} (locale/remoto) assistita da tunnel SSH e meccanismi di \textit{keepalive}.
 \end{itemize}
- 
-\subsection*{Prossimi passi}
+
+\subsection*{Sviluppi futuri}
 \begin{itemize}
-    \item Integrazione diretta con FaceReader/Noldus per l'acquisizione delle emozioni in tempo reale.
-    \item Sviluppo di un'API per Marble per automatizzare la generazione dei mondi.
-    \item Valutazione umana dei prompt e dei mondi generati per validare i punteggi LLM-as-judge.
-    \item Test con un modello LLM più grande (Llama3:70B) per migliorare la qualità dei prompt.
-    \item interfacciamento se possibile nel futuro, lavorare con un generatore di mondo più efficiente.
+    \item Integrazione nativa con i sistemi \texttt{FaceReader} / \texttt{Noldus} per ottimizzare l'acquisizione delle metriche espressive in tempo reale.
+    \item Sviluppo o integrazione di un'interfaccia API dedicata per il software \texttt{Marble}, finalizzata all'automazione completa del processo di rendering.
+    \item Conduzione di sessioni di valutazione umana sui prompt e sui mondi tridimensionali generati, al fine di validare statisticamente i punteggi assegnati dalla componente \texttt{LLM-as-a-judge}.
+    \item Migrazione del core logico verso modelli linguistici di scala maggiore (es. \texttt{Llama3:70B}) per incrementare la qualità semantica e la specificità dei prompt.
+    \item Esplorazione e interfacciamento con motori di generazione procedurale alternativi, caratterizzati da una maggiore efficienza computazionale e da una qualità visiva superiore.
 \end{itemize}
+
+\subsection*{Considerazioni finali}
+In conclusione, il lavoro svolto dimostra la fattibilità tecnica di un sistema in grado di connettere dinamicamente gli stati affettivi umani con la generazione di spazi virtuali complessi. Sebbene l'attuale motore di rendering tridimensionale rappresenti un collo di bottiglia in termini di resa visiva e automazione, l'infrastruttura software sviluppata si è rivelata flessibile, solida e pienamente coerente con i presupposti teorici stabiliti. La modularità della pipeline garantisce che futuri aggiornamenti — sia sul fronte dei modelli generativi che su quello dei motori grafici — possano essere integrati senza alterare il nucleo logico del sistema, ponendo le basi per applicazioni avanzate nell'ambito dell'interazione uomo-macchina emotivamente consapevole.
  
  
 % ═══════════════════════════════════════════════════════════════════
