@@ -30,6 +30,7 @@
 \contentsline {section}{\numberline {2.5}Fase 5: Generazione del prompt Marble (\texttt {build\_marble\_prompt.py})}{13}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Assemblaggio del prompt per Llama}{13}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Il meta-prompt: cuore del sistema}{14}{subsection.2.5.2}%
+\contentsline {paragraph}{}{14}{paragraph*.14}%
 \contentsline {subsection}{\numberline {2.5.3}Invocazione dell'LLM e Strategie di Parsing}{14}{subsection.2.5.3}%
 \contentsline {subsection}{\numberline {2.5.4}Esempio di output generato}{15}{subsection.2.5.4}%
 \contentsline {section}{\numberline {2.6}Fase 6: Valutazione (\texttt {evaluate\_outputs.py})}{15}{section.2.6}%
@@ -49,7 +50,7 @@
 \contentsline {section}{\numberline {4.4}Risultati visivi Marble}{27}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Limiti identificati}{29}{section.4.5}%
 \contentsline {chapter}{\numberline {5}Conclusione}{30}{chapter.5}%
-\contentsline {chapter}{Appendices}{32}{section*.27}%
+\contentsline {chapter}{Appendices}{32}{section*.28}%
 \contentsline {chapter}{\numberline {A}Meta-prompt completo}{33}{chapter.1.A}%
 \contentsline {chapter}{\numberline {B}Tabella di mappatura emozione $\rightarrow $ mondo 3D}{37}{chapter.1.B}%
 \contentsline {chapter}{\numberline {C}Illustrazione del funzionamento della pipeline}{38}{chapter.1.C}%

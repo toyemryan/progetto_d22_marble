@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.10)  11 JUN 2026 00:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.10)  11 JUN 2026 00:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -866,7 +866,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.43 ...rightarrow $ Llama3 (8B)}{22}{section.3.4}
+l.44 ...rightarrow $ Llama3 (8B)}{22}{section.3.4}
                                                   % [1
 
 ])
@@ -927,34 +927,34 @@ Overfull \hbox (46.27068pt too wide) in paragraph at lines 548--548
  []
 
 [13] [14] [15]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 661.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 662.
  [16]
-<images/mufasa_savana.png, id=388, 1105.731pt x 617.9085pt>
+<images/mufasa_savana.png, id=386, 1105.731pt x 617.9085pt>
 File: images/mufasa_savana.png Graphic file (type png)
 <use images/mufasa_savana.png>
-Package pdftex.def Info: images/mufasa_savana.png  used on input line 686.
+Package pdftex.def Info: images/mufasa_savana.png  used on input line 687.
 (pdftex.def)             Requested size: 396.76001pt x 221.71146pt.
-<images/prompt_031.png, id=389, 1096.69725pt x 603.4545pt>
+<images/prompt_031.png, id=387, 1096.69725pt x 603.4545pt>
 File: images/prompt_031.png Graphic file (type png)
 <use images/prompt_031.png>
-Package pdftex.def Info: images/prompt_031.png  used on input line 693.
+Package pdftex.def Info: images/prompt_031.png  used on input line 694.
 (pdftex.def)             Requested size: 396.76001pt x 218.31157pt.
  [17 <./images/mufasa_savana.png>] [18 <./images/prompt_031.png>]
 Capitolo 3.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 715.
+(hyperref)                removing `math shift' on input line 716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightarrow' on input line 715.
+(hyperref)                removing `\rightarrow' on input line 716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 715.
+(hyperref)                removing `math shift' on input line 716.
 
 
-Overfull \hbox (53.18132pt too wide) in paragraph at lines 728--729
+Overfull \hbox (53.18132pt too wide) in paragraph at lines 729--730
 \OT1/cmr/m/n/10.95 L'aggiunta del pa-ra-me-tro \OT1/cmtt/m/n/10.95 set[]keepalive=10 \OT1/cmr/m/n/10.95 su \OT1/cmtt/m/n/10.95 SSHTunnelForwarder \OT1/cmr/m/n/10.95 e \OT1/cmtt/m/n/10.95 transport.set[]keepalive(10)
  []
 
@@ -963,212 +963,212 @@ Overfull \hbox (53.18132pt too wide) in paragraph at lines 728--729
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 760.
+(hyperref)                removing `math shift' on input line 761.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightarrow' on input line 760.
+(hyperref)                removing `\rightarrow' on input line 761.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 760.
+(hyperref)                removing `math shift' on input line 761.
 
 
-Overfull \hbox (16.4098pt too wide) in paragraph at lines 763--764
+Overfull \hbox (16.4098pt too wide) in paragraph at lines 764--765
 \OT1/cmr/m/n/10.95 Nell'architettura ini-zia-le, ogni mo-du-lo che ne-ces-si-ta-va Lla-ma (\OT1/cmtt/m/n/10.95 emotion[]fusion\OT1/cmr/m/n/10.95 , \OT1/cmtt/m/n/10.95 cardinal[]point\OT1/cmr/m/n/10.95 ,
  []
 
 [20] [21]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 829.
+(hyperref)                removing `math shift' on input line 830.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightarrow' on input line 829.
+(hyperref)                removing `\rightarrow' on input line 830.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 829.
+(hyperref)                removing `math shift' on input line 830.
 
 [22]
-Overfull \hbox (50.49861pt too wide) in paragraph at lines 870--871
+Overfull \hbox (50.49861pt too wide) in paragraph at lines 871--872
 \OT1/cmr/m/n/10.95 Il mo-du-lo \OT1/cmtt/m/n/10.95 cardinal[]point.py \OT1/cmr/m/n/10.95 ^^Re sta-to re-so com-ple-ta-men-te sin-cro-no. La fun-zio-ne \OT1/cmtt/m/n/10.95 get[]emotion[]target()
  []
 
 [23]
 Capitolo 4.
 
-Overfull \hbox (21.55019pt too wide) in alignment at lines 912--918
+Overfull \hbox (21.55019pt too wide) in alignment at lines 913--919
  [] [] [] [] 
  []
 
 
-Overfull \hbox (21.55019pt too wide) in alignment at lines 918--922
+Overfull \hbox (21.55019pt too wide) in alignment at lines 919--923
  [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 1810) in paragraph at lines 924--924
+Underfull \hbox (badness 1810) in paragraph at lines 925--925
 []|\OT1/cmr/m/n/10.95 Danza spa-zia-le di Wall-E ed
  []
 
 
-Underfull \hbox (badness 1502) in paragraph at lines 927--927
+Underfull \hbox (badness 1502) in paragraph at lines 928--928
 []|\OT1/cmr/m/n/10.95 Il gla-dia-to-re: Mas-si-mo De-ci-
  []
 
 
-Underfull \hbox (badness 1728) in paragraph at lines 928--928
+Underfull \hbox (badness 1728) in paragraph at lines 929--929
 []|\OT1/cmr/m/n/10.95 The Tru-man Show: Tru-man
  []
 
 
-Overfull \hbox (21.55019pt too wide) in alignment at lines 922--930
+Overfull \hbox (21.55019pt too wide) in alignment at lines 923--931
  [] [] [] [] 
  []
 
 [24
 
 ]
-Overfull \hbox (2.4052pt too wide) in paragraph at lines 940--941
+Overfull \hbox (2.4052pt too wide) in paragraph at lines 941--942
 []|\OT1/cmr/bx/n/10.95 Punteggio| 
  []
 
 
-Overfull \hbox (11.36284pt too wide) in paragraph at lines 944--945
+Overfull \hbox (11.36284pt too wide) in paragraph at lines 945--946
 []|\OT1/cmr/bx/n/10.95 Valutazione| 
  []
 
 
-Overfull \hbox (4.62593pt too wide) in paragraph at lines 947--947
+Overfull \hbox (4.62593pt too wide) in paragraph at lines 948--948
 []|\OT1/cmr/m/n/10.95 case[]020| 
  []
 
 
-Underfull \hbox (badness 1215) in paragraph at lines 947--947
+Underfull \hbox (badness 1215) in paragraph at lines 948--948
 []|\OT1/cmr/m/n/10.95 dalla per-di-ta al-la pre-sen-
  []
 
 
-Underfull \hbox (badness 1043) in paragraph at lines 947--947
+Underfull \hbox (badness 1043) in paragraph at lines 948--948
 \OT1/cmr/m/n/10.95 za, dal-la mor-te al-l'a-mo-re
  []
 
 
-Overfull \hbox (4.62593pt too wide) in paragraph at lines 948--948
+Overfull \hbox (4.62593pt too wide) in paragraph at lines 949--949
 []|\OT1/cmr/m/n/10.95 case[]021| 
  []
 
 
-Overfull \hbox (4.62593pt too wide) in paragraph at lines 949--949
+Overfull \hbox (4.62593pt too wide) in paragraph at lines 950--950
 []|\OT1/cmr/m/n/10.95 case[]022| 
  []
 
 
-Underfull \hbox (badness 2608) in paragraph at lines 949--949
+Underfull \hbox (badness 2608) in paragraph at lines 950--950
 \OT1/cmr/m/n/10.95 the com-fort of che-ri-shed
  []
 
 
-Overfull \hbox (4.62593pt too wide) in paragraph at lines 950--950
+Overfull \hbox (4.62593pt too wide) in paragraph at lines 951--951
 []|\OT1/cmr/m/n/10.95 case[]023| 
  []
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 950--950
+Underfull \hbox (badness 1418) in paragraph at lines 951--951
 \OT1/cmr/m/n/10.95 un-cer-tain-ty to-ward a ho-
  []
 
 
-Underfull \hbox (badness 1742) in paragraph at lines 950--950
+Underfull \hbox (badness 1742) in paragraph at lines 951--951
 \OT1/cmr/m/n/10.95 ri-zon of an-ti-ci-pa-tion and
  []
 
 
-Overfull \hbox (4.62593pt too wide) in paragraph at lines 951--951
+Overfull \hbox (4.62593pt too wide) in paragraph at lines 952--952
 []|\OT1/cmr/m/n/10.95 case[]024| 
  []
 
 
-Overfull \hbox (4.62593pt too wide) in paragraph at lines 952--952
+Overfull \hbox (4.62593pt too wide) in paragraph at lines 953--953
 []|\OT1/cmr/m/n/10.95 case[]025| 
  []
 
-<images/evaluation_plot01.png, id=448, 1412.27625pt x 621.32124pt>
+<images/evaluation_plot01.png, id=449, 1412.27625pt x 621.32124pt>
 File: images/evaluation_plot01.png Graphic file (type png)
 <use images/evaluation_plot01.png>
-Package pdftex.def Info: images/evaluation_plot01.png  used on input line 963.
+Package pdftex.def Info: images/evaluation_plot01.png  used on input line 964.
 (pdftex.def)             Requested size: 440.84746pt x 193.94435pt.
 [25]
-<images/evaluation_plot02.png, id=456, 1412.27625pt x 621.32124pt>
+<images/evaluation_plot02.png, id=457, 1412.27625pt x 621.32124pt>
 File: images/evaluation_plot02.png Graphic file (type png)
 <use images/evaluation_plot02.png>
-Package pdftex.def Info: images/evaluation_plot02.png  used on input line 970.
+Package pdftex.def Info: images/evaluation_plot02.png  used on input line 971.
 (pdftex.def)             Requested size: 440.84746pt x 193.94435pt.
-<images/summary.png, id=457, 639.5895pt x 230.66174pt>
+<images/summary.png, id=458, 639.5895pt x 230.66174pt>
 File: images/summary.png Graphic file (type png)
 <use images/summary.png>
-Package pdftex.def Info: images/summary.png  used on input line 979.
+Package pdftex.def Info: images/summary.png  used on input line 980.
 (pdftex.def)             Requested size: 440.84746pt x 158.99133pt.
  [26 <./images/evaluation_plot01.png> <./images/evaluation_plot02.png>]
-<images/prompt_020.png, id=465, 1428.33624pt x 637.38126pt>
+<images/prompt_020.png, id=466, 1428.33624pt x 637.38126pt>
 File: images/prompt_020.png Graphic file (type png)
 <use images/prompt_020.png>
-Package pdftex.def Info: images/prompt_020.png  used on input line 993.
+Package pdftex.def Info: images/prompt_020.png  used on input line 994.
 (pdftex.def)             Requested size: 211.60489pt x 94.42625pt.
-<images/prompt_021.png, id=466, 1428.33624pt x 637.38126pt>
+<images/prompt_021.png, id=467, 1428.33624pt x 637.38126pt>
 File: images/prompt_021.png Graphic file (type png)
 <use images/prompt_021.png>
-Package pdftex.def Info: images/prompt_021.png  used on input line 998.
+Package pdftex.def Info: images/prompt_021.png  used on input line 999.
 (pdftex.def)             Requested size: 211.60489pt x 94.42625pt.
-<images/prompt_022.png, id=467, 1071.00125pt x 477.785pt>
+<images/prompt_022.png, id=468, 1071.00125pt x 477.785pt>
 File: images/prompt_022.png Graphic file (type png)
 <use images/prompt_022.png>
-Package pdftex.def Info: images/prompt_022.png  used on input line 1003.
+Package pdftex.def Info: images/prompt_022.png  used on input line 1004.
 (pdftex.def)             Requested size: 211.60489pt x 94.39613pt.
-<images/prompt_023.png, id=468, 1428.33624pt x 637.38126pt>
+<images/prompt_023.png, id=469, 1428.33624pt x 637.38126pt>
 File: images/prompt_023.png Graphic file (type png)
 <use images/prompt_023.png>
-Package pdftex.def Info: images/prompt_023.png  used on input line 1008.
+Package pdftex.def Info: images/prompt_023.png  used on input line 1009.
 (pdftex.def)             Requested size: 211.60489pt x 94.42625pt.
-<images/prompt_024.png, id=469, 1428.33624pt x 637.38126pt>
+<images/prompt_024.png, id=470, 1428.33624pt x 637.38126pt>
 File: images/prompt_024.png Graphic file (type png)
 <use images/prompt_024.png>
-Package pdftex.def Info: images/prompt_024.png  used on input line 1013.
+Package pdftex.def Info: images/prompt_024.png  used on input line 1014.
 (pdftex.def)             Requested size: 211.60489pt x 94.42625pt.
-<images/prompt_025.png, id=470, 1428.33624pt x 637.38126pt>
+<images/prompt_025.png, id=471, 1428.33624pt x 637.38126pt>
 File: images/prompt_025.png Graphic file (type png)
 <use images/prompt_025.png>
-Package pdftex.def Info: images/prompt_025.png  used on input line 1018.
+Package pdftex.def Info: images/prompt_025.png  used on input line 1019.
 (pdftex.def)             Requested size: 211.60489pt x 94.42625pt.
  [27 <./images/summary.png>]
-Overfull \hbox (38.13028pt too wide) in paragraph at lines 1030--1031
+Overfull \hbox (38.13028pt too wide) in paragraph at lines 1031--1032
 []\OT1/cmr/m/n/10.95 case[]020: []$\OT1/cmtt/m/n/10.95 https : / / marble . worldlabs . ai / world / 2f4dc9dd-[]d450-[]4b68-[]8cbd-[]ba102634bc4a$[] 
  []
 
 
-Overfull \hbox (38.13028pt too wide) in paragraph at lines 1031--1032
+Overfull \hbox (38.13028pt too wide) in paragraph at lines 1032--1033
 []\OT1/cmr/m/n/10.95 case[]021: []$\OT1/cmtt/m/n/10.95 https : / / marble . worldlabs . ai / world / e2638a48-[]f4c9-[]4f69-[]baa6-[]0ee910f56997$[] 
  []
 
 
-Overfull \hbox (38.13028pt too wide) in paragraph at lines 1032--1033
+Overfull \hbox (38.13028pt too wide) in paragraph at lines 1033--1034
 []\OT1/cmr/m/n/10.95 case[]022: []$\OT1/cmtt/m/n/10.95 https : / / marble . worldlabs . ai / world / 1dce6045-[]e7af-[]4ebb-[]8ff6-[]26ea0945ba99$[] 
  []
 
 
-Overfull \hbox (38.13028pt too wide) in paragraph at lines 1033--1034
+Overfull \hbox (38.13028pt too wide) in paragraph at lines 1034--1035
 []\OT1/cmr/m/n/10.95 case[]023: []$\OT1/cmtt/m/n/10.95 https : / / marble . worldlabs . ai / world / f3832c67-[]edb6-[]4a84-[]9264-[]3f6c41c6ac58$[] 
  []
 
 
-Overfull \hbox (38.13028pt too wide) in paragraph at lines 1034--1035
+Overfull \hbox (38.13028pt too wide) in paragraph at lines 1035--1036
 []\OT1/cmr/m/n/10.95 case[]024: []$\OT1/cmtt/m/n/10.95 https : / / marble . worldlabs . ai / world / 5c4053a8-[]15e5-[]4bac-[]a0ee-[]1933446db428$[] 
  []
 
 
-Overfull \hbox (38.13028pt too wide) in paragraph at lines 1035--1036
+Overfull \hbox (38.13028pt too wide) in paragraph at lines 1036--1037
 []\OT1/cmr/m/n/10.95 case[]025: []$\OT1/cmtt/m/n/10.95 https : / / marble . worldlabs . ai / world / 755aa879-[]84cd-[]4ced-[]8db6-[]d3d6c1dd2914$[] 
  []
 
@@ -1187,18 +1187,18 @@ Appendice A.
 Appendice B.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1094.
+(hyperref)                removing `math shift' on input line 1095.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightarrow' on input line 1094.
+(hyperref)                removing `\rightarrow' on input line 1095.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1094.
+(hyperref)                removing `math shift' on input line 1095.
 
 
-Underfull \hbox (badness 3815) in paragraph at lines 1114--1114
+Underfull \hbox (badness 3815) in paragraph at lines 1115--1115
 []|\OT1/cmr/m/n/9 Fratture, la-va con-trol-la-ta,
  []
 
@@ -1206,33 +1206,33 @@ Underfull \hbox (badness 3815) in paragraph at lines 1114--1114
 
 ]
 Appendice C.
-<images/--new.png, id=630, 763.05075pt x 245.11575pt>
+<images/--new.png, id=631, 763.05075pt x 245.11575pt>
 File: images/--new.png Graphic file (type png)
 <use images/--new.png>
-Package pdftex.def Info: images/--new.png  used on input line 1123.
+Package pdftex.def Info: images/--new.png  used on input line 1124.
 (pdftex.def)             Requested size: 396.76001pt x 127.45343pt.
-<images/forrest gump.png, id=631, 506.49225pt x 187.902pt>
+<images/forrest gump.png, id=632, 506.49225pt x 187.902pt>
 File: images/forrest gump.png Graphic file (type png)
 <use images/forrest gump.png>
-Package pdftex.def Info: images/forrest gump.png  used on input line 1130.
+Package pdftex.def Info: images/forrest gump.png  used on input line 1131.
 (pdftex.def)             Requested size: 396.76001pt x 147.1966pt.
-<images/input text.png, id=632, 769.07326pt x 413.1435pt>
+<images/input text.png, id=633, 769.07326pt x 413.1435pt>
 File: images/input text.png Graphic file (type png)
 <use images/input text.png>
-Package pdftex.def Info: images/input text.png  used on input line 1137.
+Package pdftex.def Info: images/input text.png  used on input line 1138.
 (pdftex.def)             Requested size: 396.76001pt x 213.14005pt.
 [38
 
  <./images/--new.png> <./images/forrest gump.png>]
-<images/elaborazione.png, id=641, 799.18575pt x 313.17pt>
+<images/elaborazione.png, id=642, 799.18575pt x 313.17pt>
 File: images/elaborazione.png Graphic file (type png)
 <use images/elaborazione.png>
-Package pdftex.def Info: images/elaborazione.png  used on input line 1144.
+Package pdftex.def Info: images/elaborazione.png  used on input line 1145.
 (pdftex.def)             Requested size: 396.76001pt x 155.47597pt.
-<images/risultato finale.png, id=642, 800.9925pt x 364.36125pt>
+<images/risultato finale.png, id=643, 800.9925pt x 364.36125pt>
 File: images/risultato finale.png Graphic file (type png)
 <use images/risultato finale.png>
-Package pdftex.def Info: images/risultato finale.png  used on input line 1151.
+Package pdftex.def Info: images/risultato finale.png  used on input line 1152.
 (pdftex.def)             Requested size: 396.76001pt x 180.48447pt.
  [39 <./images/input text.png> <./images/elaborazione.png>] [40 <./images/risultato finale.png>]
 Appendice D.
@@ -1240,7 +1240,7 @@ Appendice D.
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1193.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1194.
 
 No file main.bbl.
 [41
@@ -1255,20 +1255,20 @@ L3 programming layer <2026-05-26>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9E81FB9B7BAC890FFE0AF8BA9A186273;11690.
+(rerunfilecheck)             Checksum: D99C1FB854310A454EDCC2D706383DA8;11690.
  ) 
 Here is how much of TeX's memory you used:
- 38875 strings out of 467509
- 849320 string characters out of 5408780
- 2010123 words of memory out of 5000000
+ 38876 strings out of 467509
+ 849333 string characters out of 5408780
+ 2010250 words of memory out of 5000000
  67316 multiletter control sequences out of 15000+600000
  647726 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,10n,118p,1675b,2214s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\toyem\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/toyem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/toyem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/toyem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/toyem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/toyem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Users/toyem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/toyem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/toyem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/toyem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/toyem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/toyem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/toyem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/toyem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/toyem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/toyem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/toyem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (42 pages, 14984241 bytes).
+Output written on main.pdf (42 pages, 14984371 bytes).
 PDF statistics:
- 819 PDF objects out of 1000 (max. 8388607)
- 270 named destinations out of 1000 (max. 500000)
+ 821 PDF objects out of 1000 (max. 8388607)
+ 271 named destinations out of 1000 (max. 500000)
  529 words of extra memory for PDF output out of 10000 (max. 10000000)
 
