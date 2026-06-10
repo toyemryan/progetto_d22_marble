@@ -5,3 +5,4 @@ paramiko>=3.0.0
 sshtunnel>=0.4.0
 deepeval>=1.0.0
 json-repair>=0.30.0
+numpy>=1.24.0

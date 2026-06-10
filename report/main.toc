@@ -1,0 +1,56 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {paragraph}{}{1}{paragraph*.1}%
+\contentsline {paragraph}{}{1}{paragraph*.2}%
+\contentsline {chapter}{Introduzione}{2}{chapter*.3}%
+\contentsline {chapter}{Introduzione}{3}{chapter*.4}%
+\contentsline {chapter}{\numberline {1}Fondazioni teoriche e architettura}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Quadro teorico}{4}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Il concetto di spazio Liminal}{4}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Concetti emozionali chiave}{4}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Differenze rispetto al progetto originale}{5}{subsection.1.1.3}%
+\contentsline {section}{\numberline {1.2}Architettura globale del sistema}{5}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Schema generale}{5}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Infrastruttura e comunicazione}{6}{subsection.1.2.2}%
+\contentsline {chapter}{\numberline {2}Sviluppo della pipeline}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Fase 1: Input interattivo (\texttt {input\_case.py})}{8}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Interfaccia utente in italiano}{8}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Traduzione e normalizzazione automatica}{8}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Formato JSON standardizzato}{9}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Fase 2: Parsing e normalizzazione (\texttt {parse\_cases.py})}{9}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Uniformizzazione delle etichette}{9}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}Fase 3: Fusione emozionale (\texttt {emotion\_fusion.py})}{10}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Tre segnali, tre pesi}{10}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Esempio di calcolo: caso Mufasa}{11}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Impatto del modello LLM sulla Pipeline}{11}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Fase 4: Punto cardinale (\texttt {cardinal\_point.py})}{12}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Ruolo del punto cardinale nel quadro Liminal}{12}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Identificazione via Llama}{12}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Meccanismo di fallback}{13}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Fase 5: Generazione del prompt Marble (\texttt {build\_marble\_prompt.py})}{13}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Assemblaggio del prompt per Llama}{13}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Il meta-prompt: cuore del sistema}{14}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Invocazione dell'LLM e Strategie di Parsing}{14}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Esempio di output generato}{15}{subsection.2.5.4}%
+\contentsline {section}{\numberline {2.6}Fase 6: Valutazione (\texttt {evaluate\_outputs.py})}{15}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Approccio LLM-as-a-Judge}{16}{subsection.2.6.1}%
+\contentsline {section}{\numberline {2.7}Fase 7: Generazione Marble e Risultati Visivi}{17}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Analisi Critica dei Risultati}{18}{subsection.2.7.1}%
+\contentsline {chapter}{\numberline {3}Problemi critici e soluzioni}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Tunnel SSH instabile $\rightarrow $ keepalive}{19}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Tunnel SSH multipli $\rightarrow $ tunnel unico in \texttt {pipeline.py}}{20}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Porta 11434 occupata da Ollama locale}{21}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Qwen3:1.7b troppo piccolo per la generazione $\rightarrow $ Llama3 (8B)}{22}{section.3.4}%
+\contentsline {section}{\numberline {3.5}\texttt {asyncio.run()} annidato in \texttt {cardinal\_point.py}}{23}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Risultati e analisi}{24}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Casi benchmark testati}{24}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Valutazioni dei punti cardinali generati}{25}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Qualità dei prompt Marble}{25}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Risultati visivi Marble}{27}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Limiti identificati}{29}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Conclusione}{30}{chapter.5}%
+\contentsline {chapter}{Appendices}{32}{section*.27}%
+\contentsline {chapter}{\numberline {A}Meta-prompt completo}{33}{chapter.1.A}%
+\contentsline {chapter}{\numberline {B}Tabella di mappatura emozione $\rightarrow $ mondo 3D}{37}{chapter.1.B}%
+\contentsline {chapter}{\numberline {C}Illustrazione del funzionamento della pipeline}{38}{chapter.1.C}%
+\contentsline {chapter}{\numberline {D}Guida all'installazione e riproduzione}{41}{chapter.1.D}%

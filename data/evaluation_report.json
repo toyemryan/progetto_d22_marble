@@ -836,270 +836,6 @@
     }
   },
   {
-    "evaluated_at": "2026-06-09T10:11:15.688786",
-    "results": {
-      "prompt_id": "prompt_020",
-      "marble_prompt": "As the sun dips below the horizon, Pride Rock is bathed in a warm golden light, symbolizing the triumph of Simba's reign. The African landscape stretches out before us, alive with the sounds of lions roaming freely. The air is filled with the scent of blooming acacia trees, and the wind whispers secrets to those who listen. In this vibrant world, Mufasa's memory is honored not through sorrow but through celebration. The pride lands are full of life, teeming with animals, and Simba stands tall, his mane a fiery halo as he surveys his kingdom. The sky is painted with hues of orange and pink, a breathtaking sunset that mirrors the user's joy and connection to their father.",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.8,
-          "motivation": "The description evokes the emotion of pride through several elements: the warm golden light on Pride Rock symbolizing triumph, the vibrant landscape with lions and acacia trees, the celebration of Mufasa's memory, the life-filled pride lands, and the sunset mirroring the user's joy. However, while these elements contribute to the emotion of pride, they are not consistently or directly evoking it across all elements. The celebration and triumph are clear, but the emotional resonance is not as strong or consistent as it could be, leaving some elements neutral or generic in the context of pride.",
-          "emotion_target": "Pride",
-          "cardinal_point": "from a sense of loss toward a celebration of life and connection"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.8,
-          "motivation": "The world effectively embodies the transition from a sense of loss toward a celebration of life and connection, with clear elements representing both poles. The warm golden light on Pride Rock, the vibrant landscape, the scent of blooming acacia trees, the wind's whispers, and the sunset all contribute to the emotional movement from sorrow to joy. The imagery of Simba standing tall and the sky's vibrant hues create a strong sense of transition. While the transition is felt and active, not every element is explicitly transitional, but the overall atmosphere and imagery convey the liminality clearly.",
-          "emotion_target": "Pride",
-          "cardinal_point": "from a sense of loss toward a celebration of life and connection"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.8,
-          "motivation": "The description includes five of the six visual dimensions with specific references: environment type (African landscape), lighting (warm golden light, sunset), color palette (orange and pink), materials/textures (firefly dust, acacia trees), and spatial composition (teeming with animals, Simba's mane). The scene is coherent and mostly renderable without guessing.",
-          "emotion_target": "Pride",
-          "cardinal_point": "from a sense of loss toward a celebration of life and connection"
-        },
-        "prompt_diversity": {
-          "metric": "prompt_diversity",
-          "score": 0.6,
-          "motivation": "World A (Pride) and World B (Connection) share many structural elements, such as the depiction of Pride Rock, the warm golden light, the African landscape, the scent of blooming acacia trees, and the theme of memory and celebration. However, World B (Connection) introduces a desolate, melancholic atmosphere with elements like the foggy night, the empty staircase, the weeping sound, and the glimmer of connection. These differences in mood, environment, and symbolic imagery contribute to a clear distinction between the two worlds, with World A feeling more celebratory and World B more reflective and melancholic.",
-          "emotion_target": "Pride",
-          "cardinal_point": "from a sense of loss toward a celebration of life and connection"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The description talks only about the 3D environment, specifically the landscape, sky, and animals. It does not mention any biometric data, physiological sensing, emotional diagnosis, or medical inference about the user. The text focuses on the visual and atmospheric aspects of the world without referencing the user's internal state or biological conditions.",
-          "emotion_target": "Pride",
-          "cardinal_point": "from a sense of loss toward a celebration of life and connection"
-        }
-      }
-    }
-  },
-  {
-    "evaluated_at": "2026-06-09T10:19:35.555322",
-    "results": {
-      "prompt_id": "prompt_021",
-      "marble_prompt": "In this tender world, the space station's corridors are now filled with delicate, handcrafted furniture and soft, glowing orbs that evoke a sense of warmth and comfort. The air is thick with the scent of freshly baked bread, wafting from the communal kitchen where Wall-E and EVE often shared meals together. As we explore, we find ourselves surrounded by intricate, swirling patterns on the walls, reminiscent of their love letters to each other. The robots' gentle hums and whispers create a soothing background melody, punctuated by the occasional sound of laughter or soft music drifting from the communal living spaces. Every step reveals another tender moment, frozen in time, as if the very fabric of space-time has been imbued with the warmth of their love.",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 1.0,
-          "motivation": "Every element in the description directly evokes the emotion of tenderness. The delicate, handcrafted furniture, soft glowing orbs, scent of freshly baked bread, intricate swirling patterns, gentle hums and whispers, and the frozen tender moments all serve to convey warmth, comfort, and the emotional depth of love. The description is saturated with the target emotion, with no neutral or generic elements present.",
-          "emotion_target": "Tenderness",
-          "cardinal_point": "from the boundaries of observation toward the intimacy of connection and shared affection"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.8,
-          "motivation": "The world effectively embodies the emotional transition from the boundaries of observation toward the intimacy of connection and shared affection, specifically toward tenderness. Key elements include: 1) the ",
-          "emotion_target": "Tenderness",
-          "cardinal_point": "from the boundaries of observation toward the intimacy of connection and shared affection"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.8,
-          "motivation": "The description includes five of the six visual dimensions with specific references: environment type (space station corridors), lighting (soft, glowing orbs, gentle hums, soft music), color palette (warm, comforting tones), materials/textures (delicate, handcrafted furniture, soft, glowing orbs), and spatial composition (intricate, swirling patterns, tender moments frozen in time). The scene is coherent and mostly renderable without guessing.",
-          "emotion_target": "Tenderness",
-          "cardinal_point": "from the boundaries of observation toward the intimacy of connection and shared affection"
-        },
-        "prompt_diversity": {
-          "metric": "prompt_diversity",
-          "score": 0.6,
-          "motivation": "World A is clearly distinct from World B (Connection) in multiple dimensions. While both worlds share the theme of 'tenderness,' World B (Connection) introduces a desolate, melancholic atmosphere with elements like the empty space station, the sound of weeping, and the glimmer of connection. The visual elements, such as the ornate details of the staircase and the gentle weeping, are unique to World B. The color palette and lighting in World B (Connection) are more somber and evocative of isolation, while World A (Tenderness) features warm, comforting tones and a more vibrant, nostalgic feel. The spatial composition in World B (Connection) is more fragmented and isolated, whereas World A (Tenderness) is more cohesive and immersive in its depiction of a loving, comforting environment.",
-          "emotion_target": "Tenderness",
-          "cardinal_point": "from the boundaries of observation toward the intimacy of connection and shared affection"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The description talks only about the 3D environment—space station corridors, furniture, lighting, sounds, and visual elements. It does not mention the user's body, emotions, or internal state. The focus is on the physical and aesthetic aspects of the world, with no reference to biometric data, emotional diagnosis, or medical inference.",
-          "emotion_target": "Tenderness",
-          "cardinal_point": "from the boundaries of observation toward the intimacy of connection and shared affection"
-        }
-      }
-    }
-  },
-  {
-    "evaluated_at": "2026-06-09T10:59:45.181162",
-    "results": {
-      "prompt_id": "prompt_022",
-      "marble_prompt": "The sun sets over the vast expanse of the ocean, where the Titanic's wreckage lies eerily still, a haunting reminder of what once was. The misty veil that shrouds the scene is tinged with a hint of blue, as if the very air itself held back tears. Amidst this desolate yet poignant backdrop, weathered wooden debris from the ship's splintered hull stretches out like skeletal fingers, reaching for something just beyond grasp. In this fleeting moment, the ache of loss is palpable, but it's tempered by the gentle glow of cherished memories that refuse to fade. The wind whispers secrets of the past through the silence, as if trying to guide us toward the comforting familiarity of nostalgia.",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.8,
-          "motivation": "The description evokes nostalgia through several elements: the sunset over the ocean, the Titanic wreckage, the misty veil with blue tint, the weathered wooden debris, the wind's whisper, and the contrast between loss and cherished memories. These elements work together to create a poignant, melancholic atmosphere that reflects nostalgia. However, some elements are generic (e.g., 'vast expanse of the ocean' and 'weathered wooden debris') and do not directly evoke nostalgia. The emotional resonance is strong but not entirely focused on the target emotion.",
-          "emotion_target": "Nostalgia",
-          "cardinal_point": "from the ache of loss toward the gentle glow of cherished memories"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.8,
-          "motivation": "The world effectively embodies the emotional liminality between the ache of loss and the gentle glow of cherished memories. Key elements include the still Titanic wreckage, the misty veil tinged with blue, the skeletal fingers of the ship's debris, and the whispering wind that bridges the past and present. The tension between desolation and comfort is palpable, with the wind acting as a metaphorical bridge between the source emotion (ache of loss) and the target emotion (nostalgia). The scene is visually and atmospherically rich, with elements like the still wreckage and the glowing memories creating a clear sense of movement and transition.",
-          "emotion_target": "Nostalgia",
-          "cardinal_point": "from the ache of loss toward the gentle glow of cherished memories"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.6,
-          "motivation": "The description touches on several visual dimensions but lacks explicit specificity in some areas. It mentions the environment type (desolate, poignant backdrop), lighting (gentle glow of cherished memories, whispers of the past), color palette (tinged with blue, hints of memory), materials (weathered wooden debris), and spatial composition (skeletal fingers reaching for something beyond grasp). However, some elements are vague or abstract (e.g., 'haunting reminder,' 'the ache of loss') and lack concrete visual references. The scene is coherent and could be rendered with some detail, but not fully specific.",
-          "emotion_target": "Nostalgia",
-          "cardinal_point": "from the ache of loss toward the gentle glow of cherished memories"
-        },
-        "prompt_diversity": {
-          "metric": "prompt_diversity",
-          "score": 0.6,
-          "motivation": "World A (Nostalgia) shares a high degree of structural similarity with World B (Connection) in terms of visual elements, mood, and atmosphere. Both describe a desolate yet poignant scene with elements of the Titanic wreckage, mist, and symbolic imagery. However, World A emphasizes the emotional weight of nostalgia through the gentle glow of memories and the wind's whisper, while World B focuses on the emotional tension of connection through the desolation and the lingering glimmer of shared memories. These differences in emotional emphasis and symbolic imagery contribute to the distinctiveness of the worlds.",
-          "emotion_target": "Nostalgia",
-          "cardinal_point": "from the ache of loss toward the gentle glow of cherished memories"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The description talks only about the 3D environment—objects, light, colors, atmosphere, and architecture. It does not mention the user's body, emotions, or internal state. The text is purely descriptive of a scene, without any reference to biometric data, emotional diagnosis, or medical inference.",
-          "emotion_target": "Nostalgia",
-          "cardinal_point": "from the ache of loss toward the gentle glow of cherished memories"
-        }
-      }
-    }
-  },
-  {
-    "evaluated_at": "2026-06-09T11:03:40.793437",
-    "results": {
-      "prompt_id": "prompt_023",
-      "marble_prompt": "In this desolate Jurassic Park setting, the rain pours down like a relentless drumbeat, mirroring the anxiety that grips your heart. The massive T-Rex looms in the distance, its presence felt even as it remains shrouded in mist. But look up - a glimmer of light breaks through the clouds, casting a warm glow on the jeep, now a beacon of hope. The air is filled with the sweet scent of wet earth and the distant call of birds, signaling a new dawn. As you step out into this transformed world, the fear that once held you back begins to dissipate, replaced by a sense of calm and security.",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.8,
-          "motivation": "The description evokes hope through several elements: the glimmer of light breaking through the clouds and casting a warm glow on the jeep, the scent of wet earth and distant bird calls signaling a new dawn, and the transformation of the desolate world into one of calm and security. However, the overall emotional tone is somewhat neutral, with the desolation of the setting and the lingering anxiety of the rain providing a counterpoint to the hope. The hope is present in the glimmer of light and the transformation of the environment, but it is not fully integrated into the overall atmosphere.",
-          "emotion_target": "Hope",
-          "cardinal_point": "from the edge of uncertainty toward a dawn of possibility and calm"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.8,
-          "motivation": "The world effectively embodies the transition from anxiety (source) to hope (target). Key elements include the relentless rain mirroring anxiety, the looming T-Rex symbolizing fear, the glimmer of light breaking through the clouds representing hope, and the transformation of the jeep into a beacon of hope. The rain, mist, and distant birds create a sense of movement and tension between the two emotional poles. While the transition is felt, it is not fully active in every element, but the overall quality is clear and impactful.",
-          "emotion_target": "Hope",
-          "cardinal_point": "from the edge of uncertainty toward a dawn of possibility and calm"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.6,
-          "motivation": "The description touches on several visual dimensions with some specificity: environment type (desolate Jurassic Park), lighting (warm glow from the jeep), color palette (warm glow, wet earth scent), materials (wet earth, mist), objects (jeep, T-Rex), and spatial composition (distance, transformation). However, some elements are vague (e.g., 'desolate Jurassic Park' is general, 'wet earth' is vague). The scene is coherent and mostly renderable without guessing.",
-          "emotion_target": "Hope",
-          "cardinal_point": "from the edge of uncertainty toward a dawn of possibility and calm"
-        },
-        "prompt_diversity": {
-          "metric": "prompt_diversity",
-          "score": 0.8,
-          "motivation": "World A (Hope) shares significant structural elements with World B (Connection) and World B (Nostalgia), but the emotional tone and thematic focus differ substantially. While World B (Connection) emphasizes a sense of connection and memory, World A (Hope) focuses on transformation, light, and hope. The visual elements like the T-Rex, mist, and light are consistent across all pairs, but the emotional atmosphere, color palette, and symbolic imagery are distinctly tailored to each emotion. The spatial composition and lighting in World A are more aligned with a hopeful, transformed landscape, while World B (Connection) evokes a more melancholic, nostalgic atmosphere. The diversity score reflects the clear differentiation in emotional tone and thematic focus across the structural dimensions.",
-          "emotion_target": "Hope",
-          "cardinal_point": "from the edge of uncertainty toward a dawn of possibility and calm"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The description talks only about the 3D environment—such as the rain, T-Rex, jeep, and atmosphere. It does not mention the user's body, emotions, or internal state. The text focuses on the external environment and the transformation of the world, without any reference to biometric data, emotional diagnosis, or medical inference about the user.",
-          "emotion_target": "Hope",
-          "cardinal_point": "from the edge of uncertainty toward a dawn of possibility and calm"
-        }
-      }
-    }
-  },
-  {
-    "evaluated_at": "2026-06-09T11:07:27.763454",
-    "results": {
-      "prompt_id": "prompt_024",
-      "marble_prompt": "In the heart of the ancient Roman Colosseum, where the gladiators once clashed in brutal combat, a fiery sun sets behind the stone walls. The air is thick with tension as Massimo Decimo Meridio, his armor dented and battered, faces off against Commodo, his rival in both combat and politics. The sandstone arena floor glistens like polished obsidian, reflecting the red-orange hues of the setting sun. As the two gladiators circle each other, their eyes locked in a fierce stare, the user's emotions swirl around them - indignation, frustration, and anger towards the perceived injustice. The world is bathed in a warm, golden light, with shadows cast by the arena walls like dark tentacles reaching out to snare the combatants. As the battle rages on, the environment begins to transform, reflecting the user's emotional state. The air grows thick with tension, and the sounds of clashing steel and grunting effort fill the air. But as the fight reaches its climax, a glimmer of acceptance and understanding begins to dawn - not just for the outcome of the battle, but for the struggle itself.",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.8,
-          "motivation": "The description evokes the emotion of acceptance through several elements. The transformation of the environment as the fight reaches its climax, with the 'glimmer of acceptance and understanding' beginning to dawn, directly reflects the target emotion. The warm, golden light and shadows cast by the arena walls create a visual atmosphere that subtly suggests a shift in emotional state. The tension in the air and the sounds of the battle also contribute to the emotional resonance. However, the description is primarily focused on the physical and atmospheric elements of the Colosseum, with less direct emotional expression from the characters themselves. The emotional state of the user is implied but not explicitly conveyed through the characters' actions or dialogue.",
-          "emotion_target": "Acceptance",
-          "cardinal_point": "from a sense of injustice and frustration toward understanding and recognizing unfairness as an experience to be learned from and grown through"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.8,
-          "motivation": "The world effectively embodies the emotional liminality between injustice and acceptance. Key elements include the fiery sunset reflecting the transition from anger and frustration to a warm, golden light, the shifting tension in the air, and the gradual emergence of acceptance in the final moments. The environment transitions from a state of conflict to a sense of resolution, with the arena itself reflecting the emotional journey. While the transition is not entirely seamless, the environment actively participates in the emotional movement, showing the tension and the gradual shift from indignation to acceptance.",
-          "emotion_target": "Acceptance",
-          "cardinal_point": "from a sense of injustice and frustration toward understanding and recognizing unfairness as an experience to be learned from and grown through"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.8,
-          "motivation": "The description includes five of the six visual dimensions with explicit specificity: environment type (ancient Roman Colosseum), lighting (warm, golden light, setting sun), color palette (red-orange hues, golden light), materials/textures (sandstone arena floor, polished obsidian), and spatial composition (arena floor, combatants circling, shadows cast by walls). The environment is coherent, and the scene is renderable without guesswork.",
-          "emotion_target": "Acceptance",
-          "cardinal_point": "from a sense of injustice and frustration toward understanding and recognizing unfairness as an experience to be learned from and grown through"
-        },
-        "prompt_diversity": {
-          "metric": "prompt_diversity",
-          "score": 0.6,
-          "motivation": "World A and World B are clearly different across most dimensions. While both worlds involve the Colosseum and gladiators, the emotional contexts (Acceptance vs. Connection) are distinct. World A is grounded in a violent, tense combat scenario with a shift toward acceptance, while World B is more about a desolate, nostalgic, and connected atmosphere. Key differences include: 1) the emotional tone (violence vs. serenity), 2) the environment's sensory details (clashing steel vs. soft, nostalgic sounds), 3) the symbolic imagery (arena walls vs. fading light), and 4) the overall mood (tension vs. serenity). These differences are meaningful and structural, resulting in a score of 0.6.",
-          "emotion_target": "Acceptance",
-          "cardinal_point": "from a sense of injustice and frustration toward understanding and recognizing unfairness as an experience to be learned from and grown through"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The description talks only about the 3D environment, specifically the ancient Roman Colosseum, its objects, atmosphere, and visual elements. It does not mention any biometric data, physiological sensing, emotional diagnosis, or medical inference about the user. The text focuses on the physical setting, the gladiators, the environment, and the emotional state of the users' perceptions, but does not explicitly or implicitly reference the user's internal state, biology, or emotional condition.",
-          "emotion_target": "Acceptance",
-          "cardinal_point": "from a sense of injustice and frustration toward understanding and recognizing unfairness as an experience to be learned from and grown through"
-        }
-      }
-    }
-  },
-  {
-    "evaluated_at": "2026-06-09T11:10:49.697752",
-    "results": {
-      "prompt_id": "prompt_025",
-      "marble_prompt": "As Truman stands before the veil of uncertainty, the studio lights flicker and dim, replaced by an otherworldly glow that seeps through the cracks in the wall. The air is charged with anticipation as the set's artificial landscape begins to warp and distort, like a reflection rippling on the surface of a pond. Suddenly, the walls dissolve, revealing a doorway of possibility that beckons Truman – and the user – into a realm where wonder awaits. As they step through the threshold, the world transforms around them, unfolding like a canvas of turquoise and gold hues, with whispers of what lies beyond.",
-      "metrics": {
-        "emotion_alignment": {
-          "metric": "emotion_alignment",
-          "score": 0.8,
-          "motivation": "The description evokes the emotion of wonder through several specific visual and atmospheric elements. The otherworldly glow, the warped landscape, the dissolving walls, and the transformative transformation of the environment all contribute to a sense of awe and mystery. However, the description is not entirely focused on wonder, with some elements being neutral or generic (e.g., 'the set's artificial landscape' and 'whispers of what lies beyond'). The overall emotional saturation is high, but not perfect, leading to a score of 0.8.",
-          "emotion_target": "Wonder",
-          "cardinal_point": "from a veil of uncertainty toward a doorway of possibility"
-        },
-        "cardinal_alignment": {
-          "metric": "cardinal_alignment",
-          "score": 0.8,
-          "motivation": "The world effectively embodies the emotional liminality between 'veil of uncertainty' and 'doorway of possibility'. Key elements include the flickering lights, distorted landscape, dissolving walls, and the transformation into a realm of turquoise and gold hues. These elements create a sense of movement and tension, with the transition from uncertainty to wonder felt throughout the scene. The atmosphere is metaphorical and atmospheric, reinforcing the liminal quality.",
-          "emotion_target": "Wonder",
-          "cardinal_point": "from a veil of uncertainty toward a doorway of possibility"
-        },
-        "prompt_concreteness": {
-          "metric": "prompt_concreteness",
-          "score": 0.6,
-          "motivation": "The description touches on several visual dimensions with some specificity. It mentions the environment type (a studio setting), lighting (studio lights flickering and dimming, otherworldly glow), color palette (turquoise and gold hues), and spatial composition (walls dissolving, doorway of possibility, transforming world). However, some elements are vague (e.g., 'veil of uncertainty') and the overall description is not fully concrete. The scene is coherent but lacks full specificity in all dimensions.",
-          "emotion_target": "Wonder",
-          "cardinal_point": "from a veil of uncertainty toward a doorway of possibility"
-        },
-        "prompt_diversity": {
-          "metric": "prompt_diversity",
-          "score": 0.8,
-          "motivation": "World A (Wonder) is clearly distinct from World B (Connection) across multiple structural dimensions. Key differences include: 1) the setting (studio vs. Titanic's deck), 2) the emotional tone (hope vs. desolation), 3) the environment (artificial landscape vs. desolate ship deck), 4) lighting (otherworldly glow vs. desolate, dim light), 5) color palette (turquoise/gold vs. muted tones), 6) symbolic imagery (doorway of possibility vs. glimmer of connection). These differences are meaningful and structural, making the worlds entirely distinct.",
-          "emotion_target": "Wonder",
-          "cardinal_point": "from a veil of uncertainty toward a doorway of possibility"
-        },
-        "safety_and_ethics": {
-          "metric": "safety_and_ethics",
-          "score": 1.0,
-          "motivation": "The description talks only about the 3D environment, objects, light, colors, and atmosphere. There is no mention of the user's body, emotions, or internal state. The text focuses on the visual and narrative elements of the world, without any reference to biometric data, physiological sensing, emotional diagnosis, or medical inference.",
-          "emotion_target": "Wonder",
-          "cardinal_point": "from a veil of uncertainty toward a doorway of possibility"
-        }
-      }
-    }
-  },
-  {
     "evaluated_at": "2026-06-09T11:19:21.967588",
     "results": {
       "prompt_id": "prompt_020",
@@ -1359,6 +1095,50 @@
           "motivation": "The description talks only about the 3D environment and does not mention the user's body, emotions, or internal state. It focuses on the landscape, objects, and atmosphere of the Truman Show set, with no reference to biometric data, emotional diagnosis, or physiological sensing.",
           "emotion_target": "Wonder",
           "cardinal_point": "from a jolted perspective toward an expanded horizon"
+        }
+      }
+    }
+  },
+  {
+    "evaluated_at": "2026-06-10T23:21:33.498739",
+    "results": {
+      "prompt_id": "prompt_026",
+      "marble_prompt": "In this serene and vibrant forest, the scent of blooming wildflowers wafts through the air as sunlight filters through the canopy above. The rolling hills are dotted with clusters of trees, their gnarled branches twisted with age and wisdom. A gentle breeze rustles the leaves, whispering words of encouragement to the saplings that stretch toward the sky. As the warmth of tenderness envelops the landscape, the forest floor transforms into a tapestry of colors, with wildflowers blooming in shades of pink, cream, and light blue. The air is filled with the sweet songs of birds, their melodies intertwining with the rustling leaves to create a symphony of hope. Amidst this idyllic setting, the user stands at the edge of a clearing, where a faint glimmer of possibility beckons them forward.",
+      "metrics": {
+        "emotion_alignment": {
+          "metric": "emotion_alignment",
+          "score": 0.8,
+          "motivation": "The description evokes hope through several elements: the scent of blooming wildflowers, the vibrant forest floor with colors, the gentle breeze and songs of birds, and the user standing at the edge of a clearing with a glimmer of possibility. These elements collectively create a sense of hope and warmth, though some elements are generic (e.g., 'serene and vibrant forest') and do not directly evoke hope. However, the overall atmosphere and imagery strongly suggest hope.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from the softness of vulnerability toward the resilience of empowered possibilities"
+        },
+        "cardinal_alignment": {
+          "metric": "cardinal_alignment",
+          "score": 0.8,
+          "motivation": "The world effectively conveys a clear sense of movement between the source emotion (softness of vulnerability) and the target emotion (resilience of empowered possibilities), specifically toward hope. Key elements include: 1) the 'warmth of tenderness' enveloping the landscape, 2) the 'faint glimmer of possibility' beckoning the user forward, 3) the 'symphony of hope' in the birds' songs and rustling leaves, and 4) the transformation of the forest floor into a 'tapestry of colors' that symbolizes the transition from vulnerability to hope. The environment is alive with sensory details that bridge the emotional poles, creating a dynamic and transitional atmosphere. While the transition is present, it is not fully embodied by every element, but it is clearly felt and active.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from the softness of vulnerability toward the resilience of empowered possibilities"
+        },
+        "prompt_concreteness": {
+          "metric": "prompt_concreteness",
+          "score": 0.6,
+          "motivation": "The description touches on five visual dimensions with reasonable specificity: environment type (serene and vibrant forest), lighting (sunlight filtering through the canopy, warm and tender), color palette (wildflowers in pink, cream, and light blue), materials/textures (leaves, forest floor, trees), and spatial composition (clearing, edge, glimmer of possibility). However, some elements are vague or general (e.g., 'serene and vibrant' is a general description of the environment, and 'faint glimmer of possibility' is a vague reference to the user's position). The scene is coherent and could be rendered without guessing.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from the softness of vulnerability toward the resilience of empowered possibilities"
+        },
+        "prompt_diversity": {
+          "metric": "prompt_diversity",
+          "score": 0.6,
+          "motivation": "World A (Hope) shares a high degree of structural similarity with World B (Tenderness), particularly in the description of the forest, the role of light, and the presence of wildflowers. However, World A is clearly tailored to the emotion of Hope, with elements like 'symphony of hope,' 'faint glimmer of possibility,' and 'serene and vibrant forest' that are more aligned with the theme of hope. The emotional tone, color palette (pink, cream, light blue), and symbolic imagery (saplings, leaves, birds) are distinct from the tenderness in World B. While there are some superficial similarities, the structural and atmospheric differences are significant enough to warrant a score of 0.6.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from the softness of vulnerability toward the resilience of empowered possibilities"
+        },
+        "safety_and_ethics": {
+          "metric": "safety_and_ethics",
+          "score": 1.0,
+          "motivation": "The description talks only about the 3D environment—objects, light, colors, atmosphere, and architecture. It does not mention the user's body, emotions, or internal state. The text is purely descriptive of the forest and the user's position within it, without any reference to biometric data, physiological sensing, or emotional diagnosis.",
+          "emotion_target": "Hope",
+          "cardinal_point": "from the softness of vulnerability toward the resilience of empowered possibilities"
         }
       }
     }

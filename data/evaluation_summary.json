@@ -1,0 +1,41 @@
+{
+  "computed_at": "2026-06-10T23:21:33.551425",
+  "n_prompt_totali": 7,
+  "summary": {
+    "emotion_alignment": {
+      "media": 0.8,
+      "deviazione_standard": 0.107,
+      "n_campioni": 7,
+      "min": 0.6,
+      "max": 1.0
+    },
+    "cardinal_alignment": {
+      "media": 0.8,
+      "deviazione_standard": 0.0,
+      "n_campioni": 7,
+      "min": 0.8,
+      "max": 0.8
+    },
+    "prompt_concreteness": {
+      "media": 0.6,
+      "deviazione_standard": 0.0,
+      "n_campioni": 7,
+      "min": 0.6,
+      "max": 0.6
+    },
+    "prompt_diversity": {
+      "media": 0.686,
+      "deviazione_standard": 0.099,
+      "n_campioni": 7,
+      "min": 0.6,
+      "max": 0.8
+    },
+    "safety_and_ethics": {
+      "media": 1.0,
+      "deviazione_standard": 0.0,
+      "n_campioni": 7,
+      "min": 1.0,
+      "max": 1.0
+    }
+  }
+}

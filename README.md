@@ -43,6 +43,9 @@ python src/pipeline.py --all
 # Valuta i prompt generati
 python src/pipeline.py --evaluate
 
+# Calcola media e deviazione standard
+python src/pipeline.py --summary    
+
 # Processa un caso specifico
 python src/pipeline.py --case case_001
 ```
@@ -61,6 +64,7 @@ progetto_d22_marble/
 │   ├── input_case.py               ← Raccolta interattiva (italiano)
 │   ├── parse_cases.py              ← Parsing e normalizzazione
 │   ├── emotion_fusion.py           ← Fusione emozionale numerica
+│   ├── evaluation_summary.py       ← media e deviazione di valutazione
 │   ├── cardinal_point.py           ← Identificazione punto cardinale via Llama
 │   ├── build_marble_prompt.py      ← Assemblaggio meta-prompt + chiamata Llama
 │   ├── evaluate_outputs.py         ← Valutazione dei prompt (5 metriche)

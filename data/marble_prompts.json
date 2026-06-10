@@ -322,5 +322,57 @@
         ]
       }
     ]
+  },
+  {
+    "prompt_id": "prompt_026",
+    "case_id": "case_026",
+    "timestamp": "2026-06-10T23:21:07.945009",
+    "model_used": "llama3",
+    "fusion_profile": {
+      "dominant_emotion": "Tenderness",
+      "intensity_score": 0.68,
+      "valence": "positive",
+      "arousal": "high",
+      "fusion_scores": {
+        "Tenderness": 0.68,
+        "Happy": 0.475
+      },
+      "signal_detail": {
+        "priming_scores": {
+          "Happy": 0.9,
+          "Tenderness": 0.8
+        },
+        "realtime_scores": {
+          "Tenderness": 0.8
+        },
+        "text_scores": {
+          "Happy": 0.8,
+          "Tenderness": 0.2
+        }
+      }
+    },
+    "cardinal_context_hint": "the likely cardinal point is: from the softness of vulnerability toward the resilience of empowered possibilities",
+    "runtime_analysis": {
+      "dominant_emotion": "Tenderness",
+      "emotion_target": "Hope",
+      "complex_emotion": "The warmth of tenderness radiates through the forest, nurturing the seeds of hope as they sprout into resilient and empowered possibilities.",
+      "stimulus_universe": "A lush, vibrant forest with rolling hills, towering trees, and a sense of nostalgia, reminiscent of Forrest Gump's journey",
+      "user_reaction": "The user's message, 'con determinazione, corraggio e gentilezza verso l'umano si puo realizzare l'impossibile', resonates with the theme of overcoming obstacles through determination, courage, and kindness.",
+      "world_transformation": "The base environment is transformed by the dominant emotion of tenderness, infusing the forest with a sense of nurturing warmth, soft light, and gentle curves, guiding the user toward the target of hope."
+    },
+    "marble_prompt": "In this serene and vibrant forest, the scent of blooming wildflowers wafts through the air as sunlight filters through the canopy above. The rolling hills are dotted with clusters of trees, their gnarled branches twisted with age and wisdom. A gentle breeze rustles the leaves, whispering words of encouragement to the saplings that stretch toward the sky. As the warmth of tenderness envelops the landscape, the forest floor transforms into a tapestry of colors, with wildflowers blooming in shades of pink, cream, and light blue. The air is filled with the sweet songs of birds, their melodies intertwining with the rustling leaves to create a symphony of hope. Amidst this idyllic setting, the user stands at the edge of a clearing, where a faint glimmer of possibility beckons them forward.",
+    "negative_constraints": [
+      "No signs of desolation or decay; no threatening elements like predators or harsh weather; no enclosed oppressive spaces; no dark tones; no isolation"
+    ],
+    "variants": [
+      {
+        "prompt": "As the sun dips below the horizon, the forest transforms into a tapestry of golden light and shadow. The trees, now silhouettes against the warm orange sky, seem to stretch toward the heavens, their branches like outstretched arms embracing the unknown. The air is filled with the soft hum of crickets, their gentle chirping weaving together with the rustling leaves to create a soothing melody that lulls the user into a state of calm contemplation. Amidst this serene setting, the clearing beckons them forward, its edges glowing with an ethereal light that promises new possibilities.",
+        "description": "A variant with a different time of day and color palette"
+      },
+      {
+        "prompt": "The forest looms large before the user, its towering trees seeming to stretch upward toward the clouds. The air is alive with the buzzing of insects, their busy activity creating a sense of dynamic energy that seems to pulse through every leaf and branch. As they step forward, the landscape shifts, revealing hidden glades and secret waterways that promise new discoveries and adventures. Amidst this sprawling landscape, the user stands at the edge of a clearing, where the faint outline of a path beckons them onward, leading them deeper into the heart of the forest.",
+        "description": "A variant with a different spatial scale and symbolic emphasis"
+      }
+    ]
   }
 ]

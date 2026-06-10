@@ -9,6 +9,7 @@ from OllamaEvaluator import OllamaJudgeMetric, EVALUATION_MODEL
 from utils.file_utils import load_from_file
 from typing import Callable
 from itertools import combinations
+from evaluation_summary import compute_and_save_summary
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
@@ -186,6 +187,7 @@ async def evaluate_single(prompt: dict, use_remote=os.getenv("CONNECT_TO_REMOTE"
         json.dump(reports, f, indent=2, ensure_ascii=False)
 
     print("Report saved")
+    compute_and_save_summary()
     
     return result
 
@@ -221,6 +223,7 @@ async def evaluate_all():
         json.dump(reports, f, indent=2, ensure_ascii=False)
 
     print("Report saved")
+    compute_and_save_summary()
 
 if __name__ == "__main__":
     try:

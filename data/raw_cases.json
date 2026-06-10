@@ -638,7 +638,7 @@
     },
     "user_message": "è stato simpatico, i due robot erano felici, amorevoli l'un l'altro e in seguito anche gli abitanti dell'astronave, ho provato simpatia e tenerezza"
   },
-{
+  {
     "case_id": "case_022",
     "timestamp": "2026-06-09T11:13:02.000000",
     "stimulus": "Titanic: Jack lascia la mano di Rose e affonda nell'oceano.",
@@ -769,5 +769,32 @@
       "arousal_label": "HIGH"
     },
     "user_message": "Non me lo aspettavo, e per un attimo mi ha fatto vedere tutto in modo diverso."
+  },
+  {
+    "case_id": "case_026",
+    "timestamp": "2026-06-10T23:20:35.221857",
+    "stimulus": "forrest Gump",
+    "priming_emotion": {
+      "Happy": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "HIGH",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.9
+      },
+      "Tenderness": {
+        "avg_intensity": "HIGH",
+        "avg_arousal": "HIGH",
+        "avg_valence": "POSITIVE",
+        "emotion_probability": 0.8
+      }
+    },
+    "realtime_face_emotion": {
+      "dominant_emotion": "Tenderness",
+      "probability": 0.8,
+      "intensity_label": "HIGH",
+      "valence_label": "POSITIVE",
+      "arousal_label": "HIGH"
+    },
+    "user_message": "con determinazione, corraggio e gentilezza verso l'umano si puo realizzare l'impossibile "
   }
 ]

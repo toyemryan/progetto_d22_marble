@@ -142,6 +142,8 @@ def main():
                         help="Valuta tutti i prompt generati")
     parser.add_argument("--case", type=str,
                         help="Genera prompt per un caso specifico (es. case_001)")
+    parser.add_argument("--summary", action="store_true",
+                    help="Calcola media e deviazione standard delle valutazioni")
 
     args = parser.parse_args()
 
@@ -162,6 +164,9 @@ def main():
         asyncio.run(evaluate_all())
     elif args.case:
         run_case(args.case)
+    elif args.summary:
+        from evaluation_summary import compute_and_save_summary
+        compute_and_save_summary()    
     else:
         # Default: mostra le opzioni
         print("Uso:")

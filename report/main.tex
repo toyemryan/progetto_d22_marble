@@ -11,6 +11,7 @@
 \usepackage{lipsum}
 \usepackage{booktabs}
 \usepackage{caption}
+\usepackage{hyperref} 
 \usepackage{forest}
 \usepackage{tikz}
 \usepackage{float}
@@ -564,6 +565,9 @@ Infine, all'interno del meta-prompt viene iniettato anche il \texttt{cardinal\_h
  
 Il meta-prompt contiene la tabella di mappatura emozione $\rightarrow$ mondo 3D:
  
+
+\textbf{N.B.} La tabella di mappatura emozione $\rightarrow$ elementi del mondo Marble è stata fornita dai tutor del progetto come riferimento progettuale e integrata nel meta-prompt.
+
 \begin{table}[H]
     \centering
     \caption{Mappatura emozione $\rightarrow$ elementi del mondo Marble.}
@@ -970,6 +974,15 @@ Per superare la sola valutazione qualitativa testuale, i dati prestazionali sono
 
 Come si evince dai grafici, l'andamento delle valutazioni medie dei prompt risulta pressoché stabile, evidenziando la capacità del sistema di garantire prestazioni costanti. Di contro, le valutazioni raggruppate per metrica mettono in luce margini di miglioramento del generatore in corrispondenza di specifici criteri di valutazione. Nel complesso, la componente di generazione dei prompt ha dimostrato un'elevata efficacia, specialmente se si considerano i significativi margini di ottimizzazione applicabili direttamente ai prompt di input.
   
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/summary.png}
+    \caption{Metriche in media e deviazione.}
+    \label{fig:summary}
+\end{figure}
+
+la pipeline genera prompt che sono emotivamente e cardinalmente allineati, eticamente sicuri e sufficientemente diversificati, con margini di miglioramento sulla concretezza visiva delle descrizioni. L'adozione di un modello valutatore più capace (ad esempio \texttt{Qwen3:8b}) permetterebbe una distribuzione di punteggi più discriminante su tutte le metriche.
+
 \section{Risultati visivi Marble}
 Il passaggio finale della pipeline prevede la traduzione del prompt testuale in un output tridimensionale all'interno dell'ecosistema \texttt{Marble}. Le immagini successive (Figura \ref{fig:marble_gallery}) mostrano il riscontro visivo dei sei mondi generati, offrendo una panoramica di come le sfumature emotive siano state interpretate e renderizzate a livello spaziale e cromatico.
  
@@ -1011,6 +1024,17 @@ Il passaggio finale della pipeline prevede la traduzione del prompt testuale in 
 
 La qualità visiva dei risultati ottenuti tramite \texttt{Marble} è risultata tuttavia insoddisfacente, rendendo necessaria una riflessione più approfondita. Esula dagli obiettivi del presente progetto presentare le soluzioni architetturali e ingegneristiche necessarie per ottimizzare l'output finale del software di rendering.
   
+Qui sotto i link dei mondi generati su Marble:
+
+\begin{itemize}
+    \item case\_020: \url{https://marble.worldlabs.ai/world/2f4dc9dd-d450-4b68-8cbd-ba102634bc4a}
+    \item case\_021: \url{https://marble.worldlabs.ai/world/e2638a48-f4c9-4f69-baa6-0ee910f56997}
+    \item case\_022: \url{https://marble.worldlabs.ai/world/1dce6045-e7af-4ebb-8ff6-26ea0945ba99}
+    \item case\_023: \url{https://marble.worldlabs.ai/world/f3832c67-edb6-4a84-9264-3f6c41c6ac58}
+    \item case\_024: \url{https://marble.worldlabs.ai/world/5c4053a8-15e5-4bac-a0ee-1933446db428}
+    \item case\_025: \url{https://marble.worldlabs.ai/world/755aa879-84cd-4ced-8db6-d3d6c1dd2914}
+\end{itemize}
+
 \section{Limiti identificati}
 Nonostante i riscontri complessivamente positivi, l'analisi dei test ha evidenziato alcune criticità e colli di bottiglia all'interno del flusso di lavoro automatico. Tali limitazioni, riassunte di seguito, offrono importanti spunti di riflessione per futuri sviluppi e ottimizzazioni del sistema.
  
@@ -1018,6 +1042,7 @@ Nonostante i riscontri complessivamente positivi, l'analisi dei test ha evidenzi
     \item \textbf{Sensibilità al modello LLM}: la qualità dell'intera pipeline è strettamente subordinata alle capacità del modello linguistico adottato; l'impiego di un modello con prestazioni insufficienti degrada l'efficacia di tutte le fasi successive.
     \item \textbf{LLM-as-a-judge}: Se il medesimo modello linguistico generasse e valutasse i propri output, si introdurrebbe un bias di autocompiacimento. Per ovviare a questo problema, la configurazione base del progetto prevede l'utilizzo di un modello \texttt{llama} per la fase di generazione e di un modello \texttt{qwen} per la fase di valutazione.
     \item \textbf{Efficienza ed efficacia di Marble}: Il software \texttt{Marble} introduce criticità in termini di efficienza, a causa dei tempi richiesti per la generazione dei mondi e dell'assenza di un'interfaccia API per l'automazione del processo. Tale deficit, inoltre, non risulta compensato da un'adeguata qualità visiva nella creazione degli ambienti tridimensionali.
+    \item \textbf{Marble risulta lento nella generazione dei mondi}:  i test con Z Turbo Image per pre-validazione i prompt non hanno prodotto una qualità sufficiente, portandoci a scartare questa alternativa.
 \end{enumerate}
  
  
@@ -1089,6 +1114,46 @@ In conclusione, il lavoro svolto dimostra la fattibilità tecnica di un sistema 
         \end{tabularx}
     \end{table}
     
+    \chapter{Illustrazione del funzionamento della pipeline}
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth,keepaspectratio]{images/--new.png}
+\caption{Esecuzione del comando \texttt{python src/pipeline.py --new} per avviare un nuovo caso interattivo.}
+\label{fig:new}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth,keepaspectratio]{images/forrest gump.png}
+\caption{inserimento del stimolo visivo : il film Forrest Gump.}
+\label{fig:caso}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth,keepaspectratio]{images/input text.png}
+\caption{Inserimento dei parametri di input.}
+\label{fig:input}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth,keepaspectratio]{images/elaborazione.png}
+\caption{Elaborazione del caso : Fusion emotion e cardinal point.}
+\label{fig:elaborazione}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth,keepaspectratio]{images/risultato finale.png}
+\caption{Risultati finali : prompt generato e valutazione.}
+\label{fig:risultato}
+\end{figure}
+
+
     \chapter{Guida all'installazione e riproduzione}
     \label{app:install}
     
@@ -1127,6 +1192,8 @@ In conclusione, il lavoro svolto dimostra la fattibilità tecnica di un sistema 
     python src/pipeline.py --last      # ultimo caso
     python src/pipeline.py --all       # tutti i casi
     python src/pipeline.py --evaluate  # valutazione
+    python src/pipeline.py --summary   # Calcola media e deviazione standard
+    python src/pipeline.py --case ID   # Processa caso specifico
         \end{lstlisting}
     \end{enumerate}
 
