@@ -1043,7 +1043,6 @@ Nonostante i riscontri complessivamente positivi, l'analisi dei test ha evidenzi
     \item \textbf{Sensibilità al modello LLM}: la qualità dell'intera pipeline è strettamente subordinata alle capacità del modello linguistico adottato; l'impiego di un modello con prestazioni insufficienti degrada l'efficacia di tutte le fasi successive.
     \item \textbf{LLM-as-a-judge}: Se il medesimo modello linguistico generasse e valutasse i propri output, si introdurrebbe un bias di autocompiacimento. Per ovviare a questo problema, la configurazione base del progetto prevede l'utilizzo di un modello \texttt{llama} per la fase di generazione e di un modello \texttt{qwen} per la fase di valutazione.
     \item \textbf{Efficienza ed efficacia di Marble}: Il software \texttt{Marble} introduce criticità in termini di efficienza, a causa dei tempi richiesti per la generazione dei mondi e dell'assenza di un'interfaccia API per l'automazione del processo. Tale deficit, inoltre, non risulta compensato da un'adeguata qualità visiva nella creazione degli ambienti tridimensionali.
-    \item \textbf{Marble risulta lento nella generazione dei mondi}:  i test con Z Turbo Image per pre-validazione i prompt non hanno prodotto una qualità sufficiente, portandoci a scartare questa alternativa.
 \end{enumerate}
  
  
